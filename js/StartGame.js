@@ -1,5 +1,5 @@
 /* StartGame.js
- * JavaScript file to arrange the start of the GeoPets game
+ * JavaScript file to arrange the start of the TopoPets game
  * Made on 04-11-2015
  * by GeOdin
  *
@@ -50,7 +50,7 @@ function startGame() {
 	document.getElementById("achievements").style.display = "block";
 
 	// Show the GeoPets Found box
-	document.getElementById("geoPetsFound").style.display = "block";
+	document.getElementById("topoPetsFound").style.display = "block";
 	
 	// Draw the map
 	drawMap(startingVariables);
