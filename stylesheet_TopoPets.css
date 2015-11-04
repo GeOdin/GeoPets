@@ -86,7 +86,7 @@ body {
 	text-shadow: 1px 1px #000000;
 }
 
-#geoPetsFound {
+#topoPetsFound {
 	position: absolute;
 	display: none;
 	top: 5.5%;
@@ -100,7 +100,7 @@ body {
 	text-shadow: 1px 1px #000000;
 }
 
-#geoPetsFoundTitle {
+#topoPetsFoundTitle {
 	position: relative;
 	width: 96%;
 	height: 1.3em;
@@ -158,10 +158,3 @@ body {
 	color: white;
 	text-shadow: 1px 1px #000000;
 }
-
-/*#playerAmount {
-	display: block;
-	left: 50%;
-	top: 50%;
-	font-size: 3.6em;
-}*/
