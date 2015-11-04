@@ -1,28 +1,28 @@
 /* GeoPets.js
- * JavaScript file for the GeoPets browser game
+ * JavaScript file for the TopoPets browser game
  * Made on 04-11-2015
  * by GeOdin
  *
  * This JavaScript file includes the following functions:
- * GeoPets()
+ * TopoPets()
  */
 
 ///////////
 // To do //
 ///////////
 
-// Show markers where GeoPets are
-// When markers are clicked, remove the markers and add the GeoPet to #geoPetsFound
+// Show markers where TopoPets are
+// When markers are clicked, remove the markers and add the TopoPet to #topoPetsFound
 
-//////////////////////////
-////// GeoPets.html //////
-//////////////////////////
+///////////////////////////
+////// TopoPets.html //////
+///////////////////////////
 
-// change favicon to something with a G
+// change favicon to something with a T
 
-////////////////////////
-////// GeoPets.js //////
-////////////////////////
+/////////////////////////
+////// TopoPets.js //////
+/////////////////////////
 
 //////////////////////////
 ////// StartGame.js //////
@@ -46,13 +46,13 @@
 	}*/
 //// Possibly: add ID for game/ player
 
-///////////////
-// GeoPets() //
-///////////////
+////////////////
+// TopoPets() //
+////////////////
 
-// Function for the GeoPets game
+// Function for the TopoPets game
 
-function GeoPets() {
+function TopoPets() {
 	// Get the starting variables
 	startingVariables = startGame();
 
