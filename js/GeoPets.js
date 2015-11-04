@@ -11,6 +11,9 @@
 // To do //
 ///////////
 
+// Show markers where GeoPets are
+// When markers are clicked, remove the markers and add the GeoPet to #geoPetsFound
+
 //////////////////////////
 ////// GeoPets.html //////
 //////////////////////////
@@ -42,10 +45,6 @@
 		}
 	}*/
 //// Possibly: add ID for game/ player
-
-///////////////////////
-////// RunGame() //////
-///////////////////////
 
 ///////////////
 // GeoPets() //

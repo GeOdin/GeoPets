@@ -5,6 +5,7 @@
  *
  * This JavaScript file includes the following functions:
  * startGame()
+ * setLatLon()
  * drawMap()
  */
 
