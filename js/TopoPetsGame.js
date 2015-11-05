@@ -13,6 +13,11 @@
 
 // Show markers where TopoPets are
 // When markers are clicked, remove the markers and add the TopoPet to #topoPetsFound
+// markers from
+//// https://mapicons.mapsmarker.com/category/markers/nature/natural-marvels/
+//// https://mapicons.mapsmarker.com/category/markers/nature/weather/
+// explanation about markers
+//// http://stackoverflow.com/questions/29324136/google-map-api-multi-markers
 
 ///////////////////////////
 ////// TopoPets.html //////
