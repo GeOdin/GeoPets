@@ -95,10 +95,44 @@ function setLatLon(startingVariables) {
 
 function drawMap(startingVariables) {
 
+/*
+	// TopoPets stats
+ 	var topoPetsStats = [
+		["name", "level", "type1", "coordX", "coordY", "zoomLevel", "marker"],
+		["LAVACHE", 1, "FIRE", 51.9669056, 5.6509072, 14, "images/fire.png"]
+	];
+*/
+
+
 	// Draw the map
 	var map = new google.maps.Map(document.getElementById('map'), {
 		zoom: startingVariables.zoomLevel,
 		center: new google.maps.LatLng(startingVariables.lat, startingVariables.lon),
 		mapTypeId: google.maps.MapTypeId.HYBRID
 	});
+
+	// Put the TopoPets on the map
+	// Create the TopoPet marker
+	var coords = new google.maps.LatLng(51.9669056, 5.6509072);
+	var marker = new google.maps.Marker({
+	    position: coords,
+	    title: "LAVACHE",
+	    icon: "images/fire.png"
+	});
+	// To add the marker to the map, call setMap();
+	marker.setMap(map); 	
+
+
+/*	for (i=1; i<topoPetsStats.length; i++) {
+		var coords = new google.maps.LatLng(topoPetsStats[i, 3],topoPetsStats[i, 4]);
+
+		// Create the TopoPet marker
+		var marker = new google.maps.Marker({
+		    position: coords,
+		    title:topoPetsStats[i, 0]
+		});
+		// To add the marker to the map, call setMap();
+		marker.setMap(map);
+	}
+*/
 }

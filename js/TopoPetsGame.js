@@ -1,10 +1,10 @@
-/* GeoPets.js
+/* TopoPetsGame.js
  * JavaScript file for the TopoPets browser game
  * Made on 04-11-2015
  * by GeOdin
  *
  * This JavaScript file includes the following functions:
- * TopoPets()
+ * topoPetsGame()
  */
 
 ///////////
@@ -18,6 +18,7 @@
 //// https://mapicons.mapsmarker.com/category/markers/nature/weather/
 // explanation about markers
 //// http://stackoverflow.com/questions/29324136/google-map-api-multi-markers
+// button to reset map to Wageningen
 
 ///////////////////////////
 ////// TopoPets.html //////
@@ -25,9 +26,9 @@
 
 // change favicon to something with a T
 
-/////////////////////////
-////// TopoPets.js //////
-/////////////////////////
+/////////////////////////////
+////// TopoPetsGame.js //////
+/////////////////////////////
 
 //////////////////////////
 ////// StartGame.js //////
@@ -52,12 +53,12 @@
 //// Possibly: add ID for game/ player
 
 ////////////////
-// TopoPets() //
+// topoPets() //
 ////////////////
 
 // Function for the TopoPets game
 
-function TopoPets() {
+function topoPetsGame() {
 	// Get the starting variables
 	startingVariables = startGame();
 
