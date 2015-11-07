@@ -19,6 +19,9 @@
 // explanation about markers
 //// http://stackoverflow.com/questions/29324136/google-map-api-multi-markers
 // button to reset map to Wageningen
+// only show information about player/ TopoPets found/ achievements when player clicks one of the buttons on the bottom of the screen
+// add achievements
+// Refactor TopoPets found into TopoPets recorder
 
 ///////////////////////////
 ////// TopoPets.html //////

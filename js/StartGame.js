@@ -60,6 +60,9 @@ function startGame() {
 	// Show the map
 	document.getElementById("map").style.display = "block";
 
+	// Show the buttons
+	document.getElementById("buttons").style.display = "block";
+
 	// Return the starting variables
 	return startingVariables;
 }
@@ -257,6 +260,7 @@ function createMarkers(map) {
 		    icon: "images/" + topoPetsType1 + ".png" // works properly
 		});
 
+/*
 		// Add infowindow when hovering over an marker		
 		// Create content for infowindow
 		var content = "<font color=" + topoPetsInfowindowColour + "><h1>" + topoPetsName + "</h1>" + topoPetsDescription + "</font>";
@@ -269,6 +273,7 @@ function createMarkers(map) {
 			infowindow.setContent(content);
 			infowindow.open(map, this);
 		});
+ */
 
 /*
         markers[topoPetsName].addListener("mouseover", (function(markers[topoPetsName],content,infowindow){ 
