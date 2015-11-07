@@ -61,19 +61,17 @@
 //// Air: (air, bird, breeze, cloud, draft, fly, hail?, levitate, rain?, sky, tornado, weather?, wind)
 ////// Wasparagus (kassen ten noorden van LUMEN) (Air / Earth)
 ////// Flair (narcistic air elemental) (albardaflat)
-////// Hailo (ice cube with halo around his head) (meteo gebouw) (later light/ air)
 
 //// Earth: (earth, flower?, ground, sand, tree?)
 ////// Sworm (Earth/ Air)
 ////// (Sandash)
 ////// Sandoom
 ////// Tulpa 
-////// Piramini (Piramidi, Piramax) (bij louvre kapper achtig geval) (later versie --> ancient)
+////// (Piramini is already implemented) -> Piramidi -> Piramax (later versie --> ancient)
 ////// Sockroach (kakkerlak die eruit ziet als een sok) (winkelcentrum)
 ////// Cowabunga (dancing cow) (Nude waar danslessen zijn?)
 
 //// Fire: (campfire, fiery, fire, fireman, torch) (evt nog een bij firehouse bij haarweg)
-////// Pyrose (park zuid-oost)
 ////// Firabbit (Dreijen)
 ////// Sundash (SSR-W) (later fire/ light)
 ////// Distorchion (in de war firegast) (huisartsenpost) (later fire/ spirit)
@@ -84,7 +82,6 @@
 ////// Fireel (vis die soms vuurkrachten krijgt als je hem kookt) (eventueel nog iets in water tussen grebbedijk en rijn in: 51.9607533,5.6701563)
 ////// Tranch (waterpaard) (gracht rooseveltweg)
 ////// Shrimp (fire shrimp) (Rijn)
-////// Shealer (healer seel) (huisartsenpost)
 
 /*
  * Later version types:

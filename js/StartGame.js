@@ -139,6 +139,15 @@ function createMarkers(map) {
 			"red"
 		],
 		[
+			"HAILO", 
+			"AIR", // later version LIGHT/ AIR
+			"A hail like TopoPet with a halo around it's head.",
+			51.9771265,
+			5.6480455, 
+			14,
+			"aqua"
+		],
+		[
 			"LAVACHE",
 			"FIRE", 
 			"A French fire cow.",
@@ -175,6 +184,24 @@ function createMarkers(map) {
 			"blue"
 		],
 		[
+			"PIRAMINI",
+			"EARTH", // later version: ANCIENT
+			"A TopoPet that resambles a small pyramid.",
+			51.9677729,
+			5.6654249, 
+			15,
+			"brown"
+		],
+		[
+			"PYROSE",
+			"FIRE", 
+			"A rose whose leafs are on fire.",
+			51.9657325,
+			5.690763, 
+			16,
+			"red"
+		],
+		[
 			"SANDANCE",
 			"EARTH",
 			"It's a small ball of sand, with some sort of hula hoop around it.",
@@ -182,6 +209,15 @@ function createMarkers(map) {
 			5.6637378, 
 			16,
 			"brown"
+		],
+		[
+			"SHEAL",
+			"WATER",
+			"A very helpful seal.",
+			51.9681386,
+			5.6643775, 
+			17,
+			"blue"
 		],
 		[
 			"VAMPYRE",
@@ -281,7 +317,5 @@ function resetMap() {
 	});
 
 	// It should remember which TopoPets are already caught and not show those markers
-/*
 	var markers = createMarkers(map);
-*/
 }

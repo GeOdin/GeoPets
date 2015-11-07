@@ -119,6 +119,12 @@ body {
 	color: red;
 }
 
+#HAILO {
+	display: none;
+	background-color: white;
+	color: aqua;
+}
+
 #LAVACHE {
 	display: none;
 	background-color: white;
@@ -143,10 +149,28 @@ body {
 	color: blue;
 }
 
+#PIRAMINI {
+	display: none;
+	background-color: white;
+	color: #8B5742;
+}
+
+#PYROSE {
+	display: none;
+	background-color: white;
+	color: red;
+}
+
 #SANDANCE {
 	display: none;
 	background-color: white;
 	color: #8B5742;
+}
+
+#SHEAL {
+	display: none;
+	background-color: white;
+	color: blue;
 }
 
 #VAMPYRE {
