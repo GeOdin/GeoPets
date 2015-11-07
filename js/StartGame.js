@@ -7,6 +7,7 @@
  * startGame()
  * setLatLon()
  * drawMap()
+ * createMarkers()
  */
 
 /////////////////
@@ -53,7 +54,8 @@ function startGame() {
 	document.getElementById("topoPetsFound").style.display = "block";
 	
 	// Draw the map
-	drawMap(startingVariables);
+	var markers = drawMap(startingVariables);
+	startingVariables.markers = markers;
 	// Show the map
 	document.getElementById("map").style.display = "block";
 
@@ -95,44 +97,112 @@ function setLatLon(startingVariables) {
 
 function drawMap(startingVariables) {
 
-/*
-	// TopoPets stats
- 	var topoPetsStats = [
-		["name", "level", "type1", "coordX", "coordY", "zoomLevel", "marker"],
-		["LAVACHE", 1, "FIRE", 51.9669056, 5.6509072, 14, "images/fire.png"]
-	];
-*/
-
-
 	// Draw the map
-	var map = new google.maps.Map(document.getElementById('map'), {
+	var map = new google.maps.Map(document.getElementById("map"), {
 		zoom: startingVariables.zoomLevel,
 		center: new google.maps.LatLng(startingVariables.lat, startingVariables.lon),
 		mapTypeId: google.maps.MapTypeId.HYBRID
 	});
 
-	// Put the TopoPets on the map
-	// Create the TopoPet marker
-	var coords = new google.maps.LatLng(51.9669056, 5.6509072);
-	var marker = new google.maps.Marker({
-	    position: coords,
-	    title: "LAVACHE",
-	    icon: "images/fire.png"
-	});
-	// To add the marker to the map, call setMap();
-	marker.setMap(map); 	
+	var markers = createMarkers(map);
+	return markers;
+}
 
+////////////////////////
+// createMarkers(map) //
+////////////////////////
 
-/*	for (i=1; i<topoPetsStats.length; i++) {
-		var coords = new google.maps.LatLng(topoPetsStats[i, 3],topoPetsStats[i, 4]);
+function createMarkers(map) {
+
+	// Create an object to store the markers in
+	var markers = new Object();
+	//var infowindow = null;
+
+	// TopoPets stats and marker coordinates
+	var topoPetsStats = [
+		[
+			"name",
+			"type1",
+			"description",
+			"coordX", 
+			"coordY", 
+			"zoomLevel",
+			"infoWindowTextColor"
+		],
+		[
+			"LAVACHE",
+			"FIRE", 
+			"A French fire cow.",
+			51.9669056, 
+			5.6509072, 
+			14,
+			"red"
+		],
+		[
+			"NEMATOAD",
+			"WATER",
+			"A very small toad.",
+			51.9810459,
+			5.6596941, 
+			18,
+			"blue"
+		]
+	];
+
+	// Create the TopoPets markers and store them in the markers object
+	for (i = 1; i < topoPetsStats.length; i++) {
+		var topoPetsName = topoPetsStats[i][0];
+		var topoPetsType1 = topoPetsStats[i][1];
+		var topoPetsDescription = topoPetsStats[i][2];
+		var topoPetsCoordX = topoPetsStats[i][3];
+		var topoPetsCoordY = topoPetsStats[i][4];
+		var topoPetsZoomLevel = topoPetsStats[i][5];
+		var topoPetsInfowindowColour = topoPetsStats[i][6];
 
 		// Create the TopoPet marker
-		var marker = new google.maps.Marker({
-		    position: coords,
-		    title:topoPetsStats[i, 0]
+		var coords = new google.maps.LatLng(topoPetsCoordX, topoPetsCoordY);
+		markers[topoPetsName] = new google.maps.Marker({
+		    position: coords, // works properly
+		    title: topoPetsName, // works properly
+		    icon: "images/" + topoPetsType1 + ".png" // works properly
 		});
-		// To add the marker to the map, call setMap();
-		marker.setMap(map);
-	}
+
+		// Add infowindow when hovering over an marker		
+		// Create content for infowindow
+		var content = "<font color=" + topoPetsInfowindowColour + "><h1>" + topoPetsName + "</h1>" + topoPetsDescription + "</font>";
+		// Create infowindow
+		var infowindow = new google.maps.InfoWindow();
+		//// Multiple markers
+		////// http://you.arenot.me/2010/06/29/google-maps-api-v3-0-multiple-markers-multiple-infowindows/
+		////// http://stackoverflow.com/questions/11106671/google-maps-api-multiple-markers-with-infowindows
+		markers[topoPetsName].addListener("mouseover", function(){
+			infowindow.setContent(content);
+			infowindow.open(map, this);
+		});
+
+/*
+        markers[topoPetsName].addListener("mouseover", (function(markers[topoPetsName],content,infowindow){ 
+       		return function() {
+            	infowindow.setContent(content);
+            	infowindow.open(map, markers[topoPetsName]);
+            };
+        })(markers[topoPetsName]),content,infowindow); 
 */
+
+		// Remove marker when clicked on marker and add TopoPet to #topoPetsFound
+		google.maps.event.addListener(markers[topoPetsName], "click", function(){
+			// Show the clicked TopoPet in #topoPetsFound
+			document.getElementById(this.title).style.display = "block"; // works properly
+
+			// Remove the marker
+			this.setMap(null); // works properly
+			markers[topoPetsName] = null; // works properly
+		});
+
+		// Add the marker to the map
+		markers[topoPetsName].setMap(map);
+	}
+
+	// Return the markers object
+	return markers;
 }

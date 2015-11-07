@@ -11,8 +11,8 @@
 // To do //
 ///////////
 
-// Show markers where TopoPets are
-// When markers are clicked, remove the markers and add the TopoPet to #topoPetsFound
+// Show markers where TopoPets are, only when hovered over them
+// When hovered over TopoPets, show information about that particular TopoPet
 // markers from
 //// https://mapicons.mapsmarker.com/category/markers/nature/natural-marvels/
 //// https://mapicons.mapsmarker.com/category/markers/nature/weather/

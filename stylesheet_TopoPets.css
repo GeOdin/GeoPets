@@ -98,6 +98,7 @@ body {
 	background: rgba(00, 00, 00, .23);
 	color: white;
 	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
 }
 
 #topoPetsFoundTitle {
@@ -109,6 +110,16 @@ body {
 	color: #ABABAB;
 	background-color: white;
 	border-radius: 2px;
+}
+
+#LAVACHE {
+	display: none;
+	background-color: white;
+}
+
+#NEMATOAD {
+	display: none;
+	background-color: white;
 }
 
 #achievements {
