@@ -122,6 +122,11 @@ body {
 	background-color: white;
 }
 
+#WINGDIGO {
+	display: none;
+	background-color: white;
+}
+
 #achievements {
 	position: absolute;
 	display: none;

@@ -146,6 +146,15 @@ function createMarkers(map) {
 			5.6596941, 
 			18,
 			"blue"
+		],
+		[
+			"WINGDIGO",
+			"AIR",
+			"A winged wolf.",
+			51.9818399,
+			5.6723195, 
+			14,
+			"aqua"
 		]
 	];
 
