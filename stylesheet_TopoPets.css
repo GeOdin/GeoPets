@@ -79,6 +79,7 @@ body {
 	left: 25.5%;
 	width: 48%;
 	height: 11.75vh;
+	cursor: pointer;
 	background-color: transparent;
 	background: rgba(00, 99, 00, .23);
 	font-size: 2em;
@@ -112,19 +113,52 @@ body {
 	border-radius: 2px;
 }
 
+#CHARFOIL {
+	display: none;
+	background-color: white;
+	color: red;
+}
+
 #LAVACHE {
 	display: none;
 	background-color: white;
+	color: red;
+}
+
+#MOREEL {
+	display: none;
+	background-color: white;
+	color: blue;
+}
+
+#MUDDITCH {
+	display: none;
+	background-color: white;
+	color: #8B5742;
 }
 
 #NEMATOAD {
 	display: none;
 	background-color: white;
+	color: blue;
+}
+
+#SANDANCE {
+	display: none;
+	background-color: white;
+	color: #8B5742;
+}
+
+#VAMPYRE {
+	display: none;
+	background-color: white;
+	color: aqua;
 }
 
 #WINGDIGO {
 	display: none;
 	background-color: white;
+	color: aqua;
 }
 
 #achievements {

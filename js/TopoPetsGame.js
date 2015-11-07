@@ -52,6 +52,45 @@
 	}*/
 //// Possibly: add ID for game/ player
 
+/////////////////////////
+////// TopoPets.js //////
+/////////////////////////
+
+// New TopoPets:
+
+//// Air: (air, bird, breeze, cloud, draft, fly, hail?, levitate, rain?, sky, tornado, weather?, wind)
+////// Wasparagus (kassen ten noorden van LUMEN) (Air / Earth)
+////// Flair (narcistic air elemental) (albardaflat)
+////// Hailo (ice cube with halo around his head) (meteo gebouw) (later light/ air)
+
+//// Earth: (earth, flower?, ground, sand, tree?)
+////// Sworm (Earth/ Air)
+////// (Sandash)
+////// Sandoom
+////// Tulpa 
+////// Piramini (Piramidi, Piramax) (bij louvre kapper achtig geval) (later versie --> ancient)
+////// Sockroach (kakkerlak die eruit ziet als een sok) (winkelcentrum)
+////// Cowabunga (dancing cow) (Nude waar danslessen zijn?)
+
+//// Fire: (campfire, fiery, fire, fireman, torch) (evt nog een bij firehouse bij haarweg)
+////// Pyrose (park zuid-oost)
+////// Firabbit (Dreijen)
+////// Sundash (SSR-W) (later fire/ light)
+////// Distorchion (in de war firegast) (huisartsenpost) (later fire/ spirit)
+////// (Firefly)
+
+//// Water: (drop, eel, fish, shark, water, waterdrop)
+////// Spottle, Spotfin, Spotflow (Zwembad Bongerd)
+////// Fireel (vis die soms vuurkrachten krijgt als je hem kookt) (eventueel nog iets in water tussen grebbedijk en rijn in: 51.9607533,5.6701563)
+////// Tranch (waterpaard) (gracht rooseveltweg)
+////// Shrimp (fire shrimp) (Rijn)
+////// Shealer (healer seel) (huisartsenpost)
+
+/*
+ * Later version types:
+ * ancient, fighting, light, shadow, spirit
+ */
+
 ////////////////
 // topoPets() //
 ////////////////
@@ -59,9 +98,14 @@
 // Function for the TopoPets game
 
 function topoPetsGame() {
+	var topoPetsGame = new Object();
+
 	// Get the starting variables
 	startingVariables = startGame();
+	topoPetsGame.startingVariables = startingVariables;
 
 	// Run the game
-	//runGame(startingVariables);
+	var topoPets = new Object();
+	topoPetsGame.topoPets = topoPets;
+	//runGame(topoPetsGame);
 }

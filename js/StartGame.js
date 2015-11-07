@@ -8,13 +8,14 @@
  * setLatLon()
  * drawMap()
  * createMarkers()
+ * resetMap()
  */
 
 /////////////////
 // startGame() //
 /////////////////
 
-// Function to start the GeoPets game and get the needed variables
+// Function to start the TopoPets game and get the needed variables
 
 function startGame() {
 	// Set the variables
@@ -88,12 +89,11 @@ function setLatLon(startingVariables) {
 	}
 }
 
-
 ////////////////////////////////
 // drawMap(startingVariables) //
 ////////////////////////////////
 
-// Function to draw the map for the RUF-a-GIS game
+// Function to draw the map
 
 function drawMap(startingVariables) {
 
@@ -130,6 +130,15 @@ function createMarkers(map) {
 			"infoWindowTextColor"
 		],
 		[
+			"CHARFOIL", 
+			"FIRE", // later version FIRE/ SHADOW
+			"A small TopoPet with a knife as ear.",
+			51.9802742,
+			5.6569692, 
+			17,
+			"red"
+		],
+		[
 			"LAVACHE",
 			"FIRE", 
 			"A French fire cow.",
@@ -139,6 +148,24 @@ function createMarkers(map) {
 			"red"
 		],
 		[
+			"MOREEL",
+			"WATER", 
+			"A fish with a high morale.",
+			51.9615314,
+			5.6576431, 
+			16,
+			"blue"
+		],
+		[
+			"MUDDITCH",
+			"EARTH", 
+			"An earthy TopoPet that likes to hide in the bottom of ditches.",
+			51.9698076, 
+			5.6650889,
+			15,
+			"brown"
+		],
+		[
 			"NEMATOAD",
 			"WATER",
 			"A very small toad.",
@@ -146,6 +173,24 @@ function createMarkers(map) {
 			5.6596941, 
 			18,
 			"blue"
+		],
+		[
+			"SANDANCE",
+			"EARTH",
+			"It's a small ball of sand, with some sort of hula hoop around it.",
+			51.9535231, 
+			5.6637378, 
+			16,
+			"brown"
+		],
+		[
+			"VAMPYRE",
+			"AIR", // AIR (/FIRE)
+			"It's a bat that sometimes catches fire if it flies for a long period.",
+			51.9810143, 
+			5.6984898, 
+			15,
+			"brown"
 		],
 		[
 			"WINGDIGO",
@@ -214,4 +259,29 @@ function createMarkers(map) {
 
 	// Return the markers object
 	return markers;
+}
+
+////////////////
+// resetMap() //
+////////////////
+
+// Function to reset the map to Wageningen, zoomLevel 14
+
+function resetMap() {
+
+	var zoomLevel = 14;
+	var lat = 51.974151;
+	var lon = 5.664084;
+
+	// Draw the map
+	var map = new google.maps.Map(document.getElementById("map"), {
+		zoom: zoomLevel,
+		center: new google.maps.LatLng(lat, lon),
+		mapTypeId: google.maps.MapTypeId.HYBRID
+	});
+
+	// It should remember which TopoPets are already caught and not show those markers
+/*
+	var markers = createMarkers(map);
+*/
 }
