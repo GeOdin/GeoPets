@@ -13,8 +13,17 @@
  * * toggleRecorderHAILO()
  * * toggleRecorderLAVACHE()
  * * toggleRecorderMOREEL()
+ * * toggleRecorderMUDDITCH()
+ * * toggleRecorderNEMATOAD()
+ * * toggleRecorderPIRAMINI()
+ * * toggleRecorderPYROSE()
+ * * toggleRecorderSANDANCE()
+ * * toggleRecorderSHEAL()
+ * * toggleRecorderVAMPYRE()
+ * * toggleRecorderWINGDIGO()
  * toggleAchievements()
  * toggleJournal()
+ * toggleStory()
  */
 
 ///////////
@@ -31,22 +40,37 @@
 // button to reset map to Wageningen
 // only show information about player/ TopoPets found/ achievements when player clicks one of the buttons on the bottom of the screen
 // add achievements
-//// Obtain all TopoPets
-//// Obtain all TopoPets of a certain type
+//// TopoPets
+////// Obtain all TopoPets
+////// Obtain all TopoPets of a certain type
+////// Obtain a TopoPet for every letter of the alphabet
+//// Story
+////// Finish certain parts of the story
+//// Battles
+////// Win a battle
+////// Loose a battle
+////// Win with a type disadvantage
+////// Loose with a type advantage
+//// Items/ Money
+////// Obtain a certain amount of money
+////// Obtain all key items
+////// Obtain the recorder
+////// Obtain the journal
+////// Read the manual
 // Refactor TopoPets found into TopoPets recorder
-// Possibly make tabs for showing several extra divs on screen (for example bag becomes a tab of player)
+// Add dateTime to the upper right corner, add a manual button to the right of it
+// Show a different #storyText for every different TopoPet
+// Show Player/ Bag and Journal/ Achievements as different tabs from each other
+//// http://stackoverflow.com/questions/20127641/simple-multi-tab-hide-show-div
+////// http://jsfiddle.net/y76k4/
 
 ///////////////////////////
 ////// TopoPets.html //////
 ///////////////////////////
 
-// change favicon to something with a T
-
 /////////////////////////////
 ////// TopoPetsGame.js //////
 /////////////////////////////
-
-// Add a possibility to go back to the recorder from a TopoPet (eg. #recorderCHARFOIL)
 
 //////////////////////////
 ////// StartGame.js //////
@@ -275,6 +299,94 @@ function toggleRecorder() {
 			// Put away the recorderMOREEL box
 			document.getElementById("recorderMOREEL").style.display = "none";
 		}
+		// Put away the recorderMUDDITCH box if that is currently visible
+		if (document.getElementById("recorderMUDDITCH").style.display == "block") {
+			// Put away the recorderMUDDITCH title
+			document.getElementById("recorderMUDDITCHTitle").style.display = "none";
+			// Put away the recorderMUDDITCHText box
+			document.getElementById("recorderMUDDITCHText").style.display = "none";
+			// Put away the recorderMUDDITCHBack box
+			document.getElementById("recorderMUDDITCHBack").style.display = "none";
+			// Put away the recorderMUDDITCH box
+			document.getElementById("recorderMUDDITCH").style.display = "none";
+		}
+		// Put away the recorderNEMATOAD box if that is currently visible
+		if (document.getElementById("recorderNEMATOAD").style.display == "block") {
+			// Put away the recorderNEMATOAD title
+			document.getElementById("recorderNEMATOADTitle").style.display = "none";
+			// Put away the recorderNEMATOADText box
+			document.getElementById("recorderNEMATOADText").style.display = "none";
+			// Put away the recorderNEMATOADBack box
+			document.getElementById("recorderNEMATOADBack").style.display = "none";
+			// Put away the recorderNEMATOAD box
+			document.getElementById("recorderNEMATOAD").style.display = "none";
+		}
+		// Put away the recorderPIRAMINI box if that is currently visible
+		if (document.getElementById("recorderPIRAMINI").style.display == "block") {
+			// Put away the recorderPIRAMINI title
+			document.getElementById("recorderPIRAMINITitle").style.display = "none";
+			// Put away the recorderPIRAMINIText box
+			document.getElementById("recorderPIRAMINIText").style.display = "none";
+			// Put away the recorderPIRAMINIBack box
+			document.getElementById("recorderPIRAMINIBack").style.display = "none";
+			// Put away the recorderPIRAMINI box
+			document.getElementById("recorderPIRAMINI").style.display = "none";
+		}
+		// Put away the recorderPYROSE box if that is currently visible
+		if (document.getElementById("recorderPYROSE").style.display == "block") {
+			// Put away the recorderPYROSE title
+			document.getElementById("recorderPYROSETitle").style.display = "none";
+			// Put away the recorderPYROSEText box
+			document.getElementById("recorderPYROSEText").style.display = "none";
+			// Put away the recorderPYROSEBack box
+			document.getElementById("recorderPYROSEBack").style.display = "none";
+			// Put away the recorderPYROSE box
+			document.getElementById("recorderPYROSE").style.display = "none";
+		}
+		// Put away the recorderSANDANCE box if that is currently visible
+		if (document.getElementById("recorderSANDANCE").style.display == "block") {
+			// Put away the recorderSANDANCE title
+			document.getElementById("recorderSANDANCETitle").style.display = "none";
+			// Put away the recorderSANDANCEText box
+			document.getElementById("recorderSANDANCEText").style.display = "none";
+			// Put away the recorderSANDANCEBack box
+			document.getElementById("recorderSANDANCEBack").style.display = "none";
+			// Put away the recorderSANDANCE box
+			document.getElementById("recorderSANDANCE").style.display = "none";
+		}
+		// Put away the recorderSHEAL box if that is currently visible
+		if (document.getElementById("recorderSHEAL").style.display == "block") {
+			// Put away the recorderSHEAL title
+			document.getElementById("recorderSHEALTitle").style.display = "none";
+			// Put away the recorderSHEALText box
+			document.getElementById("recorderSHEALText").style.display = "none";
+			// Put away the recorderSHEALBack box
+			document.getElementById("recorderSHEALBack").style.display = "none";
+			// Put away the recorderSHEAL box
+			document.getElementById("recorderSHEAL").style.display = "none";
+		}
+		// Put away the recorderVAMPYRE box if that is currently visible
+		if (document.getElementById("recorderVAMPYRE").style.display == "block") {
+			// Put away the recorderVAMPYRE title
+			document.getElementById("recorderVAMPYRETitle").style.display = "none";
+			// Put away the recorderVAMPYREText box
+			document.getElementById("recorderVAMPYREText").style.display = "none";
+			// Put away the recorderVAMPYREBack box
+			document.getElementById("recorderVAMPYREBack").style.display = "none";
+			// Put away the recorderVAMPYRE box
+			document.getElementById("recorderVAMPYRE").style.display = "none";
+		}
+		// Put away the recorderWINGDIGO box if that is currently visible
+		if (document.getElementById("recorderWINGDIGO").style.display == "block") {
+			// Put away the recorderWINGDIGO title
+			document.getElementById("recorderWINGDIGOTitle").style.display = "none";
+			// Put away the recorderWINGDIGOText box
+			document.getElementById("recorderWINGDIGOText").style.display = "none";
+			// Put away the recorderWINGDIGOBack box
+			document.getElementById("recorderWINGDIGOBack").style.display = "none";
+			// Put away the recorderWINGDIGO box
+			document.getElementById("recorderWINGDIGO").style.display = "none";
+		}
 		// Show the topoPetsFoundTitle
 		document.getElementById("topoPetsFoundTitle").style.display = "block";
 		// Show the topoPetsFound box
@@ -431,6 +543,286 @@ function toggleRecorderMOREEL() {
 	}
 }
 
+//////////////////////////////
+// toggleRecorderMUDDITCH() //
+//////////////////////////////
+
+function toggleRecorderMUDDITCH() {
+	if (document.getElementById("recorderMUDDITCH").style.display == "none") {
+		// Put away the recorder box if that is currently visible
+		if (document.getElementById("recorder").style.display == "block") {
+			// Put away the topoPetsFoundTitle title
+			document.getElementById("topoPetsFoundTitle").style.display = "none";
+			// Put away the topoPetsFound box
+			document.getElementById("topoPetsFound").style.display = "none";
+			// Put away the recorder box
+			document.getElementById("recorder").style.display = "none";
+		}
+		// Show the recorderMUDDITCHTitle
+		document.getElementById("recorderMUDDITCHTitle").style.display = "block";
+		// Show the recorderMUDDITCHText box
+		document.getElementById("recorderMUDDITCHText").style.display = "block";
+		// Show the recorderMUDDITCHBack box
+		document.getElementById("recorderMUDDITCHBack").style.display = "block";
+		// Show the recorderMUDDITCH box
+		document.getElementById("recorderMUDDITCH").style.display = "block";
+	} else {
+		// Put away the recorderMUDDITCHTitle
+		document.getElementById("recorderMUDDITCHTitle").style.display = "none";
+		// Put away the recorderMUDDITCHText box
+		document.getElementById("recorderMUDDITCHText").style.display = "none";
+		// Put away the recorderMUDDITCHBack box
+		document.getElementById("recorderMUDDITCHBack").style.display = "none";
+		// Put away the recorderMUDDITCH box
+		document.getElementById("recorderMUDDITCH").style.display = "none";
+	}
+}
+
+//////////////////////////////
+// toggleRecorderNEMATOAD() //
+//////////////////////////////
+
+function toggleRecorderNEMATOAD() {
+	if (document.getElementById("recorderNEMATOAD").style.display == "none") {
+		// Put away the recorder box if that is currently visible
+		if (document.getElementById("recorder").style.display == "block") {
+			// Put away the topoPetsFoundTitle title
+			document.getElementById("topoPetsFoundTitle").style.display = "none";
+			// Put away the topoPetsFound box
+			document.getElementById("topoPetsFound").style.display = "none";
+			// Put away the recorder box
+			document.getElementById("recorder").style.display = "none";
+		}
+		// Show the recorderNEMATOADTitle
+		document.getElementById("recorderNEMATOADTitle").style.display = "block";
+		// Show the recorderNEMATOADText box
+		document.getElementById("recorderNEMATOADText").style.display = "block";
+		// Show the recorderNEMATOADBack box
+		document.getElementById("recorderNEMATOADBack").style.display = "block";
+		// Show the recorderNEMATOAD box
+		document.getElementById("recorderNEMATOAD").style.display = "block";
+	} else {
+		// Put away the recorderNEMATOADTitle
+		document.getElementById("recorderNEMATOADTitle").style.display = "none";
+		// Put away the recorderNEMATOADText box
+		document.getElementById("recorderNEMATOADText").style.display = "none";
+		// Put away the recorderNEMATOADBack box
+		document.getElementById("recorderNEMATOADBack").style.display = "none";
+		// Put away the recorderNEMATOAD box
+		document.getElementById("recorderNEMATOAD").style.display = "none";
+	}
+}
+
+//////////////////////////////
+// toggleRecorderPIRAMINI() //
+//////////////////////////////
+
+function toggleRecorderPIRAMINI() {
+	if (document.getElementById("recorderPIRAMINI").style.display == "none") {
+		// Put away the recorder box if that is currently visible
+		if (document.getElementById("recorder").style.display == "block") {
+			// Put away the topoPetsFoundTitle title
+			document.getElementById("topoPetsFoundTitle").style.display = "none";
+			// Put away the topoPetsFound box
+			document.getElementById("topoPetsFound").style.display = "none";
+			// Put away the recorder box
+			document.getElementById("recorder").style.display = "none";
+		}
+		// Show the recorderPIRAMINITitle
+		document.getElementById("recorderPIRAMINITitle").style.display = "block";
+		// Show the recorderPIRAMINIText box
+		document.getElementById("recorderPIRAMINIText").style.display = "block";
+		// Show the recorderPIRAMINIBack box
+		document.getElementById("recorderPIRAMINIBack").style.display = "block";
+		// Show the recorderPIRAMINI box
+		document.getElementById("recorderPIRAMINI").style.display = "block";
+	} else {
+		// Put away the recorderPIRAMINITitle
+		document.getElementById("recorderPIRAMINITitle").style.display = "none";
+		// Put away the recorderPIRAMINIText box
+		document.getElementById("recorderPIRAMINIText").style.display = "none";
+		// Put away the recorderPIRAMINIBack box
+		document.getElementById("recorderPIRAMINIBack").style.display = "none";
+		// Put away the recorderPIRAMINI box
+		document.getElementById("recorderPIRAMINI").style.display = "none";
+	}
+}
+
+////////////////////////////
+// toggleRecorderPYROSE() //
+////////////////////////////
+
+function toggleRecorderPYROSE() {
+	if (document.getElementById("recorderPYROSE").style.display == "none") {
+		// Put away the recorder box if that is currently visible
+		if (document.getElementById("recorder").style.display == "block") {
+			// Put away the topoPetsFoundTitle title
+			document.getElementById("topoPetsFoundTitle").style.display = "none";
+			// Put away the topoPetsFound box
+			document.getElementById("topoPetsFound").style.display = "none";
+			// Put away the recorder box
+			document.getElementById("recorder").style.display = "none";
+		}
+		// Show the recorderPYROSETitle
+		document.getElementById("recorderPYROSETitle").style.display = "block";
+		// Show the recorderPYROSEText box
+		document.getElementById("recorderPYROSEText").style.display = "block";
+		// Show the recorderPYROSEBack box
+		document.getElementById("recorderPYROSEBack").style.display = "block";
+		// Show the recorderPYROSE box
+		document.getElementById("recorderPYROSE").style.display = "block";
+	} else {
+		// Put away the recorderPYROSETitle
+		document.getElementById("recorderPYROSETitle").style.display = "none";
+		// Put away the recorderPYROSEText box
+		document.getElementById("recorderPYROSEText").style.display = "none";
+		// Put away the recorderPYROSEBack box
+		document.getElementById("recorderPYROSEBack").style.display = "none";
+		// Put away the recorderPYROSE box
+		document.getElementById("recorderPYROSE").style.display = "none";
+	}
+}
+
+//////////////////////////////
+// toggleRecorderSANDANCE() //
+//////////////////////////////
+
+function toggleRecorderSANDANCE() {
+	if (document.getElementById("recorderSANDANCE").style.display == "none") {
+		// Put away the recorder box if that is currently visible
+		if (document.getElementById("recorder").style.display == "block") {
+			// Put away the topoPetsFoundTitle title
+			document.getElementById("topoPetsFoundTitle").style.display = "none";
+			// Put away the topoPetsFound box
+			document.getElementById("topoPetsFound").style.display = "none";
+			// Put away the recorder box
+			document.getElementById("recorder").style.display = "none";
+		}
+		// Show the recorderSANDANCETitle
+		document.getElementById("recorderSANDANCETitle").style.display = "block";
+		// Show the recorderSANDANCEText box
+		document.getElementById("recorderSANDANCEText").style.display = "block";
+		// Show the recorderSANDANCEBack box
+		document.getElementById("recorderSANDANCEBack").style.display = "block";
+		// Show the recorderSANDANCE box
+		document.getElementById("recorderSANDANCE").style.display = "block";
+	} else {
+		// Put away the recorderSANDANCETitle
+		document.getElementById("recorderSANDANCETitle").style.display = "none";
+		// Put away the recorderSANDANCEText box
+		document.getElementById("recorderSANDANCEText").style.display = "none";
+		// Put away the recorderSANDANCEBack box
+		document.getElementById("recorderSANDANCEBack").style.display = "none";
+		// Put away the recorderSANDANCE box
+		document.getElementById("recorderSANDANCE").style.display = "none";
+	}
+}
+
+///////////////////////////
+// toggleRecorderSHEAL() //
+///////////////////////////
+
+function toggleRecorderSHEAL() {
+	if (document.getElementById("recorderSHEAL").style.display == "none") {
+		// Put away the recorder box if that is currently visible
+		if (document.getElementById("recorder").style.display == "block") {
+			// Put away the topoPetsFoundTitle title
+			document.getElementById("topoPetsFoundTitle").style.display = "none";
+			// Put away the topoPetsFound box
+			document.getElementById("topoPetsFound").style.display = "none";
+			// Put away the recorder box
+			document.getElementById("recorder").style.display = "none";
+		}
+		// Show the recorderSHEALTitle
+		document.getElementById("recorderSHEALTitle").style.display = "block";
+		// Show the recorderSHEALText box
+		document.getElementById("recorderSHEALText").style.display = "block";
+		// Show the recorderSHEALBack box
+		document.getElementById("recorderSHEALBack").style.display = "block";
+		// Show the recorderSHEAL box
+		document.getElementById("recorderSHEAL").style.display = "block";
+	} else {
+		// Put away the recorderSHEALTitle
+		document.getElementById("recorderSHEALTitle").style.display = "none";
+		// Put away the recorderSHEALText box
+		document.getElementById("recorderSHEALText").style.display = "none";
+		// Put away the recorderSHEALBack box
+		document.getElementById("recorderSHEALBack").style.display = "none";
+		// Put away the recorderSHEAL box
+		document.getElementById("recorderSHEAL").style.display = "none";
+	}
+}
+
+/////////////////////////////
+// toggleRecorderVAMPYRE() //
+/////////////////////////////
+
+function toggleRecorderVAMPYRE() {
+	if (document.getElementById("recorderVAMPYRE").style.display == "none") {
+		// Put away the recorder box if that is currently visible
+		if (document.getElementById("recorder").style.display == "block") {
+			// Put away the topoPetsFoundTitle title
+			document.getElementById("topoPetsFoundTitle").style.display = "none";
+			// Put away the topoPetsFound box
+			document.getElementById("topoPetsFound").style.display = "none";
+			// Put away the recorder box
+			document.getElementById("recorder").style.display = "none";
+		}
+		// Show the recorderVAMPYRETitle
+		document.getElementById("recorderVAMPYRETitle").style.display = "block";
+		// Show the recorderVAMPYREText box
+		document.getElementById("recorderVAMPYREText").style.display = "block";
+		// Show the recorderVAMPYREBack box
+		document.getElementById("recorderVAMPYREBack").style.display = "block";
+		// Show the recorderVAMPYRE box
+		document.getElementById("recorderVAMPYRE").style.display = "block";
+	} else {
+		// Put away the recorderVAMPYRETitle
+		document.getElementById("recorderVAMPYRETitle").style.display = "none";
+		// Put away the recorderVAMPYREText box
+		document.getElementById("recorderVAMPYREText").style.display = "none";
+		// Put away the recorderVAMPYREBack box
+		document.getElementById("recorderVAMPYREBack").style.display = "none";
+		// Put away the recorderVAMPYRE box
+		document.getElementById("recorderVAMPYRE").style.display = "none";
+	}
+}
+
+//////////////////////////////
+// toggleRecorderWINGDIGO() //
+//////////////////////////////
+
+function toggleRecorderWINGDIGO() {
+	if (document.getElementById("recorderWINGDIGO").style.display == "none") {
+		// Put away the recorder box if that is currently visible
+		if (document.getElementById("recorder").style.display == "block") {
+			// Put away the topoPetsFoundTitle title
+			document.getElementById("topoPetsFoundTitle").style.display = "none";
+			// Put away the topoPetsFound box
+			document.getElementById("topoPetsFound").style.display = "none";
+			// Put away the recorder box
+			document.getElementById("recorder").style.display = "none";
+		}
+		// Show the recorderWINGDIGOTitle
+		document.getElementById("recorderWINGDIGOTitle").style.display = "block";
+		// Show the recorderWINGDIGOText box
+		document.getElementById("recorderWINGDIGOText").style.display = "block";
+		// Show the recorderWINGDIGOBack box
+		document.getElementById("recorderWINGDIGOBack").style.display = "block";
+		// Show the recorderWINGDIGO box
+		document.getElementById("recorderWINGDIGO").style.display = "block";
+	} else {
+		// Put away the recorderWINGDIGOTitle
+		document.getElementById("recorderWINGDIGOTitle").style.display = "none";
+		// Put away the recorderWINGDIGOText box
+		document.getElementById("recorderWINGDIGOText").style.display = "none";
+		// Put away the recorderWINGDIGOBack box
+		document.getElementById("recorderWINGDIGOBack").style.display = "none";
+		// Put away the recorderWINGDIGO box
+		document.getElementById("recorderWINGDIGO").style.display = "none";
+	}
+}
+
 //////////////////////////
 // toggleAchievements() //
 //////////////////////////
@@ -490,5 +882,23 @@ function toggleJournal() {
 		document.getElementById("journalText").style.display = "none";
 		// Put away the journal box
 		document.getElementById("journal").style.display = "none";
+	}
+}
+
+///////////////////
+// toggleStory() //
+///////////////////
+
+function toggleStory() {
+	if (document.getElementById("story").style.display == "none") {
+		// Show the storyText box
+		document.getElementById("storyText").style.display = "block";
+		// Show the story box
+		document.getElementById("story").style.display = "block";
+	} else {
+		// Put away the storyText box
+		document.getElementById("storyText").style.display = "none";
+		// Put away the story box
+		document.getElementById("story").style.display = "none";
 	}
 }

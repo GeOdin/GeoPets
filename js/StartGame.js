@@ -172,7 +172,7 @@ function createMarkers(map) {
 		[
 			"NEMATOAD",
 			"WATER",
-			"A very small toad.",
+			"A very small toad, the size of some small earth worms.",
 			51.9810459,
 			5.6596941, 
 			18,
@@ -181,7 +181,7 @@ function createMarkers(map) {
 		[
 			"PIRAMINI",
 			"EARTH", // later version: ANCIENT
-			"A TopoPet that resambles a small pyramid.",
+			"A TopoPet that resambles a small pyramid.", // There were more in ancient times.
 			51.9677729,
 			5.6654249, 
 			15,
@@ -190,7 +190,7 @@ function createMarkers(map) {
 		[
 			"PYROSE",
 			"FIRE", 
-			"A rose whose leafs are on fire.",
+			"A rose whose leafs and thorns are on fire.",
 			51.9657325,
 			5.690763, 
 			16,
@@ -208,7 +208,7 @@ function createMarkers(map) {
 		[
 			"SHEAL",
 			"WATER",
-			"A very helpful seal.",
+			"A very helpful seal. Be careful with it. No clubs allowed.",
 			51.9681386,
 			5.6643775, 
 			17,
@@ -226,7 +226,7 @@ function createMarkers(map) {
 		[
 			"WINGDIGO",
 			"AIR",
-			"A winged wolf.",
+			"A winged wolf, rarely seen by humans. Only seen on specific times.",
 			51.9818399,
 			5.6723195, 
 			14,
@@ -247,9 +247,9 @@ function createMarkers(map) {
 		// Create the TopoPet marker
 		var coords = new google.maps.LatLng(topoPetsCoordX, topoPetsCoordY);
 		markers[topoPetsName] = new google.maps.Marker({
-		    position: coords, // works properly
-		    title: topoPetsName, // works properly
-		    icon: "images/" + topoPetsType1 + ".png" // works properly
+		    position: coords, 
+		    title: topoPetsName,
+		    icon: "images/" + topoPetsType1 + ".png" 
 		});
 
 /*
@@ -279,11 +279,15 @@ function createMarkers(map) {
 		// Remove marker when clicked on marker and add TopoPet to #topoPetsFound
 		google.maps.event.addListener(markers[topoPetsName], "click", function(){
 			// Show the clicked TopoPet in #topoPetsFound
-			document.getElementById(this.title).style.display = "block"; // works properly
+			document.getElementById(this.title).style.display = "block";
+			// Show some text about getting the TopoPet
+			document.getElementById("storyText").innerHTML = "You have found " + "a TopoPet" + "!."; // http://stackoverflow.com/questions/16985867/adding-an-onclick-event-to-google-map-marker
+			document.getElementById("storyText").style.display = "block";
+			document.getElementById("story").style.display = "block";
 
 			// Remove the marker
-			this.setMap(null); // works properly
-			markers[topoPetsName] = null; // works properly
+			this.setMap(null);
+			markers[topoPetsName] = null;
 		});
 
 		// Add the marker to the map

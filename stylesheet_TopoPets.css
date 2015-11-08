@@ -65,9 +65,9 @@ body {
 #activeTopoPetsText {
 	display: none;
 	position: relative;
-	text-align: left;
 	width: 98%;
 	height: 80%;
+	top: 2vh;
 	left: 1%;
 	overflow-y: auto;
 }
@@ -166,48 +166,56 @@ body {
 
 #MUDDITCH {
 	display: none;
+	cursor: pointer;
 	color: #8B5742;
 	background-color: #BC7642; /* was #985F48 */
 }
 
 #NEMATOAD {
 	display: none;
+	cursor: pointer;
 	color: blue;
 	background-color: #4981CE;
 }
 
 #PIRAMINI {
 	display: none;
+	cursor: pointer;
 	color: #8B5742;
 	background-color: #BC7642; /* was #A6684F */
 }
 
 #PYROSE {
 	display: none;
+	cursor: pointer;
 	color: red;
 	background-color: #CD7777;
 }
 
 #SANDANCE {
 	display: none;
+	cursor: pointer;
 	color: #8B5742;
 	background-color: #BC7642;
 }
 
 #SHEAL {
 	display: none;
+	cursor: pointer;
 	color: blue;
 	background-color: #4981CE;
 }
 
 #VAMPYRE {
 	display: none;
+	cursor: pointer;
 	color: aqua;
 	background-color: #AEEEEE;
 }
 
 #WINGDIGO {
 	display: none;
+	cursor: pointer;
 	color: aqua;
 	background-color: #AEEEEE;
 }
@@ -428,6 +436,438 @@ body {
 	border-radius: 2px;
 }
 
+#recorderMUDDITCH {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 73.5%;
+	width: 26%;
+	height: 43.625vh;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#recorderMUDDITCHTitle {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #8B5742;
+	background-color: #BC7642;
+	border-radius: 2px;
+}
+
+#recorderMUDDITCHText {
+	display: none;
+	position: relative;
+	text-align: center;
+	width: 96%;
+	top: 2vh;
+	left: 2%;
+	overflow-y: auto;
+	text-shadow: 1px 1px #000000;
+	background-color: white;
+	color: #BC7642;
+}
+
+#recorderMUDDITCHBack {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	top: 26.5vh;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#recorderNEMATOAD {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 73.5%;
+	width: 26%;
+	height: 43.625vh;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#recorderNEMATOADTitle {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: blue;
+	background-color: #4981CE;
+	border-radius: 2px;
+}
+
+#recorderNEMATOADText {
+	display: none;
+	position: relative;
+	text-align: center;
+	width: 96%;
+	top: 2vh;
+	left: 2%;
+	overflow-y: auto;
+	text-shadow: 1px 1px #000000;
+	background-color: white;
+	color: #4981CE;
+}
+
+#recorderNEMATOADBack {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	top: 26.5vh;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#recorderPIRAMINI {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 73.5%;
+	width: 26%;
+	height: 43.625vh;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#recorderPIRAMINITitle {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #8B5742;
+	background-color: #BC7642;
+	border-radius: 2px;
+}
+
+#recorderPIRAMINIText {
+	display: none;
+	position: relative;
+	text-align: center;
+	width: 96%;
+	top: 2vh;
+	left: 2%;
+	overflow-y: auto;
+	text-shadow: 1px 1px #000000;
+	background-color: white;
+	color: #BC7642;
+}
+
+#recorderPIRAMINIBack {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	top: 26.5vh;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#recorderPYROSE {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 73.5%;
+	width: 26%;
+	height: 43.625vh;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#recorderPYROSETitle {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: red;
+	background-color: #CD7777;
+	border-radius: 2px;
+}
+
+#recorderPYROSEText {
+	display: none;
+	position: relative;
+	text-align: center;
+	width: 96%;
+	top: 2vh;
+	left: 2%;
+	overflow-y: auto;
+	text-shadow: 1px 1px #000000;
+	background-color: white;
+	color: #CD7777;
+}
+
+#recorderPYROSEBack {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	top: 26.5vh;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#recorderSANDANCE {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 73.5%;
+	width: 26%;
+	height: 43.625vh;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#recorderSANDANCETitle {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #8B5742;
+	background-color: #BC7642;
+	border-radius: 2px;
+}
+
+#recorderSANDANCEText {
+	display: none;
+	position: relative;
+	text-align: center;
+	width: 96%;
+	top: 2vh;
+	left: 2%;
+	overflow-y: auto;
+	text-shadow: 1px 1px #000000;
+	background-color: white;
+	color: #BC7642;
+}
+
+#recorderSANDANCEBack {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	top: 26.5vh;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#recorderSHEAL {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 73.5%;
+	width: 26%;
+	height: 43.625vh;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#recorderSHEALTitle {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: blue;
+	background-color: #4981CE;
+	border-radius: 2px;
+}
+
+#recorderSHEALText {
+	display: none;
+	position: relative;
+	text-align: center;
+	width: 96%;
+	top: 2vh;
+	left: 2%;
+	overflow-y: auto;
+	text-shadow: 1px 1px #000000;
+	background-color: white;
+	color: #4981CE;
+}
+
+#recorderSHEALBack {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	top: 26.5vh;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#recorderVAMPYRE {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 73.5%;
+	width: 26%;
+	height: 43.625vh;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#recorderVAMPYRETitle {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: aqua;
+	background-color: #AEEEEE;
+	border-radius: 2px;
+}
+
+#recorderVAMPYREText {
+	display: none;
+	position: relative;
+	text-align: center;
+	width: 96%;
+	top: 2vh;
+	left: 2%;
+	overflow-y: auto;
+	text-shadow: 1px 1px #000000;
+	background-color: white;
+	color: #AEEEEE;
+}
+
+#recorderVAMPYREBack {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	top: 26.5vh;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#recorderWINGDIGO {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 73.5%;
+	width: 26%;
+	height: 43.625vh;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#recorderWINGDIGOTitle {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: aqua;
+	background-color: #AEEEEE;
+	border-radius: 2px;
+}
+
+#recorderWINGDIGOText {
+	display: none;
+	position: relative;
+	text-align: center;
+	width: 96%;
+	top: 2vh;
+	left: 2%;
+	overflow-y: auto;
+	text-shadow: 1px 1px #000000;
+	background-color: white;
+	color: #AEEEEE;
+}
+
+#recorderWINGDIGOBack {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	top: 26.5vh;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
 #turn {
 	position: absolute;
 	display: none;
@@ -459,8 +899,8 @@ body {
 #question {
 	position: relative;
 	display: none;
-	text-align: left;
 	width: 98%;
+	top: 2vh;
 	left: 1%;
 }
 
@@ -495,8 +935,8 @@ body {
 #bagText {
 	position: relative;
 	display: none;
-	text-align: left;
 	width: 98%;
+	top: 2vh;
 	left: 1%;
 }
 
@@ -512,6 +952,30 @@ body {
 	font-size: 2em;
 	color: white;
 	text-shadow: 1px 1px #000000;
+}
+
+#story {
+	position: absolute;
+	display: none;
+	top: 81.875%;
+	left: 25.5%;
+	width: 48%;
+	height: 8.75vh;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	font-size: 1.2em;
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#storyText {
+	position: relative;
+	display: none;
+	cursor: pointer;
+	width: 98%;
+	top: 1.5vh;
+	left: 1%;
 }
 
 #achievements {
@@ -548,8 +1012,8 @@ body {
 #achievementsText {
 	position: relative;
 	display: none;
-	text-align: left;
 	width: 98%;
+	top: 2vh;
 	left: 1%;
 }
 
@@ -584,8 +1048,8 @@ body {
 #journalText {
 	position: relative;
 	display: none;
-	text-align: left;
 	width: 98%;
+	top: 2vh;
 	left: 1%;
 }
 
