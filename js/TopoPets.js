@@ -19,7 +19,6 @@ function catchTopoPets(name) {
 
 function checkTopoPetsCaught(topoPetsGame, name) {
 	var topoPetsCaught = topoPetsGame.topoPetsCaught;
-	
 	topoPetsGame.topoPetsCaught = topoPetsCaught;
 	return topoPetsGame;
 }

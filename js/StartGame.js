@@ -11,13 +11,13 @@
  * resetMap()
  */
 
-/////////////////
-// startGame() //
-/////////////////
+/////////////////////////////
+// startGame(topoPetsGame) //
+/////////////////////////////
 
 // Function to start the TopoPets game and get the needed variables
 
-function startGame() {
+function startGame(topoPetsGame) {
 	// Set the variables
 	var locationName = "WAGENINGEN"; // var locationName = """"; for later versions
 	var playerName = "";
@@ -34,25 +34,16 @@ function startGame() {
 		playerName = prompt("What is your name? ", "Mistae");
 
 		// Add the playerName to the startingVariables
-		startingVariables.playerName = playerName;
+		topoPetsGame.player.Name = playerName;
 	}
 
 	// Show the player's name
-	document.getElementById("player").innerHTML = "<p>" + startingVariables.playerName + "</p>";
-	document.getElementById("player").style.display = "block";
-
-	// Show the turn box
-	document.getElementById("turn").style.display = "block";
+	document.getElementById("player").innerHTML = "<p>" + topoPetsGame.player.Name + "</p>";
 
 	// Show the city name
 	document.getElementById("locationName").innerHTML = "<p>" + startingVariables.locationName + "</p>";
 	document.getElementById("locationName").style.display = "block";
-
-	// Show the chat box
-	document.getElementById("achievements").style.display = "block";
-
-	// Show the GeoPets Found box
-	document.getElementById("topoPetsFound").style.display = "block";
+	document.getElementById("location").style.display = "block";
 	
 	// Draw the map
 	var markers = drawMap(startingVariables);
@@ -64,7 +55,8 @@ function startGame() {
 	document.getElementById("buttons").style.display = "block";
 
 	// Return the starting variables
-	return startingVariables;
+	topoPetsGame.startingVariables = startingVariables;
+	return topoPetsGame;
 }
 
 
@@ -104,7 +96,7 @@ function drawMap(startingVariables) {
 	var map = new google.maps.Map(document.getElementById("map"), {
 		zoom: startingVariables.zoomLevel,
 		center: new google.maps.LatLng(startingVariables.lat, startingVariables.lon),
-		mapTypeId: google.maps.MapTypeId.HYBRID
+		mapTypeId: google.maps.MapTypeId.TERRAIN
 	});
 
 	var markers = createMarkers(map);
@@ -153,7 +145,7 @@ function createMarkers(map) {
 		[
 			"LAVACHE",
 			"FIRE", 
-			"A French fire cow.",
+			"A French fire cow with a fiery barret and a French bread as belt.",
 			51.9669056, 
 			5.6509072, 
 			14,
@@ -318,7 +310,7 @@ function resetMap() {
 	var map = new google.maps.Map(document.getElementById("map"), {
 		zoom: zoomLevel,
 		center: new google.maps.LatLng(lat, lon),
-		mapTypeId: google.maps.MapTypeId.HYBRID
+		mapTypeId: google.maps.MapTypeId.TERRAIN
 	});
 
 	// It should remember which TopoPets are already caught and not show those markers

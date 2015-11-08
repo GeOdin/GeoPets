@@ -36,7 +36,7 @@ body {
 	height: 98vh;
 }
 
-#turn {
+#activeTopoPets {
 	position: absolute;
 	display: none;
 	top: 5.5%;
@@ -44,25 +44,25 @@ body {
 	width: 25%;
 	height: 43.625vh;
 	background-color: transparent;
-	//z-index: 99;
 	background: rgba(00, 00, 00, .23);
 	color: white;
 	text-shadow: 1px 1px #000000;
 }
 
-#player {
+#activeTopoPetsTitle {
 	display: none;
 	position: relative;
 	width: 96%;
 	height: 1.3em;
 	left: 2%;
+	cursor: pointer;
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
 	border-radius: 2px;
 }
 
-#question {
+#activeTopoPetsText {
 	display: none;
 	position: relative;
 	text-align: left;
@@ -72,7 +72,7 @@ body {
 	overflow-y: auto;
 }
 
-#locationName {
+#location{
 	position: absolute;
 	display: none;
 	top: 5.5%;
@@ -87,7 +87,13 @@ body {
 	text-shadow: 1px 1px #000000;
 }
 
-#topoPetsFound {
+#locationName {
+	position: relative;
+	display: none;
+	top: -1.75vh;
+}
+
+#recorder {
 	position: absolute;
 	display: none;
 	top: 5.5%;
@@ -95,7 +101,7 @@ body {
 	width: 26%;
 	height: 43.625vh;
 	background-color: transparent;
-	//z-index: 99;
+	z-index: 99;
 	background: rgba(00, 00, 00, .23);
 	color: white;
 	text-shadow: 1px 1px #000000;
@@ -103,89 +109,326 @@ body {
 }
 
 #topoPetsFoundTitle {
+	display: none;
 	position: relative;
 	width: 96%;
 	height: 1.3em;
 	left: 2%;
+	cursor: pointer;
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
 	border-radius: 2px;
 }
 
+#topoPetsFound {
+	display: none;
+	position: relative;
+	text-align: center;
+	width: 36%;
+	top: 2vh;
+	left: 32%;
+/*	opacity: 0.75;
+ */
+/*	background-color: #D4D4D4;
+ */
+	overflow-y: auto;
+	text-shadow: 1px 1px #000000;
+}
+
 #CHARFOIL {
 	display: none;
-	background-color: white;
+	cursor: pointer;
 	color: red;
+	background-color: #CD7777;
 }
 
 #HAILO {
 	display: none;
-	background-color: white;
+	cursor: pointer;
 	color: aqua;
+	background-color: #AEEEEE;
 }
 
 #LAVACHE {
 	display: none;
-	background-color: white;
+	cursor: pointer;
 	color: red;
+	background-color: #CD7777;
 }
 
 #MOREEL {
 	display: none;
-	background-color: white;
+	cursor: pointer;
 	color: blue;
+	background-color: #4981CE;
 }
 
 #MUDDITCH {
 	display: none;
-	background-color: white;
 	color: #8B5742;
+	background-color: #BC7642; /* was #985F48 */
 }
 
 #NEMATOAD {
 	display: none;
-	background-color: white;
 	color: blue;
+	background-color: #4981CE;
 }
 
 #PIRAMINI {
 	display: none;
-	background-color: white;
 	color: #8B5742;
+	background-color: #BC7642; /* was #A6684F */
 }
 
 #PYROSE {
 	display: none;
-	background-color: white;
 	color: red;
+	background-color: #CD7777;
 }
 
 #SANDANCE {
 	display: none;
-	background-color: white;
 	color: #8B5742;
+	background-color: #BC7642;
 }
 
 #SHEAL {
 	display: none;
-	background-color: white;
 	color: blue;
+	background-color: #4981CE;
 }
 
 #VAMPYRE {
 	display: none;
-	background-color: white;
 	color: aqua;
+	background-color: #AEEEEE;
 }
 
 #WINGDIGO {
 	display: none;
-	background-color: white;
 	color: aqua;
+	background-color: #AEEEEE;
 }
 
-#achievements {
+#recorderCHARFOIL {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 73.5%;
+	width: 26%;
+	height: 43.625vh;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#recorderCHARFOILTitle {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: red;
+	background-color: #CD7777;
+	border-radius: 2px;
+}
+
+#recorderCHARFOILText {
+	display: none;
+	position: relative;
+	text-align: center;
+	width: 96%;
+	top: 2vh;
+	left: 2%;
+	overflow-y: auto;
+	text-shadow: 1px 1px #000000;
+	background-color: white;
+	color: #CD7777;
+}
+
+#recorderCHARFOILBack {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	top: 11.875vh;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#recorderHAILO {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 73.5%;
+	width: 26%;
+	height: 43.625vh;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#recorderHAILOTitle {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: aqua;
+	background-color: #AEEEEE;
+	border-radius: 2px;
+}
+
+#recorderHAILOText {
+	display: none;
+	position: relative;
+	text-align: center;
+	width: 96%;
+	top: 2vh;
+	left: 2%;
+	overflow-y: auto;
+	text-shadow: 1px 1px #000000;
+	background-color: white;
+	color: #AEEEEE;
+}
+
+#recorderHAILOBack {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	top: 26.5vh;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#recorderLAVACHE {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 73.5%;
+	width: 26%;
+	height: 43.625vh;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#recorderLAVACHETitle {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: red;
+	background-color: #CD7777;
+	border-radius: 2px;
+}
+
+#recorderLAVACHEText {
+	display: none;
+	position: relative;
+	text-align: center;
+	width: 96%;
+	top: 2vh;
+	left: 2%;
+	overflow-y: auto;
+	text-shadow: 1px 1px #000000;
+	background-color: white;
+	color: #CD7777;
+}
+
+#recorderLAVACHEBack {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	top: 26.5vh;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#recorderMOREEL {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 73.5%;
+	width: 26%;
+	height: 43.625vh;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#recorderMOREELTitle {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: blue;
+	background-color: #4981CE;
+	border-radius: 2px;
+}
+
+#recorderMOREELText {
+	display: none;
+	position: relative;
+	text-align: center;
+	width: 96%;
+	top: 2vh;
+	left: 2%;
+	overflow-y: auto;
+	text-shadow: 1px 1px #000000;
+	background-color: white;
+	color: #4981CE;
+}
+
+#recorderMOREELBack {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	top: 26.5vh;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#turn {
 	position: absolute;
 	display: none;
 	top: 50%;
@@ -193,18 +436,19 @@ body {
 	width: 25%;
 	height: 40vh;
 	background-color: transparent;
-	//z-index: 99;
 	background: rgba(00, 99, 00, .23);
 	color: white;
 	text-shadow: 1px 1px #000000;
 	overflow-y: auto;
 }
 
-#achievementsTitle {
+#player {
 	position: relative;
+	display: none;
 	width: 96%;
 	height: 1.3em;
 	left: 2%;
+	cursor: pointer;
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
@@ -212,8 +456,45 @@ body {
 	border-radius: 2px;
 }
 
-#achievementsText {
+#question {
 	position: relative;
+	display: none;
+	text-align: left;
+	width: 98%;
+	left: 1%;
+}
+
+#bag {
+	position: absolute;
+	display: none;
+	top: 50%;
+	left: 0.5%;
+	width: 25%;
+	height: 40vh;
+	background-color: transparent;
+	background: rgba(00, 99, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#bagTitle {
+	position: relative;
+	display: none;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	text-shadow: 1px 1px #000000;
+	border-radius: 2px;
+}
+
+#bagText {
+	position: relative;
+	display: none;
 	text-align: left;
 	width: 98%;
 	left: 1%;
@@ -231,6 +512,81 @@ body {
 	font-size: 2em;
 	color: white;
 	text-shadow: 1px 1px #000000;
+}
+
+#achievements {
+	position: absolute;
+	display: none;
+	top: 50%;
+	left: 73.5%;
+	width: 26%;
+	height: 40vh;
+	background-color: transparent; 
+/*
+ 	z-index: 99;
+ */
+ 	background: rgba(00, 99, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#achievementsTitle {
+	position: relative;
+	display: none;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	text-shadow: 1px 1px #000000;
+	border-radius: 2px;
+}
+
+#achievementsText {
+	position: relative;
+	display: none;
+	text-align: left;
+	width: 98%;
+	left: 1%;
+}
+
+#journal {
+	position: absolute;
+	display: none;
+	top: 50%;
+	left: 73.5%;
+	width: 26%;
+	height: 40vh;
+	background-color: transparent;
+ 	background: rgba(00, 99, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#journalTitle {
+	position: relative;
+	display: none;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	text-shadow: 1px 1px #000000;
+	border-radius: 2px;
+}
+
+#journalText {
+	position: relative;
+	display: none;
+	text-align: left;
+	width: 98%;
+	left: 1%;
 }
 
 #buttons {

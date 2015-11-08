@@ -30,69 +30,193 @@ by GeOdin -->
 			<div id="map">
 			</div>
 	
-			<div id="turn">
-				<div id="player">
+			<div id="activeTopoPets">
+				<a onclick="toggleActiveTopoPets()">
+					<div id="activeTopoPetsTitle">
+						<p>
+							Active TopoPets
+						</p>
+					</div>
+				</a>
+				<div id="activeTopoPetsText">
 				</div>
+			</div>
+	
+			<div id="turn">
+				<a onclick="togglePlayer()">
+					<div id="player">
+					</div>
+				</a>
 				<div id="question">
 				</div>
 			</div>
-
-			<a onclick="resetMap()">
-				<div id="locationName">
+	
+			<div id="bag">
+				<a onclick="toggleBag()">
+					<div id="bagTitle">
+						<p>
+							Bag
+						</p>
+					</div>
+				</a>
+				<div id="bagText">
 				</div>
-			</a>
+			</div>
+
+			<div id="location">
+				<a onclick="resetMap()">
+					<div id="locationName">
+					</div>
+				</a>
+			</div>
+
+			<div id="recorder">
+				<a onclick="toggleRecorder()">
+					<div id="topoPetsFoundTitle">
+						<p>
+							Recorder
+						</p>
+					</div>
+				</a>
+				<div id="topoPetsFound">
+					<a onclick="toggleRecorderCHARFOIL()">
+						<div id="CHARFOIL">
+								Charfoil
+						</div>
+					</a>
+					<a onclick="toggleRecorderHAILO()">
+						<div id="HAILO">
+								Hailo
+						</div>
+					</a>
+					<a onclick="toggleRecorderLAVACHE()">
+						<div id="LAVACHE">
+								Lavache
+						</div>
+					</a>
+					<a onclick="toggleRecorderMOREEL()">
+						<div id="MOREEL">
+								Moreel
+						</div>
+					</a>
+					<div id="MUDDITCH">
+							Mudditch
+					</div>
+					<div id="NEMATOAD">
+							Nematoad
+					</div>
+					<div id="PIRAMINI">
+							Piramini
+					</div>
+					<div id="PYROSE">
+							Pyrose
+					</div>
+					<div id="SANDANCE">
+							Sandance
+					</div>
+					<div id="SHEAL">
+							Sheal
+					</div>
+					<div id="VAMPYRE">
+							Vampyre
+					</div>
+					<div id="WINGDIGO">
+							Wingdigo
+					</div>
+				</div>
+			</div>
+	
+			<div id="recorderCHARFOIL">
+				<a onclick="toggleRecorder()">
+					<div id="recorderCHARFOILTitle">
+						<p>
+							Charfoil
+						</p>
+					</div>
+				</a>
+				<br/> <img src="images/CHARFOIL.jpg" style="width:45%;height:11vh;"/> <br/>
+				<div id="recorderCHARFOILText">
+					Charfoil is a small fire TopoPet with a knife as ear.
+				</div>
+				<a onclick="toggleRecorder()">
+					<div id="recorderCHARFOILBack">
+						Back
+					</div>
+				</a>
+			</div>
+			<div id="recorderHAILO">
+				<a onclick="toggleRecorder()">
+					<div id="recorderHAILOTitle">
+						<p>
+							Hailo
+						</p>
+					</div>
+				</a>
+				<div id="recorderHAILOText">
+					A hail like TopoPet with a halo around it's head.
+				</div>
+				<a onclick="toggleRecorder()">
+					<div id="recorderHAILOBack">
+						Back
+					</div>
+				</a>
+			</div>
+			<div id="recorderLAVACHE">
+				<a onclick="toggleRecorder()">
+					<div id="recorderLAVACHETitle">
+						<p>
+							Lavache
+						</p>
+					</div>
+				</a>
+				<div id="recorderLAVACHEText">
+					A French fire cow with a fiery barret and a French bread as belt.
+				</div>
+				<a onclick="toggleRecorder()">
+					<div id="recorderLAVACHEBack">
+						Back
+					</div>
+				</a>
+			</div>
+			<div id="recorderMOREEL">
+				<a onclick="toggleRecorder()">
+					<div id="recorderMOREELTitle">
+						<p>
+							Moreel
+						</p>
+					</div>
+				</a>
+				<div id="recorderMOREELText">
+					A fish with a high morale. It's spirit is always high!
+				</div>
+				<a onclick="toggleRecorder()">
+					<div id="recorderMOREELBack">
+						Back
+					</div>
+				</a>
+			</div>
 
 			<div id="achievements">
-				<div id="achievementsTitle">
-					<p>
-						Achievements
-					</p>
-				</div>
+				<a onclick="toggleAchievements()">
+					<div id="achievementsTitle">
+						<p>
+							Achievements
+						</p>
+					</div>
+				</a>
 				<div id="achievementsText">
 				</div>
 			</div>
 
-			<div id="topoPetsFound">
-				<div id="topoPetsFoundTitle">
-					<p>
-						TopoPets Found
-					</p>
-					<div id="CHARFOIL">
-							CHARFOIL
+			<div id="journal">
+				<a onclick="toggleJournal()">
+					<div id="journalTitle">
+						<p>
+							Journal
+						</p>
 					</div>
-					<div id="HAILO">
-							HAILO
-					</div>
-					<div id="LAVACHE">
-							LAVACHE
-					</div>
-					<div id="MOREEL">
-							MOREEL
-					</div>
-					<div id="MUDDITCH">
-							MUDDITCH
-					</div>
-					<div id="NEMATOAD">
-							NEMATOAD
-					</div>
-					<div id="PIRAMINI">
-							PIRAMINI
-					</div>
-					<div id="PYROSE">
-							PYROSE
-					</div>
-					<div id="SANDANCE">
-							SANDANCE
-					</div>
-					<div id="SHEAL">
-							SHEAL
-					</div>
-					<div id="VAMPYRE">
-							VAMPYRE
-					</div>
-					<div id="WINGDIGO">
-							WINGDIGO
-					</div>
+				</a>
+				<div id="journalText">
 				</div>
 			</div>
 	
@@ -100,24 +224,36 @@ by GeOdin -->
 			</div>
 -->
 			<div id="buttons">
-				<div id="buttonPlayer">
-					Player
-				</div>
-				<div id="buttonBag">
-					Bag
-				</div>
-				<div id="buttonTopoPets">
-					TopoPets
-				</div>
-				<div id="buttonTopoPetsFound">
-					Recorder
-				</div>
-				<div id="buttonAchievements">
-					Achievements
-				</div>
-				<div id="buttonJournal">
-					Journal
-				</div>
+				<a onclick="togglePlayer()">
+					<div id="buttonPlayer">
+						Player
+					</div>
+				</a>
+				<a onclick="toggleBag()">
+					<div id="buttonBag">
+						Bag
+					</div>
+				</a>
+				<a onclick="toggleActiveTopoPets()">
+					<div id="buttonTopoPets">
+						TopoPets
+					</div>
+				</a>
+				<a onclick="toggleRecorder()">
+					<div id="buttonTopoPetsFound">
+						Recorder
+					</div>
+				</a>
+				<a onclick="toggleAchievements()">
+					<div id="buttonAchievements">
+						Achievements
+					</div>
+				</a>
+				<a onclick="toggleJournal()">
+					<div id="buttonJournal">
+						Journal
+					</div>
+				</a>
 			</div>
 		</div>
 	</body>
