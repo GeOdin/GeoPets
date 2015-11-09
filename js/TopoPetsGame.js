@@ -30,54 +30,76 @@
 // To do //
 ///////////
 
-// Show markers where TopoPets are, only when hovered over them
-// When hovered over TopoPets, show information about that particular TopoPet
-// markers from
-//// https://mapicons.mapsmarker.com/category/markers/nature/natural-marvels/
-//// https://mapicons.mapsmarker.com/category/markers/nature/weather/
-// explanation about markers
-//// http://stackoverflow.com/questions/29324136/google-map-api-multi-markers
-// button to reset map to Wageningen
-// only show information about player/ TopoPets found/ achievements when player clicks one of the buttons on the bottom of the screen
-// add achievements
-//// TopoPets
-////// Obtain all TopoPets
-////// Obtain all TopoPets of a certain type
-////// Obtain a TopoPet for every letter of the alphabet
-//// Story
-////// Finish certain parts of the story
-//// Battles
-////// Win a battle
-////// Loose a battle
-////// Win with a type disadvantage
-////// Loose with a type advantage
-//// Items/ Money
-////// Obtain a certain amount of money
-////// Obtain all key items
-////// Obtain the recorder
-////// Obtain the journal
-////// Read the manual
-// Refactor TopoPets found into TopoPets recorder
-// Add dateTime to the upper right corner, add a manual button to the right of it
-// Show a different #storyText for every different TopoPet
-// Show Player/ Bag and Journal/ Achievements as different tabs from each other
-//// http://stackoverflow.com/questions/20127641/simple-multi-tab-hide-show-div
-////// http://jsfiddle.net/y76k4/
+/*
+ * Show markers where TopoPets are, only when hovered over them
+ * When hovered over TopoPets, show information about that particular TopoPet
+ * markers from
+ * * https://mapicons.mapsmarker.com/category/markers/nature/natural-marvels/
+ * * https://mapicons.mapsmarker.com/category/markers/nature/weather/
+ * explanation about markers
+ * * http://stackoverflow.com/questions/29324136/google-map-api-multi-markers
+ * button to reset map to Wageningen
+ * only show information about player/ TopoPets found/ achievements when player clicks one of the buttons on the bottom of the screen
+ * add achievements
+ * * TopoPets
+ * * * Obtain all TopoPets
+ * * * Obtain all TopoPets of a certain type
+ * * * Obtain a TopoPet for every letter of the alphabet
+ * * Story
+ * * * Finish certain parts of the story
+ * * Battles
+ * * * Win a battle
+ * * * Loose a battle
+ * * * Win with a type disadvantage
+ * * * Loose with a type advantage
+ * * Items/ Money
+ * * * Obtain a certain amount of money
+ * * * Obtain all key items
+ * * * Obtain all items
+ * * * Obtain the recorder
+ * * * Obtain the journal
+ * * * Read the manual
+ * Refactor TopoPets found into TopoPets recorder
+ * Add dateTime to the upper right corner, add a manual button to the right of it
+ * Show a different #storyText for every different TopoPet
+ * Show Player/ Bag and Journal/ Achievements as different tabs from each other
+ * * http://stackoverflow.com/questions/20127641/simple-multi-tab-hide-show-div
+ * * * http://jsfiddle.net/y76k4/
+ * Make divs for Player/ Bag/ ... draggable
+ */
 
 ///////////////////////////
 ////// TopoPets.html //////
 ///////////////////////////
 
+/////////////////////////////////////
+////// stylesheet_TopoPets.css //////
+/////////////////////////////////////
+
+/* 
+ * make the button to go back from a TopoPet entry to the recorder fixed on the page
+ */
+
 /////////////////////////////
 ////// TopoPetsGame.js //////
 /////////////////////////////
+
+/* 
+ * Create a function for toggling the recorder for TopoPets
+ * * function toggleRecorderTopoPet(name) {}
+ * * * make the button to go back from a TopoPet entry to the recorder the same for all TopoPets
+ */
 
 //////////////////////////
 ////// StartGame.js //////
 //////////////////////////
 
-// Later versions: add more locations instead of only Wageningen
-/*	// Get the location name
+/* 
+ * Later versions: add more locations instead of only Wageningen
+ */
+
+/*
+	// Get the location name
 	while (locationName.length < 1) {
 		locationName = prompt("Which city? ", "Wageningen").toUpperCase();
 
@@ -91,52 +113,186 @@
 		if (locationTemp = "") {
 			locationName = "";
 		}
-	}*/
-//// Possibly: add ID for game/ player
+	}
+ */
+
+/* 
+ * Possibly: add ID for game/ player
+ */
 
 /////////////////////////
 ////// TopoPets.js //////
 /////////////////////////
 
-// New TopoPets:
-
-//// Air: (air, bird, breeze, cloud, draft, fly, hail?, levitate, rain?, sky, tornado, weather?, wind)
-////// Wasparagus (kassen ten noorden van LUMEN) (Air / Earth)
-////// Flair (narcistic air elemental) (albardaflat)
-////// Bair?
-
-//// Earth: (earth, flower?, ground, sand, tree?)
-////// Sworm (Earth/ Air)
-////// (Sandash)
-////// Sandoom
-////// Tulpa 
-////// (Piramini is already implemented) -> Piramidi -> Piramax (later versie --> ancient)
-////// Sockroach (kakkerlak die eruit ziet als een sok) (winkelcentrum)
-////// Cowabunga (dancing cow) (Nude waar danslessen zijn?)
-
-//// Fire: (campfire, fiery, fire, fireman, torch) (evt nog een bij firehouse bij haarweg)
-////// Firabbit (Dreijen)
-////// Sundash (SSR-W) (later fire/ light)
-////// Distorchion (in de war firegast) (huisartsenpost) (later fire/ spirit)
-////// Grelking (later fire/ shadow)
-////// (Firefly)
-
-//// Water: (drop, eel, fish, shark, water, waterdrop)
-////// Spottle, Spotfin, Spotflow (Zwembad Bongerd)
-////// Fireel (vis die soms vuurkrachten krijgt als je hem kookt) (eventueel nog iets in water tussen grebbedijk en rijn in: 51.9607533,5.6701563)
-////// Tranch (waterpaard) (gracht rooseveltweg)
-////// Shrimp (fire shrimp) (Rijn)
-
 /*
- * Later version types:
- * ancient, fighting, light, shadow, spirit
- * * SHADOW
- * * * Scare (transformation of Sheal) // You should know better than to mistreat a poor seal. (evolves when sheal is fainted a random amount of times - 10-20 eg.)
+ * TopoPets Stats:
+ * * Name
+ * * type1
+ * * type2 
+ * * * type or "" if the TopoPet does not have a 2nd type
+ * * currentHP 
+ * * * (see Battle.js)
+ * * maxHP
+ * * * (see Battle.js)
+ * * currentSP
+ * * * (see Battle.js)
+ * * maxSP
+ * * * (see Battle.js)
+ * * currentTP
+ * * * (see Battle.js)
+ * * maxTP
+ * * * (see Battle.js)
+ * * currentAttack
+ * * * (see Battle.js)
+ * * maxAttack
+ * * * (see Battle.js)
+ * * currentDefense
+ * * * (see Battle.js)
+ * * maxDefense
+ * * * (see Battle.js)
+ * * currentAgility
+ * * * (see Battle.js)
+ * * maxAgility
+ * * * (see Battle.js)
+ * * currentExp
+ * * * (see Battle.js)
+ * * maxExp
+ * * * (see Battle.js)
+ * * description
  */
 
 /*
- * Seasonal:
- * * Sandta (earth/ spirit)
+ * Types
+ * * New TopoPets per type:
+ * * * Air: (air, bird, breeze, cloud, draft, fly, hail?, levitate, rain?, sky, tornado, weather?, wind)
+ * * * *  Wasparagus (kassen ten noorden van LUMEN) (Air / Earth)
+ * * * * Flair (narcistic air elemental) (albardaflat)
+ * * * * Bair?
+ * * * * Cubicicle (transformation of Hailo) (looks like an icicle made of cubes/ cube as head, with halo around it's head?)
+ * * * Earth: (earth, flower?, ground, sand, tree?)
+ * * * * Sworm (Earth/ Air)
+ * * * * (Sandash)
+ * * * * Sandoom
+ * * * * Tulpa 
+ * * * * (Piramini is already implemented) -> Piramidi -> Piramax (later versie --> ancient)
+ * * * * Sockroach (kakkerlak die eruit ziet als een sok) (winkelcentrum)
+ * * * * Cowabunga (dancing cow) (Nude waar danslessen zijn?)
+ * * * Fire: (campfire, fiery, fire, fireman, torch) (evt nog een bij firehouse bij haarweg)
+ * * * * Firabbit (Dreijen)
+ * * * * Sundash (SSR-W) (later fire/ light)
+ * * * * Distorchion (in de war firegast) (huisartsenpost) (later fire/ spirit)
+ * * * * Grelking (later fire/ shadow)
+ * * * * Firemit (fire hermit)
+ * * * * (Firefly)
+ * * * Water: (drop, eel, fish, shark, water, waterdrop)
+ * * * * Spottle, Spotfin, Spotflow (Zwembad Bongerd)
+ * * * * Fireel (vis die soms vuurkrachten krijgt als je hem kookt) (eventueel nog iets in water tussen grebbedijk en rijn in: 51.9607533,5.6701563)
+ * * * * Tranch (waterpaard) (gracht rooseveltweg)
+ * * * * Shrimp (fire shrimp) (Rijn)
+ * * Later version types:
+ * * * ancient, fighting, ice, light, shadow, spirit (add normal?)
+ * * * * ANCIENT
+ * * * * * Piramini becomes ancient/ earth, it's transformations Piramidi and Piramax will also become ancient/ earth
+ * * * * ICE
+ * * * * * It will use the recorder looks of what is currently air, a new styling for air needs to be made
+ * * * * * Hailo becomes ice/ light, it's transformation Cubicicle will also become ice/ light
+ * * * * SHADOW
+ * * * * * Scare (transformation of Sheal) // You should know better than to mistreat a poor seal. (evolves when sheal is fainted a random amount of times - 10-20 eg.)
+ * * Seasonal TopoPets:
+ * * * Sandta (earth/ spirit)
+ */
+
+ //////////////////////
+ ////// Story.js //////
+ //////////////////////
+
+/*
+ * Create this JavaScript file
+ */
+
+/*
+ * Story
+ * * 1
+ * * * Professor Globe asks you to find TopoPets.
+ * * * They are threatened because of climate change.
+ * * * To help save them, he asks you to catch one of each species.
+ * * * He is unfortunately to busy with his research to do field work, so asks you to help him.
+ * * * * "You're a great kid. I have faith in you! "
+ * * * He gives you a TopoPet Recorder to help you on your quest.
+ * * * * It can only have 5 TopoPets active.
+ * * * * When you get more TopoPets, they will be sent to a database/ server/ cloud/... specially made for you.
+ * * * * If anything might happen to the TopoPet Recorderm your active TopoPets will also be sent to this database/ server/ cloud/...
+ * * Think of reason why all kinds of other
+ */
+
+/*
+ * Characters:
+ * * Professor Globe
+ * * * Looks:
+ * * * * Lab coat, glasses (sometimes safety goggles?), gray hair
+ * * * Location:
+ * * * * Gaia building
+ */
+
+/*
+ * Visualization
+ * * Big orange exclamation mark for next quest location
+ * * * Exclamation mark:
+ * * * * dark orange
+ * * * Pointer: 
+ * * * * lighter orange
+ */
+
+///////////////////////
+////// Battle.js //////
+///////////////////////
+
+/*
+ * Create this JavaScript file
+ */
+
+/*
+ * TopoPets battle stats:
+ * * HP
+ * * * Health
+ * * * * Needs to be reduced to 0 to win
+ * * SP
+ * * * Special Power
+ * * * * Power used by using battle moves
+ * * TP
+ * * * Type Power
+ * * * * Power that can be added to moves that have the same type as the TopoPet.
+ * * * * This will add extra power to the move used.
+ * * * * Must be added before the move is unleashed.
+ * * Attack
+ * * * * How much damage a move will do.
+ * * Defense
+ * * * * How much damage a TopoPet can prevent. 
+ * * Agility
+ * * * * How fast a TopoPet is.
+ * * * * This will help decide which TopoPet will move first.
+ * Extra stat:
+ * * Exp
+ * Further stats:
+ * * currentHP, currentSP, currentTP, currentAttack, currentDefense, currentAgility, currentExp
+ */
+
+/*
+ * Move stats:
+ * * Name
+ * * Type
+ * * Special Power
+ * * Special Power Cost
+ * * Type Power Damage
+ * * Type Power Cost
+ * * Accuracy
+ * * Description
+ */
+
+/*
+ * Later versions:
+ * * Add possibility to temporarily lower stats of a TopoPet during battle
+ * * Add possibility to add status effects
  */
 
 ////////////////
