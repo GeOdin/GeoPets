@@ -68,6 +68,12 @@
  * * * Achievements
  * * J
  * * * Journal
+ * * onkeypress?
+ * * tabindex?
+ * * * http://stackoverflow.com/questions/10722589/how-to-bind-keyboard-events-to-div-elements
+ * * keyboard events?
+ * * * http://javascript.info/tutorial/keyboard-events
+ * * keydown?
  */
 
 ///////////////////////////
