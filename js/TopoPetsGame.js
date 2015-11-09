@@ -66,6 +66,19 @@
  * * http://stackoverflow.com/questions/20127641/simple-multi-tab-hide-show-div
  * * * http://jsfiddle.net/y76k4/
  * Make divs for Player/ Bag/ ... draggable
+ * Make divs of buttons on the bottom of the screen also pop up when pressing specific buttons
+ * * P
+ * * * Player
+ * * B
+ * * * Bag
+ * * T
+ * * * (active) TopoPets
+ * * R
+ * * * Recorder
+ * * A
+ * * * Achievements
+ * * J
+ * * * Journal
  */
 
 ///////////////////////////
