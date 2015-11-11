@@ -191,6 +191,7 @@ function createInfoWindows(map, markers) {
 		if (topoPetsCaught[this.title] == 0) {
 			topoPetsCaught[this.title] = 1;
 			setTopoPetsCaught();
+			checkFireTopoPetsFound();
 			checkTopoPetsFound();
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
@@ -281,6 +282,7 @@ function createInfoWindows(map, markers) {
 		if (topoPetsCaught[this.title] == 0) {
 			topoPetsCaught[this.title] = 1;
 			setTopoPetsCaught();
+			checkFireTopoPetsFound();
 			checkTopoPetsFound();
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
@@ -506,6 +508,7 @@ function createInfoWindows(map, markers) {
 		if (topoPetsCaught[this.title] == 0) {
 			topoPetsCaught[this.title] = 1;
 			setTopoPetsCaught();
+			checkFireTopoPetsFound();
 			checkTopoPetsFound();
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";

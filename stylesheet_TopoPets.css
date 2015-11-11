@@ -1017,6 +1017,14 @@ body {
 	left: 1%;
 }
 
+#achievementNone {
+	display: none;
+}
+
+#achievementAllFireTopoPets {
+	display: none;
+}
+
 #achievementAllTopoPets {
 	display: none;
 }

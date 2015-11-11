@@ -9,7 +9,9 @@
  * This JavaScript file includes the following function
  * * setTopoPetsCaught()
  * * getTotalAmountTopoPets()
+ * * getTotalAmountFireTopoPets()
  * * checkTopoPetsFound()
+ * * checkFireTopoPetsFound()
  */
 
 // variable to check whether a TopoPet has been caught (to count caught TopoPet)
@@ -42,6 +44,13 @@ var topoPetsCaught = {
 		+ this.VAMPYRE
 		+ this.WINGDIGO;
 	}
+/*
+	totalFire: function() {
+		return this.CHARFOIL 
+		+ this.LAVACHE 
+		+ this.PYROSE;
+	}
+ */
 };
 
 /////////////////////////
@@ -72,15 +81,57 @@ function getTotalAmountTopoPets() {
 	return totalAmountTopoPets;
 }
 
+//////////////////////////////////
+// getTotalAmountFireTopoPets() //
+//////////////////////////////////
+
+// Function to get the total amount of Fire TopoPets
+
+function getTotalAmountFireTopoPets() {
+
+	// Set the variables
+	var totalAmountFireTopoPets = 0;
+
+	// Get the total amount of TopoPets
+	for (i=0; i<topoPets.length; i++) {
+		if (topoPets[i][1] == "FIRE") {
+			totalAmountFireTopoPets++;
+		// No 2nd type yet
+		//} else if (topoPets[i][2] == "FIRE") {
+		//	totalAmountFireTopoPets++;
+		}
+	}
+
+	// Return the amount of TopoPets
+	return totalAmountFireTopoPets;
+}
+
 //////////////////////////
 // checkTopoPetsFound() //
 //////////////////////////
 
-// Function to check whether all TopoPets have been topoPetsFoundTitle
+// Function to check whether all TopoPets have been found
 
 function checkTopoPetsFound() {
 	if (topoPetsCaught.total() == getTotalAmountTopoPets()) {
-		document.getElementById("achievementNone").style.display = "none";
+		if (document.getElementById("achievementNone").style.display == "block") {
+			document.getElementById("achievementNone").style.display = "none";
+		}
 		document.getElementById("achievementAllTopoPets").style.display = "block";
+	}
+}
+
+//////////////////////////////
+// checkFireTopoPetsFound() //
+//////////////////////////////
+
+// Function to check whether all Fire TopoPets have been found
+
+function checkFireTopoPetsFound() {
+	if (topoPetsCaught.CHARFOIL + topoPetsCaught.LAVACHE + topoPetsCaught.PYROSE == getTotalAmountFireTopoPets()) {
+		if (document.getElementById("achievementNone").style.display == "block") {
+			document.getElementById("achievementNone").style.display = "none";
+		}
+		document.getElementById("achievementAllFireTopoPets").style.display = "block";
 	}
 }

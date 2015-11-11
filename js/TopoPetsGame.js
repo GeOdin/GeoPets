@@ -601,6 +601,8 @@ function toggleAchievements() {
 		document.getElementById("achievementsTitle").style.display = "block";
 		// Show the achievementsText box
 		document.getElementById("achievementsText").style.display = "block";
+		// Show the achievements None
+		document.getElementById("achievementNone").style.display = "block";
 		// Show the achievements box
 		document.getElementById("achievements").style.display = "block";
 	} else {
@@ -608,6 +610,8 @@ function toggleAchievements() {
 		document.getElementById("achievementsTitle").style.display = "none";
 		// Put away the achievementsText box
 		document.getElementById("achievementsText").style.display = "none";
+		// Put away the achievements None
+		document.getElementById("achievementNone").style.display = "none";
 		// Put away the achievements box
 		document.getElementById("achievements").style.display = "none";
 	}
@@ -625,6 +629,8 @@ function toggleJournal() {
 			document.getElementById("achievementsTitle").style.display = "none";
 			// Put away the achievementsText box
 			document.getElementById("achievementsText").style.display = "none";
+			// Put away the achievements None
+			document.getElementById("achievementNone").style.display = "none";
 			// Put away the achievements box
 			document.getElementById("achievements").style.display = "none";
 		}
