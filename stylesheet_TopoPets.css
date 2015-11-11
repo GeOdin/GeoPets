@@ -126,7 +126,7 @@ body {
 	position: relative;
 	text-align: center;
 	width: 36%;
-	top: 2vh;
+	top: 3.75vh;
 	left: 32%;
 /*	opacity: 0.75;
  */
@@ -1015,6 +1015,10 @@ body {
 	width: 98%;
 	top: 2vh;
 	left: 1%;
+}
+
+#achievementAllTopoPets {
+	display: none;
 }
 
 #journal {

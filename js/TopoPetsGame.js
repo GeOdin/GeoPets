@@ -56,6 +56,7 @@
  * * * http://jsfiddle.net/y76k4/
  * Make divs for Player/ Bag/ ... draggable
  * Make divs of buttons on the bottom of the screen also pop up when pressing specific buttons
+ * Make different tabs for different active TopoPets
  * * P
  * * * Player
  * * B
@@ -74,6 +75,14 @@
  * * keyboard events?
  * * * http://javascript.info/tutorial/keyboard-events
  * * keydown?
+ * Add found topoPets to the (TopoPet counter of the) recorder #topoPetsFoundTitle (setTopoPetsCaught(player))
+ * * make the counter work when TopoPets are clicked
+ * Tokens
+ * * Add the possibility to earn tokens for big battles during the game
+ * * Add Tokens (earned) as tab to Achievements (and possibly also to buttons on the bottom of the screen?)
+ * Achievements
+ * * Add more text when you click on a certain achievement? (like recorder entries?)
+ * * Make achievements you don't have yet (light) gray, with more information about how to get them when you click on them? (like recorder entries?)
  */
 
 ///////////////////////////
@@ -133,43 +142,16 @@
 /////////////////////////
 
 /*
- * TopoPets Stats:
- * * Name
- * * type1
- * * type2 
- * * * type or "" if the TopoPet does not have a 2nd type
- * * currentHP 
- * * * (see Battle.js)
- * * maxHP
- * * * (see Battle.js)
- * * currentSP
- * * * (see Battle.js)
- * * maxSP
- * * * (see Battle.js)
- * * currentTP
- * * * (see Battle.js)
- * * maxTP
- * * * (see Battle.js)
- * * currentAttack
- * * * (see Battle.js)
- * * maxAttack
- * * * (see Battle.js)
- * * currentDefense
- * * * (see Battle.js)
- * * maxDefense
- * * * (see Battle.js)
- * * currentAgility
- * * * (see Battle.js)
- * * maxAgility
- * * * (see Battle.js)
- * * currentExp
- * * * (see Battle.js)
- * * maxExp
- * * * (see Battle.js)
- * * description
- */
-
-/*
+ * var topoPets
+ * * Add unique number to each TopoPet after all TopoPets are made ("topoPetNumber")
+ * * Add a specific expNeed type to which the TopoPet belongs? (how much exp a TopoPet needs per level?)
+ * * Add a specific expGive type to which the TopoPet belongs? (how much exp a TopoPet gives per level?)
+ * * Add a specific catchChance type to which the TopoPet belongs? (the chances of catching a TopoPet per level?)
+ * var topoPetsStats
+ * * Add unique number to each TopoPet after all TopoPets are made ("topoPetNumber")
+ * * Moves a TopoPet has at that specific level?
+ * * Moves a TopoPet can learn at that specific level
+ *
  * Types
  * * New TopoPets per type:
  * * * Air: (air, bird, breeze, cloud, draft, fly, hail?, levitate, rain?, sky, tornado, weather?, wind)
@@ -198,6 +180,7 @@
  * * * * Fireel (vis die soms vuurkrachten krijgt als je hem kookt) (eventueel nog iets in water tussen grebbedijk en rijn in: 51.9607533,5.6701563)
  * * * * Tranch (waterpaard) (gracht rooseveltweg)
  * * * * Shrimp (fire shrimp) (Rijn)
+ * * * * Puddolf (puddle + wolf)
  * * Later version types:
  * * * ancient, fighting, ice, light, shadow, spirit (add normal?)
  * * * * ANCIENT
@@ -313,14 +296,8 @@
 
 function topoPetsGame() {
 
-	// Create topoPetsGame object
-	var topoPetsGame = new Object();
-	// Create player object
-	var player = new Object();
-	topoPetsGame.player = player;
-
 	// Get the starting variables
-	topoPetsGameTemp = startGame(topoPetsGame);
+	topoPetsGameTemp = startGame();
 	topoPetsGame.startingVariables = topoPetsGameTemp;
 
 	// Run the game
