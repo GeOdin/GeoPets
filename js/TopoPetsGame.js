@@ -21,7 +21,6 @@
 
 /*
  * Show markers where TopoPets are, only when hovered over them
- * When hovered over TopoPets, show information about that particular TopoPet
  * markers from
  * * https://mapicons.mapsmarker.com/category/markers/nature/natural-marvels/
  * * https://mapicons.mapsmarker.com/category/markers/nature/weather/
@@ -31,7 +30,6 @@
  * only show information about player/ TopoPets found/ achievements when player clicks one of the buttons on the bottom of the screen
  * add achievements
  * * TopoPets
- * * * Obtain all TopoPets
  * * * Obtain all TopoPets of a certain type
  * * * Obtain a TopoPet for every letter of the alphabet
  * * Story
@@ -50,6 +48,9 @@
  * * * Read the manual
  * Refactor TopoPets found into TopoPets recorder
  * Add dateTime to the upper right corner, add a manual button to the right of it
+ * zoomLevel
+ * * Show different TopoPets at different zoom levels
+ * * Show the zoomLevel on the screen, so players can know where they found certain TopoPets
  * Show a different #storyText for every different TopoPet
  * Show Player/ Bag and Journal/ Achievements as different tabs from each other
  * * http://stackoverflow.com/questions/20127641/simple-multi-tab-hide-show-div
