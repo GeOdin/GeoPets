@@ -85,6 +85,8 @@
  * * Add more text when you click on a certain achievement? (like recorder entries?)
  * * Make achievements you don't have yet (light) gray, with more information about how to get them when you click on them? (like recorder entries?)
  * * Add a counter for the achievements (like the recorder)
+ * * get all Fire TopoPets
+ * * * don't show #achievementNone anymore (#achievementNone isn't shown for LAVACHE, but #achievementNone still shows for CHARFOIL and PYROSE)
  */
 
 ///////////////////////////
