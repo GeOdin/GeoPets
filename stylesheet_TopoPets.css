@@ -47,6 +47,7 @@ body {
 	background: rgba(00, 00, 00, .23);
 	color: white;
 	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
 }
 
 #activeTopoPetsTitle {
@@ -70,6 +71,26 @@ body {
 	top: 2vh;
 	left: 1%;
 	overflow-y: auto;
+}
+
+#activeTopoPet1 {
+	display: none;
+}
+
+#activeTopoPet2 {
+	display: none;
+}
+
+#activeTopoPet3 {
+	display: none;
+}
+
+#activeTopoPet4 {
+	display: none;
+}
+
+#activeTopoPet5 {
+	display: none;
 }
 
 #location{

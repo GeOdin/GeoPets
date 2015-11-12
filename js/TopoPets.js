@@ -242,29 +242,29 @@ function createTopoPet(name, level) {
 	for (i=0; i<topoPetsStats.length; i++) {
 		if (topoPetsStats[i][1] == name) {
 			if (topoPetsStats[i][2] == level) {
-				this.number = topoPetsStats[i][0], 
-				this.Name = topoPetsStats[i][1],
-				this.type1 = type1,
-				this.Description = description,
-				this.coordX = coordX,
-				this.coordY = coordY,
-				this.zoomLevel = zoomLevel,
-				this.textColor = textColor,
-				this.backgroundcolor = backgroundColor,
-				this.level = topoPetsStats[i][2],
-				this.currentHP = topoPetsStats[i][3],
-				this.maxHP = topoPetsStats[i][4],
-				this.currentSP = topoPetsStats[i][5],
-				this.maxSP = topoPetsStats[i][6],
-				this.currentTP = topoPetsStats[i][7],
-				this.maxTP = topoPetsStats[i][8],
-				this.currentAttack = topoPetsStats[i][9],
-				this.maxAttack = topoPetsStats[i][10],
-				this.currentDefense = topoPetsStats[i][11],
-				this.maxDefense = topoPetsStats[i][12],
-				this.currentAgility = topoPetsStats[i][13],
-				this.maxAgility = topoPetsStats[i][14],
-				this.currentExp = topoPetsStats[i][15],
+				this.number = topoPetsStats[i][0];
+				this.Name = topoPetsStats[i][1];
+				this.type1 = type1;
+				this.Description = description;
+				this.coordX = coordX;
+				this.coordY = coordY;
+				this.zoomLevel = zoomLevel;
+				this.textColor = textColor;
+				this.backgroundcolor = backgroundColor;
+				this.level = topoPetsStats[i][2];
+				this.currentHP = topoPetsStats[i][3];
+				this.maxHP = topoPetsStats[i][4];
+				this.currentSP = topoPetsStats[i][5];
+				this.maxSP = topoPetsStats[i][6];
+				this.currentTP = topoPetsStats[i][7];
+				this.maxTP = topoPetsStats[i][8];
+				this.currentAttack = topoPetsStats[i][9];
+				this.maxAttack = topoPetsStats[i][10];
+				this.currentDefense = topoPetsStats[i][11];
+				this.maxDefense = topoPetsStats[i][12];
+				this.currentAgility = topoPetsStats[i][13];
+				this.maxAgility = topoPetsStats[i][14];
+				this.currentExp = topoPetsStats[i][15];
 				this.expNextLevel = topoPetsStats[i][16]
 			}
 		}

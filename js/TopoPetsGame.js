@@ -6,6 +6,7 @@
  * This JavaScript file includes the following functions:
  * topoPetsGame()
  * toggleActiveTopoPets()
+ * * setActiveTopoPetsText(topoPetsGame, topoPetName)
  * togglePlayer()
  * toggleBag()
  * toggleRecorder()
@@ -109,14 +110,21 @@
  * Create a function for toggling the recorder for TopoPets
  * * function toggleRecorderTopoPet(name) {}
  * * * make the button to go back from a TopoPet entry to the recorder the same for all TopoPets
+ * Currently, you have too press the buttons twice to toggle the player/ bag with the buttons on the bottom of the screen. 
+ * * Adjust this to only having to click once
  */
 
 //////////////////////////
 ////// StartGame.js //////
 //////////////////////////
 
-/* 
- * Later versions: add more locations instead of only Wageningen
+/*
+ * resetMap()
+ * * currently not completely working, because the createInfoWindows(topoPetsGame) does not work, because topoPetsGame does not exist there
+ *
+ * Later versions: 
+ * * add more locations instead of only Wageningen
+ * * Possibly: add ID for game/ player
  */
 
 /*
@@ -135,10 +143,6 @@
 			locationName = "";
 		}
 	}
- */
-
-/* 
- * Possibly: add ID for game/ player
  */
 
 /////////////////////////
@@ -178,6 +182,7 @@
  * * * * Distorchion (in de war firegast) (huisartsenpost) (later fire/ spirit)
  * * * * Grelking (later fire/ shadow)
  * * * * Firemit (fire hermit)
+ * * * * Blace (blaze + ace)
  * * * * (Firefly)
  * * * Water: (drop, eel, fish, shark, water, waterdrop)
  * * * * Spottle, Spotfin, Spotflow (Zwembad Bongerd)
@@ -185,6 +190,7 @@
  * * * * Tranch (waterpaard) (gracht rooseveltweg)
  * * * * Shrimp (fire shrimp) (Rijn)
  * * * * Puddolf (puddle + wolf)
+ * * * * Moyster (moist + oyster) -> Moystar
  * * Later version types:
  * * * ancient, fighting, ice, light, shadow, spirit (add normal?)
  * * * * ANCIENT
@@ -305,8 +311,10 @@ function topoPetsGame() {
 	topoPetsGame.startingVariables = topoPetsGameTemp;
 
 	// Run the game
+/*
 	var topoPets = new Object();
 	topoPetsGame.topoPets = topoPets;
+ */
 	//runGame(topoPetsGame);
 }
 
@@ -331,6 +339,26 @@ function toggleActiveTopoPets() {
 		document.getElementById("activeTopoPets").style.display = "none";
 	}
 }
+
+//////////////////////////////////////////////////////
+// setActiveTopoPetsText(topoPetsGame, topoPetName) //
+//////////////////////////////////////////////////////
+
+// Function to set the active TopoPets text
+
+function setActiveTopoPetsText(topoPetsGame, topoPetName){
+	for (i=0; i<5; i++) {
+		var activeTopoPetNumber = i+1;
+		var activeTopoPetCall = "activeTopoPet" + activeTopoPetNumber;
+		if (topoPetsGame.player[activeTopoPetCall] == "") {
+			topoPetsGame.player[activeTopoPetCall] = topoPetName;
+			document.getElementById(activeTopoPetCall).innerHTML = topoPetName;
+			document.getElementById(activeTopoPetCall).style.display = "block";
+			return topoPetsGame;
+		}
+	}
+	return topoPetsGame;
+};
 
 ////////////////////
 // togglePlayer() //

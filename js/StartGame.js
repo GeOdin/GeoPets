@@ -5,10 +5,10 @@
  *
  * This JavaScript file includes the following functions:
  * startGame()
- * setLatLon()
- * drawMap()
- * createMarkers()
- * createInfoWindows(map, markers)
+ * setLatLon(startingVariables)
+ * drawMap(topoPetsGame)
+ * createMarkers(map)
+ * createInfoWindows(topoPetsGame)
  * resetMap()
  */
 
@@ -58,8 +58,8 @@ function startGame() {
 	document.getElementById("location").style.display = "block";
 	
 	// Draw the map
-	var markers = drawMap(startingVariables);
-	startingVariables.markers = markers;
+	topoPetsGame.startingVariables = startingVariables;
+	topoPetsGame = drawMap(topoPetsGame);
 	// Show the map
 	document.getElementById("map").style.display = "block";
 
@@ -67,7 +67,6 @@ function startGame() {
 	document.getElementById("buttons").style.display = "block";
 
 	// Return the starting variables
-	topoPetsGame.startingVariables = startingVariables;
 	return topoPetsGame;
 }
 
@@ -96,24 +95,33 @@ function setLatLon(startingVariables) {
 	}
 }
 
-////////////////////////////////
-// drawMap(startingVariables) //
-////////////////////////////////
+///////////////////////////
+// drawMap(topoPetsGame) //
+///////////////////////////
 
 // Function to draw the map
 
-function drawMap(startingVariables) {
+function drawMap(topoPetsGame) {
 
-	// Draw the map
+	// Create the map
 	var map = new google.maps.Map(document.getElementById("map"), {
-		zoom: startingVariables.zoomLevel,
-		center: new google.maps.LatLng(startingVariables.lat, startingVariables.lon),
+		zoom: topoPetsGame.startingVariables.zoomLevel,
+		center: new google.maps.LatLng(topoPetsGame.startingVariables.lat, topoPetsGame.startingVariables.lon),
 		mapTypeId: google.maps.MapTypeId.TERRAIN
 	});
+	// Add the map to the topoPetsGame object
+	topoPetsGame.startingVariables.map = map;
 
-	var markers = createMarkers(map);
-	createInfoWindows(map, markers);
-	return markers;
+	// Create the markers
+	var markers = createMarkers(topoPetsGame.startingVariables.map);
+	// Add the markers to the topoPetsGame object
+	topoPetsGame.startingVariables.markers = markers;
+
+	// Create the InfoWindows and add it to the topoPets object
+	topoPetsGame = createInfoWindows(topoPetsGame);
+
+	// Return the topoPetsGame object
+	return topoPetsGame;
 }
 
 ////////////////////////
@@ -154,18 +162,21 @@ function createMarkers(map) {
 }
 
 /////////////////////////////////////
-// createInfoWindows(map, markers) //
+// createInfoWindows(topoPetsGame) //
 /////////////////////////////////////
 
 // Function to add infoWindows to the markers
 
-function createInfoWindows(map, markers) {
+function createInfoWindows(topoPetsGame) {
 
 	// Set variables
 	var numb = 0;
 	var content;
 	var infoWindow;
 	var textColor;
+	var map = topoPetsGame.startingVariables.map;
+	var markers = topoPetsGame.startingVariables.markers;
+	var player = topoPetsGame.player;
 
 	// Create the InfoWindow for CHARFOIL
 	// Add 1 to numb
@@ -193,6 +204,8 @@ function createInfoWindows(map, markers) {
 			setTopoPetsCaught();
 			checkFireTopoPetsFound();
 			checkTopoPetsFound();
+			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
+			setActiveTopoPetsText(topoPetsGame,this.title);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
@@ -238,6 +251,8 @@ function createInfoWindows(map, markers) {
 			topoPetsCaught[this.title] = 1;
 			setTopoPetsCaught();
 			checkTopoPetsFound();
+			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
+			setActiveTopoPetsText(topoPetsGame,this.title);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
@@ -284,6 +299,8 @@ function createInfoWindows(map, markers) {
 			setTopoPetsCaught();
 			checkFireTopoPetsFound();
 			checkTopoPetsFound();
+			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
+			setActiveTopoPetsText(topoPetsGame,this.title);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
@@ -329,6 +346,8 @@ function createInfoWindows(map, markers) {
 			topoPetsCaught[this.title] = 1;
 			setTopoPetsCaught();
 			checkTopoPetsFound();
+			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
+			setActiveTopoPetsText(topoPetsGame,this.title);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
@@ -374,6 +393,8 @@ function createInfoWindows(map, markers) {
 			topoPetsCaught[this.title] = 1;
 			setTopoPetsCaught();
 			checkTopoPetsFound();
+			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
+			setActiveTopoPetsText(topoPetsGame,this.title);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
@@ -419,6 +440,8 @@ function createInfoWindows(map, markers) {
 			topoPetsCaught[this.title] = 1;
 			setTopoPetsCaught();
 			checkTopoPetsFound();
+			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
+			setActiveTopoPetsText(topoPetsGame,this.title);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
@@ -464,6 +487,8 @@ function createInfoWindows(map, markers) {
 			topoPetsCaught[this.title] = 1;
 			setTopoPetsCaught();
 			checkTopoPetsFound();
+			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
+			setActiveTopoPetsText(topoPetsGame,this.title);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
@@ -510,6 +535,8 @@ function createInfoWindows(map, markers) {
 			setTopoPetsCaught();
 			checkFireTopoPetsFound();
 			checkTopoPetsFound();
+			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
+			setActiveTopoPetsText(topoPetsGame,this.title);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
@@ -555,6 +582,8 @@ function createInfoWindows(map, markers) {
 			topoPetsCaught[this.title] = 1;
 			setTopoPetsCaught();
 			checkTopoPetsFound();
+			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
+			setActiveTopoPetsText(topoPetsGame,this.title);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
@@ -600,6 +629,8 @@ function createInfoWindows(map, markers) {
 			topoPetsCaught[this.title] = 1;
 			setTopoPetsCaught();
 			checkTopoPetsFound();
+			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
+			setActiveTopoPetsText(topoPetsGame,this.title);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
@@ -645,6 +676,8 @@ function createInfoWindows(map, markers) {
 			topoPetsCaught[this.title] = 1;
 			setTopoPetsCaught();
 			checkTopoPetsFound();
+			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
+			setActiveTopoPetsText(topoPetsGame,this.title);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
@@ -690,6 +723,8 @@ function createInfoWindows(map, markers) {
 			topoPetsCaught[this.title] = 1;
 			setTopoPetsCaught();
 			checkTopoPetsFound();
+			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
+			setActiveTopoPetsText(topoPetsGame,this.title);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
@@ -709,6 +744,12 @@ function createInfoWindows(map, markers) {
 			markers[topoPets[numb][0]] = null;
 		}
     });
+
+	// Return the topoPetsGame object
+	topoPetsGame.startingVariables.map = map;
+	topoPetsGame.startingVariables.markers = markers;
+	topoPetsGame.startingVariables.player = player;
+	return topoPetsGame;
 }
 
 ////////////////
@@ -732,5 +773,5 @@ function resetMap() {
 
 	// It should remember which TopoPets are already caught and not show those markers
 	var markers = createMarkers(map);
-	createInfoWindows(map, markers);
+	// createInfoWindows(topoPetsGame);// does not work
 }
