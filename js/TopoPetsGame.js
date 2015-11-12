@@ -28,7 +28,6 @@
  * explanation about markers
  * * http://stackoverflow.com/questions/29324136/google-map-api-multi-markers
  * button to reset map to Wageningen
- * only show information about player/ TopoPets found/ achievements when player clicks one of the buttons on the bottom of the screen
  * add achievements
  * * TopoPets
  * * * Obtain all TopoPets of a certain type
@@ -52,7 +51,6 @@
  * zoomLevel
  * * Show different TopoPets at different zoom levels
  * * Show the zoomLevel on the screen, so players can know where they found certain TopoPets
- * Show a different #storyText for every different TopoPet
  * Show Player/ Bag and Journal/ Achievements as different tabs from each other
  * * http://stackoverflow.com/questions/20127641/simple-multi-tab-hide-show-div
  * * * http://jsfiddle.net/y76k4/
@@ -77,8 +75,6 @@
  * * keyboard events?
  * * * http://javascript.info/tutorial/keyboard-events
  * * keydown?
- * Add found topoPets to the (TopoPet counter of the) recorder #topoPetsFoundTitle (setTopoPetsCaught(player))
- * * make the counter work when TopoPets are clicked
  * Tokens
  * * Add the possibility to earn tokens for big battles during the game
  * * Add Tokens (earned) as tab to Achievements (and possibly also to buttons on the bottom of the screen?)
@@ -86,7 +82,7 @@
  * * Add more text when you click on a certain achievement? (like recorder entries?)
  * * Make achievements you don't have yet (light) gray, with more information about how to get them when you click on them? (like recorder entries?)
  * * Add a counter for the achievements (like the recorder)
- * * get all Fire TopoPets
+ * * achievement get all Fire TopoPets
  * * * don't show #achievementNone anymore (#achievementNone isn't shown for LAVACHE, but #achievementNone still shows for CHARFOIL and PYROSE)
  */
 
