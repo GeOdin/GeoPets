@@ -84,6 +84,8 @@
  * * Add a counter for the achievements (like the recorder)
  * * achievement get all Fire TopoPets
  * * * don't show #achievementNone anymore (#achievementNone isn't shown for LAVACHE, but #achievementNone still shows for CHARFOIL and PYROSE)
+ * Active TopoPets
+ * * Also add a counter for how many active TopoPets the player has?
  */
 
 ///////////////////////////
