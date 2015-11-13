@@ -353,6 +353,14 @@ function toggleActiveTopoPets() {
 		document.getElementById("activeTopoPetsText").style.display = "block";
 		// Show the activeTopoPets box
 		document.getElementById("activeTopoPets").style.display = "block";
+/*	} else if (document.getElementById("activeTopoPetsTitle").innerHTML != "Active TopoPets") {
+		// Show the activeTopoPetsTitle box
+		document.getElementById("activeTopoPetsTitle").innerHTML = "Active TopoPets";
+		// Show the activeTopoPetsText box
+		document.getElementById("activeTopoPetsText").style.display = "block";
+		// Show the activeTopoPets box
+		document.getElementById("activeTopoPets").style.display = "block";
+ */
 	} else {
 		// Put away the activeTopoPetsTitle box
 		document.getElementById("activeTopoPetsTitle").style.display = "none";
@@ -364,24 +372,40 @@ function toggleActiveTopoPets() {
 }
 
 //////////////////////////////////////////////////////
-// setActiveTopoPetsText(topoPetsGame, topoPetName) //
+// setActiveTopoPetsText(topoPetsGame, topoPetObject) //
 //////////////////////////////////////////////////////
 
 // Function to set the active TopoPets text
 
-function setActiveTopoPetsText(topoPetsGame, topoPetName){
+function setActiveTopoPetsText(topoPetsGame, topoPetObject){
 	for (i=0; i<5; i++) {
 		var activeTopoPetNumber = i+1;
 		var activeTopoPetCall = "activeTopoPet" + activeTopoPetNumber;
 		if (topoPetsGame.player[activeTopoPetCall] == "") {
-			topoPetsGame.player[activeTopoPetCall] = topoPetName;
-			document.getElementById(activeTopoPetCall).innerHTML = topoPetName;
+			topoPetsGame.player[activeTopoPetCall] = topoPetObject.Name;
+			document.getElementById(activeTopoPetCall).innerHTML = "<a onclick='toggleActiveTopoPetText(" + topoPetObject.Name + ")' style='cursor:pointer;'>" + topoPetObject.Name +  "</a>";//add specific HTML code instead of topoPetObject!
 			document.getElementById(activeTopoPetCall).style.display = "block";
 			return topoPetsGame;
 		}
 	}
 	return topoPetsGame;
 };
+
+//////////////////////////////////////////
+// toggleActiveTopoPetText(topoPetName) //
+//////////////////////////////////////////
+
+function toggleActiveTopoPetText(topoPetName) {
+	if (document.getElementById("activeTopoPetsTitle").innerHTML == "<p>Active TopoPets</p>") {
+		//Change the active TopoPets Title
+		document.getElementById("activeTopoPetsTitle").innerHTML = topoPetName;//"<a onclick='toggleActiveTopoPets()' style='cursor:pointer;'>" + topoPetName +  "</a>";
+		//Change the active TopoPets text
+		document.getElementById("activeTopoPetsText").innerHTML = "HP: ";// + topoPetName;
+	} else {
+		document.getElementById("activeTopoPetsTitle").innerHTML = topoPetName;// + topoPetName;
+		document.getElementById("activeTopoPetsText").innerHTML = "TP: ";// + topoPetName;
+	}
+}
 
 ////////////////////
 // togglePlayer() //

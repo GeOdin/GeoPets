@@ -220,11 +220,14 @@ function createInfoWindows(topoPetsGame) {
     	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
 			topoPetsCaught[this.title] = 1;
+			var topoPetLevel = 1;
+			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
+			//document.getElementById("question").innerHTML = topoPetsGame.player[this.title].number;//works
 			setTopoPetsCaught();
 			checkFireTopoPetsFound();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
-			setActiveTopoPetsText(topoPetsGame,this.title);
+			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
@@ -268,10 +271,12 @@ function createInfoWindows(topoPetsGame) {
     	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
 			topoPetsCaught[this.title] = 1;
+			var topoPetLevel = 1;
+			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
-			setActiveTopoPetsText(topoPetsGame,this.title);
+			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
@@ -315,11 +320,13 @@ function createInfoWindows(topoPetsGame) {
     	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
 			topoPetsCaught[this.title] = 1;
+			var topoPetLevel = 1;
+			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
 			checkFireTopoPetsFound();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
-			setActiveTopoPetsText(topoPetsGame,this.title);
+			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
@@ -363,10 +370,12 @@ function createInfoWindows(topoPetsGame) {
     	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
 			topoPetsCaught[this.title] = 1;
+			var topoPetLevel = 1;
+			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
-			setActiveTopoPetsText(topoPetsGame,this.title);
+			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
@@ -410,10 +419,12 @@ function createInfoWindows(topoPetsGame) {
     	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
 			topoPetsCaught[this.title] = 1;
+			var topoPetLevel = 1;
+			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
-			setActiveTopoPetsText(topoPetsGame,this.title);
+			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
@@ -457,10 +468,12 @@ function createInfoWindows(topoPetsGame) {
     	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
 			topoPetsCaught[this.title] = 1;
+			var topoPetLevel = 1;
+			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
-			setActiveTopoPetsText(topoPetsGame,this.title);
+			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
@@ -504,10 +517,12 @@ function createInfoWindows(topoPetsGame) {
     	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
 			topoPetsCaught[this.title] = 1;
+			var topoPetLevel = 1;
+			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
-			setActiveTopoPetsText(topoPetsGame,this.title);
+			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
@@ -551,11 +566,13 @@ function createInfoWindows(topoPetsGame) {
        	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
 			topoPetsCaught[this.title] = 1;
+			var topoPetLevel = 1;
+			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
 			checkFireTopoPetsFound();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
-			setActiveTopoPetsText(topoPetsGame,this.title);
+			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
@@ -599,10 +616,12 @@ function createInfoWindows(topoPetsGame) {
     	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
 			topoPetsCaught[this.title] = 1;
+			var topoPetLevel = 1;
+			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
-			setActiveTopoPetsText(topoPetsGame,this.title);
+			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
@@ -646,10 +665,12 @@ function createInfoWindows(topoPetsGame) {
     	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
 			topoPetsCaught[this.title] = 1;
+			var topoPetLevel = 1;
+			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
-			setActiveTopoPetsText(topoPetsGame,this.title);
+			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
@@ -693,10 +714,12 @@ function createInfoWindows(topoPetsGame) {
     	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
 			topoPetsCaught[this.title] = 1;
+			var topoPetLevel = 1;
+			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
-			setActiveTopoPetsText(topoPetsGame,this.title);
+			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
@@ -740,10 +763,12 @@ function createInfoWindows(topoPetsGame) {
     	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
 			topoPetsCaught[this.title] = 1;
+			var topoPetLevel = 1;
+			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
-			setActiveTopoPetsText(topoPetsGame,this.title);
+			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
 			// Show some text about getting the TopoPet
 			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
 			document.getElementById("storyText").style.display = "block";
