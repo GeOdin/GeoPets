@@ -39,7 +39,7 @@ function startGame() {
 	while (playerName.length < 1) {
 
 		// Get the name
-		playerName = prompt("What is your name? ", "Mistae");
+		playerName = prompt("What is your name? ", "Chariza");
 
 		// Add the playerName to the startingVariables
 		player.Name = playerName;
