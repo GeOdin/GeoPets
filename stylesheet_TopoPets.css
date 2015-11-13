@@ -1038,6 +1038,10 @@ body {
 	left: 1%;
 }
 
+#achievementSTORY101{
+	display: none;
+}
+
 #achievementAllFireTopoPets {
 	display: none;
 }
@@ -1082,7 +1086,7 @@ body {
 	left: 1%;
 }
 
-#story101 {
+#STORY101 {
 	display: none;
 }
 

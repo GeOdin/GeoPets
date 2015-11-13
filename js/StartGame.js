@@ -147,16 +147,13 @@ function createMarkers(map) {
 		var topoPetsCoordY = topoPets[i][4];
 		var topoPetsZoomLevel = topoPets[i][5];
 
-		// Create the TopoPet marker
+		// Create the TopoPet markers
 		var coords = new google.maps.LatLng(topoPetsCoordX, topoPetsCoordY);
 		markers[topoPetsName] = new google.maps.Marker({
 		    position: coords, 
 		    title: topoPetsName,
 		    icon: "images/" + topoPetsType1 + ".png" 
 		});
-
-		// Add the marker to the map
-		markers[topoPetsName].setMap(map);
 	}
 	
 	// Create the story markers and store them in the markers object
@@ -798,22 +795,22 @@ function createStoryInfoWindows(topoPetsGame) {
 	// Set the content for the InfoWindow
 	content = "<font color=" + textColor + "><h3>" + storyMarkers[numb][1] + "</h3>" + storyMarkers[numb][5] + "</font>";
 	// Add the content to the infoWindow
-	infoWindowStory101 = new google.maps.InfoWindow({
+	infoWindowSTORY101 = new google.maps.InfoWindow({
 		content: content
 	});
 	
 	// Add the infoWindow to the marker
-    google.maps.event.addListener(markers.story101, "mouseover", function () {
-        infoWindowStory101.open(map, markers.story101);
+    google.maps.event.addListener(markers[storyMarkers[numb][0]], "mouseover", function () {
+        infoWindowSTORY101.open(map, markers[storyMarkers[numb][0]]);
     });	
 	
 	// Close the infoWindow when the mouse is no longer hovering over the marker
-    google.maps.event.addListener(markers.story101, "mouseout", function () {
-        infoWindowStory101.close();
+    google.maps.event.addListener(markers[storyMarkers[numb][0]], "mouseout", function () {
+        infoWindowSTORY101.close();
     });	
 	
 	// Add the story to #storyText when clicked
-    google.maps.event.addListener(markers.story101, "click", function () {
+    google.maps.event.addListener(markers[storyMarkers[numb][0]], "click", function () {
 		
 		// Add the story text
 		document.getElementById("storyText").innerHTML = storyMarkers[numb][6];
@@ -821,11 +818,20 @@ function createStoryInfoWindows(topoPetsGame) {
 		document.getElementById("story").style.display = "block";
 		document.getElementById(storyMarkers[numb][0]).innerHTML = storyMarkers[numb][7];
 		document.getElementById(storyMarkers[numb][0]).style.display = "block";
+		document.getElementById("achievement" + storyMarkers[numb][0]).style.display = "block";
 		
 		// Remove the marker
 		this.setMap(null);
 		markers[storyMarkers[numb][0]] = null;
+
+		// Add the TopoPet markers to the map
+		for (i = 1; i < topoPets.length; i++) {
+			var topoPetsName = topoPets[i][0];
+			markers[topoPetsName].setMap(map);
+		}
     });
+	
+	return topoPetsGame;
 }
 	
 /*

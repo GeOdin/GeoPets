@@ -10,7 +10,7 @@
 var storyMarkers = [
 	["ID", "title", "lat", "lon", "icon", "infoWindowText", "storyText", "journalEntry"],
 	[
-		"story101", 
+		"STORY101", 
 		"Professor Globe", 
 		51.9875424, 
 		5.6660054, 
