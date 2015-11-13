@@ -86,6 +86,7 @@
  * * Add more text when you click on a certain achievement? (like recorder entries?)
  * * Make achievements you don't have yet (light) gray, with more information about how to get them when you click on them? (like recorder entries?)
  * * Add a counter for the achievements (like the recorder)
+ * * Order achievements by kind of achievement (Story, TopoPets caught, ...)
  * Active TopoPets
  * * Also add a counter for how many active TopoPets the player has?
  * Currently, you have to press the toggling buttons twice with the buttons on the bottom of the screen. 
