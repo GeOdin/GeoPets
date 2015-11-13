@@ -165,6 +165,8 @@
  * * * * Flair (narcistic air elemental) (albardaflat)
  * * * * Bair?
  * * * * Cubicicle (transformation of Hailo) (looks like an icicle made of cubes/ cube as head, with halo around it's head?)
+ * * * * Pandart (panda + dart)
+ * * * * Zombee (zombie + bee) (later version air/ shadow)
  * * * Earth: (earth, flower?, ground, sand, tree?)
  * * * * Mudsy (earth) (helper of Sandta) (transforms into Mudditch(already implemented)/ Muddove (earth/ air))
  * * * * Sworm (Earth/ Air)
@@ -173,6 +175,8 @@
  * * * * Tulpa 
  * * * * (Piramini is already implemented) -> Piramidi -> Piramax (later versie --> ancient)
  * * * * Sockroach (kakkerlak die eruit ziet als een sok) (winkelcentrum)
+ * * * * Pebbelk (pebble + elk, transformatin of something else?)
+ * * * * Mudshroom (mud + mushroom)
  * * * * Cowabunga (dancing cow) (Nude waar danslessen zijn?)
  * * * Fire: (campfire, fiery, fire, fireman, torch) (evt nog een bij firehouse bij haarweg)
  * * * * Firabbit (Dreijen) (/ Firat)
@@ -181,6 +185,7 @@
  * * * * Grelking (later fire/ shadow)
  * * * * Firemit (fire hermit)
  * * * * Blace (blaze + ace)
+ * * * * Torchid (torch + orchid) (transforms into Pyrose) (flowers on fire?)
  * * * * (Firefly)
  * * * Water: (drop, eel, fish, shark, water, waterdrop)
  * * * * Spottle, Spotfin, Spotflow (Zwembad Bongerd)
@@ -189,8 +194,10 @@
  * * * * Shrimp (fire shrimp) (Rijn)
  * * * * Puddolf (puddle + wolf)
  * * * * Moyster (moist + oyster) -> Moystar
- * * Later version types:
- * * * ancient, fighting, ice, light, shadow, spirit (add normal?)
+ * * * * Oarca (oar(sman?) + orca)
+ * * * SPIRIT: (ether, spirit)
+ * * Later version types: (know because of research that some TopoPets are another typoe than previously thought)
+ * * * ancient, fighting, ice, light, shadow (add normal?)
  * * * * ANCIENT
  * * * * * Piramini becomes ancient/ earth, it's transformations Piramidi and Piramax will also become ancient/ earth
  * * * * ICE
@@ -276,10 +283,8 @@
  * * Exp
  * Further stats:
  * * currentHP, currentSP, currentTP, currentAttack, currentDefense, currentAgility, currentExp
- */
-
-/*
- * Move stats:
+ *
+ * Battle Attack stats:
  * * Name
  * * Type
  * * Special Power
@@ -288,6 +293,45 @@
  * * Type Power Cost
  * * Accuracy
  * * Description
+ * Battle Attacks:
+ * * AIR
+ * * * Breeze
+ * * * Windthrow (spelling?)
+ * * * Whirlwind
+ * * EARTH
+ * * * Stone/ rock
+ * * * Avalanche
+ * * * Earthquake
+ * * FIRE
+ * * * Flame
+ * * * Fireball
+ * * * Campfire/ forest fire?
+ * * WATER
+ * * * Bubble
+ * * * Water balloon
+ * * * Shower/ hose?
+ *
+ * Battle options:
+ * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Attack      * Special Attack  * Switch TopoPets *
+ * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Use Program * Use Item        * Escape          *
+ * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * * Attack 
+ * * * only show attacks that are possible, no more sp -> show a struggle move
+ * * Special Attack
+ * * * use TP to make attack stronger
+ * * * no more sp/ tp -> don't show any move
+ * * Switch TopoPets 
+ * * * switch battling TopoPet
+ * * * only switchable if currentHP > 0
+ * * Use Program
+ * * * use programs like Identify TopoPets, unlock more with further in story?
+ * * * program to catch TopoPets?
+ * * Use Item
+ * * * use items on TopoPets?
+ * * Escape
+ * * * not possible during battling other people
  */
 
 /*
