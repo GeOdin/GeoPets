@@ -25,6 +25,8 @@
  * * markers from
  * * * https://mapicons.mapsmarker.com/category/markers/nature/natural-marvels/
  * * * https://mapicons.mapsmarker.com/category/markers/nature/weather/
+ * * * make background image transparent:
+ * * * * http://www.online-image-editor.com/
  * * the markers are also visible on Streetview!
  * * try to make them only visible on Streetview?
  * explanation about markers
