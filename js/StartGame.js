@@ -9,6 +9,7 @@
  * drawMap(topoPetsGame)
  * createMarkers(map)
  * createInfoWindows(topoPetsGame)
+ * Not yet finished functions:
  * resetMap()
  */
 
@@ -752,6 +753,7 @@ function createInfoWindows(topoPetsGame) {
 	return topoPetsGame;
 }
 
+/*
 ////////////////
 // resetMap() //
 ////////////////
@@ -775,3 +777,4 @@ function resetMap() {
 	var markers = createMarkers(map);
 	// createInfoWindows(topoPetsGame);// does not work
 }
+ */
