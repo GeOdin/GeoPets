@@ -21,6 +21,7 @@
 ///////////
 
 /*
+ * Show #buttons after getting the recorder
  * Show markers where TopoPets are, only when hovered over them
  * * markers from
  * * * https://mapicons.mapsmarker.com/category/markers/nature/natural-marvels/
