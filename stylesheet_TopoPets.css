@@ -895,7 +895,7 @@ body {
 	top: 50%;
 	left: 0.5%;
 	width: 25%;
-	height: 40vh;
+	height: 40.125vh;
 	background-color: transparent;
 	background: rgba(00, 99, 00, .23);
 	color: white;
@@ -931,7 +931,7 @@ body {
 	top: 50%;
 	left: 0.5%;
 	width: 25%;
-	height: 40vh;
+	height: 40.125vh;
 	background-color: transparent;
 	background: rgba(00, 99, 00, .23);
 	color: white;
@@ -981,7 +981,7 @@ body {
 	top: 81.875%;
 	left: 25.5%;
 	width: 48%;
-	height: 8.75vh;
+	height: 8.875vh;
 	cursor: pointer;
 	background-color: transparent;
 	background: rgba(00, 00, 00, .23);
@@ -1005,7 +1005,7 @@ body {
 	top: 50%;
 	left: 73.5%;
 	width: 26%;
-	height: 40vh;
+	height: 40.125vh;
 	background-color: transparent; 
 /*
  	z-index: 99;
@@ -1056,7 +1056,7 @@ body {
 	top: 50%;
 	left: 73.5%;
 	width: 26%;
-	height: 40vh;
+	height: 40.125vh;
 	background-color: transparent;
  	background: rgba(00, 99, 00, .23);
 	color: white;
