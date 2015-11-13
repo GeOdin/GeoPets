@@ -9,6 +9,7 @@
  * drawMap(topoPetsGame)
  * createMarkers(map)
  * createInfoWindows(topoPetsGame)
+ * createStoryInfoWindows(topoPetsGame)
  * Not yet finished functions:
  * resetMap()
  */
@@ -120,6 +121,7 @@ function drawMap(topoPetsGame) {
 
 	// Create the InfoWindows and add it to the topoPets object
 	topoPetsGame = createInfoWindows(topoPetsGame);
+	topoPetsGame = createStoryInfoWindows(topoPetsGame);
 
 	// Return the topoPetsGame object
 	return topoPetsGame;
@@ -135,7 +137,6 @@ function createMarkers(map) {
 
 	// Create an object to store the markers in
 	var markers = new Object();
-	//var infowindow = null;
 
 	// Create the TopoPets markers and store them in the markers object
 	for (i = 1; i < topoPets.length; i++) {
@@ -156,6 +157,26 @@ function createMarkers(map) {
 
 		// Add the marker to the map
 		markers[topoPetsName].setMap(map);
+	}
+	
+	// Create the story markers and store them in the markers object
+	for (i = 1; i < storyMarkers.length; i++) {
+		var storyID = storyMarkers[i][0];
+		var storyTitle = storyMarkers[i][1];
+		var storyLat = storyMarkers[i][2];
+		var storyLon = storyMarkers[i][3];
+		var storyIcon = storyMarkers[i][4];
+
+		// Create the TopoPet marker
+		var coords = new google.maps.LatLng(storyLat, storyLon);
+		markers[storyID] = new google.maps.Marker({
+		    position: coords, 
+		    title: storyTitle,
+		    icon: "images/" + storyIcon + ".png" 
+		});
+
+		// Add the marker to the map
+		markers[storyID].setMap(map);
 	}
 
 	// Return the markers object
@@ -745,7 +766,7 @@ function createInfoWindows(topoPetsGame) {
 			markers[topoPets[numb][0]] = null;
 		}
     });
-
+	
 	// Return the topoPetsGame object
 	topoPetsGame.startingVariables.map = map;
 	topoPetsGame.startingVariables.markers = markers;
@@ -753,6 +774,60 @@ function createInfoWindows(topoPetsGame) {
 	return topoPetsGame;
 }
 
+//////////////////////////////////////////
+// createStoryInfoWindows(topoPetsGame) //
+//////////////////////////////////////////
+
+// Function to add infoWindows to the markers
+
+function createStoryInfoWindows(topoPetsGame) {
+
+	// Set variables
+	var numb = 0;
+	var content;
+	var infoWindow;
+	var textColor;
+	var map = topoPetsGame.startingVariables.map;
+	var markers = topoPetsGame.startingVariables.markers;
+	var player = topoPetsGame.player;
+
+	// Create the InfoWindow for CHARFOIL
+	// Add 1 to numb
+	numb++;
+	textColor = "red";
+	// Set the content for the InfoWindow
+	content = "<font color=" + textColor + "><h3>" + storyMarkers[numb][1] + "</h3>" + storyMarkers[numb][5] + "</font>";
+	// Add the content to the infoWindow
+	infoWindowStory101 = new google.maps.InfoWindow({
+		content: content
+	});
+	
+	// Add the infoWindow to the marker
+    google.maps.event.addListener(markers.story101, "mouseover", function () {
+        infoWindowStory101.open(map, markers.story101);
+    });	
+	
+	// Close the infoWindow when the mouse is no longer hovering over the marker
+    google.maps.event.addListener(markers.story101, "mouseout", function () {
+        infoWindowStory101.close();
+    });	
+	
+	// Add the story to #storyText when clicked
+    google.maps.event.addListener(markers.story101, "click", function () {
+		
+		// Add the story text
+		document.getElementById("storyText").innerHTML = storyMarkers[numb][6];
+		document.getElementById("storyText").style.display = "block";
+		document.getElementById("story").style.display = "block";
+		document.getElementById(storyMarkers[numb][0]).innerHTML = storyMarkers[numb][7];
+		document.getElementById(storyMarkers[numb][0]).style.display = "block";
+		
+		// Remove the marker
+		this.setMap(null);
+		markers[storyMarkers[numb][0]] = null;
+    });
+}
+	
 /*
 ////////////////
 // resetMap() //

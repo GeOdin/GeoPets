@@ -114,9 +114,6 @@ function getTotalAmountFireTopoPets() {
 
 function checkTopoPetsFound() {
 	if (topoPetsCaught.total() == getTotalAmountTopoPets()) {
-		if (document.getElementById("achievementNone").style.display == "block") {
-			document.getElementById("achievementNone").style.display = "none";
-		}
 		document.getElementById("achievementAllTopoPets").style.display = "block";
 	}
 }
@@ -129,9 +126,6 @@ function checkTopoPetsFound() {
 
 function checkFireTopoPetsFound() {
 	if (topoPetsCaught.CHARFOIL + topoPetsCaught.LAVACHE + topoPetsCaught.PYROSE == getTotalAmountFireTopoPets()) {
-		if (document.getElementById("achievementNone").style.display == "block") {
-			document.getElementById("achievementNone").style.display = "none";
-		}
 		document.getElementById("achievementAllFireTopoPets").style.display = "block";
 	}
 }
