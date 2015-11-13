@@ -22,9 +22,11 @@
 
 /*
  * Show markers where TopoPets are, only when hovered over them
- * markers from
- * * https://mapicons.mapsmarker.com/category/markers/nature/natural-marvels/
- * * https://mapicons.mapsmarker.com/category/markers/nature/weather/
+ * * markers from
+ * * * https://mapicons.mapsmarker.com/category/markers/nature/natural-marvels/
+ * * * https://mapicons.mapsmarker.com/category/markers/nature/weather/
+ * * the markers are also visible on Streetview!
+ * * try to make them only visible on Streetview?
  * explanation about markers
  * * http://stackoverflow.com/questions/29324136/google-map-api-multi-markers
  * button to reset map to Wageningen
