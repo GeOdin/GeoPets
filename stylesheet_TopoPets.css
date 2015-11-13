@@ -982,6 +982,7 @@ body {
 	left: 25.5%;
 	width: 48%;
 	height: 8.75vh;
+	cursor: pointer;
 	background-color: transparent;
 	background: rgba(00, 00, 00, .23);
 	font-size: 1.2em;
@@ -993,7 +994,6 @@ body {
 #storyText {
 	position: relative;
 	display: none;
-	cursor: pointer;
 	width: 98%;
 	top: 1.5vh;
 	left: 1%;
