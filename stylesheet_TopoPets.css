@@ -51,8 +51,8 @@ body {
 }
 
 #activeTopoPetsTitle {
-	display: none;
 	position: relative;
+	display: none;
 	width: 96%;
 	height: 1.3em;
 	left: 2%;
@@ -64,8 +64,8 @@ body {
 }
 
 #activeTopoPetsText {
-	display: none;
 	position: relative;
+	display: none;
 	width: 98%;
 	height: 80%;
 	top: 2vh;
