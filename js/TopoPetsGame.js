@@ -86,10 +86,10 @@
  * * Add more text when you click on a certain achievement? (like recorder entries?)
  * * Make achievements you don't have yet (light) gray, with more information about how to get them when you click on them? (like recorder entries?)
  * * Add a counter for the achievements (like the recorder)
- * * achievement get all Fire TopoPets
- * * * don't show #achievementNone anymore (#achievementNone isn't shown for LAVACHE, but #achievementNone still shows for CHARFOIL and PYROSE)
  * Active TopoPets
  * * Also add a counter for how many active TopoPets the player has?
+ * Currently, you have to press the toggling buttons twice with the buttons on the bottom of the screen. 
+ * * Adjust this to only having to click once
  */
 
 ///////////////////////////
@@ -100,21 +100,9 @@
 ////// stylesheet_TopoPets.css //////
 /////////////////////////////////////
 
-/* 
- * make the button to go back from a TopoPet entry to the recorder fixed on the page
- */
-
 /////////////////////////////
 ////// TopoPetsGame.js //////
 /////////////////////////////
-
-/* 
- * Create a function for toggling the recorder for TopoPets
- * * function toggleRecorderTopoPet(name) {}
- * * * make the button to go back from a TopoPet entry to the recorder the same for all TopoPets
- * Currently, you have too press the buttons twice to toggle the player/ bag with the buttons on the bottom of the screen. 
- * * Adjust this to only having to click once
- */
 
 //////////////////////////
 ////// StartGame.js //////
@@ -145,114 +133,6 @@
 			locationName = "";
 		}
 	}
- */
-
-/////////////////////////
-////// TopoPets.js //////
-/////////////////////////
-
-/*
- * var topoPets
- * * Add unique number to each TopoPet after all TopoPets are made ("topoPetNumber")
- * * Add a specific expNeed type to which the TopoPet belongs? (how much exp a TopoPet needs per level?)
- * * Add a specific expGive type to which the TopoPet belongs? (how much exp a TopoPet gives per level?)
- * * Add a specific catchChance type to which the TopoPet belongs? (the chances of catching a TopoPet per level?)
- * var topoPetsStats
- * * Add unique number to each TopoPet after all TopoPets are made ("topoPetNumber")
- * * Moves a TopoPet has at that specific level?
- * * Moves a TopoPet can learn at that specific level
- *
- * Types
- * * New TopoPets per type:
- * * * Air: (air, bird, breeze, cloud, draft, fly, hail?, levitate, rain?, sky, tornado, weather?, wind)
- * * * * Wasparagus (kassen ten noorden van LUMEN) (Air / Earth)
- * * * * Flair (narcistic air elemental) (albardaflat)
- * * * * Bair?
- * * * * Cubicicle (transformation of Hailo) (looks like an icicle made of cubes/ cube as head, with halo around it's head?)
- * * * * Pandart (panda + dart)
- * * * * Zombee (zombie + bee) (later version air/ shadow)
- * * * Earth: (earth, flower?, ground, sand, tree?)
- * * * * Mudsy (earth) (helper of Sandta) (transforms into Mudditch(already implemented)/ Muddove (earth/ air))
- * * * * Sworm (Earth/ Air)
- * * * * (Sandash)
- * * * * Sandoom
- * * * * Tulpa 
- * * * * (Piramini is already implemented) -> Piramidi -> Piramax (later versie --> ancient)
- * * * * Sockroach (kakkerlak die eruit ziet als een sok) (winkelcentrum)
- * * * * Pebbelk (pebble + elk, transformatin of something else?)
- * * * * Mudshroom (mud + mushroom)
- * * * * Cowabunga (dancing cow) (Nude waar danslessen zijn?)
- * * * Fire: (campfire, fiery, fire, fireman, torch) (evt nog een bij firehouse bij haarweg)
- * * * * Firabbit (Dreijen) (/ Firat)
- * * * * Sundash (SSR-W) (later fire/ light)
- * * * * Distorchion (in de war firegast) (huisartsenpost) (later fire/ spirit)
- * * * * Grelking (later fire/ shadow)
- * * * * Firemit (fire hermit)
- * * * * Blace (blaze + ace)
- * * * * Torchid (torch + orchid) (transforms into Pyrose) (flowers on fire?)
- * * * * (Firefly)
- * * * Water: (drop, eel, fish, shark, water, waterdrop)
- * * * * Spottle, Spotfin, Spotflow (Zwembad Bongerd)
- * * * * Fireel (vis die soms vuurkrachten krijgt als je hem kookt) (eventueel nog iets in water tussen grebbedijk en rijn in: 51.9607533,5.6701563)
- * * * * Tranch (waterpaard) (gracht rooseveltweg)
- * * * * Shrimp (fire shrimp) (Rijn)
- * * * * Puddolf (puddle + wolf)
- * * * * Moyster (moist + oyster) -> Moystar
- * * * * Oarca (oar(sman?) + orca)
- * * * SPIRIT: (ether, spirit)
- * * Later version types: (know because of research that some TopoPets are another typoe than previously thought)
- * * * ancient, fighting, ice, light, shadow (add normal?)
- * * * * ANCIENT
- * * * * * Piramini becomes ancient/ earth, it's transformations Piramidi and Piramax will also become ancient/ earth
- * * * * ICE
- * * * * * It will use the recorder looks of what is currently air, a new styling for air needs to be made
- * * * * * Hailo becomes ice/ light, it's transformation Cubicicle will also become ice/ light
- * * * * SHADOW
- * * * * * Scare (transformation of Sheal) // You should know better than to mistreat a poor seal. (evolves when sheal is fainted a random amount of times - 10-20 eg.)
- * * Seasonal TopoPets:
- * * * Sandta (earth/ spirit) (sort of Santa Claus)
- * * * Raindeer (water/ spirit) (helper of Sandta, some have a red nose)
- */
-
- //////////////////////
- ////// Story.js //////
- //////////////////////
-
-/*
- * Create this JavaScript file
- */
-
-/*
- * Story
- * * 1
- * * * Professor Globe asks you to find TopoPets.
- * * * They are threatened because of climate change.
- * * * To help save them, he asks you to catch one of each species.
- * * * He is unfortunately to busy with his research to do field work, so asks you to help him.
- * * * * "You're a great kid. I have faith in you! "
- * * * He gives you a TopoPet Recorder to help you on your quest.
- * * * * It can only have 5 TopoPets active.
- * * * * When you get more TopoPets, they will be sent to a database/ server/ cloud/... specially made for you.
- * * * * If anything might happen to the TopoPet Recorderm your active TopoPets will also be sent to this database/ server/ cloud/...
- * * Think of reason why all kinds of other
- */
-
-/*
- * Characters:
- * * Professor Globe
- * * * Looks:
- * * * * Lab coat, glasses (sometimes safety goggles?), gray hair
- * * * Location:
- * * * * Gaia building
- */
-
-/*
- * Visualization
- * * Big orange exclamation mark for next quest location
- * * * Exclamation mark:
- * * * * dark orange
- * * * Pointer: 
- * * * * lighter orange
  */
 
 ///////////////////////
@@ -342,6 +222,101 @@
  * Later versions:
  * * Add possibility to temporarily lower stats of a TopoPet during battle
  * * Add possibility to add status effects
+ */
+
+ //////////////////////
+ ////// Story.js //////
+ //////////////////////
+
+/*
+ * Story
+ * * 101
+ * * * Professor Globe asks you to find TopoPets.
+ * * * They are threatened because of climate change.
+ * * * To help save them, he asks you to catch one of each species.
+ * * * He is unfortunately to busy with his research to do field work, so asks you to help him.
+ * * * * "You're a great kid. I have faith in you! "
+ * * * He gives you a TopoPet Recorder to help you on your quest.
+ * * * * It can only have 5 TopoPets active.
+ * * * * When you get more TopoPets, they will be sent to a database/ server/ cloud/... specially made for you.
+ * * * * If anything might happen to the TopoPet Recorderm your active TopoPets will also be sent to this database/ server/ cloud/...
+ * * Think of reason why all kinds of other
+ */
+
+/*
+ * Characters:
+ * * Professor Globe
+ * * * Looks:
+ * * * * Lab coat, glasses (sometimes safety goggles?), gray hair
+ * * * Location:
+ * * * * Gaia building
+ */
+
+/////////////////////////
+////// TopoPets.js //////
+/////////////////////////
+
+/*
+ * var topoPets
+ * * Add unique number to each TopoPet after all TopoPets are made ("topoPetNumber")
+ * * Add a specific expNeed type to which the TopoPet belongs? (how much exp a TopoPet needs per level?)
+ * * Add a specific expGive type to which the TopoPet belongs? (how much exp a TopoPet gives per level?)
+ * * Add a specific catchChance type to which the TopoPet belongs? (the chances of catching a TopoPet per level?)
+ * var topoPetsStats
+ * * Add unique number to each TopoPet after all TopoPets are made ("topoPetNumber")
+ * * Moves a TopoPet has at that specific level?
+ * * Moves a TopoPet can learn at that specific level
+ *
+ * Types
+ * * New TopoPets per type:
+ * * * Air: (air, bird, breeze, cloud, draft, fly, hail?, levitate, rain?, sky, tornado, weather?, wind)
+ * * * * Wasparagus (kassen ten noorden van LUMEN) (Air / Earth)
+ * * * * Flair (narcistic air elemental) (albardaflat)
+ * * * * Bair?
+ * * * * Cubicicle (transformation of Hailo) (looks like an icicle made of cubes/ cube as head, with halo around it's head?)
+ * * * * Pandart (panda + dart)
+ * * * * Zombee (zombie + bee) (later version air/ shadow)
+ * * * Earth: (earth, flower?, ground, sand, tree?)
+ * * * * Mudsy (earth) (helper of Sandta) (transforms into Mudditch(already implemented)/ Muddove (earth/ air))
+ * * * * Sworm (Earth/ Air)
+ * * * * (Sandash)
+ * * * * Sandoom
+ * * * * Tulpa 
+ * * * * (Piramini is already implemented) -> Piramidi -> Piramax (later versie --> ancient)
+ * * * * Sockroach (kakkerlak die eruit ziet als een sok) (winkelcentrum)
+ * * * * Pebbelk (pebble + elk, transformatin of something else?)
+ * * * * Mudshroom (mud + mushroom)
+ * * * * Cowabunga (dancing cow) (Nude waar danslessen zijn?)
+ * * * Fire: (campfire, fiery, fire, fireman, torch) (evt nog een bij firehouse bij haarweg)
+ * * * * Firabbit (Dreijen) (/ Firat)
+ * * * * Sundash (SSR-W) (later fire/ light)
+ * * * * Distorchion (in de war firegast) (huisartsenpost) (later fire/ spirit)
+ * * * * Grelking (later fire/ shadow)
+ * * * * Firemit (fire hermit)
+ * * * * Blace (blaze + ace)
+ * * * * Torchid (torch + orchid) (transforms into Pyrose) (flowers on fire?)
+ * * * * (Firefly)
+ * * * Water: (drop, eel, fish, shark, water, waterdrop)
+ * * * * Spottle, Spotfin, Spotflow (Zwembad Bongerd)
+ * * * * Fireel (vis die soms vuurkrachten krijgt als je hem kookt) (eventueel nog iets in water tussen grebbedijk en rijn in: 51.9607533,5.6701563)
+ * * * * Tranch (waterpaard) (gracht rooseveltweg)
+ * * * * Shrimp (fire shrimp) (Rijn)
+ * * * * Puddolf (puddle + wolf)
+ * * * * Moyster (moist + oyster) -> Moystar
+ * * * * Oarca (oar(sman?) + orca)
+ * * * SPIRIT: (ether, spirit)
+ * * Later version types: (know because of research that some TopoPets are another typoe than previously thought)
+ * * * ancient, fighting, ice, light, shadow (add normal?)
+ * * * * ANCIENT
+ * * * * * Piramini becomes ancient/ earth, it's transformations Piramidi and Piramax will also become ancient/ earth
+ * * * * ICE
+ * * * * * It will use the recorder looks of what is currently air, a new styling for air needs to be made
+ * * * * * Hailo becomes ice/ light, it's transformation Cubicicle will also become ice/ light
+ * * * * SHADOW
+ * * * * * Scare (transformation of Sheal) // You should know better than to mistreat a poor seal. (evolves when sheal is fainted a random amount of times - 10-20 eg.)
+ * * Seasonal TopoPets:
+ * * * Sandta (earth/ spirit) (sort of Santa Claus)
+ * * * Raindeer (water/ spirit) (helper of Sandta, some have a red nose)
  */
 
 ////////////////
