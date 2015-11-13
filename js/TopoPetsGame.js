@@ -52,7 +52,7 @@
  * Add dateTime to the upper right corner, add a manual button to the right of it
  * zoomLevel
  * * Show different TopoPets at different zoom levels
- * * Show the zoomLevel on the screen, so players can know where they found certain TopoPets
+ * * Show the zoomLevel on the upper right corner of the screen, so players can know where they found certain TopoPets
  * Show Player/ Bag and Journal/ Achievements as different tabs from each other
  * * http://stackoverflow.com/questions/20127641/simple-multi-tab-hide-show-div
  * * * http://jsfiddle.net/y76k4/
