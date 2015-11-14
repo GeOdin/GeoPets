@@ -9,9 +9,15 @@
  * This JavaScript file includes the following function
  * * setTopoPetsCaught()
  * * getTotalAmountTopoPets()
+ * * getTotalAmountAirTopoPets()
+ * * getTotalAmountEarthTopoPets()
  * * getTotalAmountFireTopoPets()
+ * * getTotalAmountWaterTopoPets()
  * * checkTopoPetsFound()
+ * * checkAirTopoPetsFound()
+ * * checkEarthTopoPetsFound()
  * * checkFireTopoPetsFound()
+ * * checkWaterTopoPetsFound()
  */
 
 // variable to check whether a TopoPet has been caught (to count caught TopoPet)
@@ -30,6 +36,10 @@ var topoPetsCaught = {
 	SHEAL: 0,
 	VAMPYRE: 0,
 	WINGDIGO: 0,
+	totalAIR: 0,
+	totalEARTH: 0,
+	totalFIRE: 0,
+	totalWATER: 0,
 	total: function() {
 		return this.CHARFOIL 
 		+ this.HAILO
@@ -61,7 +71,7 @@ var topoPetsCaught = {
 
 function setTopoPetsCaught(){
 	document.getElementById("topoPetsFoundTitle").innerHTML = "<p> Recorder: " + topoPetsCaught.total() + "/" + getTotalAmountTopoPets() + " <br/><progress id='health' value=" + topoPetsCaught.total() + " max=" + getTotalAmountTopoPets() + " style='height:1vh;width:60%;'>";
-};
+}
 
 //////////////////////////////
 // getTotalAmountTopoPets() //
@@ -79,6 +89,56 @@ function getTotalAmountTopoPets() {
 
 	// Return the amount of TopoPets
 	return totalAmountTopoPets;
+}
+
+/////////////////////////////////
+// getTotalAmountAirTopoPets() //
+/////////////////////////////////
+
+// Function to get the total amount of Air TopoPets
+
+function getTotalAmountAirTopoPets() {
+
+	// Set the variables
+	var totalAmountAirTopoPets = 0;
+
+	// Get the total amount of TopoPets
+	for (i=0; i<topoPets.length; i++) {
+		if (topoPets[i][1] == "AIR") {
+			totalAmountAirTopoPets++;
+		// No 2nd type yet
+		//} else if (topoPets[i][2] == "AIR") {
+		//	totalAmountAirTopoPets++;
+		}
+	}
+
+	// Return the amount of TopoPets
+	return totalAmountAirTopoPets;
+}
+
+///////////////////////////////////
+// getTotalAmountEarthTopoPets() //
+///////////////////////////////////
+
+// Function to get the total amount of Earth TopoPets
+
+function getTotalAmountEarthTopoPets() {
+
+	// Set the variables
+	var totalAmountEarthTopoPets = 0;
+
+	// Get the total amount of TopoPets
+	for (i=0; i<topoPets.length; i++) {
+		if (topoPets[i][1] == "EARTH") {
+			totalAmountEarthTopoPets++;
+		// No 2nd type yet
+		//} else if (topoPets[i][2] == "EARTH") {
+		//	totalAmountEarthTopoPets++;
+		}
+	}
+
+	// Return the amount of TopoPets
+	return totalAmountEarthTopoPets;
 }
 
 //////////////////////////////////
@@ -106,6 +166,31 @@ function getTotalAmountFireTopoPets() {
 	return totalAmountFireTopoPets;
 }
 
+///////////////////////////////////
+// getTotalAmountWaterTopoPets() //
+///////////////////////////////////
+
+// Function to get the total amount of Water TopoPets
+
+function getTotalAmountWaterTopoPets() {
+
+	// Set the variables
+	var totalAmountWaterTopoPets = 0;
+
+	// Get the total amount of TopoPets
+	for (i=0; i<topoPets.length; i++) {
+		if (topoPets[i][1] == "WATER") {
+			totalAmountWaterTopoPets++;
+		// No 2nd type yet
+		//} else if (topoPets[i][2] == "WATER") {
+		//	totalAmountWaterTopoPets++;
+		}
+	}
+
+	// Return the amount of TopoPets
+	return totalAmountWaterTopoPets;
+}
+
 //////////////////////////
 // checkTopoPetsFound() //
 //////////////////////////
@@ -115,6 +200,31 @@ function getTotalAmountFireTopoPets() {
 function checkTopoPetsFound() {
 	if (topoPetsCaught.total() == getTotalAmountTopoPets()) {
 		document.getElementById("achievementAllTopoPets").style.display = "block";
+		document.getElementById("journalAllTopoPetsCaught").style.display = "block";
+	}
+}
+
+/////////////////////////////
+// checkAirTopoPetsFound() //
+/////////////////////////////
+
+// Function to check whether all Air TopoPets have been found
+
+function checkAirTopoPetsFound() {
+	if (topoPetsCaught.totalAIR == getTotalAmountAirTopoPets()) {
+		document.getElementById("achievementAllAirTopoPets").style.display = "block";
+	}
+}
+
+///////////////////////////////
+// checkEarthTopoPetsFound() //
+///////////////////////////////
+
+// Function to check whether all Earth TopoPets have been found
+
+function checkEarthTopoPetsFound() {
+	if (topoPetsCaught.totalEARTH == getTotalAmountEarthTopoPets()) {
+		document.getElementById("achievementAllEarthTopoPets").style.display = "block";
 	}
 }
 
@@ -125,7 +235,19 @@ function checkTopoPetsFound() {
 // Function to check whether all Fire TopoPets have been found
 
 function checkFireTopoPetsFound() {
-	if (topoPetsCaught.CHARFOIL + topoPetsCaught.LAVACHE + topoPetsCaught.PYROSE == getTotalAmountFireTopoPets()) {
+	if (topoPetsCaught.totalFIRE == getTotalAmountFireTopoPets()) {
 		document.getElementById("achievementAllFireTopoPets").style.display = "block";
+	}
+}
+
+///////////////////////////////
+// checkWaterTopoPetsFound() //
+///////////////////////////////
+
+// Function to check whether all Water TopoPets have been found
+
+function checkWaterTopoPetsFound() {
+	if (topoPetsCaught.totalWATER == getTotalAmountWaterTopoPets()) {
+		document.getElementById("achievementAllWaterTopoPets").style.display = "block";
 	}
 }

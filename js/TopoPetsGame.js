@@ -28,6 +28,8 @@
 /*
  * Show #buttons after getting the recorder
  * Show markers where TopoPets are, only when hovered over them, within a certain buffer (geo-fencing)
+ * * show markers only on certain zoom level
+ * * * http://stackoverflow.com/questions/5030127/marker-visibility-in-google-maps
  * * markers from
  * * * https://mapicons.mapsmarker.com/category/markers/nature/natural-marvels/
  * * * https://mapicons.mapsmarker.com/category/markers/nature/weather/
@@ -35,6 +37,9 @@
  * * * * http://www.online-image-editor.com/
  * * the markers are also visible on Streetview!
  * * try to make them only visible on Streetview?
+ * * * http://stackoverflow.com/questions/18311698/visibility-of-markers-on-map-panorama-in-google-maps
+ * * * supported cities for streetview
+ * * * * https://www.google.com/maps/streetview/understand/#where
  * explanation about markers
  * * http://stackoverflow.com/questions/29324136/google-map-api-multi-markers
  * change the color of the Title of active TopoPet entries to the types of the TopoPet, like for the recorder
@@ -42,6 +47,8 @@
  * add achievements
  * * TopoPets
  * * * Obtain all TopoPets of a certain type
+ * * * * SNOW (/ICE)
+ * * * * * I wanna build a snowman.
  * * * Obtain a TopoPet for every letter of the alphabet
  * * Story
  * * * Finish certain parts of the story
@@ -59,6 +66,7 @@
  * * * Read the manual
  * Refactor TopoPets found into TopoPets recorder
  * Add dateTime to the upper right corner, add a manual button to the right of it
+ * * also add a button to toggle the buttons on the bottom of the screen?
  * zoomLevel
  * * Show different TopoPets at different zoom levels
  * * Show the zoomLevel on the upper right corner of the screen, so players can know where they found certain TopoPets

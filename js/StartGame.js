@@ -219,7 +219,13 @@ function createInfoWindows(topoPetsGame) {
     google.maps.event.addListener(markers.CHARFOIL, "click", function () {
     	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
+
+			// Add TopoPet to TopoPets caught
 			topoPetsCaught[this.title] = 1;
+			// Add type of TopoPet to total'TYPE' caught
+			var type1 = getTopoPetType1(this.title);
+			topoPetsCaught["total" + type1]++;
+
 			var topoPetLevel = 1;
 			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			//document.getElementById("question").innerHTML = topoPetsGame.player[this.title].number;//works
@@ -270,10 +276,17 @@ function createInfoWindows(topoPetsGame) {
     google.maps.event.addListener(markers.HAILO, "click", function () {
     	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
+
+			// Add TopoPet to TopoPets caught
 			topoPetsCaught[this.title] = 1;
+			// Add type of TopoPet to total'TYPE' caught
+			var type1 = getTopoPetType1(this.title);
+			topoPetsCaught["total" + type1]++;
+
 			var topoPetLevel = 1;
 			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
+			checkAirTopoPetsFound();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
 			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
@@ -319,7 +332,13 @@ function createInfoWindows(topoPetsGame) {
     google.maps.event.addListener(markers.LAVACHE, "click", function () {
     	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
+
+			// Add TopoPet to TopoPets caught
 			topoPetsCaught[this.title] = 1;
+			// Add type of TopoPet to total'TYPE' caught
+			var type1 = getTopoPetType1(this.title);
+			topoPetsCaught["total" + type1]++;
+
 			var topoPetLevel = 1;
 			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
@@ -369,10 +388,17 @@ function createInfoWindows(topoPetsGame) {
     google.maps.event.addListener(markers.MOREEL, "click", function () {
     	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
+
+			// Add TopoPet to TopoPets caught
 			topoPetsCaught[this.title] = 1;
+			// Add type of TopoPet to total'TYPE' caught
+			var type1 = getTopoPetType1(this.title);
+			topoPetsCaught["total" + type1]++;
+
 			var topoPetLevel = 1;
 			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
+			checkWaterTopoPetsFound();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
 			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
@@ -418,10 +444,17 @@ function createInfoWindows(topoPetsGame) {
     google.maps.event.addListener(markers.MUDDITCH, "click", function () {
     	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
+
+			// Add TopoPet to TopoPets caught
 			topoPetsCaught[this.title] = 1;
+			// Add type of TopoPet to total'TYPE' caught
+			var type1 = getTopoPetType1(this.title);
+			topoPetsCaught["total" + type1]++;
+
 			var topoPetLevel = 1;
 			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
+			checkEarthTopoPetsFound();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
 			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
@@ -467,10 +500,17 @@ function createInfoWindows(topoPetsGame) {
     google.maps.event.addListener(markers.NEMATOAD, "click", function () {
     	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
+
+			// Add TopoPet to TopoPets caught
 			topoPetsCaught[this.title] = 1;
+			// Add type of TopoPet to total'TYPE' caught
+			var type1 = getTopoPetType1(this.title);
+			topoPetsCaught["total" + type1]++;
+
 			var topoPetLevel = 1;
 			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
+			checkWaterTopoPetsFound();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
 			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
@@ -516,10 +556,17 @@ function createInfoWindows(topoPetsGame) {
     google.maps.event.addListener(markers.PIRAMINI, "click", function () {
     	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
+
+			// Add TopoPet to TopoPets caught
 			topoPetsCaught[this.title] = 1;
+			// Add type of TopoPet to total'TYPE' caught
+			var type1 = getTopoPetType1(this.title);
+			topoPetsCaught["total" + type1]++;
+
 			var topoPetLevel = 1;
 			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
+			checkEarthTopoPetsFound();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
 			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
@@ -565,7 +612,13 @@ function createInfoWindows(topoPetsGame) {
     google.maps.event.addListener(markers.PYROSE, "click", function () {
        	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
+
+			// Add TopoPet to TopoPets caught
 			topoPetsCaught[this.title] = 1;
+			// Add type of TopoPet to total'TYPE' caught
+			var type1 = getTopoPetType1(this.title);
+			topoPetsCaught["total" + type1]++;
+
 			var topoPetLevel = 1;
 			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
@@ -615,10 +668,17 @@ function createInfoWindows(topoPetsGame) {
     google.maps.event.addListener(markers.SANDANCE, "click", function () {
     	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
+
+			// Add TopoPet to TopoPets caught
 			topoPetsCaught[this.title] = 1;
+			// Add type of TopoPet to total'TYPE' caught
+			var type1 = getTopoPetType1(this.title);
+			topoPetsCaught["total" + type1]++;
+
 			var topoPetLevel = 1;
 			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
+			checkEarthTopoPetsFound();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
 			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
@@ -664,10 +724,17 @@ function createInfoWindows(topoPetsGame) {
     google.maps.event.addListener(markers.SHEAL, "click", function () {
     	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
+
+			// Add TopoPet to TopoPets caught
 			topoPetsCaught[this.title] = 1;
+			// Add type of TopoPet to total'TYPE' caught
+			var type1 = getTopoPetType1(this.title);
+			topoPetsCaught["total" + type1]++;
+
 			var topoPetLevel = 1;
 			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
+			checkWaterTopoPetsFound();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
 			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
@@ -713,10 +780,17 @@ function createInfoWindows(topoPetsGame) {
     google.maps.event.addListener(markers.VAMPYRE, "click", function () {
     	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
+
+			// Add TopoPet to TopoPets caught
 			topoPetsCaught[this.title] = 1;
+			// Add type of TopoPet to total'TYPE' caught
+			var type1 = getTopoPetType1(this.title);
+			topoPetsCaught["total" + type1]++;
+
 			var topoPetLevel = 1;
 			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
+			checkAirTopoPetsFound();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
 			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
@@ -762,10 +836,17 @@ function createInfoWindows(topoPetsGame) {
     google.maps.event.addListener(markers.WINGDIGO, "click", function () {
     	// Add the TopoPet to the recorder if it has not been caught yet
 		if (topoPetsCaught[this.title] == 0) {
+
+			// Add TopoPet to TopoPets caught
 			topoPetsCaught[this.title] = 1;
+			// Add type of TopoPet to total'TYPE' caught
+			var type1 = getTopoPetType1(this.title);
+			topoPetsCaught["total" + type1]++;
+
 			var topoPetLevel = 1;
 			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
+			checkAirTopoPetsFound();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
 			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);

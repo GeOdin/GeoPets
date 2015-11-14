@@ -271,8 +271,8 @@ function getTopoPetType1(name) {
 
 			// Return the first type
 			return type1;
-		};
-	};
+		}
+	}
 }
 
 /////////////////////////////////
