@@ -75,22 +75,212 @@ body {
 
 #activeTopoPet1 {
 	display: none;
+	cursor: pointer;
 }
 
 #activeTopoPet2 {
 	display: none;
+	cursor: pointer;
 }
 
 #activeTopoPet3 {
 	display: none;
+	cursor: pointer;
 }
 
 #activeTopoPet4 {
 	display: none;
+	cursor: pointer;
 }
 
 #activeTopoPet5 {
 	display: none;
+	cursor: pointer;
+}
+
+#activeTopoPet1Div {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 0.5%;
+	width: 25%;
+	height: 43.625vh;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#activeTopoPet1Title {
+	position: relative;
+	display: none;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#activeTopoPet1Text {
+	position: relative;
+	display: none;
+	width: 98%;
+	height: 80%;
+	top: 2vh;
+	left: 1%;
+	overflow-y: auto;
+}
+
+#activeTopoPet2Div {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 0.5%;
+	width: 25%;
+	height: 43.625vh;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#activeTopoPet2Title {
+	position: relative;
+	display: none;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#activeTopoPet2Text {
+	position: relative;
+	display: none;
+	width: 98%;
+	height: 80%;
+	top: 2vh;
+	left: 1%;
+	overflow-y: auto;
+}
+
+#activeTopoPet3Div {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 0.5%;
+	width: 25%;
+	height: 43.625vh;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#activeTopoPet3Title {
+	position: relative;
+	display: none;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#activeTopoPet3Text {
+	position: relative;
+	display: none;
+	width: 98%;
+	height: 80%;
+	top: 2vh;
+	left: 1%;
+	overflow-y: auto;
+}
+
+#activeTopoPet4Div {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 0.5%;
+	width: 25%;
+	height: 43.625vh;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#activeTopoPet4Title {
+	position: relative;
+	display: none;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#activeTopoPet4Text {
+	position: relative;
+	display: none;
+	width: 98%;
+	height: 80%;
+	top: 2vh;
+	left: 1%;
+	overflow-y: auto;
+}
+
+#activeTopoPet5Div {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 0.5%;
+	width: 25%;
+	height: 43.625vh;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#activeTopoPet5Title {
+	position: relative;
+	display: none;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#activeTopoPet5Text {
+	position: relative;
+	display: none;
+	width: 98%;
+	height: 80%;
+	top: 2vh;
+	left: 1%;
+	overflow-y: auto;
 }
 
 #location{
@@ -106,6 +296,7 @@ body {
 	font-size: 2em;
 	color: white;
 	text-shadow: 1px 1px #000000;
+	overflow-y:auto;
 }
 
 #locationName {
@@ -973,6 +1164,7 @@ body {
 	font-size: 2em;
 	color: white;
 	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
 }
 
 #story {
@@ -1102,6 +1294,7 @@ body {
 	font-size: 1.2em;
 	color: white;
 	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
 }
 
 #buttonPlayer {

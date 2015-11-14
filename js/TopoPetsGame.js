@@ -7,6 +7,11 @@
  * topoPetsGame()
  * toggleActiveTopoPets()
  * * setActiveTopoPetsText(topoPetsGame, topoPetName)
+ * * toggleActiveTopoPet1Text()
+ * * toggleActiveTopoPet2Text()
+ * * toggleActiveTopoPet3Text()
+ * * toggleActiveTopoPet4Text()
+ * * toggleActiveTopoPet5Text()
  * togglePlayer()
  * toggleBag()
  * toggleRecorder()
@@ -22,7 +27,7 @@
 
 /*
  * Show #buttons after getting the recorder
- * Show markers where TopoPets are, only when hovered over them
+ * Show markers where TopoPets are, only when hovered over them, within a certain buffer (geo-fencing)
  * * markers from
  * * * https://mapicons.mapsmarker.com/category/markers/nature/natural-marvels/
  * * * https://mapicons.mapsmarker.com/category/markers/nature/weather/
@@ -347,20 +352,46 @@ function topoPetsGame() {
 
 function toggleActiveTopoPets() {
 	if (document.getElementById("activeTopoPets").style.display == "none") {
+
+		// Put away the specific activeTopoPets divs
+		// Active TopoPet 1
+		if (document.getElementById("activeTopoPet1Div").style.display == "block") {
+			document.getElementById("activeTopoPet1Title").style.display = "none";
+			document.getElementById("activeTopoPet1Text").style.display = "none";
+			document.getElementById("activeTopoPet1Div").style.display = "none";
+		}
+		// Active TopoPet 2
+		if (document.getElementById("activeTopoPet2Div").style.display == "block") {
+			document.getElementById("activeTopoPet2Title").style.display = "none";
+			document.getElementById("activeTopoPet2Text").style.display = "none";
+			document.getElementById("activeTopoPet2Div").style.display = "none";
+		}
+		// Active TopoPet 3
+		if (document.getElementById("activeTopoPet3Div").style.display == "block") {
+			document.getElementById("activeTopoPet3Title").style.display = "none";
+			document.getElementById("activeTopoPet3Text").style.display = "none";
+			document.getElementById("activeTopoPet3Div").style.display = "none";
+		}
+		// Active TopoPet 4
+		if (document.getElementById("activeTopoPet4Div").style.display == "block") {
+			document.getElementById("activeTopoPet4Title").style.display = "none";
+			document.getElementById("activeTopoPet4Text").style.display = "none";
+			document.getElementById("activeTopoPet4Div").style.display = "none";
+		}
+		// Active TopoPet 5
+		if (document.getElementById("activeTopoPet5Div").style.display == "block") {
+			document.getElementById("activeTopoPet5Title").style.display = "none";
+			document.getElementById("activeTopoPet5Text").style.display = "none";
+			document.getElementById("activeTopoPet5Div").style.display = "none";
+		}
+
 		// Show the activeTopoPetsTitle box
 		document.getElementById("activeTopoPetsTitle").style.display = "block";
 		// Show the activeTopoPetsText box
 		document.getElementById("activeTopoPetsText").style.display = "block";
 		// Show the activeTopoPets box
 		document.getElementById("activeTopoPets").style.display = "block";
-/*	} else if (document.getElementById("activeTopoPetsTitle").innerHTML != "Active TopoPets") {
-		// Show the activeTopoPetsTitle box
-		document.getElementById("activeTopoPetsTitle").innerHTML = "Active TopoPets";
-		// Show the activeTopoPetsText box
-		document.getElementById("activeTopoPetsText").style.display = "block";
-		// Show the activeTopoPets box
-		document.getElementById("activeTopoPets").style.display = "block";
- */
+
 	} else {
 		// Put away the activeTopoPetsTitle box
 		document.getElementById("activeTopoPetsTitle").style.display = "none";
@@ -371,9 +402,9 @@ function toggleActiveTopoPets() {
 	}
 }
 
-//////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
 // setActiveTopoPetsText(topoPetsGame, topoPetObject) //
-//////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
 
 // Function to set the active TopoPets text
 
@@ -383,27 +414,119 @@ function setActiveTopoPetsText(topoPetsGame, topoPetObject){
 		var activeTopoPetCall = "activeTopoPet" + activeTopoPetNumber;
 		if (topoPetsGame.player[activeTopoPetCall] == "") {
 			topoPetsGame.player[activeTopoPetCall] = topoPetObject.Name;
-			document.getElementById(activeTopoPetCall).innerHTML = "<a onclick='toggleActiveTopoPetText(" + topoPetObject.Name + ")' style='cursor:pointer;'>" + topoPetObject.Name +  "</a>";//add specific HTML code instead of topoPetObject!
+
+			// Show the specific active TopoPet within the general active TopoPets div
+			document.getElementById(activeTopoPetCall).innerHTML = "<a onclick='toggleActiveTopoPet" + activeTopoPetNumber + "Text()'> Lvl. " + topoPetObject.level + " " + topoPetObject.Name + "</a>";
 			document.getElementById(activeTopoPetCall).style.display = "block";
+
+			// Set the new div for the specific active TopoPet
+			document.getElementById(activeTopoPetCall + "Title").innerHTML = "<p> Lvl. " + topoPetObject.level + " " + topoPetObject.Name + "</p>";
+			document.getElementById(activeTopoPetCall + "Text").innerHTML = "HP: " + topoPetObject.currentHP + "/" + topoPetObject.maxHP + "<br/> SP: " + topoPetObject.currentSP + "/" + topoPetObject.maxSP + "<br/> TP: " + topoPetObject.currentTP + "/" + topoPetObject.maxTP + "<br/> Attack: " + topoPetObject.maxAttack + "<br/> Defense: " + topoPetObject.maxDefense + "<br/> Agility: " + topoPetObject.maxAgility + "<br/> Exp: " + topoPetObject.currentExp + "/" + topoPetObject.expNextLevel;
+
+			// Return the topoPetsGame object
 			return topoPetsGame;
 		}
 	}
 	return topoPetsGame;
-};
+}
 
-//////////////////////////////////////////
-// toggleActiveTopoPetText(topoPetName) //
-//////////////////////////////////////////
+////////////////////////////////
+// toggleActiveTopoPet1Text() //
+////////////////////////////////
 
-function toggleActiveTopoPetText(topoPetName) {
-	if (document.getElementById("activeTopoPetsTitle").innerHTML == "<p>Active TopoPets</p>") {
-		//Change the active TopoPets Title
-		document.getElementById("activeTopoPetsTitle").innerHTML = topoPetName;//"<a onclick='toggleActiveTopoPets()' style='cursor:pointer;'>" + topoPetName +  "</a>";
-		//Change the active TopoPets text
-		document.getElementById("activeTopoPetsText").innerHTML = "HP: ";// + topoPetName;
-	} else {
-		document.getElementById("activeTopoPetsTitle").innerHTML = topoPetName;// + topoPetName;
-		document.getElementById("activeTopoPetsText").innerHTML = "TP: ";// + topoPetName;
+// Function to toggle the stats for active TopoPet1
+
+function toggleActiveTopoPet1Text() {
+
+	// Put away the divs for the general active TopoPets divs
+	if (document.getElementById("activeTopoPets").style.display == "block") {
+		document.getElementById("activeTopoPetsTitle").style.display = "none";
+		document.getElementById("activeTopoPetsText").style.display = "none";
+		document.getElementById("activeTopoPets").style.display = "none";
+		// Show the active TopoPet 1 stats
+		document.getElementById("activeTopoPet1" + "Text").style.display = "block";
+		document.getElementById("activeTopoPet1" + "Title").style.display = "block";
+		document.getElementById("activeTopoPet1" + "Div").style.display = "block";
+	}
+}
+
+////////////////////////////////
+// toggleActiveTopoPet2Text() //
+////////////////////////////////
+
+// Function to toggle the stats for active TopoPet2
+
+function toggleActiveTopoPet2Text() {
+
+	// Put away the divs for the general active TopoPets divs
+	if (document.getElementById("activeTopoPets").style.display == "block") {
+		document.getElementById("activeTopoPetsTitle").style.display = "none";
+		document.getElementById("activeTopoPetsText").style.display = "none";
+		document.getElementById("activeTopoPets").style.display = "none";
+		// Show the active TopoPet 2 stats
+		document.getElementById("activeTopoPet2" + "Text").style.display = "block";
+		document.getElementById("activeTopoPet2" + "Title").style.display = "block";
+		document.getElementById("activeTopoPet2" + "Div").style.display = "block";
+	}
+}
+
+////////////////////////////////
+// toggleActiveTopoPet3Text() //
+////////////////////////////////
+
+// Function to toggle the stats for active TopoPet3
+
+function toggleActiveTopoPet3Text() {
+
+	// Put away the divs for the general active TopoPets divs
+	if (document.getElementById("activeTopoPets").style.display == "block") {
+		document.getElementById("activeTopoPetsTitle").style.display = "none";
+		document.getElementById("activeTopoPetsText").style.display = "none";
+		document.getElementById("activeTopoPets").style.display = "none";
+		// Show the active TopoPet 3 stats
+		document.getElementById("activeTopoPet3" + "Text").style.display = "block";
+		document.getElementById("activeTopoPet3" + "Title").style.display = "block";
+		document.getElementById("activeTopoPet3" + "Div").style.display = "block";
+	}
+}
+
+////////////////////////////////
+// toggleActiveTopoPet4Text() //
+////////////////////////////////
+
+// Function to toggle the stats for active TopoPet4
+
+function toggleActiveTopoPet4Text() {
+
+	// Put away the divs for the general active TopoPets divs
+	if (document.getElementById("activeTopoPets").style.display == "block") {
+		document.getElementById("activeTopoPetsTitle").style.display = "none";
+		document.getElementById("activeTopoPetsText").style.display = "none";
+		document.getElementById("activeTopoPets").style.display = "none";
+		// Show the active TopoPet 4 stats
+		document.getElementById("activeTopoPet4" + "Text").style.display = "block";
+		document.getElementById("activeTopoPet4" + "Title").style.display = "block";
+		document.getElementById("activeTopoPet4" + "Div").style.display = "block";
+	}
+}
+
+////////////////////////////////
+// toggleActiveTopoPet5Text() //
+////////////////////////////////
+
+// Function to toggle the stats for active TopoPet5
+
+function toggleActiveTopoPet5Text() {
+
+	// Put away the divs for the general active TopoPets divs
+	if (document.getElementById("activeTopoPets").style.display == "block") {
+		document.getElementById("activeTopoPetsTitle").style.display = "none";
+		document.getElementById("activeTopoPetsText").style.display = "none";
+		document.getElementById("activeTopoPets").style.display = "none";
+		// Show the active TopoPet 5 stats
+		document.getElementById("activeTopoPet5" + "Text").style.display = "block";
+		document.getElementById("activeTopoPet5" + "Title").style.display = "block";
+		document.getElementById("activeTopoPet5" + "Div").style.display = "block";
 	}
 }
 
