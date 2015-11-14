@@ -37,6 +37,7 @@
  * * try to make them only visible on Streetview?
  * explanation about markers
  * * http://stackoverflow.com/questions/29324136/google-map-api-multi-markers
+ * change the color of the Title of active TopoPet entries to the types of the TopoPet, like for the recorder
  * button to reset map to Wageningen
  * add achievements
  * * TopoPets
