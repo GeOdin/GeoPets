@@ -3,7 +3,23 @@
  * Made on 04-11-2015
  * by GeOdin
  *
- * This JavaScript file includes the following functions:
+ *==============================================
+ * This JavaScript file incluced to do things: *
+ *==============================================
+ * General
+ * TopoPets.html
+ * * currently no to do things
+ * stylesheet_TopoPets.css
+ * * currently no to do things
+ * TopoPetsGame.js
+ * StartGame.js
+ * Battle.js
+ * Story.js
+ * TopoPets.js
+ *
+ *=========================================================
+ * This JavaScript file includes the following functions: *
+ *=========================================================
  * topoPetsGame()
  * toggleActiveTopoPets()
  * * setActiveTopoPetsText(topoPetsGame, topoPetName)
@@ -21,9 +37,9 @@
  * toggleStory()
  */
 
-///////////
-// To do //
-///////////
+/////////////
+// General //
+/////////////
 
 /*
  * Add more TopoPets for NORMAL and SPIRIT type (at least 3)
@@ -252,6 +268,13 @@
  * * * Shower/ hose?
  * Other:
  * * Crush (normal)
+ * * Slam (normal)
+ * * Punch (fighting)
+ * * Bark (normal)
+ * * Growl (normal) (strong warning)
+ * * Roar (normal) (intimidate)
+ * * Spike
+ * * Shout (normal)
  *==================
  * Battle options: *
  *==================
@@ -340,18 +363,21 @@
  * New TopoPets per type: *
  *=========================
  * * Normal: (animals, plants, food, general items)
- * * * (animals)        : (animals, anteater, bear, beetle, boar?, bug, bull, cat, chihuahua, cow, deer, dinosaur, dog, goat, hippopotamus?, horse, lion, lynx, mammal, ox, panda, pig, rhino, rhinoceros (neushoorn), sheep, shiba, snail, spider, struisvogel, swine?, tiger, turtle) (birds + flying bugs are for air)
+ * * * (animals)        : (animals, ant, anteater, bear, beetle, boar?, bug, bull, cat, caterpillar, chameleon, chick, chicken, chihuahua, cow, dalmation?, deer, dinosaur, dog, elephant, fox, gecko, giraffe, goat, hamster, hippopotamus?, horse, insect, larva, koala, leopard, lion, lizard?, llama, lynx, mammal, mouse, ox, panda, pig, pur(spinnen), rabbit, ram (male sheep/ goat), rat, rhino, rhinoceros (neushoorn), sheep, shiba, snail, spider, struisvogel, swine?, snake, termite, tiger, turtle, viper, vole (looks like a mouse), wolf) (birds + flying bugs are for air)
  * * * (fantasy animals): (fauns, unicorn)
- * * * (animal parts)   : (arm, claw, ear, finger, foot, hair, hoove, horn, leg, lip, tail, teeth, toe, tooth, tusk)
- * * * (plants)         : (beech, birch, cherries, denneappel?, oak, pine, plant, quercus(oak), tree)
- * * * (plant parts)    : (acorn, apex, berries, branch, flower, leaf, seed?, stamper?, stem, stick, thorn, trunk, vine)
- * * * (food)           : (butter, cacao, cake, candy, chocolate, eat, eater, food, jam, macaroni, pie, spaghetti)
- * * * (general items)  : (ball, bowl, coin, cup, flat, garden, guitar, hula hoop, long, noise, paper, pen, penny, piano, pipe, ring, sock, song, sound, symphony, whip)
- * * * shycub (shy + cub (a small bear)) -> shibear (shiba + bear)
- * * * Tuscat (tusk + cat)
+ * * * (animal parts)   : (arm, claw, ear, finger, foot, hair, hoove, horn, leg, lip, tail, teeth, toe, tongue, tooth, tusk)
+ * * * (plants)         : (basil, beech, birch, blackberry, cherries, conifer, denneappel?, fir (= spar), garlic, herb, oak, pine, plant, quercus(oak), rose, sylva, tree, tullip)
+ * * * (plant parts)    : (acorn, apex, bark, berries, branch, bush, flower, leaf, seed?, stamper?, stem, stick, thorn, timber, trunk, vine, wood)
+ * * * (food)           : (apple, banana, biscuit, bread, broccoli, butter, cabbage, cacao, cake, candy, carrot, cauliflower, cheese, chili, chili con carne, chips, chocolate, coockie, corn, cucumber, cupcakes, eat, eater, food, fruit, gherkin (= augurk), jam, lettuce, macaroni, milk, nectarine, pancakes, peach, pickle (= augurk), pie, pineapple, scone, spaghetti, surimi, sushi, tomato, vegetable, waffle, yoghurt, zucchini (= courgette))
+ * * * (general items)  : (ball, basket, bowl, beard, beauty, coin, cup, dance, eye, flat, garden, giant, glitter, guitar, herald?, hula hoop, long, mustache, noise, paint, painting, paper, pen, penny, piano, pipe, ring, scarf, slinky (spring that walks down stairs), sock, song, sound, spring, sprinkles, symphony, violin, whip)
+ * * * (size)           : (big, collossal?, gargantuan, giant, large, small, tall, tiny)
+ * * * Tuscat (tusk + cat) // coords: 
+ * * * Tulpa (looks like a tullip) // coords: 
+ * * * Elephaun (elephant + faun (half human, half goat)) // coords: 
+ * * * shycub (shy + cub (= a small bear)) -> shibear (shiba + bear)
  * * * bearry (bear + berry)
  * * * sticker (stick with goo?)
- * * Air: (air, angel?, bee, bird, blaas instrument? breeze, cloud, cotton, crow, cumulus (cloud?), draft, dragon?, dust?, fairy?, fey?, flute?, fly, free, gas?, hail?, hommel?, levitate, parrot, rain?, rainbow, reiger?, sky, stork, tornado, weather?, whirlwind, wind, wing, wings)
+ * * Air: (aerosol?, air, angel?, bat, bee, bird, blaas instrument? breeze, butterfly, cloud, cotton, crow, cumulus (cloud?), draft, dragon?, dragonfly, dust?, eagle, fairy?, fey?, flute?, fly, free, gas?, goose, hail?, hawk, hommel?, ifrit (winged fire creatures), levitate, mecoptera, moth, owl, parrot, pelican (air/ water), rain?, rainbow, reiger?, sky, smog, smoke?, stork, storm, swan, tornado, umbrella, vapor, volatile, vulture?, wasp, weather?, whirlwind, wind, wing, wings)
  * * * Wasparagus (kassen ten noorden van LUMEN) (Air / Earth)
  * * * Windust (wind + dust)
  * * * Flair (narcistic air elemental) (albardaflat)
@@ -359,29 +385,29 @@
  * * * Cubicicle (transformation of Hailo) (looks like an icicle made of cubes/ cube as head, with halo around it's head?)
  * * * Pandart (panda + dart)
  * * * Zombee (zombie + bee) (later version air/ shadow)
- * * Earth: (beach?, brick, dig, dug, earth, formation?, ground, hill, island?, isle?, mountain, mud, podzol?, rift?, rock, rock formation?, sand, sediment?, seed?, soil, tectonic (plate), tile?, tree?, underground)
+ * * Earth: (beach?, brick, cave, coal?, coast?, crystal?, desert? (earth/ fire), dig, dug, dune?, earth, formation?, ground, hill, island?, isle?, ley line?, mine, mole, mountain, mud, peat, pebble, pingo, podzol?, pumice (volcanic rock, earth/ fire), rift?, rock, rock formation?, sand, sediment?, seed?, soil, stalagmite, Stone Henge?, stone, tectonic (plate), tile?, tree?, underground)
  * * * Mudsy (earth) (helper of Sandta) (transforms into Mudditch(already implemented)/ Muddove (earth/ air))
  * * * Sworm (Earth/ Air)
+ * * * Airbex (air+ ibex) (earth/ air) (looks like a mountain goat with small wings around it's legs) (It's a mountain goat that has learned how to fly to pass canyons)
  * * * (Sandash)
- * * * Sandoom
- * * * Tulpa 
+ * * * Sandoom (sand + doom) (later earth/ shadow)
  * * * (Piramini is already implemented) -> Piramidi -> Piramax (later versie --> ancient)
  * * * Sockroach (kakkerlak die eruit ziet als een sok) (winkelcentrum)
  * * * Pebbelk (pebble + elk, transformatin of something else?)
  * * * Mudshroom (mud + mushroom)
  * * * Mirrock (mirror + rock) (earth/ spirit)
  * * * Cowabunga (dancing cow) (Nude waar danslessen zijn?)
- * * Fire: (barbeque, blaze, bbq, burn, campfire, charcoal, dragon, ember, fiery, fire, fireman, flame, forest fire, heat, hot, ignin?, imp, lava, magma, match, matchstick, plasma?, scorch, torch, volcano, volcano eruption, warm, warmth) (evt nog een bij firehouse bij haarweg)
+ * * Fire: (ash, barbeque, blaze, bbq, burn, caldera, campfire, charcoal, coal?, desert? (earth/ fire), dragon, ember, explosion?, fiery, fire, fireman, fireworks, flame, forest fire, heat, hot, ifrit (winged fire creatures), ignin?, imp, lava, magma, match, matchstick, plasma?, pyro, pyroclastic, pyromaniac, scorch, smoke?, stratovolcano, summer, torch, Vesuvius (well known volcano), volcanic ash, volcano, volcano eruption, warm, warmth) (evt nog een bij firehouse bij haarweg)
  * * * Firabbit (Dreijen) (/ Firat)
  * * * Sundash (SSR-W) (later fire/ light)
  * * * Distorchion (in de war firegast) (huisartsenpost) (later fire/ spirit)
  * * * Grelking (later fire/ shadow)
  * * * Firemit (fire hermit)
- * * * Blace (blaze + ace)
+ * * * Blace (blaze + ace) (final form of a fire transformation?)
  * * * Torchid (torch + orchid) (transforms into Pyrose) (flowers on fire?)
  * * * Flamengo (flame + flamingo) (fire/ air)
  * * * (Firefly)
- * * Water: (aqua, aquaduct, aquifer?, bakboord?, basin?, beach?, canoe?, carp, crab, cruise, deck?, ditch (= gracht), drop, droplet, eel, fish, island?, isle?, lake, lobster, marine, ocean, orca (killer whale), pool, puddle, raft?, river, sea, sea snail, sea star, shark, ship, stuurboord?, swamp, tide, tidal wave, trench (= geul), water, waterdrop, waterfall, wave, whale, whirlpool, yelly fish?)
+ * * Water: (aqua, aquaduct, aquarium, aquifer?, badger, bakboord?, barnacle, basin?, beach?, canoe?, carp, cichlid (= baarsachtige), coast?, crab, creek, cruise, deck?, ditch (= gracht), dowsing (finding water underground, water/ spirit?), drink, drop, droplet, eel, fin, fish, freshwater, frog, geyser (water/ fire?), goldfish, island?, isle?, lake, lobster, Loch Ness monster?, marine, mermaid, naval, navy, newt (aquatic salamander), ocean, orca (killer whale), pool, puddle, raft?, river, salmon, sea, sea horse, seashell, sea snail, sea star, shark, ship, stuurboord?, swamp, tide, tidal wave, toad, trench (= geul), water, waterdrop, waterfall, wave, well, whale, whirlpool, yelly fish?)
  * * * Spottle, Spotfin, Spotflow (Zwembad Bongerd)
  * * * Fireel (vis die soms vuurkrachten krijgt als je hem kookt) (eventueel nog iets in water tussen grebbedijk en rijn in: 51.9607533,5.6701563)
  * * * Tranch (waterpaard) (gracht rooseveltweg)
@@ -390,7 +416,8 @@
  * * * Moyster (moist + oyster) -> Moystar
  * * * Oarca (oar(sman?) + orca)
  * * * Lotusk (lotus + tusk)
- * * SPIRIT: (angel, celestial, ceremony, chalice, djinn, ether, fey?, fairy?, guardian, mirror, priest, relic, religion, sacred, spirit, voodoo, wish)
+ * * * Whales (whale + wales) (English whale)
+ * * SPIRIT: (angel, avatar, celestial, celtic?, ceremony, chalice, deity, disciple, djinn, dowsing (finding water underground, water/ spirit?), ether, fey?, fairy?, guardian, magic?, mirror, monastery, monk, nature magic?, new age, parish?, prayer, priest, relic, religion, sacred, soul, spirit, spiritual, symbol, temple, totem, tribe? voodoo, wish, worship)
  * * * Sylph (spirit/ air)
  * * * Gnome (spirit/ earth)
  * * * Salamander? (spirit/ fire)
@@ -398,21 +425,22 @@
  * * * Gaia (spirit) (have her talk to you every now and then, but don't let her be catchable)
  * Later version types: (know because of research that some TopoPets are another typoe than previously thought)
  * * ancient, fighting, ice, light, shadow
- * * * ANCIENT (archaeology, excavation, ruin)
+ * * * ANCIENT (archaeology, descend, excavation, historic?, ruin)
  * * * * Piramini becomes ancient/ earth, it's transformations Piramidi and Piramax will also become ancient/ earth (Piramini sets you of to Cairo to find Cleopython, transforms into piramidi to help you find caesair and in piramax to help you find Solara)
  * * * * Cleopython (cleopatra + python) (ancient/ water)
  * * * * Solara (sol/ solar + ra) (ancient/ fire) // Ra was actually the sun god, so this should become ancient/ light (sekhmet as God of liopns, fire and vengeance instead?)
  * * * * Caesair (caesar + air) (ancient/ air)
- * * * FIGHTING/ FIGHT (belt, black belt, dagger, fight, fighting, fist, fencing, foil (weapon usid in fencing), karate, kung fu, martial arts, sword, taekwondo, weapon)
+ * * * FIGHTING/ FIGHT (belt, black belt, dagger, fight, fighting, fist, fencing, foil (weapon usid in fencing), karate, kung fu, martial arts, sword, taekwondo, weapon, wrestling)
  * * * * Charfoil later fire/ fighting?
  * * * * Hamstrong (hamster + strong) -> Hamstar (hamster + star) (/ Hamstar -> Hamstrong)
- * * * ICE / SNOW (cold, fjord?, glacier, ice, ice cream, ice skating, polar, snow, snow man)
+ * * * ICE / SNOW (arctic, cold, fjord?, freeze, frost, glacial, glacier, ice, ice cream, ice skating, penguin, polar, snow, snow ball, snow man, winter)
  * * * * Polaris/ polarice?
+ * * * * Polarva (polar + larva)
  * * * * Chalice (chalice + ice) (spirit/ snow/ice)
  * * * * It will use the recorder looks of what is currently air, a new styling for air needs to be made
  * * * * Hailo becomes ice/ light, it's transformation Cubicicle will also become ice/ light
- * * * LIGHT (halo?, lanturn?, light, star, sol, solar, sun)
- * * * SHADOW (apocalypse, black, ghost, pandemic)
+ * * * LIGHT (aurora? (light/ ice/snow), constellation, halo?, Hubble telescope?, lanturn?, light, star, sol, solar, sun, telescope?)
+ * * * SHADOW (apocalypse, black, disaster, disease?, doom, ghost, hyena?, mosquito (shadow/ air)?, pandemic, rodent?, scar)
  * * * * Scare (transformation of Sheal) // You should know better than to mistreat a poor seal. (evolves when sheal is fainted a random amount of times - 10-20 eg.)
  * * * * Deerie (deer + eerie)
  * Seasonal TopoPets:
