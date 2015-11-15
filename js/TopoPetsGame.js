@@ -359,7 +359,7 @@
  * * * Cubicicle (transformation of Hailo) (looks like an icicle made of cubes/ cube as head, with halo around it's head?)
  * * * Pandart (panda + dart)
  * * * Zombee (zombie + bee) (later version air/ shadow)
- * * Earth: (beach?, brick, dig, dug, earth, formation?, ground, hill, island?, isle?, mountain, mud, podzol?, rock, rock formation?, sand, sediment?, seed?, soil, tectonic (plate), tile?, tree?, underground)
+ * * Earth: (beach?, brick, dig, dug, earth, formation?, ground, hill, island?, isle?, mountain, mud, podzol?, rift?, rock, rock formation?, sand, sediment?, seed?, soil, tectonic (plate), tile?, tree?, underground)
  * * * Mudsy (earth) (helper of Sandta) (transforms into Mudditch(already implemented)/ Muddove (earth/ air))
  * * * Sworm (Earth/ Air)
  * * * (Sandash)
@@ -381,7 +381,7 @@
  * * * Torchid (torch + orchid) (transforms into Pyrose) (flowers on fire?)
  * * * Flamengo (flame + flamingo) (fire/ air)
  * * * (Firefly)
- * * Water: (aqua, aquaduct, aquifer?, bakboord?, basin?, beach?, carp, crab, cruise, deck?, ditch (= gracht), drop, droplet, eel, fish, island?, isle?, lake, lobster, marine, ocean, orca (killer whale), pool, puddle, river, sea, sea snail, sea star, shark, ship, stuurboord?, swamp, tide, tidal wave, trench (= geul), water, waterdrop, waterfall, wave, whale, whirlpool, yelly fish?)
+ * * Water: (aqua, aquaduct, aquifer?, bakboord?, basin?, beach?, canoe?, carp, crab, cruise, deck?, ditch (= gracht), drop, droplet, eel, fish, island?, isle?, lake, lobster, marine, ocean, orca (killer whale), pool, puddle, raft?, river, sea, sea snail, sea star, shark, ship, stuurboord?, swamp, tide, tidal wave, trench (= geul), water, waterdrop, waterfall, wave, whale, whirlpool, yelly fish?)
  * * * Spottle, Spotfin, Spotflow (Zwembad Bongerd)
  * * * Fireel (vis die soms vuurkrachten krijgt als je hem kookt) (eventueel nog iets in water tussen grebbedijk en rijn in: 51.9607533,5.6701563)
  * * * Tranch (waterpaard) (gracht rooseveltweg)
@@ -401,7 +401,7 @@
  * * * ANCIENT (archaeology, excavation, ruin)
  * * * * Piramini becomes ancient/ earth, it's transformations Piramidi and Piramax will also become ancient/ earth (Piramini sets you of to Cairo to find Cleopython, transforms into piramidi to help you find caesair and in piramax to help you find Solara)
  * * * * Cleopython (cleopatra + python) (ancient/ water)
- * * * * Solara (sol/ solar + ra) (ancient/ fire)
+ * * * * Solara (sol/ solar + ra) (ancient/ fire) // Ra was actually the sun god, so this should become ancient/ light (sekhmet as God of liopns, fire and vengeance instead?)
  * * * * Caesair (caesar + air) (ancient/ air)
  * * * FIGHTING/ FIGHT (belt, black belt, dagger, fight, fighting, fist, fencing, foil (weapon usid in fencing), karate, kung fu, martial arts, sword, taekwondo, weapon)
  * * * * Charfoil later fire/ fighting?
@@ -411,7 +411,7 @@
  * * * * Chalice (chalice + ice) (spirit/ snow/ice)
  * * * * It will use the recorder looks of what is currently air, a new styling for air needs to be made
  * * * * Hailo becomes ice/ light, it's transformation Cubicicle will also become ice/ light
- * * * LIGHT (halo?, lanturn?, light, star, sun)
+ * * * LIGHT (halo?, lanturn?, light, star, sol, solar, sun)
  * * * SHADOW (apocalypse, black, ghost, pandemic)
  * * * * Scare (transformation of Sheal) // You should know better than to mistreat a poor seal. (evolves when sheal is fainted a random amount of times - 10-20 eg.)
  * * * * Deerie (deer + eerie)
