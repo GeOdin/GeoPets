@@ -149,6 +149,21 @@ var topoPetsStats = [
  * * Add unique number to each TopoPet after all TopoPets are made ("topoPetNumber")
  * * Moves a TopoPet has at that specific level?
  * * Moves a TopoPet can learn at that specific level
+ * * adjust currentTP and maxTP so that it's only differrent for spirit/ ancient? (probably not)
+ * Add new TopoPets
+ * * NORMAL
+ * * * + HP, - random (TP?, attack, defense, agility)
+ * * SPIRIT
+ * * * + TP, - random (attack, defense, agility)
+ * always + TP for special type of version? (version 1 - spirit, version 2 - ancient)
+
+ * current stats:
+ * * AIR:
+ * * * + Agility, - random (TP, attack, defense)
+ * * EARTH:
+ * * * + Defense, - random (TP, attack, agility)
+ * * FIRE:
+ * * * + Attack, - random (TP, defense, agility)
  */
 	[
 		"number", //0
@@ -169,18 +184,18 @@ var topoPetsStats = [
 		"currentExp", //15
 		"expNextLevel" //16
 	],
-	["001", "CHARFOIL", 1, 12, 12, 30, 30, 5, 5, 11, 11, 9, 9, 10, 10, 0, 30],
-	["002", "HAILO", 1, 12, 12, 30, 30, 5, 5, 9, 9, 10, 10, 11, 11, 0, 30],
-	["003", "LAVACHE", 1, 12, 12, 30, 30, 5, 5, 11, 11, 10, 10, 9, 9, 0, 30],
-	["004", "MOREEL", 1, 12, 12, 30, 30, 6, 6, 10, 10, 10, 10, 9, 9, 0, 30],
-	["005", "MUDDITCH", 1, 12, 12, 30, 30, 4, 4, 10, 10, 11, 11, 10, 10, 0, 30],
-	["006", "NEMATOAD", 1, 12, 12, 30, 30, 6, 6, 10, 10, 9, 9, 10, 10, 0, 30],
-	["007", "PIRAMINI", 1, 12, 12, 30, 30, 5, 5, 10, 10, 11, 11, 9, 9, 0, 30],
-	["008", "PYROSE", 1, 12, 12, 30, 30, 4, 4, 11, 11, 10, 10, 10, 10, 0, 30],
-	["009", "SANDANCE", 1, 12, 12, 30, 30, 5, 5, 9, 9, 11, 11, 10, 10, 0, 30],
-	["010", "SHEAL", 1, 12, 12, 30, 30, 6, 6, 9, 9, 10, 10, 10, 10, 0, 30],
-	["011", "VAMPYRE", 1, 12, 12, 30, 30, 5, 5, 10, 10, 9, 9, 11, 11, 0, 30],
-	["012", "WINGDIGO", 1, 12, 12, 30, 30, 4, 4, 10, 10, 10, 10, 11, 11, 0, 30]
+	["001", "CHARFOIL", 1, 24, 24, 30, 30, 5, 5, 11, 11, 9, 9, 10, 10, 0, 30],
+	["002", "HAILO", 1, 24, 24, 30, 30, 5, 5, 9, 9, 10, 10, 11, 11, 0, 30],
+	["003", "LAVACHE", 1, 24, 24, 30, 30, 5, 5, 11, 11, 10, 10, 9, 9, 0, 30],
+	["004", "MOREEL", 1, 24, 24, 30, 30, 6, 6, 10, 10, 10, 10, 9, 9, 0, 30],
+	["005", "MUDDITCH", 1, 24, 24, 30, 30, 4, 4, 10, 10, 11, 11, 10, 10, 0, 30],
+	["006", "NEMATOAD", 1, 24, 24, 30, 30, 6, 6, 10, 10, 9, 9, 10, 10, 0, 30],
+	["007", "PIRAMINI", 1, 24, 24, 30, 30, 5, 5, 10, 10, 11, 11, 9, 9, 0, 30],
+	["008", "PYROSE", 1, 24, 24, 30, 30, 4, 4, 11, 11, 10, 10, 10, 10, 0, 30],
+	["009", "SANDANCE", 1, 24, 24, 30, 30, 5, 5, 9, 9, 11, 11, 10, 10, 0, 30],
+	["010", "SHEAL", 1, 24, 24, 30, 30, 6, 6, 9, 9, 10, 10, 10, 10, 0, 30],
+	["011", "VAMPYRE", 1, 24, 24, 30, 30, 5, 5, 10, 10, 9, 9, 11, 11, 0, 30],
+	["012", "WINGDIGO", 1, 24, 24, 30, 30, 4, 4, 10, 10, 10, 10, 11, 11, 0, 30]
 ];
 
 ////////////////////////////////

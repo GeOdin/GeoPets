@@ -26,6 +26,7 @@
 ///////////
 
 /*
+ * Add more TopoPets for NORMAL and SPIRIT type (at least 3)
  * Show #buttons after getting the recorder
  * Show markers where TopoPets are, only when hovered over them, within a certain buffer (geo-fencing)
  * * show markers only on certain zoom level
