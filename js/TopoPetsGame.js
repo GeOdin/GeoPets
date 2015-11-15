@@ -248,7 +248,8 @@
  * * * Bubble
  * * * Water balloon
  * * * Shower/ hose?
- *
+ * Other:
+ * * Crush (normal)
  *==================
  * Battle options: *
  *==================
@@ -336,16 +337,27 @@
  *=========================
  * New TopoPets per type: *
  *=========================
- * * Normal: (cat, dog, bug, bear, ?)
+ * * Normal: (animals, plants, food, general items)
+ * * * (animals)        : (animals, anteater, bear, beetle, boar?, bug, bull, cat, chihuahua, cow, deer, dinosaur, dog, goat, hippopotamus?, horse, lion, lynx, mammal, ox, panda, pig, rhino, rhinoceros (neushoorn), sheep, shiba, snail, spider, struisvogel, swine?, tiger, turtle) (birds + flying bugs are for air)
+ * * * (fantasy animals): (fauns, unicorn)
+ * * * (animal parts)   : (arm, claw, ear, finger, foot, hair, hoove, horn, leg, lip, tail, teeth, toe, tooth, tusk)
+ * * * (plants)         : (beech, birch, cherries, denneappel?, oak, pine, plant, quercus(oak), tree)
+ * * * (plant parts)    : (acorn, apex, berries, branch, flower, leaf, seed?, stamper?, stem, stick, thorn, trunk, vine)
+ * * * (food)           : (butter, cacao, cake, candy, chocolate, eat, eater, food, jam, macaroni, pie, spaghetti)
+ * * * (general items)  : (ball, bowl, coin, cup, flat, garden, guitar, hula hoop, long, noise, paper, pen, penny, piano, ring, sock, song, sound, symphony, whip)
  * * * shycub (shy + cub (a small bear)) -> shibear (shiba + bear)
- * * Air: (air, bird, breeze, cloud, draft, fly, hail?, levitate, rain?, sky, tornado, weather?, wind)
+ * * * Tuscat (tusk + cat)
+ * * * bearry (bear + berry)
+ * * * sticker (stick with goo?)
+ * * Air: (air, angel?, bee, bird, blaas instrument? breeze, cloud, cotton, crow, cumulus (cloud?), draft, dragon?, dust?, fairy?, fey?, flute?, fly, free, gas?, hail?, hommel?, levitate, parrot, rain?, rainbow, reiger?, sky, stork, tornado, weather?, whirlwind, wind, wing, wings)
  * * * Wasparagus (kassen ten noorden van LUMEN) (Air / Earth)
+ * * * Windust (wind + dust)
  * * * Flair (narcistic air elemental) (albardaflat)
  * * * Bair?
  * * * Cubicicle (transformation of Hailo) (looks like an icicle made of cubes/ cube as head, with halo around it's head?)
  * * * Pandart (panda + dart)
  * * * Zombee (zombie + bee) (later version air/ shadow)
- * * Earth: (earth, flower?, ground, sand, tree?)
+ * * Earth: (beach?, brick, earth, formation?, ground, hill, island?, isle?, mountain, mud, podzol?, rock, rock formation?, sand, seed?, soil, tile?, tree?)
  * * * Mudsy (earth) (helper of Sandta) (transforms into Mudditch(already implemented)/ Muddove (earth/ air))
  * * * Sworm (Earth/ Air)
  * * * (Sandash)
@@ -355,8 +367,9 @@
  * * * Sockroach (kakkerlak die eruit ziet als een sok) (winkelcentrum)
  * * * Pebbelk (pebble + elk, transformatin of something else?)
  * * * Mudshroom (mud + mushroom)
+ * * * Mirrock (mirror + rock) (earth/ spirit)
  * * * Cowabunga (dancing cow) (Nude waar danslessen zijn?)
- * * Fire: (campfire, fiery, fire, fireman, torch) (evt nog een bij firehouse bij haarweg)
+ * * Fire: (barbeque, blaze, bbq, burn, campfire, charcoal, dragon, ember, fiery, fire, fireman, flame, forest fire, heat, hot, ignin?, imp, match, matchstick, scorch, torch, volcano, warm, warmth) (evt nog een bij firehouse bij haarweg)
  * * * Firabbit (Dreijen) (/ Firat)
  * * * Sundash (SSR-W) (later fire/ light)
  * * * Distorchion (in de war firegast) (huisartsenpost) (later fire/ spirit)
@@ -364,8 +377,9 @@
  * * * Firemit (fire hermit)
  * * * Blace (blaze + ace)
  * * * Torchid (torch + orchid) (transforms into Pyrose) (flowers on fire?)
+ * * * Flamengo (flame + flamingo) (fire/ air)
  * * * (Firefly)
- * * Water: (drop, eel, fish, shark, water, waterdrop)
+ * * Water: (aqua, aquaduct, aquifer?, bakboord?, basin?, beach?, carp, crab, cruise, deck?, ditch (= gracht), drop, droplet, eel, fish, island?, isle?, lake, lobster, marine, ocean, orca (killer whale), pool, puddle, river, sea, sea snail, sea star, shark, ship, stuurboord?, swamp, tide, tidal wave, trench (= geul), water, waterdrop, waterfall, wave, whale, whirlpool, yelly fish?)
  * * * Spottle, Spotfin, Spotflow (Zwembad Bongerd)
  * * * Fireel (vis die soms vuurkrachten krijgt als je hem kookt) (eventueel nog iets in water tussen grebbedijk en rijn in: 51.9607533,5.6701563)
  * * * Tranch (waterpaard) (gracht rooseveltweg)
@@ -374,17 +388,25 @@
  * * * Moyster (moist + oyster) -> Moystar
  * * * Oarca (oar(sman?) + orca)
  * * * Lotusk (lotus + tusk)
- * * SPIRIT: (ether, spirit)
+ * * SPIRIT: (angel, celestial, ceremony, chalice, djinn, ether, fey?, fairy?, guardian, mirror, priest, relic, religion, sacred, spirit, voodoo, wish)
+ * * * Sylph (spirit/ air)
+ * * * Gnome (spirit/ earth)
+ * * * Salamander? (spirit/ fire)
+ * * * Undine (spirit/ water)
+ * * * Gaia (spirit) (have her talk to you every now and then, but don't let her be catchable)
  * Later version types: (know because of research that some TopoPets are another typoe than previously thought)
- * * ancient, fighting, ice, light, shadow (add normal?)
+ * * ancient, fighting, ice, light, shadow
  * * * ANCIENT
  * * * * Piramini becomes ancient/ earth, it's transformations Piramidi and Piramax will also become ancient/ earth
- * * * FIGHTING/ FIGHT
+ * * * FIGHTING/ FIGHT (belt, black belt, dagger, fight, fighting, fist, fencing, foil (weapon usid in fencing), karate, kung fu, martial arts, sword, taekwondo, weapon)
+ * * * * Charfoil later fire/ fighting?
  * * * * Hamstrong (hamster + strong) -> Hamstar (hamster + star) (/ Hamstar -> Hamstrong)
- * * * ICE / SNOW
+ * * * ICE / SNOW (cold, ice, ice cream, ice skating, snow, snow man)
+ * * * * Chalice (chalice + ice) (spirit/ snow/ice)
  * * * * It will use the recorder looks of what is currently air, a new styling for air needs to be made
  * * * * Hailo becomes ice/ light, it's transformation Cubicicle will also become ice/ light
- * * * SHADOW
+ * * * LIGHT (halo?, lanturn?, light, star, sun)
+ * * * SHADOW (apocalypse, black, ghost, pandemic)
  * * * * Scare (transformation of Sheal) // You should know better than to mistreat a poor seal. (evolves when sheal is fainted a random amount of times - 10-20 eg.)
  * * * * Deerie (deer + eerie)
  * Seasonal TopoPets:
