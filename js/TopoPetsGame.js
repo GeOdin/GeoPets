@@ -240,10 +240,12 @@
  * * * Stone/ rock
  * * * Avalanche
  * * * Earthquake
+ * * * Something with tectonic plates?
  * * FIRE
  * * * Flame
  * * * Fireball
  * * * Campfire/ forest fire?
+ * * * (volcano) eruption?
  * * WATER
  * * * Bubble
  * * * Water balloon
@@ -344,7 +346,7 @@
  * * * (plants)         : (beech, birch, cherries, denneappel?, oak, pine, plant, quercus(oak), tree)
  * * * (plant parts)    : (acorn, apex, berries, branch, flower, leaf, seed?, stamper?, stem, stick, thorn, trunk, vine)
  * * * (food)           : (butter, cacao, cake, candy, chocolate, eat, eater, food, jam, macaroni, pie, spaghetti)
- * * * (general items)  : (ball, bowl, coin, cup, flat, garden, guitar, hula hoop, long, noise, paper, pen, penny, piano, ring, sock, song, sound, symphony, whip)
+ * * * (general items)  : (ball, bowl, coin, cup, flat, garden, guitar, hula hoop, long, noise, paper, pen, penny, piano, pipe, ring, sock, song, sound, symphony, whip)
  * * * shycub (shy + cub (a small bear)) -> shibear (shiba + bear)
  * * * Tuscat (tusk + cat)
  * * * bearry (bear + berry)
@@ -357,7 +359,7 @@
  * * * Cubicicle (transformation of Hailo) (looks like an icicle made of cubes/ cube as head, with halo around it's head?)
  * * * Pandart (panda + dart)
  * * * Zombee (zombie + bee) (later version air/ shadow)
- * * Earth: (beach?, brick, earth, formation?, ground, hill, island?, isle?, mountain, mud, podzol?, rock, rock formation?, sand, seed?, soil, tile?, tree?)
+ * * Earth: (beach?, brick, dig, dug, earth, formation?, ground, hill, island?, isle?, mountain, mud, podzol?, rock, rock formation?, sand, sediment?, seed?, soil, tectonic (plate), tile?, tree?, underground)
  * * * Mudsy (earth) (helper of Sandta) (transforms into Mudditch(already implemented)/ Muddove (earth/ air))
  * * * Sworm (Earth/ Air)
  * * * (Sandash)
@@ -369,7 +371,7 @@
  * * * Mudshroom (mud + mushroom)
  * * * Mirrock (mirror + rock) (earth/ spirit)
  * * * Cowabunga (dancing cow) (Nude waar danslessen zijn?)
- * * Fire: (barbeque, blaze, bbq, burn, campfire, charcoal, dragon, ember, fiery, fire, fireman, flame, forest fire, heat, hot, ignin?, imp, match, matchstick, scorch, torch, volcano, warm, warmth) (evt nog een bij firehouse bij haarweg)
+ * * Fire: (barbeque, blaze, bbq, burn, campfire, charcoal, dragon, ember, fiery, fire, fireman, flame, forest fire, heat, hot, ignin?, imp, lava, magma, match, matchstick, plasma?, scorch, torch, volcano, volcano eruption, warm, warmth) (evt nog een bij firehouse bij haarweg)
  * * * Firabbit (Dreijen) (/ Firat)
  * * * Sundash (SSR-W) (later fire/ light)
  * * * Distorchion (in de war firegast) (huisartsenpost) (later fire/ spirit)
@@ -396,12 +398,16 @@
  * * * Gaia (spirit) (have her talk to you every now and then, but don't let her be catchable)
  * Later version types: (know because of research that some TopoPets are another typoe than previously thought)
  * * ancient, fighting, ice, light, shadow
- * * * ANCIENT
- * * * * Piramini becomes ancient/ earth, it's transformations Piramidi and Piramax will also become ancient/ earth
+ * * * ANCIENT (archaeology, excavation, ruin)
+ * * * * Piramini becomes ancient/ earth, it's transformations Piramidi and Piramax will also become ancient/ earth (Piramini sets you of to Cairo to find Cleopython, transforms into piramidi to help you find caesair and in piramax to help you find Solara)
+ * * * * Cleopython (cleopatra + python) (ancient/ water)
+ * * * * Solara (sol/ solar + ra) (ancient/ fire)
+ * * * * Caesair (caesar + air) (ancient/ air)
  * * * FIGHTING/ FIGHT (belt, black belt, dagger, fight, fighting, fist, fencing, foil (weapon usid in fencing), karate, kung fu, martial arts, sword, taekwondo, weapon)
  * * * * Charfoil later fire/ fighting?
  * * * * Hamstrong (hamster + strong) -> Hamstar (hamster + star) (/ Hamstar -> Hamstrong)
- * * * ICE / SNOW (cold, ice, ice cream, ice skating, snow, snow man)
+ * * * ICE / SNOW (cold, fjord?, glacier, ice, ice cream, ice skating, polar, snow, snow man)
+ * * * * Polaris/ polarice?
  * * * * Chalice (chalice + ice) (spirit/ snow/ice)
  * * * * It will use the recorder looks of what is currently air, a new styling for air needs to be made
  * * * * Hailo becomes ice/ light, it's transformation Cubicicle will also become ice/ light
