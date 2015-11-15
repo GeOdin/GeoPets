@@ -160,7 +160,39 @@
  */
 
 /*
- * TopoPets battle stats:
+ *==================
+ * Damage formula: *
+ *==================
+ * * a x b x c / d x e x f
+ * * * a = move.power --> the power of the move
+ * * * b = move.typePower --> the extra power added to the move when type power is used
+ * * * c = (attacker.attack / defender.defense) --> attacker.attack is the (current) attack of the attacker
+ * * * d = defender.defense --> the (current) defense of the defender
+ * * * e = the factor representing weaknesses and resistances from TopoPets against move types
+ * * * f = a random number between 0.875 and 1.175
+ *
+ *==============================
+ * Weaknesses and resistances: *
+ *==============================
+ * * Row (horizontal) : Attacking TopoPet
+ * * Column (vertical): Defending TopoPet
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *         * Normal  *   Air   *  Earth  *  Fire   *  Water  * Spirit  *Total (6)*
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Normal  *   0.5   *    1    *    1    *    1    *    1    *    2    *    6    * x
+ * Air     *    1    *    2    *    2    *   0.5   *    1    *   0.5   *    6    * x
+ * Earth   *    1    *   0.5   *    1    *    2    *    1    *    1    *    6    * x
+ * Fire    *    2    *    1    *   0.5   *    1    *   0.5   *    2    *    6    * x
+ * Water   *    1    *   0.5   *    2    *    2    *    1    *   0.5   *    6    * x
+ * Spirit  *    1    *    2    *   0.5   *   0.5   *    2    *    1    *    6    * x
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Total(6)*    6    *    6    *    6    *    6    *    6    *    6    *         *
+ *         *    x    *    x    *    x    *    x    *    x    *    x    *         *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ *==========================
+ * TopoPets battle stats:  *
+ *==========================
  * * HP
  * * * Health
  * * * * Needs to be reduced to 0 to win
@@ -184,7 +216,9 @@
  * Further stats:
  * * currentHP, currentSP, currentTP, currentAttack, currentDefense, currentAgility, currentExp
  *
- * Battle Attack stats:
+ *========================
+ * Battle Attack stats:  *
+ *========================
  * * Name
  * * Type
  * * Special Power
@@ -193,7 +227,10 @@
  * * Type Power Cost
  * * Accuracy
  * * Description
- * Battle Attacks:
+ *
+ *==================
+ * Battle Attacks: *
+ *==================
  * * AIR
  * * * Breeze
  * * * Windthrow (spelling?)
@@ -211,7 +248,9 @@
  * * * Water balloon
  * * * Shower/ hose?
  *
- * Battle options:
+ *==================
+ * Battle options: *
+ *==================
  * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Attack      * Special Attack  * Switch TopoPets *
  * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -235,7 +274,9 @@
  */
 
 /*
- * Later versions:
+ *==================
+ * Later versions: *
+ *==================
  * * Add possibility to temporarily lower stats of a TopoPet during battle
  * * Add possibility to add status effects
  */
@@ -245,7 +286,9 @@
  //////////////////////
 
 /*
- * Story
+ *========
+ * Story *
+ *========
  * * 101
  * * * Professor Globe asks you to find TopoPets.
  * * * They are threatened because of climate change.
@@ -260,7 +303,9 @@
  */
 
 /*
- * Characters:
+ *==============
+ * Characters: *
+ *==============
  * * Professor Globe
  * * * Looks:
  * * * * Lab coat, glasses (sometimes safety goggles?), gray hair
@@ -273,66 +318,77 @@
 /////////////////////////
 
 /*
- * var topoPets
+ *===============
+ * var topoPets *
+ *===============
  * * Add unique number to each TopoPet after all TopoPets are made ("topoPetNumber")
  * * Add a specific expNeed type to which the TopoPet belongs? (how much exp a TopoPet needs per level?)
  * * Add a specific expGive type to which the TopoPet belongs? (how much exp a TopoPet gives per level?)
  * * Add a specific catchChance type to which the TopoPet belongs? (the chances of catching a TopoPet per level?)
- * var topoPetsStats
+ *====================
+ * var topoPetsStats *
+ *====================
  * * Add unique number to each TopoPet after all TopoPets are made ("topoPetNumber")
  * * Moves a TopoPet has at that specific level?
  * * Moves a TopoPet can learn at that specific level
  *
- * Types
- * * New TopoPets per type:
- * * * Air: (air, bird, breeze, cloud, draft, fly, hail?, levitate, rain?, sky, tornado, weather?, wind)
- * * * * Wasparagus (kassen ten noorden van LUMEN) (Air / Earth)
- * * * * Flair (narcistic air elemental) (albardaflat)
- * * * * Bair?
- * * * * Cubicicle (transformation of Hailo) (looks like an icicle made of cubes/ cube as head, with halo around it's head?)
- * * * * Pandart (panda + dart)
- * * * * Zombee (zombie + bee) (later version air/ shadow)
- * * * Earth: (earth, flower?, ground, sand, tree?)
- * * * * Mudsy (earth) (helper of Sandta) (transforms into Mudditch(already implemented)/ Muddove (earth/ air))
- * * * * Sworm (Earth/ Air)
- * * * * (Sandash)
- * * * * Sandoom
- * * * * Tulpa 
- * * * * (Piramini is already implemented) -> Piramidi -> Piramax (later versie --> ancient)
- * * * * Sockroach (kakkerlak die eruit ziet als een sok) (winkelcentrum)
- * * * * Pebbelk (pebble + elk, transformatin of something else?)
- * * * * Mudshroom (mud + mushroom)
- * * * * Cowabunga (dancing cow) (Nude waar danslessen zijn?)
- * * * Fire: (campfire, fiery, fire, fireman, torch) (evt nog een bij firehouse bij haarweg)
- * * * * Firabbit (Dreijen) (/ Firat)
- * * * * Sundash (SSR-W) (later fire/ light)
- * * * * Distorchion (in de war firegast) (huisartsenpost) (later fire/ spirit)
- * * * * Grelking (later fire/ shadow)
- * * * * Firemit (fire hermit)
- * * * * Blace (blaze + ace)
- * * * * Torchid (torch + orchid) (transforms into Pyrose) (flowers on fire?)
- * * * * (Firefly)
- * * * Water: (drop, eel, fish, shark, water, waterdrop)
- * * * * Spottle, Spotfin, Spotflow (Zwembad Bongerd)
- * * * * Fireel (vis die soms vuurkrachten krijgt als je hem kookt) (eventueel nog iets in water tussen grebbedijk en rijn in: 51.9607533,5.6701563)
- * * * * Tranch (waterpaard) (gracht rooseveltweg)
- * * * * Shrimp (fire shrimp) (Rijn)
- * * * * Puddolf (puddle + wolf)
- * * * * Moyster (moist + oyster) -> Moystar
- * * * * Oarca (oar(sman?) + orca)
- * * * SPIRIT: (ether, spirit)
- * * Later version types: (know because of research that some TopoPets are another typoe than previously thought)
- * * * ancient, fighting, ice, light, shadow (add normal?)
- * * * * ANCIENT
- * * * * * Piramini becomes ancient/ earth, it's transformations Piramidi and Piramax will also become ancient/ earth
- * * * * ICE
- * * * * * It will use the recorder looks of what is currently air, a new styling for air needs to be made
- * * * * * Hailo becomes ice/ light, it's transformation Cubicicle will also become ice/ light
- * * * * SHADOW
- * * * * * Scare (transformation of Sheal) // You should know better than to mistreat a poor seal. (evolves when sheal is fainted a random amount of times - 10-20 eg.)
- * * Seasonal TopoPets:
- * * * Sandta (earth/ spirit) (sort of Santa Claus)
- * * * Raindeer (water/ spirit) (helper of Sandta, some have a red nose)
+ *=========================
+ * New TopoPets per type: *
+ *=========================
+ * * Normal: (cat, dog, bug, bear, ?)
+ * * * shycub (shy + cub (a small bear)) -> shibear (shiba + bear)
+ * * Air: (air, bird, breeze, cloud, draft, fly, hail?, levitate, rain?, sky, tornado, weather?, wind)
+ * * * Wasparagus (kassen ten noorden van LUMEN) (Air / Earth)
+ * * * Flair (narcistic air elemental) (albardaflat)
+ * * * Bair?
+ * * * Cubicicle (transformation of Hailo) (looks like an icicle made of cubes/ cube as head, with halo around it's head?)
+ * * * Pandart (panda + dart)
+ * * * Zombee (zombie + bee) (later version air/ shadow)
+ * * Earth: (earth, flower?, ground, sand, tree?)
+ * * * Mudsy (earth) (helper of Sandta) (transforms into Mudditch(already implemented)/ Muddove (earth/ air))
+ * * * Sworm (Earth/ Air)
+ * * * (Sandash)
+ * * * Sandoom
+ * * * Tulpa 
+ * * * (Piramini is already implemented) -> Piramidi -> Piramax (later versie --> ancient)
+ * * * Sockroach (kakkerlak die eruit ziet als een sok) (winkelcentrum)
+ * * * Pebbelk (pebble + elk, transformatin of something else?)
+ * * * Mudshroom (mud + mushroom)
+ * * * Cowabunga (dancing cow) (Nude waar danslessen zijn?)
+ * * Fire: (campfire, fiery, fire, fireman, torch) (evt nog een bij firehouse bij haarweg)
+ * * * Firabbit (Dreijen) (/ Firat)
+ * * * Sundash (SSR-W) (later fire/ light)
+ * * * Distorchion (in de war firegast) (huisartsenpost) (later fire/ spirit)
+ * * * Grelking (later fire/ shadow)
+ * * * Firemit (fire hermit)
+ * * * Blace (blaze + ace)
+ * * * Torchid (torch + orchid) (transforms into Pyrose) (flowers on fire?)
+ * * * (Firefly)
+ * * Water: (drop, eel, fish, shark, water, waterdrop)
+ * * * Spottle, Spotfin, Spotflow (Zwembad Bongerd)
+ * * * Fireel (vis die soms vuurkrachten krijgt als je hem kookt) (eventueel nog iets in water tussen grebbedijk en rijn in: 51.9607533,5.6701563)
+ * * * Tranch (waterpaard) (gracht rooseveltweg)
+ * * * Shrimp (fire shrimp) (Rijn)
+ * * * Puddolf (puddle + wolf)
+ * * * Moyster (moist + oyster) -> Moystar
+ * * * Oarca (oar(sman?) + orca)
+ * * * Lotusk (lotus + tusk)
+ * * SPIRIT: (ether, spirit)
+ * Later version types: (know because of research that some TopoPets are another typoe than previously thought)
+ * * ancient, fighting, ice, light, shadow (add normal?)
+ * * * ANCIENT
+ * * * * Piramini becomes ancient/ earth, it's transformations Piramidi and Piramax will also become ancient/ earth
+ * * * FIGHTING/ FIGHT
+ * * * * Hamstrong (hamster + strong) -> Hamstar (hamster + star) (/ Hamstar -> Hamstrong)
+ * * * ICE / SNOW
+ * * * * It will use the recorder looks of what is currently air, a new styling for air needs to be made
+ * * * * Hailo becomes ice/ light, it's transformation Cubicicle will also become ice/ light
+ * * * SHADOW
+ * * * * Scare (transformation of Sheal) // You should know better than to mistreat a poor seal. (evolves when sheal is fainted a random amount of times - 10-20 eg.)
+ * * * * Deerie (deer + eerie)
+ * Seasonal TopoPets:
+ * * Sandta (earth/ spirit) (sort of Santa Claus)
+ * * Raindeer (water/ spirit) (helper of Sandta, some have a red nose)
  */
 
 ////////////////
