@@ -357,6 +357,13 @@ body {
 	text-shadow: 1px 1px #000000;
 }
 
+#AQUNDINE {
+	display: none;
+	cursor: pointer;
+	color: #a20ce8;
+	background-color: #c083de;
+}
+
 #CHARFOIL {
 	display: none;
 	cursor: pointer;
@@ -369,6 +376,20 @@ body {
 	cursor: pointer;
 	color: #fa8ecf;
 	background-color: white;
+}
+
+#FIREMANDER {
+	display: none;
+	cursor: pointer;
+	color: #a20ce8;
+	background-color: #c083de;
+}
+
+#GNOMARL {
+	display: none;
+	cursor: pointer;
+	color: #a20ce8;
+	background-color: #c083de;
 }
 
 #HAILO {
@@ -404,6 +425,13 @@ body {
 	cursor: pointer;
 	color: blue;
 	background-color: #4981CE;
+}
+
+#PARASYLPH {
+	display: none;
+	cursor: pointer;
+	color: #a20ce8;
+	background-color: #c083de;
 }
 
 #PIRAMINI {
@@ -460,6 +488,61 @@ body {
 	cursor: pointer;
 	color: aqua;
 	background-color: #AEEEEE;
+}
+
+#recorderAQUNDINE {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 73.5%;
+	width: 26%;
+	height: 43.625vh;
+	z-index: 99;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#recorderAQUNDINETitle {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #a20ce8;
+	background-color: #c083de;
+	border-radius: 2px;
+}
+
+#recorderAQUNDINEText {
+	display: none;
+	position: relative;
+	text-align: center;
+	width: 96%;
+	top: 2vh;
+	left: 2%;
+	overflow-y: auto;
+	text-shadow: 1px 1px #000000;
+	background-color: white;
+	color: #c083de;
+}
+
+#recorderAQUNDINEBack {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	top: 26.5vh;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
 }
 
 #recorderCHARFOIL {
@@ -559,6 +642,116 @@ body {
 }
 
 #recorderELEPHAUNBack {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	top: 26.5vh;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#recorderFIREMANDER {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 73.5%;
+	width: 26%;
+	height: 43.625vh;
+	z-index: 99;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#recorderFIREMANDERTitle {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #a20ce8;
+	background-color: #c083de;
+	border-radius: 2px;
+}
+
+#recorderFIREMANDERText {
+	display: none;
+	position: relative;
+	text-align: center;
+	width: 96%;
+	top: 2vh;
+	left: 2%;
+	overflow-y: auto;
+	text-shadow: 1px 1px #000000;
+	background-color: white;
+	color: #c083de;
+}
+
+#recorderFIREMANDERBack {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	top: 26.5vh;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#recorderGNOMARL {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 73.5%;
+	width: 26%;
+	height: 43.625vh;
+	z-index: 99;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#recorderGNOMARLTitle {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #a20ce8;
+	background-color: #c083de;
+	border-radius: 2px;
+}
+
+#recorderGNOMARLText {
+	display: none;
+	position: relative;
+	text-align: center;
+	width: 96%;
+	top: 2vh;
+	left: 2%;
+	overflow-y: auto;
+	text-shadow: 1px 1px #000000;
+	background-color: white;
+	color: #c083de;
+}
+
+#recorderGNOMARLBack {
 	display: none;
 	position: relative;
 	width: 96%;
@@ -834,6 +1027,61 @@ body {
 }
 
 #recorderNEMATOADBack {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	top: 26.5vh;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#recorderPARASYLPH {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 73.5%;
+	width: 26%;
+	height: 43.625vh;
+	z-index: 99;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#recorderPARASYLPHTitle {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #a20ce8;
+	background-color: #c083de;
+	border-radius: 2px;
+}
+
+#recorderPARASYLPHText {
+	display: none;
+	position: relative;
+	text-align: center;
+	width: 96%;
+	top: 2vh;
+	left: 2%;
+	overflow-y: auto;
+	text-shadow: 1px 1px #000000;
+	background-color: white;
+	color: #c083de;
+}
+
+#recorderPARASYLPHBack {
 	display: none;
 	position: relative;
 	width: 96%;
@@ -1456,6 +1704,10 @@ body {
 }
 
 #achievementAllNormalTopoPets {
+	display: none;
+}
+
+#achievementAllSpiritTopoPets {
 	display: none;
 }
 

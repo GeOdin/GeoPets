@@ -407,7 +407,7 @@
  * * * shycub (shy + cub (= a small bear)) -> shibear (shiba + bear)
  * * * bearry (bear + berry)
  * * * sticker (stick with goo?)
- * * Air: (aerosol?, air, angel?, arrow, bat, bee, bird, blaas instrument?, black grouse, bow, bumblebee (= hommel), breeze, butterfly, cloud, cotton, crow, cumulus (cloud?), draft, dragon?, dragonfly, duck (water/ air), dust?, eagle, fairy?, feather, fey?, flute?, fly, free, gas?, goose, hail?, hawk, ifrit (winged fire creatures), levitate, mecoptera, moth, owl, parachute, parrot, pelican (air/ water), rain?, rainbow, reiger?, sky, smog, smoke?, stork, storm, swan, tornado, umbrella, vapor, volatile, vulture?, wasp, weather?, whirlwind, wind, wing, wings)
+ * * Air: (aerosol?, air, angel?, arrow, bat, bee, bird, blaas instrument?, black grouse, bow, bumblebee (= hommel), breeze, butterfly, cloud, cotton, crow, cumulus (cloud?), draft, dragon?, dragonfly, duck (water/ air), dust?, eagle, fairy?, feather, fey?, flute?, fly, free, gas?, goose, hail?, hawk, ifrit (winged fire creatures), levitate, mecoptera, moth, owl, parachute, parasailing, parrot, pelican (air/ water), rain?, rainbow, reiger?, sky, smog, smoke?, stork, storm, swan, tornado, umbrella, vapor, volatile, vulture?, wasp, weather?, whirlwind, wind, wing, wings)
  * * * Wasparagus (kassen ten noorden van LUMEN) (Air / Earth)
  * * * Windust (wind + dust)
  * * * Flair (narcistic air elemental) (albardaflat)
@@ -415,7 +415,7 @@
  * * * Cubicicle (transformation of Hailo) (looks like an icicle made of cubes/ cube as head, with halo around it's head?)
  * * * Pandart (panda + dart)
  * * * Zombee (zombie + bee) (later version air/ shadow)
- * * Earth: (beach?, brick, canyon, cave, coal?, coast?, crystal?, desert? (earth/ fire), dig, dug, dune?, earth, formation?, ground, hill, island?, isle?, ley line?, mine, mole, mountain, mud, peat, pebble, pingo, podzol?, pumice (volcanic rock, earth/ fire), rift?, rock, rock formation?, sand, sediment?, seed?, soil, solid, spelunking, stalagmite, Stone Henge?, stone, tectonic (plate), tile?, tree?, underground)
+ * * Earth: (beach?, brick, canyon, cave, coal?, coast?, crystal?, desert? (earth/ fire), dig, dug, dune?, earth, formation?, ground, hill, island?, isle?, ley line?, mine, mole, mountain, mud, peat, pebble, pingo, podzol?, pumice (volcanic rock, earth/ fire), rift?, rock, rock formation?, sand, sediment?, seed?, soil, solid, spelunking, stalagmite, Stone Henge?, stone, tectonic (plate), terra, tile?, tree?, underground)
  * * * Mudsy (earth) (helper of Sandta) (transforms into Mudditch(already implemented)/ Muddove (earth/ air))
  * * * Sworm (Earth/ Air)
  * * * Airbex (air+ ibex) (earth/ air) (looks like a mountain goat with small wings around it's legs) (It's a mountain goat that has learned how to fly to pass canyons)
@@ -451,11 +451,12 @@
  * * * Dolphump (dolphin + hump/ hunchback?)
  * * SPIRIT: (angel, avatar, celestial, celtic?, ceremony, chalice, deity, disciple, djinn, dowsing (finding water underground, water/ spirit?), ether, fey?, fairy?, guardian, magic?, meditation, mirror, monastery, monk, nature magic?, new age, parish?, prayer, priest, relic, religion, rune, sacred, soul, spirit, spiritual, symbol, temple, totem, tribe? voodoo, wish, witch, worship, yoga)
  * * * text color: #9948C2 or #a20ce8
- * * * Sylph (spirit/ air) // coords: 
- * * * Gnome (spirit/ earth) // coords: 
+ * * * background color: #c083de?
+ * * * Parasylph (spirit/ air) // coords: 51.9611814,5.6475759 // It guards the city, keeping watch from high buildings.
+ * * * Gnomarl (Gnomarble) (spirit/ earth) // coords: 51.9869076,5.6572318 // An earth spirit that looks out over the northern borders of the city.
  * * * Sandwitch (spirit/ earth)
- * * * Salamander? (spirit/ fire) // coords: 
- * * * Undine (spirit/ water) // coords: 
+ * * * Firemander (? Salamander? Salamandragon? Salamatch? Salamash? Salamember? Salamagma?) (spirit/ fire) // coords: 51.9765131,5.6915426 // It's a strong fire spirit that resembles a salamander. It lives in deciduous forests.
+ * * * Aqundine (spirit/ water) // coords: 51.9599439,5.6868434 // It's a very powerful water spirit that sometimes likes to play with the ferry.
  * * * Gaia (spirit) (have her talk to you every now and then, but don't let her be catchable)
  * Later version types: (know because of research that some TopoPets are another typoe than previously thought)
  * * ancient, fighting, ice/ snow, light, shadow
@@ -758,6 +759,17 @@ function toggleBag() {
 
 function toggleRecorder() {
 	if (document.getElementById("recorder").style.display == "none") {
+		// Put away the recorderAQUNDINE box if that is currently visible
+		if (document.getElementById("recorderAQUNDINE").style.display == "block") {
+			// Put away the recorderAQUNDINE title
+			document.getElementById("recorderAQUNDINETitle").style.display = "none";
+			// Put away the recorderAQUNDINEText box
+			document.getElementById("recorderAQUNDINEText").style.display = "none";
+			// Put away the recorderAQUNDINEBack box
+			document.getElementById("recorderAQUNDINEBack").style.display = "none";
+			// Put away the recorderAQUNDINE box
+			document.getElementById("recorderAQUNDINE").style.display = "none";
+		}
 		// Put away the recorderCHARFOIL box if that is currently visible
 		if (document.getElementById("recorderCHARFOIL").style.display == "block") {
 			// Put away the recorderCHARFOIL title
@@ -779,6 +791,28 @@ function toggleRecorder() {
 			document.getElementById("recorderELEPHAUNBack").style.display = "none";
 			// Put away the recorderELEPHAUN box
 			document.getElementById("recorderELEPHAUN").style.display = "none";
+		}
+		// Put away the recorderFIREMANDER box if that is currently visible
+		if (document.getElementById("recorderFIREMANDER").style.display == "block") {
+			// Put away the recorderFIREMANDER title
+			document.getElementById("recorderFIREMANDERTitle").style.display = "none";
+			// Put away the recorderFIREMANDERText box
+			document.getElementById("recorderFIREMANDERText").style.display = "none";
+			// Put away the recorderFIREMANDERBack box
+			document.getElementById("recorderFIREMANDERBack").style.display = "none";
+			// Put away the recorderFIREMANDER box
+			document.getElementById("recorderFIREMANDER").style.display = "none";
+		}
+		// Put away the recorderGNOMARL box if that is currently visible
+		if (document.getElementById("recorderGNOMARL").style.display == "block") {
+			// Put away the recorderGNOMARL title
+			document.getElementById("recorderGNOMARLTitle").style.display = "none";
+			// Put away the recorderGNOMARLText box
+			document.getElementById("recorderGNOMARLText").style.display = "none";
+			// Put away the recorderGNOMARLBack box
+			document.getElementById("recorderGNOMARLBack").style.display = "none";
+			// Put away the recorderGNOMARL box
+			document.getElementById("recorderGNOMARL").style.display = "none";
 		}
 		// Put away the recorderHAILO box if that is currently visible
 		if (document.getElementById("recorderHAILO").style.display == "block") {
@@ -834,6 +868,17 @@ function toggleRecorder() {
 			document.getElementById("recorderNEMATOADBack").style.display = "none";
 			// Put away the recorderNEMATOAD box
 			document.getElementById("recorderNEMATOAD").style.display = "none";
+		}
+		// Put away the recorderPARASYLPH box if that is currently visible
+		if (document.getElementById("recorderPARASYLPH").style.display == "block") {
+			// Put away the recorderPARASYLPH title
+			document.getElementById("recorderPARASYLPHTitle").style.display = "none";
+			// Put away the recorderPARASYLPHText box
+			document.getElementById("recorderPARASYLPHText").style.display = "none";
+			// Put away the recorderPARASYLPHBack box
+			document.getElementById("recorderPARASYLPHBack").style.display = "none";
+			// Put away the recorderPARASYLPH box
+			document.getElementById("recorderPARASYLPH").style.display = "none";
 		}
 		// Put away the recorderPIRAMINI box if that is currently visible
 		if (document.getElementById("recorderPIRAMINI").style.display == "block") {

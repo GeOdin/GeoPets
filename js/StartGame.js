@@ -197,6 +197,62 @@ function createInfoWindows(topoPetsGame) {
 	var markers = topoPetsGame.startingVariables.markers;
 	var player = topoPetsGame.player;
 
+	// Create the InfoWindow for AQUNDINE
+	// Add 1 to numb
+	numb++;
+	textColor = "#a20ce8";
+	// Set the content for the InfoWindow
+	content = "<font color=" + textColor + "><h3>" + topoPets[numb][0] + "</h3>" + topoPets[numb][2] + "</font>";
+	// Add the content to the infoWindow
+	infoWindowAQUNDINE = new google.maps.InfoWindow({
+		content: content
+	});
+	// Add the infoWindow to the marker
+    google.maps.event.addListener(markers.AQUNDINE, "mouseover", function () {
+        infoWindowAQUNDINE.open(map, markers.AQUNDINE);
+    });	
+	// Close the infoWindow when the mouse is no longer hovering over the marker
+    google.maps.event.addListener(markers.AQUNDINE, "mouseout", function () {
+        infoWindowAQUNDINE.close();
+    });	
+	// Add the TopoPet to the recorder when clicked
+    google.maps.event.addListener(markers.AQUNDINE, "click", function () {
+    	// Add the TopoPet to the recorder if it has not been caught yet
+		if (topoPetsCaught[this.title] == 0) {
+
+			// Add TopoPet to TopoPets caught
+			topoPetsCaught[this.title] = 1;
+			// Add type of TopoPet to total'TYPE' caught
+			var type1 = getTopoPetType1(this.title);
+			topoPetsCaught["total" + type1]++;
+
+			var topoPetLevel = 1;
+			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
+			setTopoPetsCaught();
+			checkSpiritTopoPetsFound();
+			checkTopoPetsFound();
+			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
+			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
+			// Show some text about getting the TopoPet
+			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
+			document.getElementById("storyText").style.display = "block";
+			document.getElementById("story").style.display = "block";
+			// Show the clicked TopoPet in #topoPetsFound
+			document.getElementById(this.title).style.display = "block";
+			// Remove the marker
+			this.setMap(null);
+			markers[this.title] = null;
+		} else {
+			// Show some text about already having the TopoPet
+			document.getElementById("storyText").innerHTML = "You have already found " + "CHARFOIL" + "!";
+			document.getElementById("storyText").style.display = "block";
+			document.getElementById("story").style.display = "block";
+			// Remove the marker
+			this.setMap(null);
+			markers[topoPets[numb][0]] = null;
+		}
+    });
+
 	// Create the InfoWindow for CHARFOIL
 	// Add 1 to numb
 	numb++;
@@ -286,6 +342,118 @@ function createInfoWindows(topoPetsGame) {
 			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
 			checkNormalTopoPetsFound();
+			checkTopoPetsFound();
+			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
+			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
+			// Show some text about getting the TopoPet
+			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
+			document.getElementById("storyText").style.display = "block";
+			document.getElementById("story").style.display = "block";
+			// Show the clicked TopoPet in #topoPetsFound
+			document.getElementById(this.title).style.display = "block";
+			// Remove the marker
+			this.setMap(null);
+			markers[this.title] = null;
+		} else {
+			// Show some text about already having the TopoPet
+			document.getElementById("storyText").innerHTML = "You have already found " + "CHARFOIL" + "!";
+			document.getElementById("storyText").style.display = "block";
+			document.getElementById("story").style.display = "block";
+			// Remove the marker
+			this.setMap(null);
+			markers[topoPets[numb][0]] = null;
+		}
+    });
+
+	// Create the InfoWindow for FIREMANDER
+	// Add 1 to numb
+	numb++;
+	textColor = "#a20ce8";
+	// Set the content for the InfoWindow
+	content = "<font color=" + textColor + "><h3>" + topoPets[numb][0] + "</h3>" + topoPets[numb][2] + "</font>";
+	// Add the content to the infoWindow
+	infoWindowFIREMANDER = new google.maps.InfoWindow({
+		content: content
+	});
+	// Add the infoWindow to the marker
+    google.maps.event.addListener(markers.FIREMANDER, "mouseover", function () {
+        infoWindowFIREMANDER.open(map, markers.FIREMANDER);
+    });	
+	// Close the infoWindow when the mouse is no longer hovering over the marker
+    google.maps.event.addListener(markers.FIREMANDER, "mouseout", function () {
+        infoWindowFIREMANDER.close();
+    });	
+	// Add the TopoPet to the recorder when clicked
+    google.maps.event.addListener(markers.FIREMANDER, "click", function () {
+    	// Add the TopoPet to the recorder if it has not been caught yet
+		if (topoPetsCaught[this.title] == 0) {
+
+			// Add TopoPet to TopoPets caught
+			topoPetsCaught[this.title] = 1;
+			// Add type of TopoPet to total'TYPE' caught
+			var type1 = getTopoPetType1(this.title);
+			topoPetsCaught["total" + type1]++;
+
+			var topoPetLevel = 1;
+			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
+			setTopoPetsCaught();
+			checkSpiritTopoPetsFound();
+			checkTopoPetsFound();
+			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
+			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
+			// Show some text about getting the TopoPet
+			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
+			document.getElementById("storyText").style.display = "block";
+			document.getElementById("story").style.display = "block";
+			// Show the clicked TopoPet in #topoPetsFound
+			document.getElementById(this.title).style.display = "block";
+			// Remove the marker
+			this.setMap(null);
+			markers[this.title] = null;
+		} else {
+			// Show some text about already having the TopoPet
+			document.getElementById("storyText").innerHTML = "You have already found " + "CHARFOIL" + "!";
+			document.getElementById("storyText").style.display = "block";
+			document.getElementById("story").style.display = "block";
+			// Remove the marker
+			this.setMap(null);
+			markers[topoPets[numb][0]] = null;
+		}
+    });
+
+	// Create the InfoWindow for GNOMARL
+	// Add 1 to numb
+	numb++;
+	textColor = "#a20ce8";
+	// Set the content for the InfoWindow
+	content = "<font color=" + textColor + "><h3>" + topoPets[numb][0] + "</h3>" + topoPets[numb][2] + "</font>";
+	// Add the content to the infoWindow
+	infoWindowGNOMARL = new google.maps.InfoWindow({
+		content: content
+	});
+	// Add the infoWindow to the marker
+    google.maps.event.addListener(markers.GNOMARL, "mouseover", function () {
+        infoWindowGNOMARL.open(map, markers.GNOMARL);
+    });	
+	// Close the infoWindow when the mouse is no longer hovering over the marker
+    google.maps.event.addListener(markers.GNOMARL, "mouseout", function () {
+        infoWindowGNOMARL.close();
+    });	
+	// Add the TopoPet to the recorder when clicked
+    google.maps.event.addListener(markers.GNOMARL, "click", function () {
+    	// Add the TopoPet to the recorder if it has not been caught yet
+		if (topoPetsCaught[this.title] == 0) {
+
+			// Add TopoPet to TopoPets caught
+			topoPetsCaught[this.title] = 1;
+			// Add type of TopoPet to total'TYPE' caught
+			var type1 = getTopoPetType1(this.title);
+			topoPetsCaught["total" + type1]++;
+
+			var topoPetLevel = 1;
+			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
+			setTopoPetsCaught();
+			checkSpiritTopoPetsFound();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
 			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
@@ -566,6 +734,62 @@ function createInfoWindows(topoPetsGame) {
 			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
 			setTopoPetsCaught();
 			checkWaterTopoPetsFound();
+			checkTopoPetsFound();
+			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
+			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
+			// Show some text about getting the TopoPet
+			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
+			document.getElementById("storyText").style.display = "block";
+			document.getElementById("story").style.display = "block";
+			// Show the clicked TopoPet in #topoPetsFound
+			document.getElementById(this.title).style.display = "block";
+			// Remove the marker
+			this.setMap(null);
+			markers[this.title] = null;
+		} else {
+			// Show some text about already having the TopoPet
+			document.getElementById("storyText").innerHTML = "You have already found " + "CHARFOIL" + "!";
+			document.getElementById("storyText").style.display = "block";
+			document.getElementById("story").style.display = "block";
+			// Remove the marker
+			this.setMap(null);
+			markers[topoPets[numb][0]] = null;
+		}
+    });
+
+	// Create the InfoWindow for PARASYLPH
+	// Add 1 to numb
+	numb++;
+	textColor = "#a20ce8";
+	// Set the content for the InfoWindow
+	content = "<font color=" + textColor + "><h3>" + topoPets[numb][0] + "</h3>" + topoPets[numb][2] + "</font>";
+	// Add the content to the infoWindow
+	infoWindowPARASYLPH = new google.maps.InfoWindow({
+		content: content
+	});
+	// Add the infoWindow to the marker
+    google.maps.event.addListener(markers.PARASYLPH, "mouseover", function () {
+        infoWindowPARASYLPH.open(map, markers.PARASYLPH);
+    });	
+	// Close the infoWindow when the mouse is no longer hovering over the marker
+    google.maps.event.addListener(markers.PARASYLPH, "mouseout", function () {
+        infoWindowPARASYLPH.close();
+    });	
+	// Add the TopoPet to the recorder when clicked
+    google.maps.event.addListener(markers.PARASYLPH, "click", function () {
+    	// Add the TopoPet to the recorder if it has not been caught yet
+		if (topoPetsCaught[this.title] == 0) {
+
+			// Add TopoPet to TopoPets caught
+			topoPetsCaught[this.title] = 1;
+			// Add type of TopoPet to total'TYPE' caught
+			var type1 = getTopoPetType1(this.title);
+			topoPetsCaught["total" + type1]++;
+
+			var topoPetLevel = 1;
+			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
+			setTopoPetsCaught();
+			checkSpiritTopoPetsFound();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
 			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);

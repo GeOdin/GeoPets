@@ -13,12 +13,14 @@
  * * getTotalAmountEarthTopoPets()
  * * getTotalAmountFireTopoPets()
  * * getTotalAmountNormalTopoPets()
+ * * getTotalAmountSpiritTopoPets()
  * * getTotalAmountWaterTopoPets()
  * * checkTopoPetsFound()
  * * checkAirTopoPetsFound()
  * * checkEarthTopoPetsFound()
  * * checkFireTopoPetsFound()
  * * checkNormalTopoPetsFound()
+ * * checkSpiritTopoPetsFound()
  * * checkWaterTopoPetsFound()
  */
 
@@ -26,13 +28,17 @@
 // 0 = not caught
 // 1 = caught
 var topoPetsCaught = {
+	AQUNDINE: 0, 
 	CHARFOIL: 0,
 	ELEPHAUN: 0,
+	FIREMANDER: 0, 
+	GNOMARL: 0, 
 	HAILO: 0,
 	LAVACHE: 0,
 	MOREEL: 0,
 	MUDDITCH: 0,
 	NEMATOAD: 0,
+	PARASYLPH: 0, 
 	PIRAMINI: 0,
 	PYROSE: 0,
 	SANDANCE: 0,
@@ -45,15 +51,20 @@ var topoPetsCaught = {
 	totalEARTH: 0,
 	totalFIRE: 0,
 	totalNORMAL: 0,
+	totalSPIRIT: 0,
 	totalWATER: 0,
 	total: function() {
-		return this.CHARFOIL 
+		return this.AQUNDINE
+		+ this.CHARFOIL 
 		+ this.ELEPHAUN
+		+ this.FIREMANDER 
+		+ this.GNOMARL 
 		+ this.HAILO
 		+ this.LAVACHE 
 		+ this.MOREEL
 		+ this.MUDDITCH
-		+ this.NEMATOAD 
+		+ this.NEMATOAD
+		+ this.PARASYLPH 
 		+ this.PIRAMINI
 		+ this.PYROSE
 		+ this.SANDANCE
@@ -200,6 +211,31 @@ function getTotalAmountNormalTopoPets() {
 	return totalAmountNormalTopoPets;
 }
 
+////////////////////////////////////
+// getTotalAmountSpiritTopoPets() //
+////////////////////////////////////
+
+// Function to get the total amount of Spirit TopoPets
+
+function getTotalAmountSpiritTopoPets() {
+
+	// Set the variables
+	var totalAmountSpiritTopoPets = 0;
+
+	// Get the total amount of TopoPets
+	for (i=0; i<topoPets.length; i++) {
+		if (topoPets[i][1] == "SPIRIT") {
+			totalAmountSpiritTopoPets++;
+		// No 2nd type yet
+		//} else if (topoPets[i][2] == "SPIRIT") {
+		//	totalAmountSpiritTopoPets++;
+		}
+	}
+
+	// Return the amount of TopoPets
+	return totalAmountSpiritTopoPets;
+}
+
 ///////////////////////////////////
 // getTotalAmountWaterTopoPets() //
 ///////////////////////////////////
@@ -283,6 +319,18 @@ function checkFireTopoPetsFound() {
 function checkNormalTopoPetsFound() {
 	if (topoPetsCaught.totalNORMAL == getTotalAmountNormalTopoPets()) {
 		document.getElementById("achievementAllNormalTopoPets").style.display = "block";
+	}
+}
+
+////////////////////////////////
+// checkSpiritTopoPetsFound() //
+////////////////////////////////
+
+// Function to check whether all Spirit TopoPets have been found
+
+function checkSpiritTopoPetsFound() {
+	if (topoPetsCaught.totalSPIRIT == getTotalAmountSpiritTopoPets()) {
+		document.getElementById("achievementAllSpiritTopoPets").style.display = "block";
 	}
 }
 

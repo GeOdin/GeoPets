@@ -46,6 +46,14 @@ var topoPets = [
 		"zoomLevel"
 	],
 	[
+		"AQUNDINE",
+		"SPIRIT",
+		"It's a very powerful water spirit that sometimes likes to play with the ferry.",
+		51.9599439,
+		5.6868434, 
+		14//?
+	],
+	[
 		"CHARFOIL", 
 		"FIRE", // later version FIRE/ SHADOW
 		"A small TopoPet with a knife as ear.",
@@ -59,6 +67,22 @@ var topoPets = [
 		"Half elephant, half goat. It lives in forested areas.",
 		51.9731725,
 		5.7012871,
+		14//?
+	],
+	[
+		"FIREMANDER",
+		"SPIRIT",
+		"It's a strong fire spirit that resembles a salamander. It lives in deciduous forests.",
+		51.9765131,
+		5.6915426, 
+		14//?
+	],
+	[
+		"GNOMARL",
+		"SPIRIT",
+		"An earth spirit that looks out over the northern borders of the city.",
+		51.9869076,
+		5.6572318, 
 		14//?
 	],
 	[
@@ -100,6 +124,14 @@ var topoPets = [
 		51.9810459,
 		5.6596941, 
 		18
+	],
+	[
+		"PARASYLPH",
+		"SPIRIT",
+		"It guards the city, keeping watch from high buildings.", //. It carries a parachute for emergencies.
+		51.9611814,
+		5.6475759, 
+		14//?
 	],
 	[
 		"PIRAMINI",
@@ -175,10 +207,6 @@ var topoPetsStats = [
  * * Moves a TopoPet can learn at that specific level
  * * adjust currentTP and maxTP so that it's only differrent for spirit/ ancient? (probably not)
  * Add new TopoPets
- * * NORMAL
- * * * + HP, - random (TP?, attack, defense, agility)
- * * SPIRIT
- * * * + TP, - random (attack, defense, agility)
  * always + TP for special type of version? (version 1 - spirit, version 2 - ancient)
 
  * current stats:
@@ -188,6 +216,12 @@ var topoPetsStats = [
  * * * + Defense, - random (TP, attack, agility)
  * * FIRE:
  * * * + Attack, - random (TP, defense, agility)
+ * * NORMAL
+ * * * + HP, - random (attack, defense, agility)
+ * * SPIRIT
+ * * * + TP, - random (hp, attack, defense, agility)
+ * * WATER:
+ * * * + TP, - random (attack, defense, agility)
  */
 	[
 		"number", //0
@@ -208,21 +242,25 @@ var topoPetsStats = [
 		"currentExp", //15
 		"expNextLevel" //16
 	],
-	["001", "CHARFOIL", 1, 24, 24, 30, 30, 5, 5, 11, 11, 9, 9, 10, 10, 0, 30],
-	["002", "ELEPHAUN", 1, 26, 26, 30, 30, 5, 5, 10, 10, 10, 10, 9, 9, 0, 30],
-	["003", "HAILO", 1, 24, 24, 30, 30, 5, 5, 9, 9, 10, 10, 11, 11, 0, 30],
-	["004", "LAVACHE", 1, 24, 24, 30, 30, 5, 5, 11, 11, 10, 10, 9, 9, 0, 30],
-	["005", "MOREEL", 1, 24, 24, 30, 30, 6, 6, 10, 10, 10, 10, 9, 9, 0, 30],
-	["006", "MUDDITCH", 1, 24, 24, 30, 30, 4, 4, 10, 10, 11, 11, 10, 10, 0, 30],
-	["007", "NEMATOAD", 1, 24, 24, 30, 30, 6, 6, 10, 10, 9, 9, 10, 10, 0, 30],
-	["008", "PIRAMINI", 1, 24, 24, 30, 30, 5, 5, 10, 10, 11, 11, 9, 9, 0, 30],
-	["009", "PYROSE", 1, 24, 24, 30, 30, 4, 4, 11, 11, 10, 10, 10, 10, 0, 30],
-	["010", "SANDANCE", 1, 24, 24, 30, 30, 5, 5, 9, 9, 11, 11, 10, 10, 0, 30],
-	["011", "SHEAL", 1, 24, 24, 30, 30, 6, 6, 9, 9, 10, 10, 10, 10, 0, 30],
-	["012", "TULPA", 1, 26, 26, 30, 30, 5, 5, 10, 10, 9, 9, 10, 10, 0, 30],
-	["013", "TUSCAT", 1, 26, 26, 30, 30, 5, 5, 9, 9, 10, 10, 10, 10, 0, 30],
-	["014", "VAMPYRE", 1, 24, 24, 30, 30, 5, 5, 10, 10, 9, 9, 11, 11, 0, 30],
-	["015", "WINGDIGO", 1, 24, 24, 30, 30, 4, 4, 10, 10, 10, 10, 11, 11, 0, 30]
+	["001", "AQUNDINE", 1, 24, 24, 30, 30, 6, 6, 9, 9, 10, 10, 10, 10, 0, 30], // + TP, - attack
+	["002", "CHARFOIL", 1, 24, 24, 30, 30, 5, 5, 11, 11, 9, 9, 10, 10, 0, 30],
+	["003", "ELEPHAUN", 1, 26, 26, 30, 30, 5, 5, 10, 10, 10, 10, 9, 9, 0, 30],
+	["004", "FIREMANDER", 1, 24, 24, 30, 30, 6, 6, 10, 10, 9, 9, 10, 10, 0, 30], // + TP, - defense
+	["005", "GNOMARL", 1, 24, 24, 30, 30, 6, 6, 10, 10, 10, 10, 9, 9, 0, 30], // + TP, - agility
+	["006", "HAILO", 1, 24, 24, 30, 30, 5, 5, 9, 9, 10, 10, 11, 11, 0, 30],
+	["007", "LAVACHE", 1, 24, 24, 30, 30, 5, 5, 11, 11, 10, 10, 9, 9, 0, 30],
+	["008", "MOREEL", 1, 24, 24, 30, 30, 6, 6, 10, 10, 10, 10, 9, 9, 0, 30],
+	["009", "MUDDITCH", 1, 24, 24, 30, 30, 4, 4, 10, 10, 11, 11, 10, 10, 0, 30],
+	["010", "NEMATOAD", 1, 24, 24, 30, 30, 6, 6, 10, 10, 9, 9, 10, 10, 0, 30],
+	["011", "PARASYLPH", 1, 22, 22, 30, 30, 6, 6, 10, 10, 10, 10, 10, 10, 0, 30], // + TP, - hp
+	["012", "PIRAMINI", 1, 24, 24, 30, 30, 5, 5, 10, 10, 11, 11, 9, 9, 0, 30],
+	["013", "PYROSE", 1, 24, 24, 30, 30, 4, 4, 11, 11, 10, 10, 10, 10, 0, 30],
+	["014", "SANDANCE", 1, 24, 24, 30, 30, 5, 5, 9, 9, 11, 11, 10, 10, 0, 30],
+	["015", "SHEAL", 1, 24, 24, 30, 30, 6, 6, 9, 9, 10, 10, 10, 10, 0, 30],
+	["016", "TULPA", 1, 26, 26, 30, 30, 5, 5, 10, 10, 9, 9, 10, 10, 0, 30],
+	["017", "TUSCAT", 1, 26, 26, 30, 30, 5, 5, 9, 9, 10, 10, 10, 10, 0, 30],
+	["018", "VAMPYRE", 1, 24, 24, 30, 30, 5, 5, 10, 10, 9, 9, 11, 11, 0, 30],
+	["019", "WINGDIGO", 1, 24, 24, 30, 30, 4, 4, 10, 10, 10, 10, 11, 11, 0, 30]
 ];
 
 ////////////////////////////////
@@ -433,6 +471,8 @@ function getTopoPetTextColor(name) {
 				textColor = "red";
 			} else if (type1 = "NORMAL") {
 				textColor = "#fa8ecf";
+			} else if (type1 = "SPIRIT") {
+				textColor = "#a20ce8";
 			} else if (type1 = "WATER") {
 				textColor = "blue";
 			} else {
@@ -472,6 +512,8 @@ function getTopoPetBackgroundColor(name) {
 				backgroundColor = "#CD7777";
 			} else if (type1 = "NORMAL") {
 				backgroundColor = "white";
+			} else if (type1 = "SPIRIT") {
+				backgroundColor = "#c083de";
 			} else if (type1 = "WATER") {
 				backgroundColor = "#4981CE";
 			} else {
