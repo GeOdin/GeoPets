@@ -112,7 +112,7 @@ var topoPets = [
 	[
 		"MUDDITCH",
 		"EARTH", 
-		"An earthy TopoPet that likes to hide in the bottom of ditches.",
+		"An earthy TopoPet that likes to hide in the soil of ditches.",
 		51.9698076, 
 		5.6650889,
 		15

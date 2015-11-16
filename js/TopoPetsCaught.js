@@ -271,6 +271,11 @@ function checkTopoPetsFound() {
 	if (topoPetsCaught.total() == getTotalAmountTopoPets()) {
 		document.getElementById("achievementAllTopoPets").style.display = "block";
 		document.getElementById("journalAllTopoPetsCaught").style.display = "block";
+/*
+		document.getElementById("storyText").innerHTML = "Congratulations! <br/> You have found all TopoPets!";
+		document.getElementById("storyText").style.display = "block";
+		document.getElementById("story").style.display = "block";
+ */
 	}
 }
 

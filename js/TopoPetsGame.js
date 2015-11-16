@@ -284,7 +284,7 @@
  * * * Bubble
  * * * Water balloon
  * * * Shower/ hose?
- * * * Tidal wave
+ * * * Tidal wave/ Wave/ Tide
  * * * Waterfall
  * * * Monsoon
  * * SPIRIT
@@ -428,7 +428,7 @@
  * * * Mudshroom (mud + mushroom)
  * * * Mirrock (mirror + rock) (earth/ spirit)
  * * * Cowabunga (dancing cow) (Nude waar danslessen zijn?)
- * * Fire: (ash, barbeque, blaze, bbq, burn, burst?, caldera, campfire, charcoal, coal?, desert? (earth/ fire), dragon, ember, explosion?, fiery, fire, fireman, fireworks, flame, forest fire, heat, hot, ifrit (winged fire creatures), ignin?, imp, lava, magma, match, matchstick, plasma?, pyro, pyroclastic, pyromaniac, scorch, smoke?, stratovolcano, summer, torch, Vesuvius (well known volcano), volcanic ash, volcano, volcano eruption, warm, warmth) (evt nog een bij firehouse bij haarweg)
+ * * Fire: (ablaze, ash, barbeque, blaze, bbq, bonfire, burn, burst?, caldera, campfire, candle, charcoal, coal?, combustion, conflagration, desert? (earth/ fire), dragon, ember, explosion?, fiery, fire, fireman, fireplace, firestorm, fireworks, flame, flare, forest fire, furnace, heat, hot, ifrit (winged fire creatures), ignin?, imp, incinerate, lava, magma, match, matchstick, plasma?, pyre, pyro, pyroclastic, pyromaniac, scorch, searing, smoke?, stratovolcano, summer, torch, Vesuvius (well known volcano), volcanic ash, volcano, volcano eruption, warm, warmth, wildfire) (evt nog een bij firehouse bij haarweg)
  * * * Firabbit (Dreijen) (/ Firat)
  * * * Sundash (SSR-W) (later fire/ light)
  * * * Distorchion (in de war firegast) (huisartsenpost) (later fire/ spirit)
@@ -437,11 +437,12 @@
  * * * Blace (blaze + ace) (final form of a fire transformation?)
  * * * Torchid (torch + orchid) (transforms into Pyrose) (flowers on fire?)
  * * * Flamengo (flame + flamingo) (fire/ air)
+ * * * Kerberox (Kerberos + ox) (fire/ ancient?)
  * * * (Firefly)
  * * Water: (algae, aqua, aquaduct, aquarium, aquifer?, badger, bakboord?, barnacle, basin?, bath, beach?, bubble, bubble bath, canoe?, carp, cichlid (= baarsachtige), coast?, crab, creek, crocodile, cruise, deck?, ditch (= gracht), dolphin, dowsing (finding water underground, water/ spirit?), drink, drop, droplet, duck (water/ air), eel, fin, fish, freshwater, frog, geyser (water/ fire?), goldfish, gondola, hot bath, hot spring (air/ fire), island?, isle?, jacuzzi, jet ski, kayak, lake, lobster, Loch Ness monster?, manatee (sea cow), marine, mermaid, naval, navy, newt (aquatic salamander), ocean, offshore, orca (killer whale), pool, puddle, raft?, river, salmon, sauna, sea, sea horse, seal, seashell, sea snail, sea star, shark, ship, stuurboord?, surf, swamp, tide, tidal wave, toad, trench (= geul), water, waterdrop, waterfall, wave, well, wetland, whale, whirlpool, yelly fish?)
  * * * Spottle, Spotfin, Spotflow (Zwembad Bongerd)
- * * * Fireel (vis die soms vuurkrachten krijgt als je hem kookt) (eventueel nog iets in water tussen grebbedijk en rijn in: 51.9607533,5.6701563)
- * * * Tranch (waterpaard) (gracht rooseveltweg)
+ * * * Fireel (fish that sometimes gets firepowers when coocked) (could be between grebbedijk and rijn: 51.9607533,5.6701563)
+ * * * Tranch (waterpaard) (ditch rooseveltweg)
  * * * Shrimp (fire shrimp) (Rijn)
  * * * Puddolf (puddle + wolf)
  * * * Moyster (moist + oyster) -> Moystar
@@ -449,6 +450,8 @@
  * * * Lotusk (lotus + tusk)
  * * * Whales (whale + wales) (English whale)
  * * * Dolphump (dolphin + hump/ hunchback?)
+ * * * Hydrake (hydra + drake)
+ * * * Dalmeteo (Dalmatian + meteo) (water/ air?)
  * * SPIRIT: (angel, avatar, celestial, celtic?, ceremony, chalice, deity, disciple, djinn, dowsing (finding water underground, water/ spirit?), ether, fey?, fairy?, guardian, magic?, meditation, mirror, monastery, monk, nature magic?, new age, parish?, prayer, priest, relic, religion, rune, sacred, soul, spirit, spiritual, symbol, temple, totem, tribe? voodoo, wish, witch, worship, yoga)
  * * * text color: #9948C2 or #a20ce8
  * * * background color: #c083de?
@@ -464,7 +467,7 @@
  * * * * text color: #c48648
  * * * * Piramini becomes ancient/ earth, it's transformations Piramidi and Piramax will also become ancient/ earth (Piramini sets you of to Cairo to find Cleopython, transforms into piramidi to help you find caesair and in piramax to help you find Solara)
  * * * * Cleopython (cleopatra + python) (ancient/ water)
- * * * * Solara (sol/ solar + ra) (ancient/ fire) // Ra was actually the sun god, so this should become ancient/ light (sekhmet as God of liopns, fire and vengeance instead?)
+ * * * * Solara (sol/ solar + ra) (ancient/ fire) // Ra was actually the sun god, so this should become ancient/ light (Sekhmet as God of liopns, fire and vengeance instead?)
  * * * * Caesair (caesar + air) (ancient/ air)
  * * * FIGHTING/ FIGHT (belt, black belt, dagger, fight, fighting, fist, fencing, foil (weapon usid in fencing), karate, kung fu, martial arts, sumo, sword, taekwondo, weapon, wrestling)
  * * * * Charfoil later fire/ fighting?
@@ -476,8 +479,8 @@
  * * * * Chalice (chalice + ice) (spirit/ snow/ice)
  * * * * It will use the recorder looks of what is currently air, a new styling for air needs to be made
  * * * * Hailo becomes ice/ light, it's transformation Cubicicle will also become ice/ light
- * * * LIGHT (aurora? (light/ ice/snow), constellation, glow, halo?, Hubble telescope?, lanturn?, light, star, sol, solar, sun, telescope?)
- * * * SHADOW (apocalypse, black, disaster, disease?, doom, ghost, hyena?, mosquito (shadow/ air)?, pandemic, rodent?, scar)
+ * * * LIGHT (aurora? (light/ ice/snow), constellation, glow, halo?, Hubble telescope?, illuminate, lantern, lamp, light, lighthouse, star, sol, solar, sun, telescope?)
+ * * * SHADOW (apocalypse, black, disaster, disease?, doom, ghost, hyena?, mosquito (shadow/ air)?, pandemic, rodent?, scar, shadow)
  * * * * Scare (transformation of Sheal) // You should know better than to mistreat a poor seal. (evolves when sheal is fainted a random amount of times - 10-20 eg.)
  * * * * Deerie (deer + eerie)
  * Seasonal TopoPets:
