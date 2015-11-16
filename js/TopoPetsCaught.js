@@ -12,11 +12,13 @@
  * * getTotalAmountAirTopoPets()
  * * getTotalAmountEarthTopoPets()
  * * getTotalAmountFireTopoPets()
+ * * getTotalAmountNormalTopoPets()
  * * getTotalAmountWaterTopoPets()
  * * checkTopoPetsFound()
  * * checkAirTopoPetsFound()
  * * checkEarthTopoPetsFound()
  * * checkFireTopoPetsFound()
+ * * checkNormalTopoPetsFound()
  * * checkWaterTopoPetsFound()
  */
 
@@ -25,6 +27,7 @@
 // 1 = caught
 var topoPetsCaught = {
 	CHARFOIL: 0,
+	ELEPHAUN: 0,
 	HAILO: 0,
 	LAVACHE: 0,
 	MOREEL: 0,
@@ -34,14 +37,18 @@ var topoPetsCaught = {
 	PYROSE: 0,
 	SANDANCE: 0,
 	SHEAL: 0,
+	TULPA: 0,
+	TUSCAT: 0,
 	VAMPYRE: 0,
 	WINGDIGO: 0,
 	totalAIR: 0,
 	totalEARTH: 0,
 	totalFIRE: 0,
+	totalNORMAL: 0,
 	totalWATER: 0,
 	total: function() {
 		return this.CHARFOIL 
+		+ this.ELEPHAUN
 		+ this.HAILO
 		+ this.LAVACHE 
 		+ this.MOREEL
@@ -51,6 +58,8 @@ var topoPetsCaught = {
 		+ this.PYROSE
 		+ this.SANDANCE
 		+ this.SHEAL
+		+ this.TULPA
+		+ this.TUSCAT
 		+ this.VAMPYRE
 		+ this.WINGDIGO;
 	}
@@ -166,6 +175,31 @@ function getTotalAmountFireTopoPets() {
 	return totalAmountFireTopoPets;
 }
 
+////////////////////////////////////
+// getTotalAmountNormalTopoPets() //
+////////////////////////////////////
+
+// Function to get the total amount of Normal TopoPets
+
+function getTotalAmountNormalTopoPets() {
+
+	// Set the variables
+	var totalAmountNormalTopoPets = 0;
+
+	// Get the total amount of TopoPets
+	for (i=0; i<topoPets.length; i++) {
+		if (topoPets[i][1] == "NORMAL") {
+			totalAmountNormalTopoPets++;
+		// No 2nd type yet
+		//} else if (topoPets[i][2] == "NORMAL") {
+		//	totalAmountNormalTopoPets++;
+		}
+	}
+
+	// Return the amount of TopoPets
+	return totalAmountNormalTopoPets;
+}
+
 ///////////////////////////////////
 // getTotalAmountWaterTopoPets() //
 ///////////////////////////////////
@@ -237,6 +271,18 @@ function checkEarthTopoPetsFound() {
 function checkFireTopoPetsFound() {
 	if (topoPetsCaught.totalFIRE == getTotalAmountFireTopoPets()) {
 		document.getElementById("achievementAllFireTopoPets").style.display = "block";
+	}
+}
+
+////////////////////////////////
+// checkNormalTopoPetsFound() //
+////////////////////////////////
+
+// Function to check whether all Normal TopoPets have been found
+
+function checkNormalTopoPetsFound() {
+	if (topoPetsCaught.totalNORMAL == getTotalAmountNormalTopoPets()) {
+		document.getElementById("achievementAllNormalTopoPets").style.display = "block";
 	}
 }
 

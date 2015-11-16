@@ -364,6 +364,13 @@ body {
 	background-color: #CD7777;
 }
 
+#ELEPHAUN {
+	display: none;
+	cursor: pointer;
+	color: #fa8ecf;
+	background-color: white;
+}
+
 #HAILO {
 	display: none;
 	cursor: pointer;
@@ -427,6 +434,20 @@ body {
 	background-color: #4981CE;
 }
 
+#TULPA {
+	display: none;
+	cursor: pointer;
+	color: #fa8ecf;
+	background-color: white;
+}
+
+#TUSCAT {
+	display: none;
+	cursor: pointer;
+	color: #fa8ecf;
+	background-color: white;
+}
+
 #VAMPYRE {
 	display: none;
 	cursor: pointer;
@@ -488,6 +509,61 @@ body {
 	width: 96%;
 	height: 1.3em;
 	top: 11.875vh;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#recorderELEPHAUN {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 73.5%;
+	width: 26%;
+	height: 43.625vh;
+	z-index: 99;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#recorderELEPHAUNTitle {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #fa8ecf;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#recorderELEPHAUNText {
+	display: none;
+	position: relative;
+	text-align: center;
+	width: 96%;
+	top: 2vh;
+	left: 2%;
+	overflow-y: auto;
+	text-shadow: 1px 1px #000000;
+	background-color: white;
+	color: #fa8ecf;
+}
+
+#recorderELEPHAUNBack {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	top: 26.5vh;
 	left: 2%;
 	cursor: pointer;
 	font-size: 1.2em;
@@ -991,6 +1067,116 @@ body {
 	border-radius: 2px;
 }
 
+#recorderTULPA {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 73.5%;
+	width: 26%;
+	height: 43.625vh;
+	z-index: 99;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#recorderTULPATitle {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #fa8ecf;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#recorderTULPAText {
+	display: none;
+	position: relative;
+	text-align: center;
+	width: 96%;
+	top: 2vh;
+	left: 2%;
+	overflow-y: auto;
+	text-shadow: 1px 1px #000000;
+	background-color: white;
+	color: #fa8ecf;
+}
+
+#recorderTULPABack {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	top: 26.5vh;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#recorderTUSCAT {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 73.5%;
+	width: 26%;
+	height: 43.625vh;
+	z-index: 99;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#recorderTUSCATTitle {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #fa8ecf;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#recorderTUSCATText {
+	display: none;
+	position: relative;
+	text-align: center;
+	width: 96%;
+	top: 2vh;
+	left: 2%;
+	overflow-y: auto;
+	text-shadow: 1px 1px #000000;
+	background-color: white;
+	color: #fa8ecf;
+}
+
+#recorderTUSCATBack {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	top: 26.5vh;
+	left: 2%;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
 #recorderVAMPYRE {
 	position: absolute;
 	display: none;
@@ -1266,6 +1452,10 @@ body {
 }
 
 #achievementAllFireTopoPets {
+	display: none;
+}
+
+#achievementAllNormalTopoPets {
 	display: none;
 }
 

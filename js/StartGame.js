@@ -228,9 +228,64 @@ function createInfoWindows(topoPetsGame) {
 
 			var topoPetLevel = 1;
 			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
-			//document.getElementById("question").innerHTML = topoPetsGame.player[this.title].number;//works
 			setTopoPetsCaught();
 			checkFireTopoPetsFound();
+			checkTopoPetsFound();
+			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
+			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
+			// Show some text about getting the TopoPet
+			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
+			document.getElementById("storyText").style.display = "block";
+			document.getElementById("story").style.display = "block";
+			// Show the clicked TopoPet in #topoPetsFound
+			document.getElementById(this.title).style.display = "block";
+			// Remove the marker
+			this.setMap(null);
+			markers[this.title] = null;
+		} else {
+			// Show some text about already having the TopoPet
+			document.getElementById("storyText").innerHTML = "You have already found " + "CHARFOIL" + "!";
+			document.getElementById("storyText").style.display = "block";
+			document.getElementById("story").style.display = "block";
+			// Remove the marker
+			this.setMap(null);
+			markers[topoPets[numb][0]] = null;
+		}
+    });
+
+    // Create the InfoWindow for ELEPHAUN
+	// Add 1 to numb
+	numb++;
+	textColor = "#fa8ecf";
+	// Set the content for the InfoWindow
+	content = "<font color=" + textColor + "><h3>" + topoPets[numb][0] + "</h3>" + topoPets[numb][2] + "</font>";
+	// Add the content to the infoWindow
+	infoWindowELEPHAUN = new google.maps.InfoWindow({
+		content: content
+	});
+	// Add the infoWindow to the marker
+    google.maps.event.addListener(markers.ELEPHAUN, "mouseover", function () {
+        infoWindowELEPHAUN.open(map, markers.ELEPHAUN);
+    });	
+	// Close the infoWindow when the mouse is no longer hovering over the marker
+    google.maps.event.addListener(markers.ELEPHAUN, "mouseout", function () {
+        infoWindowELEPHAUN.close();
+    });
+	// Add the TopoPet to the recorder when clicked
+    google.maps.event.addListener(markers.ELEPHAUN, "click", function () {
+    	// Add the TopoPet to the recorder if it has not been caught yet
+		if (topoPetsCaught[this.title] == 0) {
+
+			// Add TopoPet to TopoPets caught
+			topoPetsCaught[this.title] = 1;
+			// Add type of TopoPet to total'TYPE' caught
+			var type1 = getTopoPetType1(this.title);
+			topoPetsCaught["total" + type1]++;
+
+			var topoPetLevel = 1;
+			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
+			setTopoPetsCaught();
+			checkNormalTopoPetsFound();
 			checkTopoPetsFound();
 			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
 			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
@@ -758,6 +813,118 @@ function createInfoWindows(topoPetsGame) {
 		}
     });
 
+    // Create the InfoWindow for TULPA
+	// Add 1 to numb
+	numb++;
+	textColor = "#fa8ecf";
+	// Set the content for the InfoWindow
+	content = "<font color=" + textColor + "><h3>" + topoPets[numb][0] + "</h3>" + topoPets[numb][2] + "</font>";
+	// Add the content to the infoWindow
+	infoWindowTULPA = new google.maps.InfoWindow({
+		content: content
+	});
+	// Add the infoWindow to the marker
+    google.maps.event.addListener(markers.TULPA, "mouseover", function () {
+        infoWindowTULPA.open(map, markers.TULPA);
+    });	
+	// Close the infoWindow when the mouse is no longer hovering over the marker
+    google.maps.event.addListener(markers.TULPA, "mouseout", function () {
+        infoWindowTULPA.close();
+    });
+	// Add the TopoPet to the recorder when clicked
+    google.maps.event.addListener(markers.TULPA, "click", function () {
+    	// Add the TopoPet to the recorder if it has not been caught yet
+		if (topoPetsCaught[this.title] == 0) {
+
+			// Add TopoPet to TopoPets caught
+			topoPetsCaught[this.title] = 1;
+			// Add type of TopoPet to total'TYPE' caught
+			var type1 = getTopoPetType1(this.title);
+			topoPetsCaught["total" + type1]++;
+
+			var topoPetLevel = 1;
+			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
+			setTopoPetsCaught();
+			checkNormalTopoPetsFound();
+			checkTopoPetsFound();
+			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
+			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
+			// Show some text about getting the TopoPet
+			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
+			document.getElementById("storyText").style.display = "block";
+			document.getElementById("story").style.display = "block";
+			// Show the clicked TopoPet in #topoPetsFound
+			document.getElementById(this.title).style.display = "block";
+			// Remove the marker
+			this.setMap(null);
+			markers[this.title] = null;
+		} else {
+			// Show some text about already having the TopoPet
+			document.getElementById("storyText").innerHTML = "You have already found " + "CHARFOIL" + "!";
+			document.getElementById("storyText").style.display = "block";
+			document.getElementById("story").style.display = "block";
+			// Remove the marker
+			this.setMap(null);
+			markers[topoPets[numb][0]] = null;
+		}
+    });
+
+    // Create the InfoWindow for TUSCAT
+	// Add 1 to numb
+	numb++;
+	textColor = "#fa8ecf";
+	// Set the content for the InfoWindow
+	content = "<font color=" + textColor + "><h3>" + topoPets[numb][0] + "</h3>" + topoPets[numb][2] + "</font>";
+	// Add the content to the infoWindow
+	infoWindowTUSCAT = new google.maps.InfoWindow({
+		content: content
+	});
+	// Add the infoWindow to the marker
+    google.maps.event.addListener(markers.TUSCAT, "mouseover", function () {
+        infoWindowTUSCAT.open(map, markers.TUSCAT);
+    });	
+	// Close the infoWindow when the mouse is no longer hovering over the marker
+    google.maps.event.addListener(markers.TUSCAT, "mouseout", function () {
+        infoWindowTUSCAT.close();
+    });
+	// Add the TopoPet to the recorder when clicked
+    google.maps.event.addListener(markers.TUSCAT, "click", function () {
+    	// Add the TopoPet to the recorder if it has not been caught yet
+		if (topoPetsCaught[this.title] == 0) {
+
+			// Add TopoPet to TopoPets caught
+			topoPetsCaught[this.title] = 1;
+			// Add type of TopoPet to total'TYPE' caught
+			var type1 = getTopoPetType1(this.title);
+			topoPetsCaught["total" + type1]++;
+
+			var topoPetLevel = 1;
+			topoPetsGame.player[this.title] = new createTopoPet(this.title, topoPetLevel);
+			setTopoPetsCaught();
+			checkNormalTopoPetsFound();
+			checkTopoPetsFound();
+			// Add TopoPet to active TopoPets if there are less than 5 TopoPets
+			setActiveTopoPetsText(topoPetsGame, topoPetsGame.player[this.title]);
+			// Show some text about getting the TopoPet
+			document.getElementById("storyText").innerHTML = "You have found " + this.title + "!";
+			document.getElementById("storyText").style.display = "block";
+			document.getElementById("story").style.display = "block";
+			// Show the clicked TopoPet in #topoPetsFound
+			document.getElementById(this.title).style.display = "block";
+			// Remove the marker
+			this.setMap(null);
+			markers[this.title] = null;
+		} else {
+			// Show some text about already having the TopoPet
+			document.getElementById("storyText").innerHTML = "You have already found " + "CHARFOIL" + "!";
+			document.getElementById("storyText").style.display = "block";
+			document.getElementById("story").style.display = "block";
+			// Remove the marker
+			this.setMap(null);
+			markers[topoPets[numb][0]] = null;
+		}
+    });
+
     // Create the InfoWindow for VAMPYRE
 	// Add 1 to numb
 	numb++;
@@ -894,10 +1061,10 @@ function createStoryInfoWindows(topoPetsGame) {
 	var markers = topoPetsGame.startingVariables.markers;
 	var player = topoPetsGame.player;
 
-	// Create the InfoWindow for CHARFOIL
+	// Create the InfoWindow for STORY101
 	// Add 1 to numb
 	numb++;
-	textColor = "red";
+	textColor = "e69e0e";
 	// Set the content for the InfoWindow
 	content = "<font color=" + textColor + "><h3>" + storyMarkers[numb][1] + "</h3>" + storyMarkers[numb][5] + "</font>";
 	// Add the content to the infoWindow

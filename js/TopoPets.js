@@ -54,6 +54,14 @@ var topoPets = [
 		17
 	],
 	[
+		"ELEPHAUN",
+		"NORMAL",
+		"Half elephant, half goat. It lives in forested areas.",
+		51.9731725,
+		5.7012871,
+		14//?
+	],
+	[
 		"HAILO", 
 		"AIR", // later version LIGHT/ AIR
 		"A hail like TopoPet with a halo around it's head.",
@@ -126,6 +134,22 @@ var topoPets = [
 		17
 	],
 	[
+		"TULPA",
+		"NORMAL",
+		"A TopoPet that resembles a tullip. It has a colorful personality.",
+		51.9750596,
+		5.6757712,
+		14//?
+	],
+	[
+		"TUSCAT",
+		"NORMAL",
+		"A cat with tusks. This TopoPet is very common.",
+		51.9766674,
+		5.6622998,
+		14//?
+	],
+	[
 		"VAMPYRE",
 		"AIR", // AIR (/FIRE)
 		"It's a bat that sometimes catches fire if it flies for a long period.",
@@ -185,17 +209,20 @@ var topoPetsStats = [
 		"expNextLevel" //16
 	],
 	["001", "CHARFOIL", 1, 24, 24, 30, 30, 5, 5, 11, 11, 9, 9, 10, 10, 0, 30],
-	["002", "HAILO", 1, 24, 24, 30, 30, 5, 5, 9, 9, 10, 10, 11, 11, 0, 30],
-	["003", "LAVACHE", 1, 24, 24, 30, 30, 5, 5, 11, 11, 10, 10, 9, 9, 0, 30],
-	["004", "MOREEL", 1, 24, 24, 30, 30, 6, 6, 10, 10, 10, 10, 9, 9, 0, 30],
-	["005", "MUDDITCH", 1, 24, 24, 30, 30, 4, 4, 10, 10, 11, 11, 10, 10, 0, 30],
-	["006", "NEMATOAD", 1, 24, 24, 30, 30, 6, 6, 10, 10, 9, 9, 10, 10, 0, 30],
-	["007", "PIRAMINI", 1, 24, 24, 30, 30, 5, 5, 10, 10, 11, 11, 9, 9, 0, 30],
-	["008", "PYROSE", 1, 24, 24, 30, 30, 4, 4, 11, 11, 10, 10, 10, 10, 0, 30],
-	["009", "SANDANCE", 1, 24, 24, 30, 30, 5, 5, 9, 9, 11, 11, 10, 10, 0, 30],
-	["010", "SHEAL", 1, 24, 24, 30, 30, 6, 6, 9, 9, 10, 10, 10, 10, 0, 30],
-	["011", "VAMPYRE", 1, 24, 24, 30, 30, 5, 5, 10, 10, 9, 9, 11, 11, 0, 30],
-	["012", "WINGDIGO", 1, 24, 24, 30, 30, 4, 4, 10, 10, 10, 10, 11, 11, 0, 30]
+	["002", "ELEPHAUN", 1, 26, 26, 30, 30, 5, 5, 10, 10, 10, 10, 9, 9, 0, 30],
+	["003", "HAILO", 1, 24, 24, 30, 30, 5, 5, 9, 9, 10, 10, 11, 11, 0, 30],
+	["004", "LAVACHE", 1, 24, 24, 30, 30, 5, 5, 11, 11, 10, 10, 9, 9, 0, 30],
+	["005", "MOREEL", 1, 24, 24, 30, 30, 6, 6, 10, 10, 10, 10, 9, 9, 0, 30],
+	["006", "MUDDITCH", 1, 24, 24, 30, 30, 4, 4, 10, 10, 11, 11, 10, 10, 0, 30],
+	["007", "NEMATOAD", 1, 24, 24, 30, 30, 6, 6, 10, 10, 9, 9, 10, 10, 0, 30],
+	["008", "PIRAMINI", 1, 24, 24, 30, 30, 5, 5, 10, 10, 11, 11, 9, 9, 0, 30],
+	["009", "PYROSE", 1, 24, 24, 30, 30, 4, 4, 11, 11, 10, 10, 10, 10, 0, 30],
+	["010", "SANDANCE", 1, 24, 24, 30, 30, 5, 5, 9, 9, 11, 11, 10, 10, 0, 30],
+	["011", "SHEAL", 1, 24, 24, 30, 30, 6, 6, 9, 9, 10, 10, 10, 10, 0, 30],
+	["012", "TULPA", 1, 26, 26, 30, 30, 5, 5, 10, 10, 9, 9, 10, 10, 0, 30],
+	["013", "TUSCAT", 1, 26, 26, 30, 30, 5, 5, 9, 9, 10, 10, 10, 10, 0, 30],
+	["014", "VAMPYRE", 1, 24, 24, 30, 30, 5, 5, 10, 10, 9, 9, 11, 11, 0, 30],
+	["015", "WINGDIGO", 1, 24, 24, 30, 30, 4, 4, 10, 10, 10, 10, 11, 11, 0, 30]
 ];
 
 ////////////////////////////////
@@ -404,6 +431,8 @@ function getTopoPetTextColor(name) {
 				textColor = "#8B5742";
 			} else if (type1 = "FIRE") {
 				textColor = "red";
+			} else if (type1 = "NORMAL") {
+				textColor = "#fa8ecf";
 			} else if (type1 = "WATER") {
 				textColor = "blue";
 			} else {
@@ -441,6 +470,8 @@ function getTopoPetBackgroundColor(name) {
 				backgroundColor = "#BC7642";
 			} else if (type1 = "FIRE") {
 				backgroundColor = "#CD7777";
+			} else if (type1 = "NORMAL") {
+				backgroundColor = "white";
 			} else if (type1 = "WATER") {
 				backgroundColor = "#4981CE";
 			} else {

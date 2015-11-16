@@ -116,7 +116,7 @@
  * * Add Tokens (earned) as tab to Achievements (and possibly also to buttons on the bottom of the screen?)
  * Achievements
  * * Add more text when you click on a certain achievement? (like recorder entries?)
- * * Make achievements you don't have yet (light) gray, with more information about how to get them when you click on them? (like recorder entries?)
+ * * Make achievements you don't have yet ('to do') (light) gray (underneath the 'done' achievements), with more information about how to get them when you click on them? (like recorder entries?)
  * * Add a counter for the achievements (like the recorder)
  * * Order achievements by kind of achievement (Story, TopoPets caught, ...)
  * Active TopoPets
@@ -248,33 +248,59 @@
  *==================
  * Battle Attacks: *
  *==================
+ * * NORMAL
+ * * * Bark
+ * * * Crush
+ * * * Growl (strong warning)
+ * * * Roar (intimidate)
+ * * * Shout
+ * * * Slam
  * * AIR
+ * * * Blow
  * * * Breeze
  * * * Windthrow (spelling?)
  * * * Whirlwind
+ * * * Tornado?
+ * * * Twister
+ * * * Cyclone
+ * * * Hurricane
+ * * * Storm
+ * * * Gale?
  * * EARTH
- * * * Stone/ rock
- * * * Avalanche
+ * * * Throw stone/ rock/ pebble
+ * * * Rock Slide
  * * * Earthquake
  * * * Something with tectonic plates?
+ * * * Quick sand
+ * * * Tremor
  * * FIRE
  * * * Flame
  * * * Fireball
  * * * Campfire/ forest fire?
  * * * (volcano) eruption?
+ * * * Explosion?
+ * * * Inferno
  * * WATER
  * * * Bubble
  * * * Water balloon
  * * * Shower/ hose?
+ * * * Tidal wave
+ * * * Waterfall
+ * * * Monsoon
+ * * SPIRIT
+ * * * Meditate
+ * * * Pray
+ * * * Sacrifice?
+ * * * Wish?
+ * * * Throw runes
+ * * * Totem dance?
  * Other:
- * * Crush (normal)
- * * Slam (normal)
- * * Punch (fighting)
- * * Bark (normal)
- * * Growl (normal) (strong warning)
- * * Roar (normal) (intimidate)
- * * Spike
- * * Shout (normal)
+ * * FIGHTING
+ * * * Punch
+ * * SNOW/ ICE
+ * * * Snow ball
+ * * * Avalanche
+ * * Spike (type?)
  *==================
  * Battle options: *
  *==================
@@ -327,6 +353,8 @@
  * * * * When you get more TopoPets, they will be sent to a database/ server/ cloud/... specially made for you.
  * * * * If anything might happen to the TopoPet Recorderm your active TopoPets will also be sent to this database/ server/ cloud/...
  * * Think of reason why all kinds of other
+ *
+ * Use runes as special alphabet? (since spirit is the special type of version 1)
  */
 
 /*
@@ -363,21 +391,23 @@
  * New TopoPets per type: *
  *=========================
  * * Normal: (animals, plants, food, general items)
- * * * (animals)        : (animals, ant, anteater, bear, beetle, boar?, bug, bull, cat, caterpillar, chameleon, chick, chicken, chihuahua, cow, dalmation?, deer, dinosaur, dog, elephant, fox, gecko, giraffe, goat, hamster, hippopotamus?, horse, insect, larva, koala, leopard, lion, lizard?, llama, lynx, mammal, mouse, ox, panda, pig, pur(spinnen), rabbit, ram (male sheep/ goat), rat, rhino, rhinoceros (neushoorn), sheep, shiba, snail, spider, struisvogel, swine?, snake, termite, tiger, turtle, viper, vole (looks like a mouse), wolf) (birds + flying bugs are for air)
+ * * * text color: #fa8ecf
+ * * * background color: white
+ * * * (animals)        : (animals, ant, anteater, bear, beetle, boar?, bug, bull, camel, cat, caterpillar, chameleon, chick, chicken, chihuahua, cow, dalmation?, deer, dinosaur, dog, dromedary, elephant, emu, fox, gecko, giraffe, goat, hamster, hare, hippopotamus?, horse, insect, monkey, moose, larva, kangaroo, koala, leopard, lion, lizard?, llama, lynx, mammal, mouse, ox, panda, pig, pur(spinnen), rabbit, ram (male sheep/ goat), rat, rattlesnake, rhino, rhinoceros (neushoorn), sheep, shiba, snail, spider, struisvogel, swine?, snake, termite, tiger, turtle, viper, vole (looks like a mouse), wolf) (birds + flying bugs are for air)
  * * * (fantasy animals): (fauns, unicorn)
- * * * (animal parts)   : (arm, claw, ear, finger, foot, hair, hoove, horn, leg, lip, tail, teeth, toe, tongue, tooth, tusk)
- * * * (plants)         : (basil, beech, birch, blackberry, cherries, conifer, denneappel?, fir (= spar), garlic, herb, oak, pine, plant, quercus(oak), rose, sylva, tree, tullip)
+ * * * (animal parts)   : (arm, claw, ear, finger, foot, fur, hair, hoove, horn, leg, lip, paw, print, tail, teeth, toe, tongue, tooth, tusk, web)
+ * * * (plants)         : (basil, beech, birch, blackberry, cherries, clover, conifer, denneappel?, fir (= spar), garlic, herb, oak, palm tree? (fire?), pine, plant, quercus(oak), rose, sylva, tree, tullip)
  * * * (plant parts)    : (acorn, apex, bark, berries, branch, bush, flower, leaf, seed?, stamper?, stem, stick, thorn, timber, trunk, vine, wood)
- * * * (food)           : (apple, banana, biscuit, bread, broccoli, butter, cabbage, cacao, cake, candy, carrot, cauliflower, cheese, chili, chili con carne, chips, chocolate, coockie, corn, cucumber, cupcakes, eat, eater, food, fruit, gherkin (= augurk), jam, lettuce, macaroni, milk, nectarine, pancakes, peach, pickle (= augurk), pie, pineapple, scone, spaghetti, surimi, sushi, tomato, vegetable, waffle, yoghurt, zucchini (= courgette))
- * * * (general items)  : (ball, basket, bowl, beard, beauty, coin, cup, dance, eye, flat, garden, giant, glitter, guitar, herald?, hula hoop, long, mustache, noise, paint, painting, paper, pen, penny, piano, pipe, ring, scarf, slinky (spring that walks down stairs), sock, song, sound, spring, sprinkles, symphony, violin, whip)
+ * * * (food)           : (apple, banana, biscuit, bread, broccoli, butter, cabbage, cacao, cake, candy, carrot, cauliflower, cheese, chili, chili con carne, chips, chocolate, coockie, corn, cucumber, cupcakes, eat, eater, eggs, food, fruit, gherkin (= augurk), jam, lettuce, macaroni, milk, nectarine, pancakes, peach, pickle (= augurk), pie, pineapple, rice, sandwhich, scone, spaghetti, surimi, sushi, tomato, vegetable, waffle, yoghurt, zucchini (= courgette))
+ * * * (general items)  : (art, ball, basket, bowl, beard, beauty, coin, cup, dance, eye, flat, garden, giant, glitter, guitar, hat, herald?, hula hoop, long, mustache, noise, paint, painting, paper, pen, penny, piano, pipe, ring, scarf, slinky (spring that walks down stairs), sock, song, sound, spring, sprinkles, symphony, violin, whip)
  * * * (size)           : (big, collossal?, gargantuan, giant, large, small, tall, tiny)
- * * * Tuscat (tusk + cat) // coords: 
- * * * Tulpa (looks like a tullip) // coords: 
- * * * Elephaun (elephant + faun (half human, half goat)) // coords: 
+ * * * Tuscat (tusk + cat) // coords: 51.9766674,5.6622998
+ * * * Tulpa (looks like a tullip) // coords: 51.9750596,5.6757712
+ * * * Elephaun (elephant + faun (half human, half goat)) // coords: 51.9731725,5.7012871
  * * * shycub (shy + cub (= a small bear)) -> shibear (shiba + bear)
  * * * bearry (bear + berry)
  * * * sticker (stick with goo?)
- * * Air: (aerosol?, air, angel?, bat, bee, bird, blaas instrument? breeze, butterfly, cloud, cotton, crow, cumulus (cloud?), draft, dragon?, dragonfly, dust?, eagle, fairy?, fey?, flute?, fly, free, gas?, goose, hail?, hawk, hommel?, ifrit (winged fire creatures), levitate, mecoptera, moth, owl, parrot, pelican (air/ water), rain?, rainbow, reiger?, sky, smog, smoke?, stork, storm, swan, tornado, umbrella, vapor, volatile, vulture?, wasp, weather?, whirlwind, wind, wing, wings)
+ * * Air: (aerosol?, air, angel?, arrow, bat, bee, bird, blaas instrument?, black grouse, bow, bumblebee (= hommel), breeze, butterfly, cloud, cotton, crow, cumulus (cloud?), draft, dragon?, dragonfly, duck (water/ air), dust?, eagle, fairy?, feather, fey?, flute?, fly, free, gas?, goose, hail?, hawk, ifrit (winged fire creatures), levitate, mecoptera, moth, owl, parachute, parrot, pelican (air/ water), rain?, rainbow, reiger?, sky, smog, smoke?, stork, storm, swan, tornado, umbrella, vapor, volatile, vulture?, wasp, weather?, whirlwind, wind, wing, wings)
  * * * Wasparagus (kassen ten noorden van LUMEN) (Air / Earth)
  * * * Windust (wind + dust)
  * * * Flair (narcistic air elemental) (albardaflat)
@@ -385,19 +415,20 @@
  * * * Cubicicle (transformation of Hailo) (looks like an icicle made of cubes/ cube as head, with halo around it's head?)
  * * * Pandart (panda + dart)
  * * * Zombee (zombie + bee) (later version air/ shadow)
- * * Earth: (beach?, brick, cave, coal?, coast?, crystal?, desert? (earth/ fire), dig, dug, dune?, earth, formation?, ground, hill, island?, isle?, ley line?, mine, mole, mountain, mud, peat, pebble, pingo, podzol?, pumice (volcanic rock, earth/ fire), rift?, rock, rock formation?, sand, sediment?, seed?, soil, stalagmite, Stone Henge?, stone, tectonic (plate), tile?, tree?, underground)
+ * * Earth: (beach?, brick, canyon, cave, coal?, coast?, crystal?, desert? (earth/ fire), dig, dug, dune?, earth, formation?, ground, hill, island?, isle?, ley line?, mine, mole, mountain, mud, peat, pebble, pingo, podzol?, pumice (volcanic rock, earth/ fire), rift?, rock, rock formation?, sand, sediment?, seed?, soil, solid, spelunking, stalagmite, Stone Henge?, stone, tectonic (plate), tile?, tree?, underground)
  * * * Mudsy (earth) (helper of Sandta) (transforms into Mudditch(already implemented)/ Muddove (earth/ air))
  * * * Sworm (Earth/ Air)
  * * * Airbex (air+ ibex) (earth/ air) (looks like a mountain goat with small wings around it's legs) (It's a mountain goat that has learned how to fly to pass canyons)
  * * * (Sandash)
  * * * Sandoom (sand + doom) (later earth/ shadow)
  * * * (Piramini is already implemented) -> Piramidi -> Piramax (later versie --> ancient)
+ * * * Sant (sand + ant)
  * * * Sockroach (kakkerlak die eruit ziet als een sok) (winkelcentrum)
  * * * Pebbelk (pebble + elk, transformatin of something else?)
  * * * Mudshroom (mud + mushroom)
  * * * Mirrock (mirror + rock) (earth/ spirit)
  * * * Cowabunga (dancing cow) (Nude waar danslessen zijn?)
- * * Fire: (ash, barbeque, blaze, bbq, burn, caldera, campfire, charcoal, coal?, desert? (earth/ fire), dragon, ember, explosion?, fiery, fire, fireman, fireworks, flame, forest fire, heat, hot, ifrit (winged fire creatures), ignin?, imp, lava, magma, match, matchstick, plasma?, pyro, pyroclastic, pyromaniac, scorch, smoke?, stratovolcano, summer, torch, Vesuvius (well known volcano), volcanic ash, volcano, volcano eruption, warm, warmth) (evt nog een bij firehouse bij haarweg)
+ * * Fire: (ash, barbeque, blaze, bbq, burn, burst?, caldera, campfire, charcoal, coal?, desert? (earth/ fire), dragon, ember, explosion?, fiery, fire, fireman, fireworks, flame, forest fire, heat, hot, ifrit (winged fire creatures), ignin?, imp, lava, magma, match, matchstick, plasma?, pyro, pyroclastic, pyromaniac, scorch, smoke?, stratovolcano, summer, torch, Vesuvius (well known volcano), volcanic ash, volcano, volcano eruption, warm, warmth) (evt nog een bij firehouse bij haarweg)
  * * * Firabbit (Dreijen) (/ Firat)
  * * * Sundash (SSR-W) (later fire/ light)
  * * * Distorchion (in de war firegast) (huisartsenpost) (later fire/ spirit)
@@ -407,7 +438,7 @@
  * * * Torchid (torch + orchid) (transforms into Pyrose) (flowers on fire?)
  * * * Flamengo (flame + flamingo) (fire/ air)
  * * * (Firefly)
- * * Water: (aqua, aquaduct, aquarium, aquifer?, badger, bakboord?, barnacle, basin?, beach?, canoe?, carp, cichlid (= baarsachtige), coast?, crab, creek, cruise, deck?, ditch (= gracht), dowsing (finding water underground, water/ spirit?), drink, drop, droplet, eel, fin, fish, freshwater, frog, geyser (water/ fire?), goldfish, island?, isle?, lake, lobster, Loch Ness monster?, marine, mermaid, naval, navy, newt (aquatic salamander), ocean, orca (killer whale), pool, puddle, raft?, river, salmon, sea, sea horse, seashell, sea snail, sea star, shark, ship, stuurboord?, swamp, tide, tidal wave, toad, trench (= geul), water, waterdrop, waterfall, wave, well, whale, whirlpool, yelly fish?)
+ * * Water: (algae, aqua, aquaduct, aquarium, aquifer?, badger, bakboord?, barnacle, basin?, bath, beach?, bubble, bubble bath, canoe?, carp, cichlid (= baarsachtige), coast?, crab, creek, crocodile, cruise, deck?, ditch (= gracht), dolphin, dowsing (finding water underground, water/ spirit?), drink, drop, droplet, duck (water/ air), eel, fin, fish, freshwater, frog, geyser (water/ fire?), goldfish, gondola, hot bath, hot spring (air/ fire), island?, isle?, jacuzzi, jet ski, kayak, lake, lobster, Loch Ness monster?, manatee (sea cow), marine, mermaid, naval, navy, newt (aquatic salamander), ocean, offshore, orca (killer whale), pool, puddle, raft?, river, salmon, sauna, sea, sea horse, seal, seashell, sea snail, sea star, shark, ship, stuurboord?, surf, swamp, tide, tidal wave, toad, trench (= geul), water, waterdrop, waterfall, wave, well, wetland, whale, whirlpool, yelly fish?)
  * * * Spottle, Spotfin, Spotflow (Zwembad Bongerd)
  * * * Fireel (vis die soms vuurkrachten krijgt als je hem kookt) (eventueel nog iets in water tussen grebbedijk en rijn in: 51.9607533,5.6701563)
  * * * Tranch (waterpaard) (gracht rooseveltweg)
@@ -417,29 +448,34 @@
  * * * Oarca (oar(sman?) + orca)
  * * * Lotusk (lotus + tusk)
  * * * Whales (whale + wales) (English whale)
- * * SPIRIT: (angel, avatar, celestial, celtic?, ceremony, chalice, deity, disciple, djinn, dowsing (finding water underground, water/ spirit?), ether, fey?, fairy?, guardian, magic?, mirror, monastery, monk, nature magic?, new age, parish?, prayer, priest, relic, religion, sacred, soul, spirit, spiritual, symbol, temple, totem, tribe? voodoo, wish, worship)
- * * * Sylph (spirit/ air)
- * * * Gnome (spirit/ earth)
- * * * Salamander? (spirit/ fire)
- * * * Undine (spirit/ water)
+ * * * Dolphump (dolphin + hump/ hunchback?)
+ * * SPIRIT: (angel, avatar, celestial, celtic?, ceremony, chalice, deity, disciple, djinn, dowsing (finding water underground, water/ spirit?), ether, fey?, fairy?, guardian, magic?, meditation, mirror, monastery, monk, nature magic?, new age, parish?, prayer, priest, relic, religion, rune, sacred, soul, spirit, spiritual, symbol, temple, totem, tribe? voodoo, wish, witch, worship, yoga)
+ * * * text color: #9948C2 or #a20ce8
+ * * * Sylph (spirit/ air) // coords: 
+ * * * Gnome (spirit/ earth) // coords: 
+ * * * Sandwitch (spirit/ earth)
+ * * * Salamander? (spirit/ fire) // coords: 
+ * * * Undine (spirit/ water) // coords: 
  * * * Gaia (spirit) (have her talk to you every now and then, but don't let her be catchable)
  * Later version types: (know because of research that some TopoPets are another typoe than previously thought)
- * * ancient, fighting, ice, light, shadow
- * * * ANCIENT (archaeology, descend, excavation, historic?, ruin)
+ * * ancient, fighting, ice/ snow, light, shadow
+ * * * ANCIENT (archaeology, descend, excavation, fossil, historic?, ruin)
+ * * * * text color: #c48648
  * * * * Piramini becomes ancient/ earth, it's transformations Piramidi and Piramax will also become ancient/ earth (Piramini sets you of to Cairo to find Cleopython, transforms into piramidi to help you find caesair and in piramax to help you find Solara)
  * * * * Cleopython (cleopatra + python) (ancient/ water)
  * * * * Solara (sol/ solar + ra) (ancient/ fire) // Ra was actually the sun god, so this should become ancient/ light (sekhmet as God of liopns, fire and vengeance instead?)
  * * * * Caesair (caesar + air) (ancient/ air)
- * * * FIGHTING/ FIGHT (belt, black belt, dagger, fight, fighting, fist, fencing, foil (weapon usid in fencing), karate, kung fu, martial arts, sword, taekwondo, weapon, wrestling)
+ * * * FIGHTING/ FIGHT (belt, black belt, dagger, fight, fighting, fist, fencing, foil (weapon usid in fencing), karate, kung fu, martial arts, sumo, sword, taekwondo, weapon, wrestling)
  * * * * Charfoil later fire/ fighting?
  * * * * Hamstrong (hamster + strong) -> Hamstar (hamster + star) (/ Hamstar -> Hamstrong)
- * * * ICE / SNOW (arctic, cold, fjord?, freeze, frost, glacial, glacier, ice, ice cream, ice skating, penguin, polar, snow, snow ball, snow man, winter)
+ * * * ICE / SNOW (arctic, bobsleigh, cold, fjord?, freeze, freezer, fridge, frost, glacial, glacier, ice, ice cream, ice skating, penguin, polar, (bob)sled, ski, snow, snow ball, snowboard, snow man, winter)
+ * * * * text color: #3dfcff or 3bceff
  * * * * Polaris/ polarice?
  * * * * Polarva (polar + larva)
  * * * * Chalice (chalice + ice) (spirit/ snow/ice)
  * * * * It will use the recorder looks of what is currently air, a new styling for air needs to be made
  * * * * Hailo becomes ice/ light, it's transformation Cubicicle will also become ice/ light
- * * * LIGHT (aurora? (light/ ice/snow), constellation, halo?, Hubble telescope?, lanturn?, light, star, sol, solar, sun, telescope?)
+ * * * LIGHT (aurora? (light/ ice/snow), constellation, glow, halo?, Hubble telescope?, lanturn?, light, star, sol, solar, sun, telescope?)
  * * * SHADOW (apocalypse, black, disaster, disease?, doom, ghost, hyena?, mosquito (shadow/ air)?, pandemic, rodent?, scar)
  * * * * Scare (transformation of Sheal) // You should know better than to mistreat a poor seal. (evolves when sheal is fainted a random amount of times - 10-20 eg.)
  * * * * Deerie (deer + eerie)
@@ -733,6 +769,17 @@ function toggleRecorder() {
 			// Put away the recorderCHARFOIL box
 			document.getElementById("recorderCHARFOIL").style.display = "none";
 		}
+		// Put away the recorderELEPHAUN box if that is currently visible
+		if (document.getElementById("recorderELEPHAUN").style.display == "block") {
+			// Put away the recorderELEPHAUN title
+			document.getElementById("recorderELEPHAUNTitle").style.display = "none";
+			// Put away the recorderELEPHAUNText box
+			document.getElementById("recorderELEPHAUNText").style.display = "none";
+			// Put away the recorderELEPHAUNBack box
+			document.getElementById("recorderELEPHAUNBack").style.display = "none";
+			// Put away the recorderELEPHAUN box
+			document.getElementById("recorderELEPHAUN").style.display = "none";
+		}
 		// Put away the recorderHAILO box if that is currently visible
 		if (document.getElementById("recorderHAILO").style.display == "block") {
 			// Put away the recorderHAILO title
@@ -831,6 +878,28 @@ function toggleRecorder() {
 			document.getElementById("recorderSHEALBack").style.display = "none";
 			// Put away the recorderSHEAL box
 			document.getElementById("recorderSHEAL").style.display = "none";
+		}
+		// Put away the recorderTULPA box if that is currently visible
+		if (document.getElementById("recorderTULPA").style.display == "block") {
+			// Put away the recorderTULPA title
+			document.getElementById("recorderTULPATitle").style.display = "none";
+			// Put away the recorderTULPAText box
+			document.getElementById("recorderTULPAText").style.display = "none";
+			// Put away the recorderTULPABack box
+			document.getElementById("recorderTULPABack").style.display = "none";
+			// Put away the recorderTULPA box
+			document.getElementById("recorderTULPA").style.display = "none";
+		}
+		// Put away the recorderTUSCAT box if that is currently visible
+		if (document.getElementById("recorderTUSCAT").style.display == "block") {
+			// Put away the recorderTUSCAT title
+			document.getElementById("recorderTUSCATTitle").style.display = "none";
+			// Put away the recorderTUSCATText box
+			document.getElementById("recorderTUSCATText").style.display = "none";
+			// Put away the recorderTUSCATBack box
+			document.getElementById("recorderTUSCATBack").style.display = "none";
+			// Put away the recorderTUSCAT box
+			document.getElementById("recorderTUSCAT").style.display = "none";
 		}
 		// Put away the recorderVAMPYRE box if that is currently visible
 		if (document.getElementById("recorderVAMPYRE").style.display == "block") {

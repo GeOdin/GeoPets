@@ -154,6 +154,11 @@ by GeOdin -->
 								Charfoil
 						</div>
 					</a>
+					<a onclick="toggleRecorderTopoPet('ELEPHAUN')">
+						<div id="ELEPHAUN">
+							Elephaun
+						</div>
+					</a>
 					<a onclick="toggleRecorderTopoPet('HAILO')">
 						<div id="HAILO">
 								Hailo
@@ -199,6 +204,16 @@ by GeOdin -->
 							Sheal
 						</div>
 					</a>
+					<a onclick="toggleRecorderTopoPet('TULPA')">
+						<div id="TULPA">
+							Tulpa
+						</div>
+					</a>
+					<a onclick="toggleRecorderTopoPet('TUSCAT')">
+						<div id="TUSCAT">
+							Tuscat
+						</div>
+					</a>
 					<a onclick="toggleRecorderTopoPet('VAMPYRE')">
 						<div id="VAMPYRE">
 							Vampyre
@@ -227,6 +242,23 @@ by GeOdin -->
 				</div>
 				<a onclick="toggleRecorder()">
 					<div id="recorderCHARFOILBack">
+						Back
+					</div>
+				</a>
+			</div>
+			<div id="recorderELEPHAUN">
+				<a onclick="toggleRecorder()">
+					<div id="recorderELEPHAUNTitle">
+						<p>
+							Elephaun
+						</p>
+					</div>
+				</a>
+				<div id="recorderELEPHAUNText">
+					Half elephant, half goat. It lives in forested areas.
+				</div>
+				<a onclick="toggleRecorder()">
+					<div id="recorderELEPHAUNBack">
 						Back
 					</div>
 				</a>
@@ -384,6 +416,40 @@ by GeOdin -->
 					</div>
 				</a>
 			</div>
+			<div id="recorderTULPA">
+				<a onclick="toggleRecorder()">
+					<div id="recorderTULPATitle">
+						<p>
+							Tulpa
+						</p>
+					</div>
+				</a>
+				<div id="recorderTULPAText">
+					A TopoPet that resembles a tullip. It has a colorful personality.
+				</div>
+				<a onclick="toggleRecorder()">
+					<div id="recorderTULPABack">
+						Back
+					</div>
+				</a>
+			</div>
+			<div id="recorderTUSCAT">
+				<a onclick="toggleRecorder()">
+					<div id="recorderTUSCATTitle">
+						<p>
+							Tuscat
+						</p>
+					</div>
+				</a>
+				<div id="recorderTUSCATText">
+					A cat with tusks. This TopoPet is very common.
+				</div>
+				<a onclick="toggleRecorder()">
+					<div id="recorderTUSCATBack">
+						Back
+					</div>
+				</a>
+			</div>
 			<div id="recorderVAMPYRE">
 				<a onclick="toggleRecorder()">
 					<div id="recorderVAMPYRETitle">
@@ -440,8 +506,11 @@ by GeOdin -->
 					<div id="achievementAllFireTopoPets">
 						The roof is on fire! <br/> (All fire TopoPets found.)
 					</div>
+					<div id="achievementAllNormalTopoPets">
+						Normal is relative! <br/> (All normal TopoPets found.)
+					</div>
 					<div id="achievementAllWaterTopoPets">
-						Time for a water balloon fight! <br/> (All water TopoPets found.)
+						Sea ya water! <br/> (All water TopoPets found.)
 					</div>
 					<div id="achievementAllTopoPets">
 						The completionist! <br/> (All Topopets found.)
