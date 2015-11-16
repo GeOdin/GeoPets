@@ -239,28 +239,33 @@ var topoPetsStats = [
 		"maxDefense", //12
 		"currentAgility", //13
 		"maxAgility", //14
-		"currentExp", //15
-		"expNextLevel" //16
+		"moveOne", //15
+		"moveTwo", //16
+		"moveThree", //17
+		"moveFour", //18
+		"moveFive", //19
+		"currentExp", //20
+		"expNextLevel" //21
 	],
-	["001", "AQUNDINE", 1, 24, 24, 30, 30, 6, 6, 9, 9, 10, 10, 10, 10, 0, 30], // + TP, - attack
-	["002", "CHARFOIL", 1, 24, 24, 30, 30, 5, 5, 11, 11, 9, 9, 10, 10, 0, 30],
-	["003", "ELEPHAUN", 1, 26, 26, 30, 30, 5, 5, 10, 10, 10, 10, 9, 9, 0, 30],
-	["004", "FIREMANDER", 1, 24, 24, 30, 30, 6, 6, 10, 10, 9, 9, 10, 10, 0, 30], // + TP, - defense
-	["005", "GNOMARL", 1, 24, 24, 30, 30, 6, 6, 10, 10, 10, 10, 9, 9, 0, 30], // + TP, - agility
-	["006", "HAILO", 1, 24, 24, 30, 30, 5, 5, 9, 9, 10, 10, 11, 11, 0, 30],
-	["007", "LAVACHE", 1, 24, 24, 30, 30, 5, 5, 11, 11, 10, 10, 9, 9, 0, 30],
-	["008", "MOREEL", 1, 24, 24, 30, 30, 6, 6, 10, 10, 10, 10, 9, 9, 0, 30],
-	["009", "MUDDITCH", 1, 24, 24, 30, 30, 4, 4, 10, 10, 11, 11, 10, 10, 0, 30],
-	["010", "NEMATOAD", 1, 24, 24, 30, 30, 6, 6, 10, 10, 9, 9, 10, 10, 0, 30],
-	["011", "PARASYLPH", 1, 22, 22, 30, 30, 6, 6, 10, 10, 10, 10, 10, 10, 0, 30], // + TP, - hp
-	["012", "PIRAMINI", 1, 24, 24, 30, 30, 5, 5, 10, 10, 11, 11, 9, 9, 0, 30],
-	["013", "PYROSE", 1, 24, 24, 30, 30, 4, 4, 11, 11, 10, 10, 10, 10, 0, 30],
-	["014", "SANDANCE", 1, 24, 24, 30, 30, 5, 5, 9, 9, 11, 11, 10, 10, 0, 30],
-	["015", "SHEAL", 1, 24, 24, 30, 30, 6, 6, 9, 9, 10, 10, 10, 10, 0, 30],
-	["016", "TULPA", 1, 26, 26, 30, 30, 5, 5, 10, 10, 9, 9, 10, 10, 0, 30],
-	["017", "TUSCAT", 1, 26, 26, 30, 30, 5, 5, 9, 9, 10, 10, 10, 10, 0, 30],
-	["018", "VAMPYRE", 1, 24, 24, 30, 30, 5, 5, 10, 10, 9, 9, 11, 11, 0, 30],
-	["019", "WINGDIGO", 1, 24, 24, 30, 30, 4, 4, 10, 10, 10, 10, 11, 11, 0, 30]
+	["001", "AQUNDINE", 1, 24, 24, 30, 30, 6, 6, 9, 9, 10, 10, 10, 10, "THROW RUNES", "", "", "", "", 0, 30], // + TP, - attack
+	["002", "CHARFOIL", 1, 24, 24, 30, 30, 5, 5, 11, 11, 9, 9, 10, 10, "FLAME", "", "", "", "", 0, 30],
+	["003", "ELEPHAUN", 1, 26, 26, 30, 30, 5, 5, 10, 10, 10, 10, 9, 9, "SLAM", "", "", "", "", 0, 30],
+	["004", "FIREMANDER", 1, 24, 24, 30, 30, 6, 6, 10, 10, 9, 9, 10, 10, "THROW RUNES", "", "", "", "", 0, 30], // + TP, - defense
+	["005", "GNOMARL", 1, 24, 24, 30, 30, 6, 6, 10, 10, 10, 10, 9, 9, "THROW RUNES", "", "", "", "", 0, 30], // + TP, - agility
+	["006", "HAILO", 1, 24, 24, 30, 30, 5, 5, 9, 9, 10, 10, 11, 11, "BREEZE", "", "", "", "", 0, 30],
+	["007", "LAVACHE", 1, 24, 24, 30, 30, 5, 5, 11, 11, 10, 10, 9, 9, "FLAME", "", "", "", "", 0, 30],
+	["008", "MOREEL", 1, 24, 24, 30, 30, 6, 6, 10, 10, 10, 10, 9, 9, "BUBBLE", "", "", "", "", 0, 30],
+	["009", "MUDDITCH", 1, 24, 24, 30, 30, 4, 4, 10, 10, 11, 11, 10, 10, "THROW STONE", "", "", "", "", 0, 30],
+	["010", "NEMATOAD", 1, 24, 24, 30, 30, 6, 6, 10, 10, 9, 9, 10, 10, "BUBBLE", "", "", "", "", 0, 30],
+	["011", "PARASYLPH", 1, 22, 22, 30, 30, 6, 6, 10, 10, 10, 10, 10, 10, "THROW RUNES", "", "", "", "", 0, 30], // + TP, - hp
+	["012", "PIRAMINI", 1, 24, 24, 30, 30, 5, 5, 10, 10, 11, 11, 9, 9, "THROW STONE", "", "", "", "", 0, 30],
+	["013", "PYROSE", 1, 24, 24, 30, 30, 4, 4, 11, 11, 10, 10, 10, 10, "FLAME", "", "", "", "", 0, 30],
+	["014", "SANDANCE", 1, 24, 24, 30, 30, 5, 5, 9, 9, 11, 11, 10, 10, "THROW STONE", "", "", "", "", 0, 30],
+	["015", "SHEAL", 1, 24, 24, 30, 30, 6, 6, 9, 9, 10, 10, 10, 10, "BUBBLE", "", "", "", "", 0, 30],
+	["016", "TULPA", 1, 26, 26, 30, 30, 5, 5, 10, 10, 9, 9, 10, 10, "SLAM", "", "", "", "", 0, 30],
+	["017", "TUSCAT", 1, 26, 26, 30, 30, 5, 5, 9, 9, 10, 10, 10, 10, "SLAM", "", "", "", "", 0, 30],
+	["018", "VAMPYRE", 1, 24, 24, 30, 30, 5, 5, 10, 10, 9, 9, 11, 11, "BREEZE", "", "", "", "", 0, 30],
+	["019", "WINGDIGO", 1, 24, 24, 30, 30, 4, 4, 10, 10, 10, 10, 11, 11, "BREEZE", "", "", "", "", 0, 30]
 ];
 
 ////////////////////////////////
@@ -271,11 +276,8 @@ var topoPetsStats = [
 
 function createTopoPet(name, level) {
 	// Check whether player already has this specific TopoPet?
-
-	// Get the stats for the TopoPet
-	// Get type 1
-	var type1 = getTopoPetType1(name);
-
+	
+	// Later versions
 	// Get type 2
 	// Get transformType (yet to be implemented)
 	// Get transformSpecific (yet to be implemented)
@@ -283,37 +285,44 @@ function createTopoPet(name, level) {
 	// Get exp the TopoPet gives
 	// Get chance you catch the TopoPet
 
+	// Get the general information for the TopoPet
+	// Get type 1
+	var type1 = getTopoPetType1(name);
 	// Add description
 	var description = getTopoPetDescription(name);
-
-	// Add coordinates
-	// Add coordX
-	var coordX = getTopoPetCoordX(name);
-	// Add coordY
-	var coordY = getTopoPetCoordY(name);
-
-	// Add zoomLevel
-	var zoomLevel = getTopoPetZoomLevel(name);
-
 	// Add textColor
 	var textColor = getTopoPetTextColor(name);
 	// Add backgroundcolor
 	var backgroundColor = getTopoPetBackgroundColor(name);
 
+	// Get location related information
+	// Add coordX
+	var coordX = getTopoPetCoordX(name);
+	// Add coordY
+	var coordY = getTopoPetCoordY(name);
+	// Add zoomLevel
+	var zoomLevel = getTopoPetZoomLevel(name);
+
 	// Create the TopoPet Object
 	for (i=0; i<topoPetsStats.length; i++) {
 		if (topoPetsStats[i][1] == name) {
 			if (topoPetsStats[i][2] == level) {
+				
+				// General information
 				this.number = topoPetsStats[i][0];
 				this.Name = topoPetsStats[i][1];
 				this.type1 = type1;
 				this.Description = description;
+				this.level = topoPetsStats[i][2];
+				this.textColor = textColor;
+				this.backgroundcolor = backgroundColor;
+				
+				// Location related information
 				this.coordX = coordX;
 				this.coordY = coordY;
 				this.zoomLevel = zoomLevel;
-				this.textColor = textColor;
-				this.backgroundcolor = backgroundColor;
-				this.level = topoPetsStats[i][2];
+				
+				// Battle stats information
 				this.currentHP = topoPetsStats[i][3];
 				this.maxHP = topoPetsStats[i][4];
 				this.currentSP = topoPetsStats[i][5];
@@ -326,11 +335,100 @@ function createTopoPet(name, level) {
 				this.maxDefense = topoPetsStats[i][12];
 				this.currentAgility = topoPetsStats[i][13];
 				this.maxAgility = topoPetsStats[i][14];
-				this.currentExp = topoPetsStats[i][15];
-				this.expNextLevel = topoPetsStats[i][16]
+				
+				// Battle move name information
+				this.moveOne = topoPetsStats[i][15];
+				this.moveTwo = topoPetsStats[i][16];
+				this.moveThree = topoPetsStats[i][17];
+				this.moveFour = topoPetsStats[i][18];
+				this.moveFive = topoPetsStats[i][19];
+				
+				// Levelling information
+				this.currentExp = topoPetsStats[i][20];
+				this.expNextLevel = topoPetsStats[i][21]
 			}
 		}
-	};
+	}
+
+	// Create the battle move objects
+	for (i = 0; i < battleMoves.length; i++) {
+
+		// Create the first battle move
+		if (battleMoves[i][1] == this.moveOne) {
+			this.move1 = new createBattleMove(
+				battleMoves[i][0],
+				battleMoves[i][1],
+				battleMoves[i][2],
+				battleMoves[i][3],
+				battleMoves[i][4],
+				battleMoves[i][5],
+				battleMoves[i][6],
+				battleMoves[i][7],
+				battleMoves[i][8],
+				battleMoves[i][9]
+			);
+
+		// Create the second battle move
+		} else if (battleMoves[i][1] == this.moveTwo) {
+			this.move2 = new createBattleMove(
+				battleMoves[i][0],
+				battleMoves[i][1],
+				battleMoves[i][2],
+				battleMoves[i][3],
+				battleMoves[i][4],
+				battleMoves[i][5],
+				battleMoves[i][6],
+				battleMoves[i][7],
+				battleMoves[i][8],
+				battleMoves[i][9]
+			);
+
+		// Create the third battle move
+		} else if (battleMoves[i][1] == this.moveThree) {
+			this.move3 = new createBattleMove(
+				battleMoves[i][0],
+				battleMoves[i][1],
+				battleMoves[i][2],
+				battleMoves[i][3],
+				battleMoves[i][4],
+				battleMoves[i][5],
+				battleMoves[i][6],
+				battleMoves[i][7],
+				battleMoves[i][8],
+				battleMoves[i][9]
+			);
+
+		// Create the fourth battle move
+		} else if (battleMoves[i][1] == this.moveFour) {
+			this.move4 = new createBattleMove(
+				battleMoves[i][0],
+				battleMoves[i][1],
+				battleMoves[i][2],
+				battleMoves[i][3],
+				battleMoves[i][4],
+				battleMoves[i][5],
+				battleMoves[i][6],
+				battleMoves[i][7],
+				battleMoves[i][8],
+				battleMoves[i][9]
+			);
+
+		// Create the fifth battle move
+		} else if (battleMoves[i][1] == this.moveFive) {
+			this.move5 = new createBattleMove(
+				battleMoves[i][0],
+				battleMoves[i][1],
+				battleMoves[i][2],
+				battleMoves[i][3],
+				battleMoves[i][4],
+				battleMoves[i][5],
+				battleMoves[i][6],
+				battleMoves[i][7],
+				battleMoves[i][8],
+				battleMoves[i][9]
+			); 
+		}
+	}
 }
 
 ///////////////////////////

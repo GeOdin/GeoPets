@@ -42,8 +42,8 @@
 /////////////
 
 /*
- * Add more TopoPets for NORMAL and SPIRIT type (at least 3)
  * Show #buttons after getting the recorder
+ * Show icon of player instead of mouse when hovering over map?
  * Show markers where TopoPets are, only when hovered over them, within a certain buffer (geo-fencing)
  * * show markers only on certain zoom level
  * * * http://stackoverflow.com/questions/5030127/marker-visibility-in-google-maps
@@ -136,6 +136,10 @@
 /////////////////////////////
 ////// TopoPetsGame.js //////
 /////////////////////////////
+
+/*
+ * add all 5 moves to setActiveTopoPetsText(topoPetsGame, topoPetObject) instead of just move1
+ */
 
 //////////////////////////
 ////// StartGame.js //////
@@ -249,13 +253,16 @@
  * Battle Attacks: *
  *==================
  * * NORMAL
+ * * * Normal attack
  * * * Bark
  * * * Crush
  * * * Growl (strong warning)
  * * * Roar (intimidate)
  * * * Shout
  * * * Slam
+ * * * Charge?
  * * AIR
+ * * * Air attack
  * * * Blow
  * * * Breeze
  * * * Windthrow (spelling?)
@@ -267,6 +274,7 @@
  * * * Storm
  * * * Gale?
  * * EARTH
+ * * * Earth attack
  * * * Throw stone/ rock/ pebble
  * * * Rock Slide
  * * * Earthquake
@@ -274,6 +282,7 @@
  * * * Quick sand
  * * * Tremor
  * * FIRE
+ * * * Fire attack
  * * * Flame
  * * * Fireball
  * * * Campfire/ forest fire?
@@ -281,6 +290,7 @@
  * * * Explosion?
  * * * Inferno
  * * WATER
+ * * * Water attack
  * * * Bubble
  * * * Water balloon
  * * * Shower/ hose?
@@ -288,6 +298,7 @@
  * * * Waterfall
  * * * Monsoon
  * * SPIRIT
+ * * * Spirit attack
  * * * Meditate
  * * * Pray
  * * * Sacrifice?
@@ -355,6 +366,18 @@
  * * Think of reason why all kinds of other
  *
  * Use runes as special alphabet? (since spirit is the special type of version 1)
+ *
+ *============
+ * Version 2 *
+ *============
+ * Find Piramini (anciuent/ earth)
+ * * get hint to go to cAIRo to find Cleopython (ancient/ water)
+ * Find Piramidi
+ * * get hint to find caesAIR (ancient/ air)
+ * Find Piramax
+ * * get hint to find Solara (ancient/ fire)
+ * with all ancient/ other types
+ * * find ancient type
  */
 
 /*
@@ -415,9 +438,11 @@
  * * * Cubicicle (transformation of Hailo) (looks like an icicle made of cubes/ cube as head, with halo around it's head?)
  * * * Pandart (panda + dart)
  * * * Zombee (zombie + bee) (later version air/ shadow)
+ * * * Sparrow (sparrow (= mus) + arrow) (sparrow with an arrow over it's body)
+ * * * Dracoin (dragon + coin) ( flying coin with dragon print) -> Draconomy (dragon + economy ) (economy/ business dragon)
  * * Earth: (beach?, brick, canyon, cave, coal?, coast?, crystal?, desert? (earth/ fire), dig, dug, dune?, earth, formation?, ground, hill, island?, isle?, ley line?, mine, mole, mountain, mud, peat, pebble, pingo, podzol?, pumice (volcanic rock, earth/ fire), rift?, rock, rock formation?, sand, sediment?, seed?, soil, solid, spelunking, stalagmite, Stone Henge?, stone, tectonic (plate), terra, tile?, tree?, underground)
  * * * Mudsy (earth) (helper of Sandta) (transforms into Mudditch(already implemented)/ Muddove (earth/ air))
- * * * Sworm (Earth/ Air)
+ * * * Sworm (Earth/ Air) (worm that can levitate. When levitating, it excretes a hormone that attracts other sWORMs. Giant flying sWORMs have been seen because of this.) / swarm (fire/ air) / swater (water/ air?)
  * * * Airbex (air+ ibex) (earth/ air) (looks like a mountain goat with small wings around it's legs) (It's a mountain goat that has learned how to fly to pass canyons)
  * * * (Sandash)
  * * * Sandoom (sand + doom) (later earth/ shadow)
@@ -436,22 +461,25 @@
  * * * Firemit (fire hermit)
  * * * Blace (blaze + ace) (final form of a fire transformation?)
  * * * Torchid (torch + orchid) (transforms into Pyrose) (flowers on fire?)
- * * * Flamengo (flame + flamingo) (fire/ air)
+ * * * Flamengo/ flamingo (flame + flamingo) (fire/ air)
  * * * Kerberox (Kerberos + ox) (fire/ ancient?)
+ * * * Charfold (transformation of Charfoil)
+ * * * Storch? (? + torch)
  * * * (Firefly)
  * * Water: (algae, aqua, aquaduct, aquarium, aquifer?, badger, bakboord?, barnacle, basin?, bath, beach?, bubble, bubble bath, canoe?, carp, cichlid (= baarsachtige), coast?, crab, creek, crocodile, cruise, deck?, ditch (= gracht), dolphin, dowsing (finding water underground, water/ spirit?), drink, drop, droplet, duck (water/ air), eel, fin, fish, freshwater, frog, geyser (water/ fire?), goldfish, gondola, hot bath, hot spring (air/ fire), island?, isle?, jacuzzi, jet ski, kayak, lake, lobster, Loch Ness monster?, manatee (sea cow), marine, mermaid, naval, navy, newt (aquatic salamander), ocean, offshore, orca (killer whale), pool, puddle, raft?, river, salmon, sauna, sea, sea horse, seal, seashell, sea snail, sea star, shark, ship, stuurboord?, surf, swamp, tide, tidal wave, toad, trench (= geul), water, waterdrop, waterfall, wave, well, wetland, whale, whirlpool, yelly fish?)
  * * * Spottle, Spotfin, Spotflow (Zwembad Bongerd)
- * * * Fireel (fish that sometimes gets firepowers when coocked) (could be between grebbedijk and rijn: 51.9607533,5.6701563)
+ * * * Fireel (fire + eel) (fish that sometimes gets firepowers when coocked) / firel (fire + forel - Dutch fish that sometimes gets firepowers when coocked) (could be between grebbedijk and rijn: 51.9607533,5.6701563)
  * * * Tranch (waterpaard) (ditch rooseveltweg)
  * * * Shrimp (fire shrimp) (Rijn)
- * * * Puddolf (puddle + wolf)
+ * * * Puddolf (puddle + wolf) (water wolf)
  * * * Moyster (moist + oyster) -> Moystar
  * * * Oarca (oar(sman?) + orca)
  * * * Lotusk (lotus + tusk)
- * * * Whales (whale + wales) (English whale)
+ * * * Whalies/ Whaleys -> Whales (whale + wales) (English whale) - whale that likes chocolate milk that transforms/ evolves into English whale
  * * * Dolphump (dolphin + hump/ hunchback?)
  * * * Hydrake (hydra + drake)
  * * * Dalmeteo (Dalmatian + meteo) (water/ air?)
+ * * * Aligatorch (aligator + torch) (water/ fire)
  * * SPIRIT: (angel, avatar, celestial, celtic?, ceremony, chalice, deity, disciple, djinn, dowsing (finding water underground, water/ spirit?), ether, fey?, fairy?, guardian, magic?, meditation, mirror, monastery, monk, nature magic?, new age, parish?, prayer, priest, relic, religion, rune, sacred, soul, spirit, spiritual, symbol, temple, totem, tribe? voodoo, wish, witch, worship, yoga)
  * * * text color: #9948C2 or #a20ce8
  * * * background color: #c083de?
@@ -472,6 +500,7 @@
  * * * FIGHTING/ FIGHT (belt, black belt, dagger, fight, fighting, fist, fencing, foil (weapon usid in fencing), karate, kung fu, martial arts, sumo, sword, taekwondo, weapon, wrestling)
  * * * * Charfoil later fire/ fighting?
  * * * * Hamstrong (hamster + strong) -> Hamstar (hamster + star) (/ Hamstar -> Hamstrong)
+ * * * * Slapstick (slap + stick + slapstick) (figthing stick with humor)
  * * * ICE / SNOW (arctic, bobsleigh, cold, fjord?, freeze, freezer, fridge, frost, glacial, glacier, ice, ice cream, ice skating, penguin, polar, (bob)sled, ski, snow, snow ball, snowboard, snow man, winter)
  * * * * text color: #3dfcff or 3bceff
  * * * * Polaris/ polarice?
@@ -479,13 +508,18 @@
  * * * * Chalice (chalice + ice) (spirit/ snow/ice)
  * * * * It will use the recorder looks of what is currently air, a new styling for air needs to be made
  * * * * Hailo becomes ice/ light, it's transformation Cubicicle will also become ice/ light
+ * * * * Snowl (snow + owl) (snow/ air)
  * * * LIGHT (aurora? (light/ ice/snow), constellation, glow, halo?, Hubble telescope?, illuminate, lantern, lamp, light, lighthouse, star, sol, solar, sun, telescope?)
  * * * SHADOW (apocalypse, black, disaster, disease?, doom, ghost, hyena?, mosquito (shadow/ air)?, pandemic, rodent?, scar, shadow)
  * * * * Scare (transformation of Sheal) // You should know better than to mistreat a poor seal. (evolves when sheal is fainted a random amount of times - 10-20 eg.)
  * * * * Deerie (deer + eerie)
  * Seasonal TopoPets:
- * * Sandta (earth/ spirit) (sort of Santa Claus)
- * * Raindeer (water/ spirit) (helper of Sandta, some have a red nose)
+ * * Christmas
+ * * * Sandta (earth/ spirit) (sort of Santa Claus)
+ * * * Raindeer (water/ spirit) (helper of Sandta, some have a red nose)
+ * * * Mudsy (earth) (helper of Sandta) 
+ * * Halloween
+ * * * Pumpking (pumpkin + king))
  */
 
 ////////////////
@@ -583,7 +617,7 @@ function setActiveTopoPetsText(topoPetsGame, topoPetObject){
 
 			// Set the new div for the specific active TopoPet
 			document.getElementById(activeTopoPetCall + "Title").innerHTML = "<p> Lvl. " + topoPetObject.level + " " + topoPetObject.Name + "</p>";
-			document.getElementById(activeTopoPetCall + "Text").innerHTML = "HP: " + topoPetObject.currentHP + "/" + topoPetObject.maxHP + "<br/> SP: " + topoPetObject.currentSP + "/" + topoPetObject.maxSP + "<br/> TP: " + topoPetObject.currentTP + "/" + topoPetObject.maxTP + "<br/> Attack: " + topoPetObject.maxAttack + "<br/> Defense: " + topoPetObject.maxDefense + "<br/> Agility: " + topoPetObject.maxAgility + "<br/> Exp: " + topoPetObject.currentExp + "/" + topoPetObject.expNextLevel;
+			document.getElementById(activeTopoPetCall + "Text").innerHTML = " Exp: " + topoPetObject.currentExp + "/" + topoPetObject.expNextLevel + "<br/> <br/> HP: " + topoPetObject.currentHP + "/" + topoPetObject.maxHP + "<br/> SP: " + topoPetObject.currentSP + "/" + topoPetObject.maxSP + "<br/> TP: " + topoPetObject.currentTP + "/" + topoPetObject.maxTP + "<br/> Attack: " + topoPetObject.maxAttack + "<br/> Defense: " + topoPetObject.maxDefense + "<br/> Agility: " + topoPetObject.maxAgility + "<br/> <br/> Move 1: " + topoPetObject.move1.Name; // + "<br/> Move 2: " + topoPetObject.move2.Name + "<br/> Move 3: " + topoPetObject.move3.Name + "<br/> Move 4: " + topoPetObject.move4.Name + "<br/> Move 5: " + topoPetObject.move5.Name;
 
 			// Return the topoPetsGame object
 			return topoPetsGame;
