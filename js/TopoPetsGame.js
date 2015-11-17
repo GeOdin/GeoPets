@@ -52,8 +52,7 @@
  * button to reset map to Wageningen
  * Show icon of player instead of mouse when hovering over map?
  * Refactor TopoPets found into TopoPets recorder
- * Add dateTime to the upper right corner, add a manual button to the right of it
- * Show the zoomLevel on the upper right corner of the screen, so players can know where they found certain TopoPets
+ * add a manual button to the right of the date
  * Show Player/ Bag and Journal/ Achievements as different tabs from each other
  * Make divs for Player/ Bag/ ... draggable
  ================

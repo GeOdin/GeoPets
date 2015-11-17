@@ -12,6 +12,8 @@
  * createMarkers(map)
  * createInfoWindows(topoPetsGame)
  * createStoryInfoWindows(topoPetsGame)
+ * startTime(map)
+ * checkTime(i)
  * Not yet finished functions:
  * resetMap()
  */
@@ -66,6 +68,12 @@ function startGame() {
 	topoPetsGame = drawMap(topoPetsGame);
 	// Show the map
 	document.getElementById("map").style.display = "block";
+
+	// Keep getting the current time and current zoom level
+	startTime(topoPetsGame.startingVariables.map);
+
+	// Show the time and the zoom level
+	document.getElementById("dateZoom").style.display = "block";
 
 	// Show the buttons
 	document.getElementById("buttons").style.display = "block";
@@ -1332,6 +1340,70 @@ function createStoryInfoWindows(topoPetsGame) {
 	
 	return topoPetsGame;
 }
+
+////////////////////
+// startTime(map) //
+////////////////////
+
+// Function to start showing the current time
+//// from http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_settimeout_clock
+
+function startTime(map) {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+
+    var month = today.getMonth();
+    if (month == 0) {
+    	month = "January";
+    } else if (month == 1) {
+    	month = "February";
+    } else if (month == 2) {
+    	month = "March";
+    } else if (month == 3) {
+    	month = "April";
+    } else if (month == 4) {
+    	month = "May";
+    } else if (month == 5) {
+    	month = "June";
+    } else if (month == 6) {
+    	month = "July";
+    } else if (month == 7) {
+    	month = "August";
+    } else if (month == 8) {
+    	month = "September";
+    } else if (month == 9) {
+    	month = "October";
+    } else if (month == 10) {
+    	month = "November";
+    } else if (month == 11) {
+    	month = "December";
+    }
+    var day = today.getDay();
+    // add a zero in front of numbers<10
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById("dateZoom").innerHTML = month + " " + day + " - " + h + ":" + m + ":" + s + " - Zoomlevel: " + map.getZoom();
+
+    // Get zoom level
+    var t = setTimeout(function(){ startTime(map) }, 500);
+}
+
+//////////////////
+// checkTime(i) //
+//////////////////
+
+// Function to check whether a 0 has to be put in front of the minutes or seconds of the time
+//// from http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_settimeout_clock
+
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}
+
 	
 /*
 ////////////////

@@ -36,6 +36,21 @@ body {
 	height: 98vh;
 }
 
+#dateZoom {
+	position: absolute;
+	display: none;
+	bottom: 94.5%;
+	right: 0.5%;
+	width: 32%;
+	z-index: 99;
+	background-color: transparent;
+	background: rgba(00, 99, 00, .23);
+	font-size: 1.2em;
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y:auto;
+}
+
 #activeTopoPets {
 	position: absolute;
 	display: none;
