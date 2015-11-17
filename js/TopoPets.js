@@ -3,13 +3,17 @@
  * Made on 06-11-2015
  * by GeOdin
  *
- * This JavaScript file contains the following variables:
+ *=========================================================
+ * This JavaScript file includes the following variables: *
+ *=========================================================
  * * topoPets
  * * * information about TopoPets that is not dependent on it's level
  * * topoPetsStats
  * * * information about TopoPets that is dependent on it's level
  *
- * This JavaScript file includes the following functions:
+ *=========================================================
+ * This JavaScript file includes the following functions: *
+ *=========================================================
  * * createTopoPet(name, level)
  * * getTopoPetType1(name)
  * * getTopoPetDescription(name)
@@ -561,17 +565,17 @@ function getTopoPetTextColor(name) {
 			type1 = topoPets[i][1];
 
 			// Get matching text color
-			if (type1 = "AIR") {
+			if (type1 == "AIR") {
 				textColor = "aqua";
-			} else if (type1 = "EARTH") {
+			} else if (type1 == "EARTH") {
 				textColor = "#8B5742";
-			} else if (type1 = "FIRE") {
+			} else if (type1 == "FIRE") {
 				textColor = "red";
-			} else if (type1 = "NORMAL") {
+			} else if (type1 == "NORMAL") {
 				textColor = "#fa8ecf";
-			} else if (type1 = "SPIRIT") {
+			} else if (type1 == "SPIRIT") {
 				textColor = "#a20ce8";
-			} else if (type1 = "WATER") {
+			} else if (type1 == "WATER") {
 				textColor = "blue";
 			} else {
 				textColor = "#ABABAB";
@@ -602,17 +606,17 @@ function getTopoPetBackgroundColor(name) {
 			type1 = topoPets[i][1];
 
 			// Get matching background color
-			if (type1 = "AIR") {
+			if (type1 == "AIR") {
 				backgroundColor = "#AEEEEE";
-			} else if (type1 = "EARTH") {
+			} else if (type1 == "EARTH") {
 				backgroundColor = "#BC7642";
-			} else if (type1 = "FIRE") {
+			} else if (type1 == "FIRE") {
 				backgroundColor = "#CD7777";
-			} else if (type1 = "NORMAL") {
-				backgroundColor = "white";
-			} else if (type1 = "SPIRIT") {
+			} else if (type1 == "NORMAL") {
+				backgroundColor = "#fcd3e6";
+			} else if (type1 == "SPIRIT") {
 				backgroundColor = "#c083de";
-			} else if (type1 = "WATER") {
+			} else if (type1 == "WATER") {
 				backgroundColor = "#4981CE";
 			} else {
 				backgroundColor = "white";

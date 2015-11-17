@@ -3,10 +3,14 @@
  * Made on 16-11-2015
  * by GeOdin
  *
- * This JavaScript file containts the following variables:
+ *========================================================
+ * This JavaScript file includes the following variable: *
+ *========================================================
  * * battleMoves
  *
- * This JavaScript file containts the following functions:
+ *=========================================================
+ * This JavaScript file includes the following functions: *
+ *=========================================================
  * createBattleMove(moveNumber, moveName, moveType1, moveType2, SPdamage, SPcost, TPdamage, TPcost, accuracy, description);
  */
 

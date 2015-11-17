@@ -3,10 +3,14 @@
  * Made on 07-11-2015
  * by GeOdin
  *
- * This JavaScript file includes the following variables:
+ *========================================================
+ * This JavaScript file includes the following variable: *
+ *========================================================
  * * var topoPetsCaught
  *
- * This JavaScript file includes the following function
+ *=========================================================
+ * This JavaScript file includes the following functions: *
+ *=========================================================
  * * setTopoPetsCaught()
  * * getTotalAmountTopoPets()
  * * getTotalAmountAirTopoPets()
@@ -24,9 +28,17 @@
  * * checkWaterTopoPetsFound()
  */
 
-// variable to check whether a TopoPet has been caught (to count caught TopoPet)
+////////////////////
+// topoPetsCaught //
+////////////////////
+
+// Variable to check 
+//// whether a TopoPet has been caught (to count caught TopoPet)
+//// how much of a certain type have been caught
+//// and how much in total
 // 0 = not caught
 // 1 = caught
+
 var topoPetsCaught = {
 	AQUNDINE: 0, 
 	CHARFOIL: 0,

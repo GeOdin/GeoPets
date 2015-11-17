@@ -3,7 +3,9 @@
  * Made on 11-11-2015
  * by GeOdin
  *
- * This JavaScript file includes the following functions:
+ *=========================================================
+ * This JavaScript file includes the following functions: *
+ *=========================================================
  * * createPlayer()
  */
 

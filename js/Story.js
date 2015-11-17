@@ -3,7 +3,9 @@
  * Made on 13-11-2015
  * by GeOdin
  *
- * This JavaScript file includes the following variables:
+ *========================================================
+ * This JavaScript file includes the following variable: *
+ *========================================================
  * * storyMarkers
  */
 

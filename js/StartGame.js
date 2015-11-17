@@ -3,7 +3,9 @@
  * Made on 04-11-2015
  * by GeOdin
  *
- * This JavaScript file includes the following functions:
+ *=========================================================
+ * This JavaScript file includes the following functions: *
+ *=========================================================
  * startGame()
  * setLatLon(startingVariables)
  * drawMap(topoPetsGame)

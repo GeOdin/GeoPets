@@ -11,11 +11,15 @@
  * * currently no to do things
  * stylesheet_TopoPets.css
  * * currently no to do things
- * TopoPetsGame.js
  * StartGame.js
+ * TopoPetsGame.js
  * Battle.js
+ * Player.js
+ * * currently no to do things
  * Story.js
  * TopoPets.js
+ * TopoPetsCaught.js
+ * * currently no to do things
  *
  *=========================================================
  * This JavaScript file includes the following functions: *
@@ -37,30 +41,24 @@
  * toggleStory()
  */
 
-/////////////
-// General //
-/////////////
+////////////////////////////
+// To do (general things) //
+////////////////////////////
 
 /*
- * Show #buttons after getting the recorder
- * Show icon of player instead of mouse when hovering over map?
- * Show markers where TopoPets are, only when hovered over them, within a certain buffer (geo-fencing)
- * * show markers only on certain zoom level
- * * * http://stackoverflow.com/questions/5030127/marker-visibility-in-google-maps
- * * markers from
- * * * https://mapicons.mapsmarker.com/category/markers/nature/natural-marvels/
- * * * https://mapicons.mapsmarker.com/category/markers/nature/weather/
- * * * make background image transparent:
- * * * * http://www.online-image-editor.com/
- * * the markers are also visible on Streetview!
- * * try to make them only visible on Streetview?
- * * * http://stackoverflow.com/questions/18311698/visibility-of-markers-on-map-panorama-in-google-maps
- * * * supported cities for streetview
- * * * * https://www.google.com/maps/streetview/understand/#where
- * explanation about markers
- * * http://stackoverflow.com/questions/29324136/google-map-api-multi-markers
- * change the color of the Title of active TopoPet entries to the types of the TopoPet, like for the recorder
+ ===========
+ * General *
+ ===========
  * button to reset map to Wageningen
+ * Show icon of player instead of mouse when hovering over map?
+ * Refactor TopoPets found into TopoPets recorder
+ * Add dateTime to the upper right corner, add a manual button to the right of it
+ * Show the zoomLevel on the upper right corner of the screen, so players can know where they found certain TopoPets
+ * Show Player/ Bag and Journal/ Achievements as different tabs from each other
+ * Make divs for Player/ Bag/ ... draggable
+ ================
+ * Achievements *
+ ================
  * add achievements
  * * TopoPets
  * * * Obtain all TopoPets of a certain type
@@ -81,18 +79,34 @@
  * * * Obtain the recorder
  * * * Obtain the journal
  * * * Read the manual
- * Refactor TopoPets found into TopoPets recorder
- * Add dateTime to the upper right corner, add a manual button to the right of it
- * * also add a button to toggle the buttons on the bottom of the screen?
- * zoomLevel
- * * Show different TopoPets at different zoom levels
- * * Show the zoomLevel on the upper right corner of the screen, so players can know where they found certain TopoPets
- * Show Player/ Bag and Journal/ Achievements as different tabs from each other
- * * http://stackoverflow.com/questions/20127641/simple-multi-tab-hide-show-div
- * * * http://jsfiddle.net/y76k4/
- * Make divs for Player/ Bag/ ... draggable
- * Make divs of buttons on the bottom of the screen also pop up when pressing specific buttons
+ * Add more text when you click on a certain achievement? (like recorder entries?)
+ * Make achievements you don't have yet ('to do') (light) gray (underneath the 'done' achievements), with more information about how to get them when you click on them? (like recorder entries?)
+ * Add a counter for the achievements (like the recorder)?
+ * Order achievements by kind of achievement (Story, TopoPets caught, ...)
+ ===================
+ * Active TopoPets *
+ ===================
+ * change the color of the Title of active TopoPet entries to the types of the TopoPet, like for the recorder
  * Make different tabs for different active TopoPets
+ * Also add a counter for how many active TopoPets the player has?
+ * When clicked on an active TopoPet, get a small menu where on the left you can click on
+ * * General information
+ * * Stats
+ * * Battle moved
+ * * //document.getElementById(activeTopoPetCall + "Text").style.width = "50%"; from the setActiveTopoPetsText(topoPetsGame, topoPetObject) function
+ * And where you see this explained on the right
+ * * for example, create new divs and toggle functions for this purpose that are set in the setActiveTopoPetsText(topoPetsGame, topoPetObject) function, make these in a horizontal div under the #...Title?
+ * * * (activeTopoPetCall + "General")
+ * * * (activeTopoPetCall + "Stats")
+ * * * (activeTopoPetCall + "Moves")
+ * Don't show space vertically between active TopoPets
+ ===========
+ * Buttons *
+ ===========
+ * Show #buttons after getting the recorder
+ * Make divs of buttons on the bottom of the screen also pop up when pressing specific buttons
+ * Currently, you have to press the toggling buttons twice with the buttons on the bottom of the screen. 
+ * * Adjust this to only having to click once
  * * P
  * * * Player
  * * B
@@ -111,18 +125,34 @@
  * * keyboard events?
  * * * http://javascript.info/tutorial/keyboard-events
  * * keydown?
- * Tokens
- * * Add the possibility to earn tokens for big battles during the game
- * * Add Tokens (earned) as tab to Achievements (and possibly also to buttons on the bottom of the screen?)
- * Achievements
- * * Add more text when you click on a certain achievement? (like recorder entries?)
- * * Make achievements you don't have yet ('to do') (light) gray (underneath the 'done' achievements), with more information about how to get them when you click on them? (like recorder entries?)
- * * Add a counter for the achievements (like the recorder)
- * * Order achievements by kind of achievement (Story, TopoPets caught, ...)
- * Active TopoPets
- * * Also add a counter for how many active TopoPets the player has?
- * Currently, you have to press the toggling buttons twice with the buttons on the bottom of the screen. 
- * * Adjust this to only having to click once
+ * also add a button to toggle the buttons on the bottom of the screen? (so that you have a whole street view/ able to use the zooming buttons of google maps)
+ ===========
+ * Markers *
+ ===========
+ * Show markers where TopoPets are, only when hovered over them, within a certain buffer (geo-fencing)
+ * * show markers only on certain zoom level
+ * * * http://stackoverflow.com/questions/5030127/marker-visibility-in-google-maps
+ * * markers from
+ * * * https://mapicons.mapsmarker.com/category/markers/nature/natural-marvels/
+ * * * https://mapicons.mapsmarker.com/category/markers/nature/weather/
+ * * * make background image transparent:
+ * * * * http://www.online-image-editor.com/
+ * * the markers are also visible on Streetview!
+ * * try to make them only visible on Streetview?
+ * * * http://stackoverflow.com/questions/18311698/visibility-of-markers-on-map-panorama-in-google-maps
+ * * * supported cities for streetview
+ * * * * https://www.google.com/maps/streetview/understand/#where
+ * explanation about markers
+ * * http://stackoverflow.com/questions/29324136/google-map-api-multi-markers
+ * zoomLevel
+ * * Show different TopoPets at different zoom levels
+ * * http://stackoverflow.com/questions/20127641/simple-multi-tab-hide-show-div
+ * * * http://jsfiddle.net/y76k4/
+ ==========
+ * Tokens *
+ ==========
+ * Add the possibility to earn tokens for big battles during the game
+ * Add Tokens (earned) as tab of Achievements (and possibly also to buttons on the bottom of the screen?)
  */
 
 ///////////////////////////
@@ -132,14 +162,6 @@
 /////////////////////////////////////
 ////// stylesheet_TopoPets.css //////
 /////////////////////////////////////
-
-/////////////////////////////
-////// TopoPetsGame.js //////
-/////////////////////////////
-
-/*
- * add all 5 moves to setActiveTopoPetsText(topoPetsGame, topoPetObject) instead of just move1
- */
 
 //////////////////////////
 ////// StartGame.js //////
@@ -172,13 +194,17 @@
 	}
  */
 
+/////////////////////////////
+////// TopoPetsGame.js //////
+/////////////////////////////
+
+/*
+ * add all 5 moves to setActiveTopoPetsText(topoPetsGame, topoPetObject) instead of just move1
+ */
+
 ///////////////////////
 ////// Battle.js //////
 ///////////////////////
-
-/*
- * Create this JavaScript file
- */
 
 /*
  *==================
@@ -312,6 +338,7 @@
  * * * Snow ball
  * * * Avalanche
  * * Spike (type?)
+ *
  *==================
  * Battle options: *
  *==================
@@ -335,15 +362,17 @@
  * * * use items on TopoPets?
  * * Escape
  * * * not possible during battling other people
- */
-
-/*
+ *
  *==================
  * Later versions: *
  *==================
  * * Add possibility to temporarily lower stats of a TopoPet during battle
  * * Add possibility to add status effects
  */
+
+ ///////////////////////
+ ////// Player.js //////
+ ///////////////////////
 
  //////////////////////
  ////// Story.js //////
@@ -378,9 +407,7 @@
  * * get hint to find Solara (ancient/ fire)
  * with all ancient/ other types
  * * find ancient type
- */
-
-/*
+ *
  *==============
  * Characters: *
  *==============
@@ -522,6 +549,10 @@
  * * * Pumpking (pumpkin + king))
  */
 
+ ///////////////////////////////
+ ////// TopoPetsCaught.js //////
+ ///////////////////////////////
+
 ////////////////
 // topoPets() //
 ////////////////
@@ -612,12 +643,27 @@ function setActiveTopoPetsText(topoPetsGame, topoPetObject){
 			topoPetsGame.player[activeTopoPetCall] = topoPetObject.Name;
 
 			// Show the specific active TopoPet within the general active TopoPets div
-			document.getElementById(activeTopoPetCall).innerHTML = "<a onclick='toggleActiveTopoPet" + activeTopoPetNumber + "Text()'> Lvl. " + topoPetObject.level + " " + topoPetObject.Name + "</a>";
+			document.getElementById(activeTopoPetCall).innerHTML = "<a onclick='toggleActiveTopoPet" + activeTopoPetNumber + "Text()' style='background-color:" + topoPetObject.backgroundcolor + ";color:" + topoPetObject.textColor + ";'> Lvl. " + topoPetObject.level + " " + topoPetObject.Name + "</a>";
 			document.getElementById(activeTopoPetCall).style.display = "block";
 
 			// Set the new div for the specific active TopoPet
+			document.getElementById(activeTopoPetCall + "Title").style.color = topoPetObject.textColor;
+			document.getElementById(activeTopoPetCall + "Title").style.backgroundColor = topoPetObject.backgroundcolor;
 			document.getElementById(activeTopoPetCall + "Title").innerHTML = "<p> Lvl. " + topoPetObject.level + " " + topoPetObject.Name + "</p>";
-			document.getElementById(activeTopoPetCall + "Text").innerHTML = " Exp: " + topoPetObject.currentExp + "/" + topoPetObject.expNextLevel + "<br/> <br/> HP: " + topoPetObject.currentHP + "/" + topoPetObject.maxHP + "<br/> SP: " + topoPetObject.currentSP + "/" + topoPetObject.maxSP + "<br/> TP: " + topoPetObject.currentTP + "/" + topoPetObject.maxTP + "<br/> Attack: " + topoPetObject.maxAttack + "<br/> Defense: " + topoPetObject.maxDefense + "<br/> Agility: " + topoPetObject.maxAgility + "<br/> <br/> Move 1: " + topoPetObject.move1.Name; // + "<br/> Move 2: " + topoPetObject.move2.Name + "<br/> Move 3: " + topoPetObject.move3.Name + "<br/> Move 4: " + topoPetObject.move4.Name + "<br/> Move 5: " + topoPetObject.move5.Name;
+			var specificColor = topoPetObject.backgroundcolor;
+			if (topoPetObject.type1 == "NORMAL") {
+				specificColor = topoPetObject.textColor;
+			} else if (topoPetObject.type1 == "AIR") {
+				specificColor = topoPetObject.textColor;
+			}
+			document.getElementById(activeTopoPetCall + "Text").style.position = "relative";
+			document.getElementById(activeTopoPetCall + "Text").style.width = "60%";
+			document.getElementById(activeTopoPetCall + "Text").style.left = "20%";
+			document.getElementById(activeTopoPetCall + "Text").style.textAlign = "center";
+			document.getElementById(activeTopoPetCall + "Text").style.color = specificColor;
+			document.getElementById(activeTopoPetCall + "Text").style.backgroundColor = "white";
+			document.getElementById(activeTopoPetCall + "Text").style.borderRadius = "5px";
+			document.getElementById(activeTopoPetCall + "Text").innerHTML = " Exp: " + topoPetObject.currentExp + "/" + topoPetObject.expNextLevel + "<br/> <br/> HP: " + topoPetObject.currentHP + "/" + topoPetObject.maxHP + "<br/> SP: " + topoPetObject.currentSP + "/" + topoPetObject.maxSP + "<br/> TP: " + topoPetObject.currentTP + "/" + topoPetObject.maxTP + "<br/> Attack: " + topoPetObject.maxAttack + "<br/> Defense: " + topoPetObject.maxDefense + "<br/> Agility: " + topoPetObject.maxAgility + "<br/> <br/> Move 1: <br/>" + topoPetObject.move1.Name; // + "<br/> Move 2: " + topoPetObject.move2.Name + "<br/> Move 3: " + topoPetObject.move3.Name + "<br/> Move 4: " + topoPetObject.move4.Name + "<br/> Move 5: " + topoPetObject.move5.Name;
 
 			// Return the topoPetsGame object
 			return topoPetsGame;
