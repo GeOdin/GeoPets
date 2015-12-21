@@ -132,6 +132,7 @@
  * Show markers where TopoPets are, only when hovered over them, within a certain buffer (geo-fencing)
  * * show markers only on certain zoom level
  * * * http://stackoverflow.com/questions/5030127/marker-visibility-in-google-maps
+ * * * http://stackoverflow.com/questions/11141865/toggle-hide-show-google-map-markers
  * * markers from
  * * * https://mapicons.mapsmarker.com/category/markers/nature/natural-marvels/
  * * * https://mapicons.mapsmarker.com/category/markers/nature/weather/

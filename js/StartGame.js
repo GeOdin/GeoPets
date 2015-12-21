@@ -35,6 +35,8 @@ function startGame() {
 	var locationName = "WAGENINGEN"; // var locationName = """"; for later versions
 	var playerName = "";
 	var startingVariables = new Object();
+	var map;
+	var markers;
 
 	// Create the startingVariables object
 	startingVariables.locationName = locationName;
@@ -78,6 +80,19 @@ function startGame() {
 
 	// Show the buttons
 	document.getElementById("buttons").style.display = "block";
+
+	// Only show TopoPet markers on their specific zoomLevel
+	map = topoPetsGame.startingVariables.map;
+	markers = topoPetsGame.startingVariables.markers;
+	google.maps.event.addListener(map,'zoom_changed', function () {
+		for (i=1; i<topoPets.length; i++) {
+			if (map.getZoom() == topoPets[i][5]) {
+				markers[topoPets[i][0]].setVisible(true);
+			} else {
+				markers[topoPets[i][0]].setVisible(false);
+			}
+		}
+	});
 
 	// Return the starting variables
 	return topoPetsGame;
@@ -263,6 +278,12 @@ function createInfoWindows(topoPetsGame) {
 			markers[topoPets[numb][0]] = null;
 		}
     });
+	// Set visibility of the TopoPet marker to false by default, unless it's the same as the starting zoomLevel
+	if (topoPets[numb][5] == topoPetsGame.startingVariables.zoomLevel) {
+		markers[topoPets[numb][0]].setVisible(true);
+	} else {
+		markers[topoPets[numb][0]].setVisible(false);
+	}
 
 	// Create the InfoWindow for CHARFOIL
 	// Add 1 to numb
@@ -319,6 +340,12 @@ function createInfoWindows(topoPetsGame) {
 			markers[topoPets[numb][0]] = null;
 		}
     });
+	// Set visibility of the TopoPet marker to false by default, unless it's the same as the starting zoomLevel
+	if (topoPets[numb][5] == topoPetsGame.startingVariables.zoomLevel) {
+		markers[topoPets[numb][0]].setVisible(true);
+	} else {
+		markers[topoPets[numb][0]].setVisible(false);
+	}
 
     // Create the InfoWindow for ELEPHAUN
 	// Add 1 to numb
@@ -375,6 +402,12 @@ function createInfoWindows(topoPetsGame) {
 			markers[topoPets[numb][0]] = null;
 		}
     });
+	// Set visibility of the TopoPet marker to false by default, unless it's the same as the starting zoomLevel
+	if (topoPets[numb][5] == topoPetsGame.startingVariables.zoomLevel) {
+		markers[topoPets[numb][0]].setVisible(true);
+	} else {
+		markers[topoPets[numb][0]].setVisible(false);
+	}
 
 	// Create the InfoWindow for FIREMANDER
 	// Add 1 to numb
@@ -431,6 +464,12 @@ function createInfoWindows(topoPetsGame) {
 			markers[topoPets[numb][0]] = null;
 		}
     });
+	// Set visibility of the TopoPet marker to false by default, unless it's the same as the starting zoomLevel
+	if (topoPets[numb][5] == topoPetsGame.startingVariables.zoomLevel) {
+		markers[topoPets[numb][0]].setVisible(true);
+	} else {
+		markers[topoPets[numb][0]].setVisible(false);
+	}
 
 	// Create the InfoWindow for GNOMARL
 	// Add 1 to numb
@@ -487,6 +526,12 @@ function createInfoWindows(topoPetsGame) {
 			markers[topoPets[numb][0]] = null;
 		}
     });
+	// Set visibility of the TopoPet marker to false by default, unless it's the same as the starting zoomLevel
+	if (topoPets[numb][5] == topoPetsGame.startingVariables.zoomLevel) {
+		markers[topoPets[numb][0]].setVisible(true);
+	} else {
+		markers[topoPets[numb][0]].setVisible(false);
+	}
 
     // Create the InfoWindow for HAILO
 	// Add 1 to numb
@@ -543,6 +588,12 @@ function createInfoWindows(topoPetsGame) {
 			markers[topoPets[numb][0]] = null;
 		}
     });
+	// Set visibility of the TopoPet marker to false by default, unless it's the same as the starting zoomLevel
+	if (topoPets[numb][5] == topoPetsGame.startingVariables.zoomLevel) {
+		markers[topoPets[numb][0]].setVisible(true);
+	} else {
+		markers[topoPets[numb][0]].setVisible(false);
+	}
 
     // Create the InfoWindow for LAVACHE
 	// Add 1 to numb
@@ -599,6 +650,12 @@ function createInfoWindows(topoPetsGame) {
 			markers[topoPets[numb][0]] = null;
 		}
     });
+	// Set visibility of the TopoPet marker to false by default, unless it's the same as the starting zoomLevel
+	if (topoPets[numb][5] == topoPetsGame.startingVariables.zoomLevel) {
+		markers[topoPets[numb][0]].setVisible(true);
+	} else {
+		markers[topoPets[numb][0]].setVisible(false);
+	}
 
     // Create the InfoWindow for MOREEL
 	// Add 1 to numb
@@ -655,6 +712,12 @@ function createInfoWindows(topoPetsGame) {
 			markers[topoPets[numb][0]] = null;
 		}
     });
+	// Set visibility of the TopoPet marker to false by default, unless it's the same as the starting zoomLevel
+	if (topoPets[numb][5] == topoPetsGame.startingVariables.zoomLevel) {
+		markers[topoPets[numb][0]].setVisible(true);
+	} else {
+		markers[topoPets[numb][0]].setVisible(false);
+	}
 
     // Create the InfoWindow for MUDDITCH
 	// Add 1 to numb
@@ -711,6 +774,12 @@ function createInfoWindows(topoPetsGame) {
 			markers[topoPets[numb][0]] = null;
 		}
     });
+	// Set visibility of the TopoPet marker to false by default, unless it's the same as the starting zoomLevel
+	if (topoPets[numb][5] == topoPetsGame.startingVariables.zoomLevel) {
+		markers[topoPets[numb][0]].setVisible(true);
+	} else {
+		markers[topoPets[numb][0]].setVisible(false);
+	}
 
     // Create the InfoWindow for NEMATOAD
 	// Add 1 to numb
@@ -767,6 +836,12 @@ function createInfoWindows(topoPetsGame) {
 			markers[topoPets[numb][0]] = null;
 		}
     });
+	// Set visibility of the TopoPet marker to false by default, unless it's the same as the starting zoomLevel
+	if (topoPets[numb][5] == topoPetsGame.startingVariables.zoomLevel) {
+		markers[topoPets[numb][0]].setVisible(true);
+	} else {
+		markers[topoPets[numb][0]].setVisible(false);
+	}
 
 	// Create the InfoWindow for PARASYLPH
 	// Add 1 to numb
@@ -823,6 +898,12 @@ function createInfoWindows(topoPetsGame) {
 			markers[topoPets[numb][0]] = null;
 		}
     });
+	// Set visibility of the TopoPet marker to false by default, unless it's the same as the starting zoomLevel
+	if (topoPets[numb][5] == topoPetsGame.startingVariables.zoomLevel) {
+		markers[topoPets[numb][0]].setVisible(true);
+	} else {
+		markers[topoPets[numb][0]].setVisible(false);
+	}
 
     // Create the InfoWindow for PIRAMINI
 	// Add 1 to numb
@@ -879,6 +960,12 @@ function createInfoWindows(topoPetsGame) {
 			markers[topoPets[numb][0]] = null;
 		}
     });
+	// Set visibility of the TopoPet marker to false by default, unless it's the same as the starting zoomLevel
+	if (topoPets[numb][5] == topoPetsGame.startingVariables.zoomLevel) {
+		markers[topoPets[numb][0]].setVisible(true);
+	} else {
+		markers[topoPets[numb][0]].setVisible(false);
+	}
 
     // Create the InfoWindow for PYROSE
 	// Add 1 to numb
@@ -935,6 +1022,12 @@ function createInfoWindows(topoPetsGame) {
 			markers[topoPets[numb][0]] = null;
 		}
     });
+	// Set visibility of the TopoPet marker to false by default, unless it's the same as the starting zoomLevel
+	if (topoPets[numb][5] == topoPetsGame.startingVariables.zoomLevel) {
+		markers[topoPets[numb][0]].setVisible(true);
+	} else {
+		markers[topoPets[numb][0]].setVisible(false);
+	}
 
     // Create the InfoWindow for SANDANCE
 	// Add 1 to numb
@@ -991,6 +1084,12 @@ function createInfoWindows(topoPetsGame) {
 			markers[topoPets[numb][0]] = null;
 		}
     });
+	// Set visibility of the TopoPet marker to false by default, unless it's the same as the starting zoomLevel
+	if (topoPets[numb][5] == topoPetsGame.startingVariables.zoomLevel) {
+		markers[topoPets[numb][0]].setVisible(true);
+	} else {
+		markers[topoPets[numb][0]].setVisible(false);
+	}
 
     // Create the InfoWindow for SHEAL
 	// Add 1 to numb
@@ -1047,6 +1146,12 @@ function createInfoWindows(topoPetsGame) {
 			markers[topoPets[numb][0]] = null;
 		}
     });
+	// Set visibility of the TopoPet marker to false by default, unless it's the same as the starting zoomLevel
+	if (topoPets[numb][5] == topoPetsGame.startingVariables.zoomLevel) {
+		markers[topoPets[numb][0]].setVisible(true);
+	} else {
+		markers[topoPets[numb][0]].setVisible(false);
+	}
 
     // Create the InfoWindow for TULPA
 	// Add 1 to numb
@@ -1103,6 +1208,12 @@ function createInfoWindows(topoPetsGame) {
 			markers[topoPets[numb][0]] = null;
 		}
     });
+	// Set visibility of the TopoPet marker to false by default, unless it's the same as the starting zoomLevel
+	if (topoPets[numb][5] == topoPetsGame.startingVariables.zoomLevel) {
+		markers[topoPets[numb][0]].setVisible(true);
+	} else {
+		markers[topoPets[numb][0]].setVisible(false);
+	}
 
     // Create the InfoWindow for TUSCAT
 	// Add 1 to numb
@@ -1159,6 +1270,12 @@ function createInfoWindows(topoPetsGame) {
 			markers[topoPets[numb][0]] = null;
 		}
     });
+	// Set visibility of the TopoPet marker to false by default, unless it's the same as the starting zoomLevel
+	if (topoPets[numb][5] == topoPetsGame.startingVariables.zoomLevel) {
+		markers[topoPets[numb][0]].setVisible(true);
+	} else {
+		markers[topoPets[numb][0]].setVisible(false);
+	}
 
     // Create the InfoWindow for VAMPYRE
 	// Add 1 to numb
@@ -1215,6 +1332,12 @@ function createInfoWindows(topoPetsGame) {
 			markers[topoPets[numb][0]] = null;
 		}
     });
+	// Set visibility of the TopoPet marker to false by default, unless it's the same as the starting zoomLevel
+	if (topoPets[numb][5] == topoPetsGame.startingVariables.zoomLevel) {
+		markers[topoPets[numb][0]].setVisible(true);
+	} else {
+		markers[topoPets[numb][0]].setVisible(false);
+	}
 
     // Create the InfoWindow for WINGDIGO
 	// Add 1 to numb
@@ -1271,6 +1394,12 @@ function createInfoWindows(topoPetsGame) {
 			markers[topoPets[numb][0]] = null;
 		}
     });
+	// Set visibility of the TopoPet marker to false by default, unless it's the same as the starting zoomLevel
+	if (topoPets[numb][5] == topoPetsGame.startingVariables.zoomLevel) {
+		markers[topoPets[numb][0]].setVisible(true);
+	} else {
+		markers[topoPets[numb][0]].setVisible(false);
+	}
 	
 	// Return the topoPetsGame object
 	topoPetsGame.startingVariables.map = map;
@@ -1336,6 +1465,14 @@ function createStoryInfoWindows(topoPetsGame) {
 		for (i = 1; i < topoPets.length; i++) {
 			var topoPetsName = topoPets[i][0];
 			markers[topoPetsName].setMap(map);
+/*
+			// Only show TopoPets which zoomLevel complies with the current zoomLevel
+			if (map.getZoom() == topoPets[i][5]) {
+				markers[topoPetsName].setVisible(true);
+			} else {
+				markers[topoPetsName].setVisible(false);
+			}
+ */
 		}
     });
 	
@@ -1404,7 +1541,6 @@ function checkTime(i) {
     }
     return i;
 }
-
 	
 /*
 ////////////////
