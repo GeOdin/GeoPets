@@ -55,6 +55,7 @@
  * add a manual button to the right of the date
  * Show Player/ Bag and Journal/ Achievements as different tabs from each other
  * Make divs for Player/ Bag/ ... draggable
+ * * http://www.w3schools.com/html/html5_draganddrop.asp
  ================
  * Achievements *
  ================
@@ -565,6 +566,8 @@ function topoPetsGame() {
 	topoPetsGame.startingVariables = topoPetsGameTemp;
 
 	// Run the game
+		// Show TopoPets only on certain zoomLevel
+
 /*
 	var topoPets = new Object();
 	topoPetsGame.topoPets = topoPets;
@@ -636,32 +639,48 @@ function toggleActiveTopoPets() {
 
 function setActiveTopoPetsText(topoPetsGame, topoPetObject){
 	for (i=0; i<5; i++) {
+		// Set the variables
 		var activeTopoPetNumber = i+1;
 		var activeTopoPetCall = "activeTopoPet" + activeTopoPetNumber;
+
 		if (topoPetsGame.player[activeTopoPetCall] == "") {
-			topoPetsGame.player[activeTopoPetCall] = topoPetObject.Name;
-
-			// Show the specific active TopoPet within the general active TopoPets div
-			document.getElementById(activeTopoPetCall).innerHTML = "<a onclick='toggleActiveTopoPet" + activeTopoPetNumber + "Text()' style='background-color:" + topoPetObject.backgroundcolor + ";color:" + topoPetObject.textColor + ";'> Lvl. " + topoPetObject.level + " " + topoPetObject.Name + "</a>";
-			document.getElementById(activeTopoPetCall).style.display = "block";
-
-			// Set the new div for the specific active TopoPet
-			document.getElementById(activeTopoPetCall + "Title").style.color = topoPetObject.textColor;
-			document.getElementById(activeTopoPetCall + "Title").style.backgroundColor = topoPetObject.backgroundcolor;
-			document.getElementById(activeTopoPetCall + "Title").innerHTML = "<p> Lvl. " + topoPetObject.level + " " + topoPetObject.Name + "</p>";
+			// Set the variables
+			var borderColor = topoPetObject.textColor;
+			if (topoPetObject.textColor == "red") {
+				borderColor = "#FF4F4F";
+			}
 			var specificColor = topoPetObject.backgroundcolor;
 			if (topoPetObject.type1 == "NORMAL") {
 				specificColor = topoPetObject.textColor;
 			} else if (topoPetObject.type1 == "AIR") {
 				specificColor = topoPetObject.textColor;
 			}
-			document.getElementById(activeTopoPetCall + "Text").style.position = "relative";
+			topoPetsGame.player[activeTopoPetCall] = topoPetObject.Name;
+
+			// Show the specific active TopoPet within the general active TopoPets div
+			document.getElementById(activeTopoPetCall).innerHTML = "<a onclick='toggleActiveTopoPet" + activeTopoPetNumber + "Text()' style='background-color:" + topoPetObject.backgroundcolor + ";color:" + topoPetObject.textColor + ";'> Lvl. " + topoPetObject.level + " " + topoPetObject.Name + "</a>";
+			document.getElementById(activeTopoPetCall).style.display = "block";
+			document.getElementById(activeTopoPetCall).style.textAlign = "center";
+			document.getElementById(activeTopoPetCall).style.backgroundColor = topoPetObject.backgroundcolor;
+			//document.getElementById(activeTopoPetCall).style.borderColor = borderColor;
+
+			// Set the new div for the specific active TopoPet
+			//// Set the title for the specific active TopoPet
+			document.getElementById(activeTopoPetCall + "Title").style.textAlign = "center";
+			document.getElementById(activeTopoPetCall + "Title").style.width = "95%";
+			document.getElementById(activeTopoPetCall + "Title").style.top = "3vh";
+			document.getElementById(activeTopoPetCall + "Title").style.color = topoPetObject.textColor;
+			document.getElementById(activeTopoPetCall + "Title").style.backgroundColor = topoPetObject.backgroundcolor;
+			document.getElementById(activeTopoPetCall + "Title").innerHTML = "Lvl. " + topoPetObject.level + " " + topoPetObject.Name;
+			document.getElementById(activeTopoPetCall + "Title").style.borderColor = borderColor;
+			//// Set the text for the specific active TopoPet
 			document.getElementById(activeTopoPetCall + "Text").style.width = "60%";
+			document.getElementById(activeTopoPetCall + "Text").style.top = "4vh";
 			document.getElementById(activeTopoPetCall + "Text").style.left = "20%";
 			document.getElementById(activeTopoPetCall + "Text").style.textAlign = "center";
 			document.getElementById(activeTopoPetCall + "Text").style.color = specificColor;
 			document.getElementById(activeTopoPetCall + "Text").style.backgroundColor = "white";
-			document.getElementById(activeTopoPetCall + "Text").style.borderRadius = "5px";
+			document.getElementById(activeTopoPetCall + "Text").style.border = "0.25vh solid " + borderColor;
 			document.getElementById(activeTopoPetCall + "Text").innerHTML = " Exp: " + topoPetObject.currentExp + "/" + topoPetObject.expNextLevel + "<br/> <br/> HP: " + topoPetObject.currentHP + "/" + topoPetObject.maxHP + "<br/> SP: " + topoPetObject.currentSP + "/" + topoPetObject.maxSP + "<br/> TP: " + topoPetObject.currentTP + "/" + topoPetObject.maxTP + "<br/> Attack: " + topoPetObject.maxAttack + "<br/> Defense: " + topoPetObject.maxDefense + "<br/> Agility: " + topoPetObject.maxAgility + "<br/> <br/> Move 1: <br/>" + topoPetObject.move1.Name; // + "<br/> Move 2: " + topoPetObject.move2.Name + "<br/> Move 3: " + topoPetObject.move3.Name + "<br/> Move 4: " + topoPetObject.move4.Name + "<br/> Move 5: " + topoPetObject.move5.Name;
 
 			// Return the topoPetsGame object

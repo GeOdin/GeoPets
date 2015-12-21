@@ -59,7 +59,7 @@ function startGame() {
 	setTopoPetsCaught();
 
 	// Show the city name
-	document.getElementById("locationName").innerHTML = "<p>" + startingVariables.locationName + "</p>";
+	document.getElementById("locationName").innerHTML = startingVariables.locationName;
 	document.getElementById("locationName").style.display = "block";
 	document.getElementById("location").style.display = "block";
 	
@@ -73,6 +73,7 @@ function startGame() {
 	startTime(topoPetsGame.startingVariables.map);
 
 	// Show the time and the zoom level
+	document.getElementById("dateZoomText").style.display = "block";
 	document.getElementById("dateZoom").style.display = "block";
 
 	// Show the buttons
@@ -174,7 +175,7 @@ function createMarkers(map) {
 		var storyLon = storyMarkers[i][3];
 		var storyIcon = storyMarkers[i][4];
 
-		// Create the TopoPet marker
+		// Create the story marker
 		var coords = new google.maps.LatLng(storyLat, storyLon);
 		markers[storyID] = new google.maps.Marker({
 		    position: coords, 
@@ -1380,13 +1381,13 @@ function startTime(map) {
     } else if (month == 11) {
     	month = "December";
     }
-    var day = today.getDay();
+    var day = today.getDate();
     // add a zero in front of numbers<10
     m = checkTime(m);
     s = checkTime(s);
-    document.getElementById("dateZoom").innerHTML = month + " " + day + " - " + h + ":" + m + ":" + s + " - Zoomlevel: " + map.getZoom();
+    document.getElementById("dateZoomText").innerHTML = month + " " + day + " - " + h + ":" + m + ":" + s + " - Zoomlevel: " + map.getZoom();
 
-    // Get zoom level
+    // Keep refreshing
     var t = setTimeout(function(){ startTime(map) }, 500);
 }
 

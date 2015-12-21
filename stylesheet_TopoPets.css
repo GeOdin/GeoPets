@@ -36,12 +36,43 @@ body {
 	height: 98vh;
 }
 
+#location{
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 25.5%;
+	width: 48%;
+	height: 11.75vh;
+/*	cursor: pointer;*/
+/*
+	z-index: 99;
+ */
+	background-color: transparent;
+	background: rgba(00, 99, 00, .23);
+	font-size: 2em;
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#locationName {
+	position: relative;
+	display: none;
+	width: 96%;
+	top: 3vh;
+	left: 2%;
+	background-color: rgba(00, 99, 00, .23);
+	border: 0.25vh solid rgba(00, 99, 00, .23);
+	border-radius: 2px;
+}
+
 #dateZoom {
 	position: absolute;
 	display: none;
 	bottom: 94.5%;
 	right: 0.5%;
-	width: 32%;
+	height: 5.5vh;
+	width: 34%; /* was 32 */
 	z-index: 99;
 	background-color: transparent;
 	background: rgba(00, 99, 00, .23);
@@ -49,6 +80,17 @@ body {
 	color: white;
 	text-shadow: 1px 1px #000000;
 	overflow-y:auto;
+}
+
+#dateZoomText {
+	display: none;
+	position: relative;
+	width: 96%;
+	top: 1vh;
+	left: 2%;
+	background-color: rgba(00, 99, 00, .23);
+	border: 0.25vh solid rgba(00, 99, 00, .23);
+	border-radius: 2px;
 }
 
 #activeTopoPets {
@@ -79,13 +121,18 @@ body {
 	border-radius: 2px;
 }
 
+#activeTopoPetsTitle p {
+	height: 96%;
+	border: 0.25vh solid #ABABAB;
+}
+
 #activeTopoPetsText {
 	position: relative;
 	display: none;
-	width: 98%;
 	height: 80%;
-	top: 2vh;
-	left: 1%;
+	width: 70%;
+	top: 1.5vh;
+	left: 15%;
 	overflow-y: auto;
 }
 
@@ -139,7 +186,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
 }
 
 #activeTopoPet1Text {
@@ -177,6 +224,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
+	border: 0.25vh solid #ABABAB;
 	border-radius: 2px;
 }
 
@@ -215,6 +263,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
+	border: 0.25vh solid #ABABAB;
 	border-radius: 2px;
 }
 
@@ -253,6 +302,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
+	border: 0.25vh solid #ABABAB;
 	border-radius: 2px;
 }
 
@@ -291,6 +341,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
+	border: 0.25vh solid #ABABAB;
 	border-radius: 2px;
 }
 
@@ -302,31 +353,6 @@ body {
 	top: 2vh;
 	left: 1%;
 	overflow-y: auto;
-}
-
-#location{
-	position: absolute;
-	display: none;
-	top: 5.5%;
-	left: 25.5%;
-	width: 48%;
-	height: 11.75vh;
-/*	cursor: pointer;*/
-/*
-	z-index: 99;
- */
-	background-color: transparent;
-	background: rgba(00, 99, 00, .23);
-	font-size: 2em;
-	color: white;
-	text-shadow: 1px 1px #000000;
-	overflow-y:auto;
-}
-
-#locationName {
-	position: relative;
-	display: none;
-	top: -1.75vh;
 }
 
 #recorder {
@@ -357,13 +383,18 @@ body {
 	border-radius: 2px;
 }
 
+#topoPetsFoundTitle p {
+	height: 96%;
+	border: 0.25vh solid #ABABAB;
+}
+
 #topoPetsFound {
 	display: none;
 	position: relative;
 	text-align: center;
-	width: 36%;
+	width: 70%;
 	top: 3.75vh;
-	left: 32%;
+	left: 15%;
 /*	opacity: 0.75;
  */
 /*	background-color: #D4D4D4;
@@ -533,23 +564,28 @@ body {
 	border-radius: 2px;
 }
 
+#recorderAQUNDINETitle p {
+	border: 0.25vh solid #a20ce8;
+}
+
 #recorderAQUNDINEText {
 	display: none;
 	position: relative;
 	text-align: center;
-	width: 96%;
+	width: 95.5%;
 	top: 2vh;
 	left: 2%;
 	overflow-y: auto;
 	text-shadow: 1px 1px #000000;
 	background-color: white;
 	color: #c083de;
+	border: 0.25vh solid #a20ce8;
 }
 
 #recorderAQUNDINEBack {
 	display: none;
 	position: relative;
-	width: 96%;
+	width: 95.5%;
 	height: 1.3em;
 	top: 26.5vh;
 	left: 2%;
@@ -557,7 +593,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
 }
 
 #recorderCHARFOIL {
@@ -588,6 +624,10 @@ body {
 	border-radius: 2px;
 }
 
+#recorderCHARFOILTitle p {
+	border: 0.25vh solid #FF4F4F;
+}
+
 #recorderCHARFOILText {
 	display: none;
 	position: relative;
@@ -604,7 +644,7 @@ body {
 #recorderCHARFOILBack {
 	display: none;
 	position: relative;
-	width: 96%;
+	width: 95.5%;
 	height: 1.3em;
 	top: 11.875vh;
 	left: 2%;
@@ -612,7 +652,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
 }
 
 #recorderELEPHAUN {
@@ -643,6 +683,11 @@ body {
 	border-radius: 2px;
 }
 
+#recorderELEPHAUNTitle p {
+	height: 96%;
+	border: 0.25vh solid #fa8ecf;
+}
+
 #recorderELEPHAUNText {
 	display: none;
 	position: relative;
@@ -659,7 +704,7 @@ body {
 #recorderELEPHAUNBack {
 	display: none;
 	position: relative;
-	width: 96%;
+	width: 95.5%;
 	height: 1.3em;
 	top: 26.5vh;
 	left: 2%;
@@ -667,7 +712,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
 }
 
 #recorderFIREMANDER {
@@ -698,6 +743,11 @@ body {
 	border-radius: 2px;
 }
 
+#recorderFIREMANDERTitle p {
+	height: 96%;
+	border: 0.25vh solid #a20ce8;
+}
+
 #recorderFIREMANDERText {
 	display: none;
 	position: relative;
@@ -714,7 +764,7 @@ body {
 #recorderFIREMANDERBack {
 	display: none;
 	position: relative;
-	width: 96%;
+	width: 95.5%;
 	height: 1.3em;
 	top: 26.5vh;
 	left: 2%;
@@ -722,7 +772,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
 }
 
 #recorderGNOMARL {
@@ -753,6 +803,11 @@ body {
 	border-radius: 2px;
 }
 
+#recorderGNOMARLTitle p {
+	height: 96%;
+	border: 0.25vh solid #a20ce8;
+}
+
 #recorderGNOMARLText {
 	display: none;
 	position: relative;
@@ -769,7 +824,7 @@ body {
 #recorderGNOMARLBack {
 	display: none;
 	position: relative;
-	width: 96%;
+	width: 95.5%;
 	height: 1.3em;
 	top: 26.5vh;
 	left: 2%;
@@ -777,7 +832,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
 }
 
 #recorderHAILO {
@@ -808,6 +863,11 @@ body {
 	border-radius: 2px;
 }
 
+#recorderHAILOTitle p {
+	height: 96%;
+	border: 0.25vh solid aqua;
+}
+
 #recorderHAILOText {
 	display: none;
 	position: relative;
@@ -824,7 +884,7 @@ body {
 #recorderHAILOBack {
 	display: none;
 	position: relative;
-	width: 96%;
+	width: 95.5%;
 	height: 1.3em;
 	top: 26.5vh;
 	left: 2%;
@@ -832,7 +892,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
 }
 
 #recorderLAVACHE {
@@ -863,6 +923,11 @@ body {
 	border-radius: 2px;
 }
 
+#recorderLAVACHETitle p {
+	height: 96%;
+	border: 0.25vh solid #FF4F4F;
+}
+
 #recorderLAVACHEText {
 	display: none;
 	position: relative;
@@ -879,7 +944,7 @@ body {
 #recorderLAVACHEBack {
 	display: none;
 	position: relative;
-	width: 96%;
+	width: 95.5%;
 	height: 1.3em;
 	top: 26.5vh;
 	left: 2%;
@@ -887,7 +952,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
 }
 
 #recorderMOREEL {
@@ -918,6 +983,11 @@ body {
 	border-radius: 2px;
 }
 
+#recorderMOREELTitle p {
+	height: 96%;
+	border: 0.25vh solid blue;
+}
+
 #recorderMOREELText {
 	display: none;
 	position: relative;
@@ -934,7 +1004,7 @@ body {
 #recorderMOREELBack {
 	display: none;
 	position: relative;
-	width: 96%;
+	width: 95.5%;
 	height: 1.3em;
 	top: 26.5vh;
 	left: 2%;
@@ -942,7 +1012,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
 }
 
 #recorderMUDDITCH {
@@ -973,6 +1043,11 @@ body {
 	border-radius: 2px;
 }
 
+#recorderMUDDITCHTitle p {
+	height: 96%;
+	border: 0.25vh solid #8B5742;
+}
+
 #recorderMUDDITCHText {
 	display: none;
 	position: relative;
@@ -989,7 +1064,7 @@ body {
 #recorderMUDDITCHBack {
 	display: none;
 	position: relative;
-	width: 96%;
+	width: 95.5%;
 	height: 1.3em;
 	top: 26.5vh;
 	left: 2%;
@@ -997,7 +1072,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
 }
 
 #recorderNEMATOAD {
@@ -1028,6 +1103,11 @@ body {
 	border-radius: 2px;
 }
 
+#recorderNEMATOADTitle p {
+	height: 96%;
+	border: 0.25vh solid blue;
+}
+
 #recorderNEMATOADText {
 	display: none;
 	position: relative;
@@ -1044,7 +1124,7 @@ body {
 #recorderNEMATOADBack {
 	display: none;
 	position: relative;
-	width: 96%;
+	width: 95.5%;
 	height: 1.3em;
 	top: 26.5vh;
 	left: 2%;
@@ -1052,7 +1132,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
 }
 
 #recorderPARASYLPH {
@@ -1083,6 +1163,11 @@ body {
 	border-radius: 2px;
 }
 
+#recorderPARASYLPHTitle p {
+	height: 96%;
+	border: 0.25vh solid #a20ce8;
+}
+
 #recorderPARASYLPHText {
 	display: none;
 	position: relative;
@@ -1099,7 +1184,7 @@ body {
 #recorderPARASYLPHBack {
 	display: none;
 	position: relative;
-	width: 96%;
+	width: 95.5%;
 	height: 1.3em;
 	top: 26.5vh;
 	left: 2%;
@@ -1107,7 +1192,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
 }
 
 #recorderPIRAMINI {
@@ -1138,6 +1223,11 @@ body {
 	border-radius: 2px;
 }
 
+#recorderPIRAMINITitle p {
+	height: 96%;
+	border: 0.25vh solid #8B5742;
+}
+
 #recorderPIRAMINIText {
 	display: none;
 	position: relative;
@@ -1154,7 +1244,7 @@ body {
 #recorderPIRAMINIBack {
 	display: none;
 	position: relative;
-	width: 96%;
+	width: 95.5%;
 	height: 1.3em;
 	top: 26.5vh;
 	left: 2%;
@@ -1162,7 +1252,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
 }
 
 #recorderPYROSE {
@@ -1193,6 +1283,11 @@ body {
 	border-radius: 2px;
 }
 
+#recorderPYROSETitle p {
+	height: 96%;
+	border: 0.25vh solid #FF4F4F;
+}
+
 #recorderPYROSEText {
 	display: none;
 	position: relative;
@@ -1209,7 +1304,7 @@ body {
 #recorderPYROSEBack {
 	display: none;
 	position: relative;
-	width: 96%;
+	width: 95.5%;
 	height: 1.3em;
 	top: 26.5vh;
 	left: 2%;
@@ -1217,7 +1312,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
 }
 
 #recorderSANDANCE {
@@ -1248,6 +1343,11 @@ body {
 	border-radius: 2px;
 }
 
+#recorderSANDANCETitle p {
+	height: 96%;
+	border: 0.25vh solid #8B5742;
+}
+
 #recorderSANDANCEText {
 	display: none;
 	position: relative;
@@ -1264,7 +1364,7 @@ body {
 #recorderSANDANCEBack {
 	display: none;
 	position: relative;
-	width: 96%;
+	width: 95.5%;
 	height: 1.3em;
 	top: 26.5vh;
 	left: 2%;
@@ -1272,7 +1372,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
 }
 
 #recorderSHEAL {
@@ -1303,6 +1403,11 @@ body {
 	border-radius: 2px;
 }
 
+#recorderSHEALTitle p {
+	height: 96%;
+	border: 0.25vh solid blue;
+}
+
 #recorderSHEALText {
 	display: none;
 	position: relative;
@@ -1319,7 +1424,7 @@ body {
 #recorderSHEALBack {
 	display: none;
 	position: relative;
-	width: 96%;
+	width: 95.5%;
 	height: 1.3em;
 	top: 26.5vh;
 	left: 2%;
@@ -1327,7 +1432,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
 }
 
 #recorderTULPA {
@@ -1358,6 +1463,11 @@ body {
 	border-radius: 2px;
 }
 
+#recorderTULPATitle p {
+	height: 96%;
+	border: 0.25vh solid #fa8ecf;
+}
+
 #recorderTULPAText {
 	display: none;
 	position: relative;
@@ -1374,7 +1484,7 @@ body {
 #recorderTULPABack {
 	display: none;
 	position: relative;
-	width: 96%;
+	width: 95.5%;
 	height: 1.3em;
 	top: 26.5vh;
 	left: 2%;
@@ -1382,7 +1492,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
 }
 
 #recorderTUSCAT {
@@ -1413,6 +1523,11 @@ body {
 	border-radius: 2px;
 }
 
+#recorderTUSCATTitle p {
+	height: 96%;
+	border: 0.25vh solid #fa8ecf;
+}
+
 #recorderTUSCATText {
 	display: none;
 	position: relative;
@@ -1429,7 +1544,7 @@ body {
 #recorderTUSCATBack {
 	display: none;
 	position: relative;
-	width: 96%;
+	width: 95.5%;
 	height: 1.3em;
 	top: 26.5vh;
 	left: 2%;
@@ -1437,7 +1552,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
 }
 
 #recorderVAMPYRE {
@@ -1468,6 +1583,11 @@ body {
 	border-radius: 2px;
 }
 
+#recorderVAMPYRETitle p {
+	height: 96%;
+	border: 0.25vh solid aqua;
+}
+
 #recorderVAMPYREText {
 	display: none;
 	position: relative;
@@ -1484,7 +1604,7 @@ body {
 #recorderVAMPYREBack {
 	display: none;
 	position: relative;
-	width: 96%;
+	width: 95.5%;
 	height: 1.3em;
 	top: 26.5vh;
 	left: 2%;
@@ -1492,7 +1612,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
 }
 
 #recorderWINGDIGO {
@@ -1523,6 +1643,11 @@ body {
 	border-radius: 2px;
 }
 
+#recorderWINGDIGOTitle p {
+	height: 96%;
+	border: 0.25vh solid aqua;
+}
+
 #recorderWINGDIGOText {
 	display: none;
 	position: relative;
@@ -1539,7 +1664,7 @@ body {
 #recorderWINGDIGOBack {
 	display: none;
 	position: relative;
-	width: 96%;
+	width: 95.5%;
 	height: 1.3em;
 	top: 26.5vh;
 	left: 2%;
@@ -1547,7 +1672,7 @@ body {
 	font-size: 1.2em;
 	color: #ABABAB;
 	background-color: white;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
 }
 
 #turn {
@@ -1556,7 +1681,7 @@ body {
 	top: 50%;
 	left: 0.5%;
 	width: 25%;
-	height: 40.125vh;
+	height: 40vh;
 	z-index: 99;
 	background-color: transparent;
 	background: rgba(00, 99, 00, .23);
@@ -1579,12 +1704,18 @@ body {
 	border-radius: 2px;
 }
 
+#player p {
+	height: 96%;
+	border: 0.25vh solid #ABABAB;
+}
+
 #question {
 	position: relative;
 	display: none;
-	width: 98%;
-	top: 2vh;
-	left: 1%;
+	width: 96%;
+	top: 1.5vh;
+	left: 2%;
+	background-color: rgba(00, 99, 00, .23);
 }
 
 #bag {
@@ -1593,7 +1724,7 @@ body {
 	top: 50%;
 	left: 0.5%;
 	width: 25%;
-	height: 40.125vh;
+	height: 40vh;
 	z-index: 99;
 	background-color: transparent;
 	background: rgba(00, 99, 00, .23);
@@ -1616,12 +1747,18 @@ body {
 	border-radius: 2px;
 }
 
+#bagTitle p {
+	height: 96%;
+	border: 0.25vh solid #ABABAB;
+}
+
 #bagText {
 	position: relative;
 	display: none;
-	width: 98%;
-	top: 2vh;
-	left: 1%;
+	width: 96%;
+	top: 1.5vh;
+	left: 2%;
+	background-color: rgba(00, 99, 00, .23);
 }
 
 #gameWon {
@@ -1660,9 +1797,13 @@ body {
 #storyText {
 	position: relative;
 	display: none;
-	width: 98%;
+	width: 96%;
 	top: 1.5vh;
-	left: 1%;
+	left: 2%;
+	bottom: 1.5vh;
+	background-color: rgba(00, 00, 00, .23);
+	border: 0.25vh solid rgba(00, 00, 00, .23);
+	border-radius: 2px;
 }
 
 #achievements {
@@ -1671,7 +1812,7 @@ body {
 	top: 50%;
 	left: 73.5%;
 	width: 26%;
-	height: 40.125vh;
+	height: 40vh;
 	background-color: transparent; 
  	z-index: 99;
  	background: rgba(00, 99, 00, .23);
@@ -1694,44 +1835,58 @@ body {
 	border-radius: 2px;
 }
 
+#achievementsTitle p {
+	height: 96%;
+	border: 0.25vh solid #ABABAB;
+}
+
 #achievementsText {
 	position: relative;
 	display: none;
-	width: 98%;
-	top: 2vh;
-	left: 1%;
+	width: 96%;
+	top: 1.5vh;
+	left: 2%;
+	background-color: rgba(00, 99, 00, .23);
 }
 
 #achievementSTORY101{
 	display: none;
+	border: 0.25vh solid rgba(00, 99, 00, .23);
 }
 
 #achievementAllAirTopoPets {
 	display: none;
+	border: 0.25vh solid rgba(00, 99, 00, .23);
 }
 
 #achievementAllEarthTopoPets {
 	display: none;
+	border: 0.25vh solid rgba(00, 99, 00, .23);
 }
 
 #achievementAllFireTopoPets {
 	display: none;
+	border: 0.25vh solid rgba(00, 99, 00, .23);
 }
 
 #achievementAllNormalTopoPets {
 	display: none;
+	border: 0.25vh solid rgba(00, 99, 00, .23);
 }
 
 #achievementAllSpiritTopoPets {
 	display: none;
+	border: 0.25vh solid rgba(00, 99, 00, .23);
 }
 
 #achievementAllWaterTopoPets {
 	display: none;
+	border: 0.25vh solid rgba(00, 99, 00, .23);
 }
 
 #achievementAllTopoPets {
 	display: none;
+	border: 0.25vh solid rgba(00, 99, 00, .23);
 }
 
 #journal {
@@ -1740,7 +1895,7 @@ body {
 	top: 50%;
 	left: 73.5%;
 	width: 26%;
-	height: 40.125vh;
+	height: 40vh;
 	z-index: 99;
 	background-color: transparent;
  	background: rgba(00, 99, 00, .23);
@@ -1763,20 +1918,28 @@ body {
 	border-radius: 2px;
 }
 
+#journalTitle p {
+	height: 96%;
+	border: 0.25vh solid #ABABAB;
+}
+
 #journalText {
 	position: relative;
 	display: none;
-	width: 98%;
-	top: 2vh;
-	left: 1%;
+	width: 96%;
+	top: 1.5vh;
+	left: 2%;
+	background-color: rgba(00, 99, 00, .23);
 }
 
 #STORY101 {
 	display: none;
+	border: 0.25vh solid rgba(00, 99, 00, .23);
 }
 
 #journalAllTopoPetsCaught {
 	display: none;
+	border: 0.25vh solid rgba(00, 99, 00, .23);
 }
 
 #buttons {
@@ -1804,7 +1967,8 @@ body {
 	color: #ABABAB;
 	background-color: white;
 	text-shadow: 1px 1px #000000;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
+	border-radius: 5px;
 }
 
 #buttonBag {
@@ -1816,7 +1980,8 @@ body {
 	color: #ABABAB;
 	background-color: white;
 	text-shadow: 1px 1px #000000;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
+	border-radius: 5px;
 }
 
 #buttonTopoPets {
@@ -1828,7 +1993,8 @@ body {
 	color: #ABABAB;
 	background-color: white;
 	text-shadow: 1px 1px #000000;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
+	border-radius: 5px;
 }
 
 #buttonTopoPetsFound {
@@ -1840,7 +2006,8 @@ body {
 	color: #ABABAB;
 	background-color: white;
 	text-shadow: 1px 1px #000000;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
+	border-radius: 5px;
 }
 
 #buttonAchievements {
@@ -1852,7 +2019,8 @@ body {
 	color: #ABABAB;
 	background-color: white;
 	text-shadow: 1px 1px #000000;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
+	border-radius: 5px;
 }
 
 #buttonJournal {
@@ -1864,5 +2032,6 @@ body {
 	color: #ABABAB;
 	background-color: white;
 	text-shadow: 1px 1px #000000;
-	border-radius: 2px;
+	border: 0.25vh solid #ABABAB;
+	border-radius: 5px;
 }
