@@ -130,9 +130,6 @@
  * Markers *
  ===========
  * Show markers where TopoPets are, only when hovered over them, within a certain buffer (geo-fencing)
- * * show markers only on certain zoom level
- * * * http://stackoverflow.com/questions/5030127/marker-visibility-in-google-maps
- * * * http://stackoverflow.com/questions/11141865/toggle-hide-show-google-map-markers
  * * markers from
  * * * https://mapicons.mapsmarker.com/category/markers/nature/natural-marvels/
  * * * https://mapicons.mapsmarker.com/category/markers/nature/weather/
@@ -218,25 +215,6 @@
  * * * d = defender.defense --> the (current) defense of the defender
  * * * e = the factor representing weaknesses and resistances from TopoPets against move types
  * * * f = a random number between 0.875 and 1.175
- *
- *==============================
- * Weaknesses and resistances: *
- *==============================
- * * Row (horizontal) : Attacking TopoPet
- * * Column (vertical): Defending TopoPet
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- *         * Normal  *   Air   *  Earth  *  Fire   *  Water  * Spirit  *Total (6)*
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * Normal  *   0.5   *    1    *    1    *    1    *    1    *    2    *    6    * x
- * Air     *    1    *    2    *    2    *   0.5   *    1    *   0.5   *    6    * x
- * Earth   *    1    *   0.5   *    1    *    2    *    1    *    1    *    6    * x
- * Fire    *    2    *    1    *   0.5   *    1    *   0.5   *    2    *    6    * x
- * Water   *    1    *   0.5   *    2    *    2    *    1    *   0.5   *    6    * x
- * Spirit  *    1    *    2    *   0.5   *   0.5   *    2    *    1    *    6    * x
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * Total(6)*    6    *    6    *    6    *    6    *    6    *    6    *         *
- *         *    x    *    x    *    x    *    x    *    x    *    x    *         *
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *
  *==========================
  * TopoPets battle stats:  *

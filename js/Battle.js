@@ -7,7 +7,7 @@
  * This JavaScript file includes the following variable: *
  *========================================================
  * * battleMoves
- *
+ * * weaknessResistance
  *=========================================================
  * This JavaScript file includes the following functions: *
  *=========================================================
@@ -113,6 +113,36 @@ var battleMoves = [
 		1, //8
 		"It is a regular SPIRIT move." //9
 	]
+];
+
+var weaknessResistance = [
+/*
+ *==============================
+ * Weaknesses and resistances: *
+ *==============================
+ * * Row (horizontal) : Attacking TopoPet
+ * * Column (vertical): Defending TopoPet
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *         * Normal  *   Air   *  Earth  *  Fire   *  Water  * Spirit  *Total (6)*
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Normal  *   0.5   *    1    *    1    *    1    *    1    *    2    *    6    * x
+ * Air     *    1    *    2    *    2    *   0.5   *    1    *   0.5   *    6    * x
+ * Earth   *    1    *   0.5   *    1    *    2    *    1    *    1    *    6    * x
+ * Fire    *    2    *    1    *   0.5   *    1    *   0.5   *    2    *    6    * x
+ * Water   *    1    *   0.5   *    2    *    2    *    1    *   0.5   *    6    * x
+ * Spirit  *    1    *    2    *   0.5   *   0.5   *    2    *    1    *    6    * x
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Total(6)*    6    *    6    *    6    *    6    *    6    *    6    *         *
+ *         *    x    *    x    *    x    *    x    *    x    *    x    *         *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ */
+	["AttackingTypeVsDefendingType", "NORMAL", "AIR", "EARTH", "FIRE", "WATER", "SPIRIT"],
+	["NORMAL", 0.5, 1, 1, 1, 1, 2],
+	["AIR", 1, 2, 2, 0.5, 1, 0.5],
+	["EARTH", 1, 0.5, 1, 2, 1, 1],
+	["FIRE", 2, 1, 0.5, 1, 0.5, 2],
+	["WATER", 1, 0.5, 2, 2, 1, 0.5],
+	["SPIRIT", 1, 2, 0.5, 0.5, 2, 1]
 ];
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
