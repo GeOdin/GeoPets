@@ -85,7 +85,7 @@ function startGame() {
 	map = topoPetsGame.startingVariables.map;
 	markers = topoPetsGame.startingVariables.markers;
 	google.maps.event.addListener(map,'zoom_changed', function () {
-		for (i=1; i<topoPets.length; i++) {
+		for (i=1; i<topoPets.length+1; i++) {
 			if (map.getZoom() == topoPets[i][5]) {
 				markers[topoPets[i][0]].setVisible(true);
 			} else {
@@ -1465,14 +1465,6 @@ function createStoryInfoWindows(topoPetsGame) {
 		for (i = 1; i < topoPets.length; i++) {
 			var topoPetsName = topoPets[i][0];
 			markers[topoPetsName].setMap(map);
-/*
-			// Only show TopoPets which zoomLevel complies with the current zoomLevel
-			if (map.getZoom() == topoPets[i][5]) {
-				markers[topoPetsName].setVisible(true);
-			} else {
-				markers[topoPetsName].setVisible(false);
-			}
- */
 		}
     });
 	

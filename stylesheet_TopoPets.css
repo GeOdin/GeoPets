@@ -33,7 +33,7 @@ body {
 
 #map {
 	display: none;
-	height: 98vh;
+	height: 97.75vh;
 }
 
 #location{
@@ -1678,10 +1678,10 @@ body {
 #turn {
 	position: absolute;
 	display: none;
-	top: 50%;
+	top: 50.125%;
 	left: 0.5%;
 	width: 25%;
-	height: 40vh;
+	height: 40.5vh;
 	z-index: 99;
 	background-color: transparent;
 	background: rgba(00, 99, 00, .23);
@@ -1721,10 +1721,10 @@ body {
 #bag {
 	position: absolute;
 	display: none;
-	top: 50%;
+	top: 50.125%;
 	left: 0.5%;
 	width: 25%;
-	height: 40vh;
+	height: 40.5vh;
 	z-index: 99;
 	background-color: transparent;
 	background: rgba(00, 99, 00, .23);
@@ -1780,7 +1780,7 @@ body {
 #story {
 	position: absolute;
 	display: none;
-	top: 81.875%;
+	top: 82.5%;
 	left: 25.5%;
 	width: 48%;
 	height: 8.875vh;
@@ -1809,10 +1809,10 @@ body {
 #achievements {
 	position: absolute;
 	display: none;
-	top: 50%;
+	top: 50.125%;
 	left: 73.5%;
 	width: 26%;
-	height: 40vh;
+	height: 40.5vh;
 	background-color: transparent; 
  	z-index: 99;
  	background: rgba(00, 99, 00, .23);
@@ -1892,10 +1892,10 @@ body {
 #journal {
 	position: absolute;
 	display: none;
-	top: 50%;
+	top: 50.125%;
 	left: 73.5%;
 	width: 26%;
-	height: 40vh;
+	height: 40.5vh;
 	z-index: 99;
 	background-color: transparent;
  	background: rgba(00, 99, 00, .23);
@@ -1945,9 +1945,9 @@ body {
 #buttons {
 	position: absolute;
 	display: none;
-	top: 90.875%;
+	top: 91.5%;
 	left: 0.5%;
-	width: 99%;
+	width: 95.75%;
 	height: 8.5vh;
 	z-index: 99;
 	background-color: transparent;
