@@ -56,6 +56,7 @@
  * Show Player/ Bag and Journal/ Achievements as different tabs from each other
  * Make divs for Player/ Bag/ ... draggable
  * * http://www.w3schools.com/html/html5_draganddrop.asp
+ * * http://www.html5rocks.com/en/tutorials/dnd/basics/
  ================
  * Achievements *
  ================
@@ -144,8 +145,11 @@
  * * http://stackoverflow.com/questions/29324136/google-map-api-multi-markers
  * zoomLevel
  * * Show different TopoPets at different zoom levels
+ * * * http://stackoverflow.com/questions/20044308/google-maps-api-3-show-hide-markers-depending-on-zoom-level
  * * http://stackoverflow.com/questions/20127641/simple-multi-tab-hide-show-div
  * * * http://jsfiddle.net/y76k4/
+ * infoWindow background color
+ * * http://stackoverflow.com/questions/26992013/changing-google-maps-infowindow-background-colour
  ==========
  * Tokens *
  ==========
@@ -532,9 +536,9 @@
  ////// TopoPetsCaught.js //////
  ///////////////////////////////
 
-////////////////
-// topoPets() //
-////////////////
+////////////////////
+// topoPetsGame() //
+////////////////////
 
 // Function for the TopoPets game
 

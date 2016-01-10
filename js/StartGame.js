@@ -26,17 +26,17 @@
 
 function startGame() {
 
-	// Create topoPetsGame object
-	var topoPetsGame = new Object();
-	// Create player object
-	var player = new createPlayer();
-
 	// Set the variables
 	var locationName = "WAGENINGEN"; // var locationName = """"; for later versions
 	var playerName = "";
 	var startingVariables = new Object();
 	var map;
 	var markers;
+
+	// Create topoPetsGame object
+	var topoPetsGame = new Object();
+	// Create player object
+	var player = new createPlayer();
 
 	// Create the startingVariables object
 	startingVariables.locationName = locationName;
@@ -94,7 +94,7 @@ function startGame() {
 		}
 	});
 
-	// Return the starting variables
+	// Return the topoPetsGame object
 	return topoPetsGame;
 }
 
