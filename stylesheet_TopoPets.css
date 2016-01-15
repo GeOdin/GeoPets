@@ -141,9 +141,21 @@ body {
 	cursor: pointer;
 }
 
+#activeTopoPet1Link {
+	position: relative;
+	display: none;
+	width: 100%;
+}
+
 #activeTopoPet2 {
 	display: none;
 	cursor: pointer;
+}
+
+#activeTopoPet2Link {
+	position: relative;
+	display: none;
+	width: 100%;
 }
 
 #activeTopoPet3 {
@@ -151,14 +163,32 @@ body {
 	cursor: pointer;
 }
 
+#activeTopoPet3Link {
+	position: relative;
+	display: none;
+	width: 100%;
+}
+
 #activeTopoPet4 {
 	display: none;
 	cursor: pointer;
 }
 
+#activeTopoPet4Link {
+	position: relative;
+	display: none;
+	width: 100%;
+}
+
 #activeTopoPet5 {
 	display: none;
 	cursor: pointer;
+}
+
+#activeTopoPet5Link {
+	position: relative;
+	display: none;
+	width: 100%;
 }
 
 #activeTopoPet1Div {

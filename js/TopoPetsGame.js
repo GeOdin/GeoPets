@@ -641,7 +641,8 @@ function setActiveTopoPetsText(topoPetsGame, topoPetObject){
 			topoPetsGame.player[activeTopoPetCall] = topoPetObject.Name;
 
 			// Show the specific active TopoPet within the general active TopoPets div
-			document.getElementById(activeTopoPetCall).innerHTML = "<a onclick='toggleActiveTopoPet" + activeTopoPetNumber + "Text()' style='background-color:" + topoPetObject.backgroundcolor + ";color:" + topoPetObject.textColor + ";'> Lvl. " + topoPetObject.level + " " + topoPetObject.Name + "</a>";
+			document.getElementById(activeTopoPetCall).innerHTML = "<a onclick='toggleActiveTopoPet" + activeTopoPetNumber + "Text()' style='background-color:" + topoPetObject.backgroundcolor + ";color:" + topoPetObject.textColor + ";'><div id='" + activeTopoPetCall + "Link'> Lvl. " + topoPetObject.level + " " + topoPetObject.Name + "</div></a>";
+			document.getElementById(activeTopoPetCall + "Link").style.display = "block";
 			document.getElementById(activeTopoPetCall).style.display = "block";
 			document.getElementById(activeTopoPetCall).style.textAlign = "center";
 			document.getElementById(activeTopoPetCall).style.backgroundColor = topoPetObject.backgroundcolor;
